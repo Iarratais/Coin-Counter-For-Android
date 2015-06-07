@@ -1,5 +1,6 @@
 package com.karl.android.coincounter;
 
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -25,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
     public static String cent1Amt;
     public static String additionalCoins;
 
-    public final static String EXTRA_MESSAGE = "com.karl.coincounter.MESSAGE";
+    public final static String EXTRA_MESSAGE = "com.karl.android.coincounter.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,22 +77,22 @@ public class MainActivity extends ActionBarActivity {
         final EditText coins1 = (EditText) findViewById(R.id.coins1);
         coin1Amt = coins1.getText().toString();
 
-        final EditText cents50 = (EditText) findViewById(R.id.coins1);
+        final EditText cents50 = (EditText) findViewById(R.id.cent50);
         cent50Amt = cents50.getText().toString();
 
-        final EditText cents20 = (EditText) findViewById(R.id.coins1);
+        final EditText cents20 = (EditText) findViewById(R.id.cent20);
         cent20Amt = cents20.getText().toString();
 
-        final EditText cents10 = (EditText) findViewById(R.id.coins1);
+        final EditText cents10 = (EditText) findViewById(R.id.cent10);
         cent10Amt = cents10.getText().toString();
 
-        final EditText cents5 = (EditText) findViewById(R.id.coins1);
+        final EditText cents5 = (EditText) findViewById(R.id.cent5);
         cent5Amt = cents5.getText().toString();
 
-        final EditText cents2 = (EditText) findViewById(R.id.coins1);
+        final EditText cents2 = (EditText) findViewById(R.id.cent2);
         cent2Amt = cents2.getText().toString();
 
-        final EditText cents1 = (EditText) findViewById(R.id.coins1);
+        final EditText cents1 = (EditText) findViewById(R.id.cent1);
         cent1Amt = cents1.getText().toString();
 
         final EditText additions = (EditText) findViewById(R.id.extraAdditions);
@@ -99,46 +100,36 @@ public class MainActivity extends ActionBarActivity {
 
         double total = calcTotal();
 
-        intent.putExtra(EXTRA_MESSAGE, total);
+        String totalString = String.valueOf(total);
+
+        intent.putExtra(EXTRA_MESSAGE, totalString);
         startActivity(intent);
     }
 
     public static double calcTotal() {
         double note50 = toInt(note50Amt) * 50.0;
-        System.out.println("€50: " + note50);
 
         double note20 = toInt(note20Amt) * 20.0;
-        System.out.println("€20: " + note20);
 
         double note10 = toInt(note10Amt) * 10.0;
-        System.out.println("€10: " + note10);
 
         double note5 = toInt(note5Amt) * 5.0;
-        System.out.println("€5: " + note5);
 
         double euro2 = toInt(coin2Amt) * 2.0;
-        System.out.println("€2: " + euro2);
 
         double euro1 = toInt(coin1Amt) * 1.0;
-        System.out.println("€1: " + euro1);
 
-        double cent50 = toInt(cent50Amt) * 0.50;
-        System.out.println("50c: " + cent50);
+        double cent50 = toInt(cent50Amt) * 0.5;
 
-        double cent20 = toInt(cent20Amt) * 0.20;
-        System.out.println("20c: " + cent20);
+        double cent20 = toInt(cent20Amt) * 0.2;
 
-        double cent10 = toInt(cent10Amt) * 0.10;
-        System.out.println("10c: " + cent10);
+        double cent10 = toInt(cent10Amt) * 0.1;
 
         double cent5 = toInt(cent5Amt) * 0.05;
-        System.out.println("5c: " + cent5);
 
-        double cent2 = toInt(cent2Amt) * 0.020;
-        System.out.println("2c: " + cent2);
+        double cent2 = toInt(cent2Amt) * 0.02;
 
         double cent1 = toInt(cent1Amt) * 0.01;
-        System.out.println("1c: " + cent1);
 
         double total = 0;
 
@@ -157,3 +148,4 @@ public class MainActivity extends ActionBarActivity {
         return num;
     }
 }
+

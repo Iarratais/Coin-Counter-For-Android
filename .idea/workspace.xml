@@ -44,22 +44,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/karl/android/coincounter/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="107" column="28" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="91" column="61" selection-start-line="91" selection-start-column="61" selection-end-line="91" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DisplayMessageActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DisplayMessageActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/karl/android/coincounter/DisplayMessageActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.43814433">
+              <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+              <folding>
+                <element signature="method#onOptionsItemSelected#0;class#DisplayMessageActivity#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,8 +81,8 @@
       <file leaf-file-name="activity_display_message.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_display_message.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.862069">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,24 +94,23 @@
       <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.793103">
-              <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
+            <state vertical-scroll-proportion="-2.9310346">
+              <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
               <folding>
-                <element signature="e#633#657#0" expanded="true" />
-                <element signature="e#887#908#0" expanded="true" />
-                <element signature="e#1139#1160#0" expanded="true" />
-                <element signature="e#1391#1412#0" expanded="true" />
-                <element signature="e#1642#1662#0" expanded="true" />
-                <element signature="e#1892#1911#0" expanded="true" />
-                <element signature="e#2141#2160#0" expanded="true" />
-                <element signature="e#2390#2410#0" expanded="true" />
-                <element signature="e#2640#2660#0" expanded="true" />
-                <element signature="e#2890#2910#0" expanded="true" />
-                <element signature="e#3139#3158#0" expanded="true" />
-                <element signature="e#3387#3406#0" expanded="true" />
-                <element signature="e#3635#3654#0" expanded="true" />
-                <element signature="e#3892#3920#0" expanded="true" />
-                <element signature="e#4157#4182#0" expanded="true" />
+                <element signature="e#659#683#0" expanded="true" />
+                <element signature="e#913#934#0" expanded="true" />
+                <element signature="e#1165#1186#0" expanded="true" />
+                <element signature="e#1417#1438#0" expanded="true" />
+                <element signature="e#1668#1688#0" expanded="true" />
+                <element signature="e#1918#1937#0" expanded="true" />
+                <element signature="e#2416#2436#0" expanded="true" />
+                <element signature="e#2666#2686#0" expanded="true" />
+                <element signature="e#2916#2936#0" expanded="true" />
+                <element signature="e#3165#3184#0" expanded="true" />
+                <element signature="e#3413#3432#0" expanded="true" />
+                <element signature="e#3661#3680#0" expanded="true" />
+                <element signature="e#3918#3946#0" expanded="true" />
+                <element signature="e#4183#4208#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,8 +122,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.92">
-              <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+            <state vertical-scroll-proportion="-14.28">
+              <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -1412,12 +1413,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/karl/android/coincounter/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_display_message.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/karl/android/coincounter/DisplayMessageActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/karl/android/coincounter/DisplayMessageActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/karl/android/coincounter/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -1760,7 +1761,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1799,56 +1800,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.793103">
-          <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
-          <folding>
-            <element signature="e#633#657#0" expanded="true" />
-            <element signature="e#887#908#0" expanded="true" />
-            <element signature="e#1139#1160#0" expanded="true" />
-            <element signature="e#1391#1412#0" expanded="true" />
-            <element signature="e#1642#1662#0" expanded="true" />
-            <element signature="e#1892#1911#0" expanded="true" />
-            <element signature="e#2141#2160#0" expanded="true" />
-            <element signature="e#2390#2410#0" expanded="true" />
-            <element signature="e#2640#2660#0" expanded="true" />
-            <element signature="e#2890#2910#0" expanded="true" />
-            <element signature="e#3139#3158#0" expanded="true" />
-            <element signature="e#3387#3406#0" expanded="true" />
-            <element signature="e#3635#3654#0" expanded="true" />
-            <element signature="e#3892#3920#0" expanded="true" />
-            <element signature="e#4157#4182#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/karl/android/coincounter/DisplayMessageActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_display_message.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.92">
-          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+        <state vertical-scroll-proportion="-14.28">
+          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -1863,11 +1818,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_display_message.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.862069">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9310346">
+          <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+          <folding>
+            <element signature="e#659#683#0" expanded="true" />
+            <element signature="e#913#934#0" expanded="true" />
+            <element signature="e#1165#1186#0" expanded="true" />
+            <element signature="e#1417#1438#0" expanded="true" />
+            <element signature="e#1668#1688#0" expanded="true" />
+            <element signature="e#1918#1937#0" expanded="true" />
+            <element signature="e#2416#2436#0" expanded="true" />
+            <element signature="e#2666#2686#0" expanded="true" />
+            <element signature="e#2916#2936#0" expanded="true" />
+            <element signature="e#3165#3184#0" expanded="true" />
+            <element signature="e#3413#3432#0" expanded="true" />
+            <element signature="e#3661#3680#0" expanded="true" />
+            <element signature="e#3918#3946#0" expanded="true" />
+            <element signature="e#4183#4208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/karl/android/coincounter/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="107" column="28" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="61" selection-start-line="91" selection-start-column="61" selection-end-line="91" selection-end-column="61" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/karl/android/coincounter/DisplayMessageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43814433">
+          <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+          <folding>
+            <element signature="method#onOptionsItemSelected#0;class#DisplayMessageActivity#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
