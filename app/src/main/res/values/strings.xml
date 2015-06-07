@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Coin Counter</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="appDescription">Coin Counter</string>
+    <string name="notes50edit">€50</string>
+    <string name="notes20edit">€20</string>
+    <string name="notes10edit">€10</string>
+    <string name="notes5edit">€5</string>
+    <string name="coin2edit">€2</string>
+    <string name="coin1edit">€1</string>
+    <string name="cent50edit">50c</string>
+    <string name="cent20edit">20c</string>
+    <string name="cent10edit">10c</string>
+    <string name="cent5edit">5c</string>
+    <string name="cent2edit">2c</string>
+    <string name="cent1edit">1c</string>
+    <string name="extraAdditionsedit">Any other additions (e.g. bags)</string>
+    <string name="calculateButton">Calculate</string>
+</resources>
