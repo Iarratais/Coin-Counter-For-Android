@@ -18,7 +18,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
-        StringBuilder stringBuilder = new StringBuilder().append("€").append(message);
+        StringBuilder stringBuilder = new StringBuilder().append(message);
 
         String finalTotal = stringBuilder.toString();
 
