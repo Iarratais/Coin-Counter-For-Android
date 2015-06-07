@@ -17,4 +17,7 @@
     <string name="cent1edit">1c</string>
     <string name="extraAdditionsedit">Any other additions (e.g. bags)</string>
     <string name="calculateButton">Calculate</string>
+    <string name="title_activity_display_message">Total</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>

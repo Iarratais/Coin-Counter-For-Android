@@ -100,6 +100,7 @@ public class MainActivity extends ActionBarActivity {
         double total = calcTotal();
 
         intent.putExtra(EXTRA_MESSAGE, total);
+        startActivity(intent);
     }
 
     public static double calcTotal() {
