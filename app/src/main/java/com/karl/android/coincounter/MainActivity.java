@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends ActionBarActivity {
 
     public static String note50Amt = "0";
@@ -96,12 +98,10 @@ public class MainActivity extends ActionBarActivity {
     private final TextWatcher note50listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
         }
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-
         }
 
         @Override
@@ -120,86 +120,111 @@ public class MainActivity extends ActionBarActivity {
     private final TextWatcher note20listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
         }
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-
         }
 
         @Override
         public void afterTextChanged(Editable s) {
-            note20Amt = note20edit.getText().toString();
-            calcTotal();
+            if (!note20edit.getText().toString().equals("")){
+                note20Amt = note20edit.getText().toString();
+                System.out.println("note20listener: " + note20edit.getText().toString());
+                calcTotal();
+            }
+            if (note20edit.getText().toString().equals("")) {
+                note20Amt = "0";
+                calcTotal();
+            }
         }
     };
     private final TextWatcher note10listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
         }
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-
         }
 
         @Override
         public void afterTextChanged(Editable s) {
-            note10Amt = note10edit.getText().toString();
-            calcTotal();
+            if (!note10edit.getText().toString().equals("")){
+                note10Amt = note10edit.getText().toString();
+                System.out.println("note10listener: " + note10edit.getText().toString());
+                calcTotal();
+            }
+            if (note10edit.getText().toString().equals("")) {
+                note10Amt = "0";
+                calcTotal();
+            }
         }
     };
     private final TextWatcher note5listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
         }
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-
         }
 
         @Override
         public void afterTextChanged(Editable s) {
-            note5Amt = note5edit.getText().toString();
-            calcTotal();
+            if (!note5edit.getText().toString().equals("")){
+                note50Amt = note5edit.getText().toString();
+                System.out.println("note5listener: " + note5edit.getText().toString());
+                calcTotal();
+            }
+            if (note5edit.getText().toString().equals("")) {
+                note5Amt = "0";
+                calcTotal();
+            }
         }
     };
     private final TextWatcher coin2listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
         }
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-
         }
 
         @Override
         public void afterTextChanged(Editable s) {
-            coin2Amt = coin2edit.getText().toString();
-            calcTotal();
+            if (!coin2edit.getText().toString().equals("")){
+                coin2Amt = coin2edit.getText().toString();
+                System.out.println("coin2listener: " + coin2edit.getText().toString());
+                calcTotal();
+            }
+            if (coin2edit.getText().toString().equals("")) {
+                coin2Amt = "0";
+                calcTotal();
+            }
         }
     };
     private final TextWatcher coin1listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
         }
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-
         }
 
         @Override
         public void afterTextChanged(Editable s) {
-            coin1Amt = coin1edit.getText().toString();
-            calcTotal();
+            if (!coin1edit.getText().toString().equals("")){
+                coin1Amt = coin1edit.getText().toString();
+                System.out.println("coin1listener: " + coin1edit.getText().toString());
+                calcTotal();
+            }
+            if (coin1edit.getText().toString().equals("")) {
+                coin1Amt = "0";
+                calcTotal();
+            }
         }
     };
     private final TextWatcher cent50listener = new TextWatcher() {
@@ -215,8 +240,15 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            cent50Amt = cent50edit.getText().toString();
-            calcTotal();
+            if (!cent50edit.getText().toString().equals("")){
+                cent50Amt = cent50edit.getText().toString();
+                System.out.println("cent50listener: " + cent50edit.getText().toString());
+                calcTotal();
+            }
+            if (cent50edit.getText().toString().equals("")) {
+                cent50Amt = "0";
+                calcTotal();
+            }
         }
     };
     private final TextWatcher cent20listener = new TextWatcher() {
@@ -232,8 +264,15 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            cent20Amt = cent20edit.getText().toString();
-            calcTotal();
+            if (!cent20edit.getText().toString().equals("")){
+                cent20Amt = cent20edit.getText().toString();
+                System.out.println("clistener: " + cent20edit.getText().toString());
+                calcTotal();
+            }
+            if (cent20edit.getText().toString().equals("")) {
+                cent20Amt = "0";
+                calcTotal();
+            }
         }
     };
     private final TextWatcher cent10listener = new TextWatcher() {
@@ -249,8 +288,15 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            cent10Amt = cent10edit.getText().toString();
-            calcTotal();
+            if (!cent10edit.getText().toString().equals("")){
+                cent10Amt = cent10edit.getText().toString();
+                System.out.println("cent10listener: " + cent10edit.getText().toString());
+                calcTotal();
+            }
+            if (cent10edit.getText().toString().equals("")) {
+                cent10Amt = "0";
+                calcTotal();
+            }
         }
     };
     private final TextWatcher cent5listener = new TextWatcher() {
@@ -266,8 +312,15 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            cent5Amt = cent5edit.getText().toString();
-            calcTotal();
+            if (!cent5edit.getText().toString().equals("")){
+                cent5Amt = cent5edit.getText().toString();
+                System.out.println("cent5listener: " + cent5edit.getText().toString());
+                calcTotal();
+            }
+            if (cent5edit.getText().toString().equals("")) {
+                cent5Amt = "0";
+                calcTotal();
+            }
         }
     };
     private final TextWatcher cent2listener = new TextWatcher() {
@@ -283,8 +336,15 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            cent2Amt = cent2edit.getText().toString();
-            calcTotal();
+            if (!cent2edit.getText().toString().equals("")){
+                cent2Amt = cent2edit.getText().toString();
+                System.out.println("cent2listener: " + cent2edit.getText().toString());
+                calcTotal();
+            }
+            if (cent2edit.getText().toString().equals("")) {
+                cent2Amt = "0";
+                calcTotal();
+            }
         }
     };
     private final TextWatcher cent1listener = new TextWatcher() {
@@ -300,8 +360,15 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            cent1Amt = cent1edit.getText().toString();
-            calcTotal();
+            if (!cent1edit.getText().toString().equals("")){
+                cent1Amt = cent1edit.getText().toString();
+                System.out.println("cent1listener: " + cent1edit.getText().toString());
+                calcTotal();
+            }
+            if (cent1edit.getText().toString().equals("")) {
+                cent1Amt = "0";
+                calcTotal();
+            }
         }
     };
     private final TextWatcher additionallistener = new TextWatcher() {
@@ -317,8 +384,15 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            additionalCoins = additionaledit.getText().toString();
-            calcTotal();
+            if (!additionaledit.getText().toString().equals("")){
+                additionalCoins = additionaledit.getText().toString();
+                System.out.println("additionallistener: " + additionaledit.getText().toString());
+                calcTotal();
+            }
+            if (additionaledit.getText().toString().equals("")) {
+                additionalCoins = "0";
+                calcTotal();
+            }
         }
     };
 
@@ -361,7 +435,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-    public void calculateCoins(View button) {
+    /*public void calculateCoins(View button) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
 
         final EditText notes50 = (EditText) findViewById(R.id.notes50);
@@ -453,7 +527,7 @@ public class MainActivity extends ActionBarActivity {
 
         intent.putExtra(EXTRA_MESSAGE, totalString);
         startActivity(intent);
-    }
+    } */
 
     public static double calcTotal() {
         double note50 = toInt(note50Amt) * 50.0;
@@ -484,8 +558,12 @@ public class MainActivity extends ActionBarActivity {
 
         double total_numb = note50 + note20 + note10 + note5 + euro2 + euro1 + cent50 + cent20 + cent10 + cent5 + cent2 + cent1 + toInt(additionalCoins);
 
+        System.out.println("Done with calculating total");
+
+        DecimalFormat formatter = new DecimalFormat("#,###.00");
+
         StringBuilder sb = new StringBuilder();
-        sb.append(total_numb);
+        sb.append(formatter.format(total_numb));
 
         setTotal(sb.toString());
 
