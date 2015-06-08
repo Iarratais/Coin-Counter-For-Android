@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -55,42 +56,94 @@ public class MainActivity extends ActionBarActivity {
 
         final EditText notes50 = (EditText) findViewById(R.id.notes50);
         note50Amt = notes50.getText().toString();
+        if(note50Amt.matches("")){
+            Toast.makeText(this, "Please fill in the blanks", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final EditText notes20 = (EditText) findViewById(R.id.notes20);
         note20Amt = notes20.getText().toString();
+        if(note20Amt.matches("")){
+            Toast.makeText(this, "Please fill in the blanks", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final EditText notes10 = (EditText) findViewById(R.id.notes10);
         note10Amt = notes10.getText().toString();
+        if(note10Amt.matches("")){
+            Toast.makeText(this, "Please fill in the blanks", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final EditText notes5 = (EditText) findViewById(R.id.notes5);
         note5Amt = notes5.getText().toString();
+        if(note5Amt.matches("")){
+            Toast.makeText(this, "Please fill in the blanks", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final EditText coins2 = (EditText) findViewById(R.id.coins2);
         coin2Amt = coins2.getText().toString();
+        if(coin2Amt.matches("")){
+            Toast.makeText(this, "Please fill in the blanks", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final EditText coins1 = (EditText) findViewById(R.id.coins1);
         coin1Amt = coins1.getText().toString();
+        if(coin1Amt.matches("")){
+            Toast.makeText(this, "Please fill in the blanks", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final EditText cents50 = (EditText) findViewById(R.id.cent50);
         cent50Amt = cents50.getText().toString();
+        if(cent50Amt.matches("")){
+            Toast.makeText(this, "Please fill in the blanks", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final EditText cents20 = (EditText) findViewById(R.id.cent20);
         cent20Amt = cents20.getText().toString();
+        if(cent20Amt.matches("")){
+            Toast.makeText(this, "Please fill in the blanks", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final EditText cents10 = (EditText) findViewById(R.id.cent10);
         cent10Amt = cents10.getText().toString();
+        if(cent10Amt.matches("")){
+            Toast.makeText(this, "Please fill in the blanks", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final EditText cents5 = (EditText) findViewById(R.id.cent5);
         cent5Amt = cents5.getText().toString();
+        if(cent5Amt.matches("")){
+            Toast.makeText(this, "Please fill in the blanks", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final EditText cents2 = (EditText) findViewById(R.id.cent2);
         cent2Amt = cents2.getText().toString();
+        if(cent2Amt.matches("")){
+            Toast.makeText(this, "Please fill in the blanks", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final EditText cents1 = (EditText) findViewById(R.id.cent1);
         cent1Amt = cents1.getText().toString();
+        if(cent1Amt.matches("")){
+            Toast.makeText(this, "Please fill in the blanks", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final EditText additions = (EditText) findViewById(R.id.extraAdditions);
         additionalCoins = additions.getText().toString();
+        if(additionalCoins.matches("")){
+            Toast.makeText(this, "Please fill in the blanks", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         double total = calcTotal();
 
