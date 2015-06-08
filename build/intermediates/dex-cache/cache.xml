@@ -2,6 +2,20 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-6ecf31e7a7480ab94a4d4de78cee4b279099dee7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-be5173766cc1469872fa92a44e30572edb33d409.jar" />
+    </item>
+    <item
         jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -21,13 +35,6 @@
         revision="22.0.1"
         sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
         <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-8fad68187cf784a66ba1620e86f18fba73161976.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-6ecf31e7a7480ab94a4d4de78cee4b279099dee7.jar" />
     </item>
 
 </items>

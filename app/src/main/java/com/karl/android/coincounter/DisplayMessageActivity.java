@@ -7,6 +7,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 
 public class DisplayMessageActivity extends ActionBarActivity {
 
@@ -14,6 +17,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        DecimalFormat formatter = new DecimalFormat("#0.00");
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
@@ -22,9 +26,11 @@ public class DisplayMessageActivity extends ActionBarActivity {
 
         String finalTotal = stringBuilder.toString();
 
+        double finalValue = Double.parseDouble(finalTotal);
+
         TextView textView = new TextView(this);
         textView.setTextSize(40);
-        textView.setText(message);
+        textView.setText(formatter.format(finalValue));
 
         setContentView(textView);
     }
