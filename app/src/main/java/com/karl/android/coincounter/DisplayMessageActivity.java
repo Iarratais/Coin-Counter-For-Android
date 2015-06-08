@@ -22,7 +22,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_display_message);
 
-        DecimalFormat formatter = new DecimalFormat("#0.00");
+        DecimalFormat formatter = new DecimalFormat("#,###.00");
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
