@@ -109,7 +109,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onInit(int status) {
                 if(status != TextToSpeech.ERROR) {
-                    t1.setLanguage(Locale.UK);
+                    t1.setLanguage(Locale.ENGLISH);
                 }
             }
         });
@@ -434,7 +434,7 @@ public class MainActivity extends ActionBarActivity {
         //noinspection SimplifiableIfStatement
         switch (item.getItemId()) {
             case R.id.action_settings:
-                openSettings();
+                openHowTo();
                 return true;
             case R.id.action_about:
                 openAbout();
@@ -444,110 +444,17 @@ public class MainActivity extends ActionBarActivity {
         } // End switch
     }
 
-    public void openSettings() {
+    // Open the howto activity
+    public void openHowTo() {
         Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
         startActivity(intent);
     }
 
+    // Open the search activity
     public void openAbout() {
         Intent intent = new Intent(MainActivity.this, AboutActivity.class);
         startActivity(intent);
     }
-
-
-    /*public void calculateCoins(View button) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-
-        final EditText notes50 = (EditText) findViewById(R.id.notes50);
-        note50Amt = notes50.getText().toString();
-        if(note50Amt.matches("")){
-            note50Amt = "0";
-        }
-
-        final EditText notes20 = (EditText) findViewById(R.id.notes20);
-        note20Amt = notes20.getText().toString();
-        if(note20Amt.matches("")){
-            note20Amt = "0";
-        }
-
-        final EditText notes10 = (EditText) findViewById(R.id.notes10);
-        note10Amt = notes10.getText().toString();
-        if(note10Amt.matches("")){
-            note10Amt = "0";
-        }
-
-        final EditText notes5 = (EditText) findViewById(R.id.notes5);
-        note5Amt = notes5.getText().toString();
-        if(note5Amt.matches("")){
-            note5Amt = "0";
-        }
-
-        final EditText coins2 = (EditText) findViewById(R.id.coins2);
-        coin2Amt = coins2.getText().toString();
-        if(coin2Amt.matches("")){
-            coin2Amt = "0";
-        }
-
-        final EditText coins1 = (EditText) findViewById(R.id.coins1);
-        coin1Amt = coins1.getText().toString();
-        if(coin1Amt.matches("")){
-            coin1Amt = "0";
-        }
-
-        final EditText cents50 = (EditText) findViewById(R.id.cent50);
-        cent50Amt = cents50.getText().toString();
-        if(cent50Amt.matches("")){
-            cent50Amt = "0";
-        }
-
-        final EditText cents20 = (EditText) findViewById(R.id.cent20);
-        cent20Amt = cents20.getText().toString();
-        if(cent20Amt.matches("")){
-            cent20Amt = "0";
-        }
-
-        final EditText cents10 = (EditText) findViewById(R.id.cent10);
-        cent10Amt = cents10.getText().toString();
-        if(cent10Amt.matches("")){
-            cent10Amt = "0";
-        }
-
-        final EditText cents5 = (EditText) findViewById(R.id.cent5);
-        cent5Amt = cents5.getText().toString();
-        if(cent5Amt.matches("")){
-            cent5Amt = "0";
-        }
-
-        final EditText cents2 = (EditText) findViewById(R.id.cent2);
-        cent2Amt = cents2.getText().toString();
-        if(cent2Amt.matches("")){
-            cent2Amt = "0";
-        }
-
-        final EditText cents1 = (EditText) findViewById(R.id.cent1);
-        cent1Amt = cents1.getText().toString();
-        if(cent1Amt.matches("")){
-            cent1Amt = "0";
-        }
-
-        final EditText additions = (EditText) findViewById(R.id.extraAdditions);
-        additionalCoins = additions.getText().toString();
-        if(additionalCoins.matches("")){
-            additionalCoins = "0";
-        }
-
-        double total = calcTotal();
-
-        if(total == 0.00) {
-            Toast.makeText(this, "Fill in blanks to get result!", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        String totalString = String.valueOf(total);
-
-        intent.putExtra(EXTRA_MESSAGE, totalString);
-        startActivity(intent);
-    } */
 
     public static double calcTotal() {
         double note50 = toInt(note50Amt) * 50.0;
@@ -593,12 +500,13 @@ public class MainActivity extends ActionBarActivity {
         return total;
     }
 
-    // Method to convert the strings into integers
+    // Convert String to Integer
     public static int toInt(String number) {
         int new_num = Integer.parseInt(number);
         return new_num;
     }
 
+    // Convert String into double
     public static double toDouble(String number){
         double value = Double.parseDouble(number);
         return value;
@@ -613,6 +521,7 @@ public class MainActivity extends ActionBarActivity {
 
     public static String getTotal() { return total; }
 
+    // Takes a String and double and adds to the total using these two values
     public static String add_to_total(String incoming_addition, double multiple) {
         String totalNum = getTotal();
         System.out.println("add_to_total: " + totalNum + " - totalNum");
@@ -643,7 +552,7 @@ public class MainActivity extends ActionBarActivity {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public static void make_a_toast(){
         StringBuilder toSpeak = new StringBuilder();
-        toSpeak.append("Your total is: " + getTotal() + "euro");
+        toSpeak.append("Your total is: " + getTotal());
 
         String Speak = toSpeak.toString();
         System.out.println("make_a_toast (TTS): " + Speak);
