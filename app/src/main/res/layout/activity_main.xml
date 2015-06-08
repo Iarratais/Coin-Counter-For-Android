@@ -1,237 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ScrollView01"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
     android:scrollbars="vertical">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/tool_bar"
-        ></include>
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
 
         <!-- form elements -->
-        <android.support.design.widget.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:fontFamily="sans-serif"
-                android:id="@+id/notes50"
-                android:hint="@string/notes50edit"
-                android:inputType="phone"
-                />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:fontFamily="sans-serif"
+            android:id="@+id/notes50"
+            android:hint="@string/notes50edit"
+            android:inputType="phone"
+            />
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:fontFamily="sans-serif"
-                android:id="@+id/notes20"
-                android:hint="@string/notes20edit"
-                android:inputType="phone"
-                />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:fontFamily="sans-serif"
+            android:id="@+id/notes20"
+            android:hint="@string/notes20edit"
+            android:inputType="phone"
+            />
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:id="@+id/notes10"
-                android:hint="@string/notes10edit"
-                android:inputType="phone"
-                />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/notes10"
+            android:hint="@string/notes10edit"
+            android:inputType="phone"
+            />
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:id="@+id/notes5"
-                android:hint="@string/notes5edit"
-                android:inputType="phone"
-                />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/notes5"
+            android:hint="@string/notes5edit"
+            android:inputType="phone"
+            />
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:id="@+id/coins2"
-                android:hint="@string/coin2edit"
-                android:inputType="phone"
-                />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/coins2"
+            android:hint="@string/coin2edit"
+            android:inputType="phone"
+            />
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:id="@+id/coins1"
-                android:hint="@string/coin1edit"
-                android:inputType="phone"
-                />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/coins1"
+            android:hint="@string/coin1edit"
+            android:inputType="phone"
+            />
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:id="@+id/cent50"
-                android:hint="@string/cent50edit"
-                android:inputType="phone"
-                />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/cent50"
+            android:hint="@string/cent50edit"
+            android:inputType="phone"
+            />
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:id="@+id/cent20"
-                android:hint="@string/cent20edit"
-                android:inputType="phone"
-                />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/cent20"
+            android:hint="@string/cent20edit"
+            android:inputType="phone"
+            />
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:id="@+id/cent10"
-                android:hint="@string/cent10edit"
-                android:inputType="phone"
-                />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/cent10"
+            android:hint="@string/cent10edit"
+            android:inputType="phone"
+            />
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:id="@+id/cent5"
-                android:hint="@string/cent5edit"
-                android:inputType="phone"
-                />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/cent5"
+            android:hint="@string/cent5edit"
+            android:inputType="phone"
+            />
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:id="@+id/cent2"
-                android:hint="@string/cent2edit"
-                android:inputType="phone"
-                />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/cent2"
+            android:hint="@string/cent2edit"
+            android:inputType="phone"
+            />
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:id="@+id/cent1"
-                android:hint="@string/cent1edit"
-                android:inputType="phone"
-                />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/cent1"
+            android:hint="@string/cent1edit"
+            android:inputType="phone"
+            />
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:id="@+id/extraAdditions"
-                android:hint="@string/extraAdditionsedit"
-                android:inputType="phone"
-                />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/extraAdditions"
+            android:hint="@string/extraAdditionsedit"
+            android:inputType="phone"
+            />
 
-        <!--
         <Button
             android:layout_width="fill_parent"
+            android:fontFamily="sans-serif"
             android:layout_height="wrap_content"
             android:id="@+id/ButtonCalculate"
             android:text="@string/calculateButton"
             android:onClick="calculateCoins"
-            /> -->
-
-        <ImageButton
-            android:layout_margin="15dp"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/ic_action"
-            android:background="@drawable/circle"
-            android:id="@+id/imageButton"
-            android:layout_gravity="right|bottom" />
-
+            />
     </LinearLayout>
 </ScrollView>
