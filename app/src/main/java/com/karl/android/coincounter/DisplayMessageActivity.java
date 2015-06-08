@@ -3,14 +3,16 @@ package com.karl.android.coincounter;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.support.v7.widget.Toolbar;
 
 import java.text.DecimalFormat;
 
 
 public class DisplayMessageActivity extends ActionBarActivity {
+
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,10 @@ public class DisplayMessageActivity extends ActionBarActivity {
         textView.setText(formatter.format(finalValue));
 
         setContentView(textView);
+
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+
     }
 
 

@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -30,10 +31,15 @@ public class MainActivity extends ActionBarActivity {
 
     public final static String EXTRA_MESSAGE = "com.karl.android.coincounter.MESSAGE";
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
     }
 
     @Override

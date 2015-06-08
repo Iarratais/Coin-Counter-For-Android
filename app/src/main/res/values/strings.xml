@@ -25,14 +25,12 @@
     <string name="about_title">About</string>
 
     <string name="howto">
-        <b>Welcome to Coin Counter \n</b>
-        In order to use this app there are three simple steps: \n\n
-        1. Count the amount of coins you have
-        2. Input into the app
-        3. Get result!
+        <b>Welcome to Coin Counter \n\n\n\n</b>In order to use this app there are three simple steps: \n\n1. Count the amount of coins you have\n2. Input into the app\n3. Get result!\n
     </string>
     <string name="howto_title">How To</string>
 
     <string name="title_activity_about">AboutActivity</string>
     <string name="title_activity_settings">SettingsActivity</string>
+
+    <string name="toolbar">Toolbar</string>
 </resources>
