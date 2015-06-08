@@ -1,3 +1,5 @@
+// Copyright Karl Jones
+
 package com.karl.android.coincounter;
 
 import android.content.Intent;

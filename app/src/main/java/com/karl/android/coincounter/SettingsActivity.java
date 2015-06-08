@@ -1,3 +1,5 @@
+// Copyright Karl Jones
+
 package com.karl.android.coincounter;
 
 import android.support.v7.app.ActionBarActivity;

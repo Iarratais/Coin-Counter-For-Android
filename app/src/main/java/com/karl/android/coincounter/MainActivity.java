@@ -1,6 +1,7 @@
+// Copyright Karl Jones
+
 package com.karl.android.coincounter;
 
-import android.app.DialogFragment;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
