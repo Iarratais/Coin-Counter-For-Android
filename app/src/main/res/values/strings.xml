@@ -33,4 +33,6 @@
     <string name="title_activity_settings">SettingsActivity</string>
 
     <string name="toolbar">Toolbar</string>
+
+    <string name="overlay">0.00</string>
 </resources>
