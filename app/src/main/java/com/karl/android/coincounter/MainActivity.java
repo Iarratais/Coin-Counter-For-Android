@@ -2,7 +2,10 @@
 
 package com.karl.android.coincounter;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -13,12 +16,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 
 import java.text.DecimalFormat;
+import java.util.Locale;
 
 public class MainActivity extends ActionBarActivity {
+
+    public static TextToSpeech t1;
 
     public static String note50Amt = "0";
     public static String note20Amt = "0";
@@ -92,8 +97,23 @@ public class MainActivity extends ActionBarActivity {
         cent2edit.addTextChangedListener(cent2listener);
         cent1edit.addTextChangedListener(cent1listener);
         additionaledit.addTextChangedListener(additionallistener);
-    }
 
+        overlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                make_a_toast();
+            }
+        });
+
+        t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status != TextToSpeech.ERROR) {
+                    t1.setLanguage(Locale.UK);
+                }
+            }
+        });
+    } // End onCreate()
     // Text watcher for €50
     private final TextWatcher note50listener = new TextWatcher() {
         @Override
@@ -618,6 +638,21 @@ public class MainActivity extends ActionBarActivity {
         setTotal(total_final);
 
         return total_final;
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public static void make_a_toast(){
+        StringBuilder toSpeak = new StringBuilder();
+        toSpeak.append("Your total is: " + getTotal() + "euro");
+
+        String Speak = toSpeak.toString();
+        System.out.println("make_a_toast (TTS): " + Speak);
+
+        if(Build.VERSION.RELEASE.startsWith("5")) {
+            t1.speak(Speak, TextToSpeech.QUEUE_FLUSH, null, null);
+        } else {
+            t1.speak(Speak, TextToSpeech.QUEUE_FLUSH, null);
+        }
     }
 }
 

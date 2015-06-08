@@ -26,7 +26,9 @@
             android:gravity="center"
             android:text="@string/overlay"
             android:elevation="4dp"
-            android:clickable="false" />
+            android:clickable="true"
+            android:onClick="make_a_toast"
+            />
 
 
         <!-- form elements -->
