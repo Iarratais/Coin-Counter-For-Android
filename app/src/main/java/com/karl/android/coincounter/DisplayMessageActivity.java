@@ -18,6 +18,8 @@ public class DisplayMessageActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setContentView(R.layout.activity_display_message);
+
         DecimalFormat formatter = new DecimalFormat("#0.00");
 
         Intent intent = getIntent();
@@ -25,19 +27,21 @@ public class DisplayMessageActivity extends ActionBarActivity {
 
         StringBuilder stringBuilder = new StringBuilder().append(message);
 
+        // It is converted to a string and then to a double so that the format of the output is correct
         String finalTotal = stringBuilder.toString();
 
         double finalValue = Double.parseDouble(finalTotal);
 
-        TextView textView = new TextView(this);
-        textView.setTextSize(40);
-        textView.setText(formatter.format(finalValue));
+        String finalString = formatter.format(finalValue);
 
-        setContentView(textView);
+        TextView textView = new TextView(this);
+        textView = (TextView) findViewById(R.id.finalValueDisplay);
+        textView.setTextSize(40);
+        textView.setText(finalString);
 
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 
