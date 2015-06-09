@@ -33,5 +33,5 @@
 
     <string name="toolbar">Toolbar</string>
 
-    <string name="overlay">Coin Counter</string>
+    <string name="overlay">0.00</string>
 </resources>

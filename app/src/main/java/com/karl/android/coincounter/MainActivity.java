@@ -2,6 +2,7 @@
 
 package com.karl.android.coincounter;
 
+
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
@@ -18,8 +19,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.Locale;
 
 public class MainActivity extends ActionBarActivity {
@@ -60,6 +63,8 @@ public class MainActivity extends ActionBarActivity {
     private EditText cent1edit;
     private EditText additionaledit;
     public static TextView overlay;
+
+    public AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,8 +119,41 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
         });
+
+        adView = (AdView) findViewById(R.id.adView);
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+
+        adView.loadAd(adRequest);
     } // End onCreate()
 
+    /** Called when leaving the activity */
+    @Override
+    public void onPause() {
+        if (adView != null) {
+            adView.pause();
+        }
+        super.onPause();
+    }
+
+    /** Called when returning to the activity */
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (adView != null) {
+            adView.resume();
+        }
+    }
+
+    /** Called before the activity is destroyed */
+    @Override
+    public void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
+    }
     // Text watcher for €50
     private final TextWatcher note50listener = new TextWatcher() {
         @Override

@@ -34,12 +34,9 @@
         android:scrollbars="vertical">
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-
-
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
             <!-- form elements -->
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/til"
@@ -275,6 +272,18 @@
                     android:inputType="number"
                     />
             </android.support.design.widget.TextInputLayout>
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="ca-app-pub-9529089167941341/1676679237">
+            </com.google.android.gms.ads.AdView>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
