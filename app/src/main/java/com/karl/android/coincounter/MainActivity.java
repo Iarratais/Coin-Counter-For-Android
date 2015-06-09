@@ -3,6 +3,8 @@
 package com.karl.android.coincounter;
 
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.speech.tts.TextToSpeech;
@@ -17,6 +19,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.util.Locale;
@@ -193,7 +196,7 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public void afterTextChanged(Editable s) {
             if (!note5edit.getText().toString().equals("")){
-                note50Amt = note5edit.getText().toString();
+                note5Amt = note5edit.getText().toString();
                 System.out.println("note5listener: " + note5edit.getText().toString());
                 calcTotal();
             }
@@ -549,7 +552,6 @@ public class MainActivity extends ActionBarActivity {
         return total_final;
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public static void make_a_toast(){
         StringBuilder toSpeak = new StringBuilder();
         toSpeak.append("Your total is: " + getTotal());
@@ -563,5 +565,7 @@ public class MainActivity extends ActionBarActivity {
             t1.speak(Speak, TextToSpeech.QUEUE_FLUSH, null);
         }
     }
+
+
 }
 
