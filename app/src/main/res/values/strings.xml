@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Coin Counter</string>
+    <string name="app_name">Coin Countr</string>
 
     <string name="action_settings">Settings</string>
     <string name="appDescription">Coin Counter</string>
@@ -15,17 +15,16 @@
     <string name="cent5edit">5c</string>
     <string name="cent2edit">2c</string>
     <string name="cent1edit">1c</string>
-    <string name="extraAdditionsedit">Any other additions (e.g. bags)</string>
+    <string name="extraAdditionsedit">Any other additions (in euro)</string>
     <string name="calculateButton">Calculate</string>
     <string name="title_activity_display_message">Total</string>
-    <string name="hello_world">hi</string>
 
     <string name="description">
-        Compiled on "date"\nCopyright © of Karl Jones \nKarljoones52@gmail.com \n\nFeedback is appreciated </string>
+        Compiled on "9 June 2015"\nCopyright © of Karl Jones \ncoincountr@gmail.com \n\nFeedback is appreciated </string>
     <string name="about_title">About</string>
 
     <string name="howto">
-        <b>Welcome to Coin Counter \n\n\n\n</b>In order to use this app there are three simple steps: \n\n1. Count the amount of coins you have\n2. Input into the app\n3. Get result!\n
+        <b>Welcome to Coin Countr \n\n\n\n</b>In order to use this app there are three simple steps: \n\n1. Count the amount of coins you have\n2. Input into the app\n3. Get result!\n
     </string>
     <string name="howto_title">How To</string>
 
@@ -34,5 +33,5 @@
 
     <string name="toolbar">Toolbar</string>
 
-    <string name="overlay">0.00</string>
+    <string name="overlay">Coin Counter</string>
 </resources>

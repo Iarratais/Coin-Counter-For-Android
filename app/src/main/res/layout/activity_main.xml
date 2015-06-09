@@ -23,8 +23,9 @@
         android:elevation="4dp"
         android:clickable="true"
         android:onClick="make_a_toast"
+        android:visibility="gone"
         />
-    
+
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:android.support.design="http://schemas.android.com/tools"
         android:id="@+id/ScrollView01"

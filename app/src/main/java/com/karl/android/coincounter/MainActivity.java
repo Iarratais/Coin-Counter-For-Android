@@ -3,8 +3,6 @@
 package com.karl.android.coincounter;
 
 import android.annotation.TargetApi;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.speech.tts.TextToSpeech;
@@ -19,9 +17,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
-import android.widget.Toast;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Locale;
 
 public class MainActivity extends ActionBarActivity {
@@ -117,6 +115,7 @@ public class MainActivity extends ActionBarActivity {
             }
         });
     } // End onCreate()
+
     // Text watcher for €50
     private final TextWatcher note50listener = new TextWatcher() {
         @Override
@@ -499,7 +498,14 @@ public class MainActivity extends ActionBarActivity {
 
         System.out.println("Total: " + getTotal());
 
-        overlay.setText(getTotal());
+        if(toDouble(getTotal()) < 0.01){
+            overlay.setVisibility(TextView.GONE);
+            System.out.println("Overlay: Invisible");
+        } else {
+            overlay.setText(getTotal());
+            overlay.setVisibility(TextView.VISIBLE);
+            System.out.println("Overlay: Visible");
+        }
         return total;
     }
 
@@ -511,7 +517,10 @@ public class MainActivity extends ActionBarActivity {
 
     // Convert String into double
     public static double toDouble(String number){
-        double value = Double.parseDouble(number);
+        System.out.println("toDouble: " + number);
+        String num = number.replace(",", "");
+        double value = Double.parseDouble(num);
+        System.out.println("toDouble: " + value);
         return value;
     }
 
@@ -552,6 +561,7 @@ public class MainActivity extends ActionBarActivity {
         return total_final;
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public static void make_a_toast(){
         StringBuilder toSpeak = new StringBuilder();
         toSpeak.append("Your total is: " + getTotal());
