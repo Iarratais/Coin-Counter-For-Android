@@ -39,6 +39,24 @@
             android:orientation="vertical">
             <!-- form elements -->
             <android.support.design.widget.TextInputLayout
+                android:id="@+id/til0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android.support.design:hintTextAppearance="@style/TextAppearance.AppCompat">
+                <EditText
+                    android:maxLength="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:fontFamily="sans-serif"
+                    android:id="@+id/notes100"
+                    android:hint="@string/notes100edit"
+                    android:inputType="number"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
                 android:id="@+id/til"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -110,7 +128,23 @@
                     android:inputType="number"
                     />
             </android.support.design.widget.TextInputLayout>
-
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til14"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:maxLength="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:id="@+id/notes1"
+                    android:hint="@string/notes1edit"
+                    android:inputType="number"
+                    />
+            </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/til5"
                 android:layout_width="fill_parent"
@@ -164,7 +198,23 @@
                     android:inputType="number"
                     />
             </android.support.design.widget.TextInputLayout>
-
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til15"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:maxLength="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:id="@+id/cent25"
+                    android:hint="@string/cent25edit"
+                    android:inputType="number"
+                    />
+            </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/til8"
                 android:layout_width="fill_parent"
@@ -268,7 +318,7 @@
                     android:paddingTop="20dp"
                     android:paddingBottom="20dp"
                     android:id="@+id/extraAdditions"
-                    android:hint="@string/extraAdditionsedit"
+                    android:hint="@string/extraAdditionsedit_euro"
                     android:inputType="number"
                     />
             </android.support.design.widget.TextInputLayout>

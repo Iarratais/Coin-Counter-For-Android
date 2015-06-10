@@ -5,8 +5,7 @@
     xmlns:android.support.design="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <include
         android:id="@+id/tool_bar"
@@ -39,14 +38,6 @@
             android:orientation="vertical">
 
             <!-- form elements -->
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rate on the Play Store!"
-                android:id="@+id/button"
-                android:layout_gravity="center_horizontal"
-                style="?android:attr/borderlessButtonStyle"
-                android:onClick="rate_the_app"/>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/FB1"
@@ -97,4 +88,19 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:layout_width="207dp"
+        android:layout_height="wrap_content"
+        android:text="Rate on the Play Store!"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/borderlessButtonStyle"
+        android:onClick="rate_the_app"
+        android:elevation="4dp"
+        android:fontFamily="sans serif"
+        android:focusable="false"
+        android:longClickable="true"
+        android:typeface="serif"
+        android:visibility="visible" />
 </LinearLayout>

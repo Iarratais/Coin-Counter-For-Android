@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
     <item
         android:id="@+id/action_about"
-        android:title="About"
+        android:title="@string/about_title"
         />
     <item
         android:id="@+id/action_settings"
@@ -13,11 +13,18 @@
         />
     <item
         android:id="@+id/action_clear_all"
-        android:title="Clear all"
+        android:title="@string/clear_all_title"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_feedback"
-        android:title="Feedback"
+        android:title="@string/feedback_title"
         app:showAsAction="never" />
-
+    <item
+        android:id="@+id/action_currency_selector"
+        android:title="@string/currency_title"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_language_selector"
+        android:title="@string/language_title"
+        app:showAsAction="never" />
 </menu>

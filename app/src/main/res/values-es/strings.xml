@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title">Sobre Esto</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="extraAdditionsedit_euro">Cualesquiera otras adiciones (en euros)</string>
+    <string name="feedback_comment_edit">Tu comentario</string>
+    <string name="feedback_email_edit">Correo</string>
+    <string name="feedback_name_edit">Su nombre</string>
+    <string name="feedback_submit">Presentar</string>
+    <string name="rate_on_play"><b>Precio en la tienda de Google!</b></string>
+    <string name="howto_title">Cómo</string>
+    <string name="howto"><b> Bienvenido a Coin Countr \n\n \n \n </b></string>
+    <string name="description">Compilado de "09 de junio 2015" \nCopyright © de Karl Jones \ncoincountr@gmail.com \n \nFeedback se agradece</string>
+    <string name="title_activity_about">Acerca de Actividad</string>
+    <string name="title_activity_currency_selector">Selector de moneda</string>
+    <string name="title_activity_feedback">Realimentación</string>
+    <string name="currency_title">Moneda</string>
+    <string name="feedback_title">Realimentación</string>
+    <string name="language_title">Idioma</string>
+    <string name="clear_all_title">Limpiar todo</string>
+</resources>

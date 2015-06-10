@@ -59,6 +59,22 @@
         <activity
             android:name=".FeedbackActivity"
             android:label="@string/title_activity_feedback"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.karl.android.coincounter.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CurrencySelectorActivity"
+            android:label="@string/title_activity_currency_selector"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.karl.android.coincounter.MainActivity" />
+        </activity>
+        <activity
+            android:name=".LanguageSelectorActivity"
+            android:label="@string/title_activity_language_selector"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
