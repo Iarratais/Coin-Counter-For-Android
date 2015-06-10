@@ -55,7 +55,12 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         config.locale = locale;
         this.getApplicationContext().getResources().updateConfiguration(config, null);
         saveLanguage("Spanish");
+
+        Intent intent = new Intent(this, MainActivity.class);
+
         Toast.makeText(this, getResources().getString(R.string.lang_english), Toast.LENGTH_SHORT).show();
+
+        startActivity(intent);
     }
 
     public void change_to_ENGLISH(View view) {
@@ -65,7 +70,12 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         config.locale = locale;
         this.getApplicationContext().getResources().updateConfiguration(config, null);
         saveLanguage("English");
+
+        Intent intent = new Intent(this, MainActivity.class);
+
         Toast.makeText(this, getResources().getString(R.string.lang_english), Toast.LENGTH_SHORT).show();
+
+        startActivity(intent);
     }
 
     public void change_to_GERMAN(View view) {
@@ -75,7 +85,12 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         config.locale = locale;
         this.getApplicationContext().getResources().updateConfiguration(config, null);
         saveLanguage("German");
+
+        Intent intent = new Intent(this, MainActivity.class);
+
         Toast.makeText(this, getResources().getString(R.string.lang_english), Toast.LENGTH_SHORT).show();
+
+        startActivity(intent);
     }
 
     public static final String PREFS_NAME = "PREFS";

@@ -10,32 +10,49 @@
     <include
         android:id="@+id/tool_bar"
         layout="@layout/tool_bar"> </include>
-
-    <Button
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:text="USD"
-        android:id="@+id/button2"
-        android:layout_gravity="center_horizontal"
-        style="?android:attr/borderlessButtonStyle"
-        android:onClick="change_to_USD"/>
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:text="USD"
+                android:id="@+id/button2"
+                android:layout_gravity="center_horizontal"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="change_to_USD"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:text="EUR"
-        android:id="@+id/button3"
-        android:layout_gravity="center_horizontal"
-        style="?android:attr/borderlessButtonStyle"
-        android:onClick="change_to_EUR"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:text="EUR"
+                android:id="@+id/button3"
+                android:layout_gravity="center_horizontal"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="change_to_EUR"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:text="GBP"
-        android:id="@+id/button4"
-        android:layout_gravity="center_horizontal"
-        style="?android:attr/borderlessButtonStyle"
-        android:onClick="change_to_GBP"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:text="GBP"
+                android:id="@+id/button4"
+                android:layout_gravity="center_horizontal"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="change_to_GBP"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:text="RUB"
+                android:id="@+id/button5"
+                android:layout_gravity="center_horizontal"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="change_to_RUB" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

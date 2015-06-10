@@ -31,6 +31,9 @@ public class MainActivity extends ActionBarActivity {
 
     public static TextToSpeech t1;
 
+    public static String note5000Amt = "0";
+    public static String note1000Amt = "0";
+    public static String note500Amt = "0";
     public static String note100Amt = "0";
     public static String note50Amt = "0";
     public static String note20Amt = "0";
@@ -54,6 +57,9 @@ public class MainActivity extends ActionBarActivity {
     private Toolbar toolbar;
 
     // All edittexts
+    private EditText note5000edit;
+    private EditText note1000edit;
+    private EditText note500edit;
     private EditText note100edit;
     private EditText note50edit;
     private EditText note20edit;
@@ -85,7 +91,9 @@ public class MainActivity extends ActionBarActivity {
         SharedPreferences settings = this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
-
+        note5000edit     = (EditText) findViewById (R.id.notes5000);
+        note1000edit     = (EditText) findViewById (R.id.notes1000);
+        note500edit      = (EditText) findViewById (R.id.notes500);
         note100edit      = (EditText) findViewById (R.id.notes100);
         note50edit       = (EditText) findViewById (R.id.notes50);
         note20edit       = (EditText) findViewById (R.id.notes20);
@@ -105,6 +113,9 @@ public class MainActivity extends ActionBarActivity {
         overlay          = (TextView) findViewById (R.id.OverlayTotal);
 
         // Set text watchers
+        note5000edit.addTextChangedListener(note5000listener);
+        note1000edit.addTextChangedListener(note1000listener);
+        note500edit.addTextChangedListener(note500listener);
         note100edit.addTextChangedListener(note100listener);
         note50edit.addTextChangedListener(note50listener);
         note20edit.addTextChangedListener(note20listener);
@@ -177,6 +188,70 @@ public class MainActivity extends ActionBarActivity {
         super.onDestroy();
     }
 
+    private final TextWatcher note5000listener = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (!note5000edit.getText().toString().equals("")){
+                note5000Amt = note5000edit.getText().toString();
+                System.out.println("note5000listener: " + note5000edit.getText().toString());
+                calcTotal();
+            }
+            if (note5000edit.getText().toString().equals("")) {
+                note5000Amt = "0";
+                calcTotal();
+            }
+        }
+    }; private final TextWatcher note1000listener = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (!note1000edit.getText().toString().equals("")){
+                note1000Amt = note1000edit.getText().toString();
+                System.out.println("note1000listener: " + note1000edit.getText().toString());
+                calcTotal();
+            }
+            if (note1000edit.getText().toString().equals("")) {
+                note1000Amt = "0";
+                calcTotal();
+            }
+        }
+    }; private final TextWatcher note500listener = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (!note500edit.getText().toString().equals("")){
+                note500Amt = note500edit.getText().toString();
+                System.out.println("note500listener: " + note500edit.getText().toString());
+                calcTotal();
+            }
+            if (note500edit.getText().toString().equals("")) {
+                note500Amt = "0";
+                calcTotal();
+            }
+        }
+    };
     private final TextWatcher note100listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -614,6 +689,9 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void clearAll() {
+        note5000edit.setText("");
+        note1000edit.setText("");
+        note500edit.setText("");
         note100edit.setText("");
         note50edit.setText("");
         note20edit.setText("");
@@ -629,9 +707,15 @@ public class MainActivity extends ActionBarActivity {
         cent5edit.setText("");
         cent2edit.setText("");
         cent1edit.setText("");
+        additionaledit.setText("");
+
+        System.out.println("clearAll: All inputs cleared");
     }
 
     public static double calcTotal() {
+        double note5000 = toInt(note5000Amt) * 5000.0;
+        double note1000 = toInt(note1000Amt) * 1000.0;
+        double note500 = toInt(note500Amt) * 500.0;
         double note100 = toInt(note100Amt) * 100.0;
         double note50 = toInt(note50Amt) * 50.0;
         double note20 = toInt(note20Amt) * 20.0;
@@ -650,7 +734,25 @@ public class MainActivity extends ActionBarActivity {
 
         double total = 0;
 
-        double total_numb = note100 + note50 + note20 + note10 + note5 + note1 + euro2 + euro1 + cent50 + cent20 + cent10 + cent5 + cent2 + cent1 + toInt(additionalCoins);
+        double total_numb = note5000
+                + note1000
+                + note500
+                + note100
+                + note50
+                + note20
+                + note10
+                + note5
+                + note1
+                + euro2
+                + euro1
+                + cent50
+                + cent25
+                + cent20
+                + cent10
+                + cent5
+                + cent2
+                + cent1
+                + toInt(additionalCoins);
 
         System.out.println("Done with calculating total");
 
@@ -727,11 +829,24 @@ public class MainActivity extends ActionBarActivity {
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public static void make_a_toast(){
+        String curr = "";
+        if(currentCurrency.equals("EUR")){
+            curr = "Euro";
+        } else if (currentCurrency.equals("USD")) {
+            curr = "Dollars";
+        } else if (currentCurrency.equals("RUB")) {
+            curr = "Roubles";
+        } else if (currentCurrency.equals("GBP")) {
+            curr = "Pounds";
+        } else {
+            curr = "monies";
+        }
         StringBuilder toSpeak = new StringBuilder();
-        toSpeak.append("Your total is: " + getTotal());
+        toSpeak.append("Your total is: " + getTotal()).append(curr);
 
         String Speak = toSpeak.toString();
         System.out.println("make_a_toast (TTS): " + Speak);
+
 
         if(Build.VERSION.RELEASE.startsWith("5")) {
             t1.speak(Speak, TextToSpeech.QUEUE_FLUSH, null, null);
@@ -744,13 +859,15 @@ public class MainActivity extends ActionBarActivity {
     public static final String PREFS_NAME = "PREFS";
     public static final String PREFS_KEY = "PREFS_String";
 
+    public static String currentCurrency;
+
     public String getCurrency() {
         System.out.println("getCurrency: Starting..");
         SharedPreferences settings;
         String text;
         settings = this.getSharedPreferences(PREFS_NAME, this.MODE_PRIVATE);
         text = settings.getString(PREFS_KEY, null);
-
+        currentCurrency = text;
         System.out.println("getCurrency: finished.");
         return text;
     }
@@ -759,6 +876,8 @@ public class MainActivity extends ActionBarActivity {
     public static final String USD = "\u0024";
     public static final String USD_CENT = "\u00A2";
     public static final String GBP = "\u00a3";
+    public static final String RUB = "rubles";
+    public static final String RUB_COIN = "kopeks";
 
     public void hintChecks() {
         String currency = getCurrency();
@@ -779,6 +898,9 @@ public class MainActivity extends ActionBarActivity {
             additionaledit.setHint("Any other additions (in USD)");
 
             // Set visibilities
+            note5000edit.setVisibility(View.GONE);
+            note1000edit.setVisibility(View.GONE);
+            note500edit.setVisibility(View.GONE);
             note100edit.setVisibility(View.VISIBLE);
             note50edit.setVisibility(View.VISIBLE);
             note20edit.setVisibility(View.VISIBLE);
@@ -812,6 +934,9 @@ public class MainActivity extends ActionBarActivity {
             additionaledit.setHint("Any other additions (in euro)");
 
             // Set visibilities
+            note5000edit.setVisibility(View.GONE);
+            note1000edit.setVisibility(View.GONE);
+            note500edit.setVisibility(View.GONE);
             note100edit.setVisibility(View.GONE);
             note50edit.setVisibility(View.VISIBLE);
             note20edit.setVisibility(View.VISIBLE);
@@ -827,6 +952,7 @@ public class MainActivity extends ActionBarActivity {
             cent5edit.setVisibility(View.VISIBLE);
             cent2edit.setVisibility(View.VISIBLE);
             cent1edit.setVisibility(View.VISIBLE);
+            additionaledit.setVisibility(View.VISIBLE);
         } else if (currency.equals("GBP")) {
             // Set hints
             note50edit.setHint(GBP + "50");
@@ -844,6 +970,9 @@ public class MainActivity extends ActionBarActivity {
             additionaledit.setHint("Any other additions (in pound)");
 
             // Set visibilities
+            note5000edit.setVisibility(View.GONE);
+            note1000edit.setVisibility(View.GONE);
+            note500edit.setVisibility(View.GONE);
             note100edit.setVisibility(View.GONE);
             note50edit.setVisibility(View.VISIBLE);
             note20edit.setVisibility(View.VISIBLE);
@@ -859,6 +988,42 @@ public class MainActivity extends ActionBarActivity {
             cent5edit.setVisibility(View.VISIBLE);
             cent2edit.setVisibility(View.VISIBLE);
             cent1edit.setVisibility(View.VISIBLE);
+            additionaledit.setVisibility(View.VISIBLE);
+        } else if(currency.equals("RUB")) {
+            note5000edit.setHint("5,000 " + RUB);
+            note1000edit.setHint("1,000 " + RUB);
+            note500edit.setHint("500 " + RUB);
+            note100edit.setHint("100 " + RUB);
+            note50edit.setHint("50 " + RUB);
+            note5edit.setHint("5 " + RUB);
+            coin2edit.setHint("2 " + RUB);
+            coin1edit.setHint("1 " + RUB);
+            cent50edit.setHint("50 " + RUB_COIN);
+            cent10edit.setHint("10 " + RUB_COIN);
+            cent5edit.setHint("5 " + RUB_COIN);
+            cent1edit.setHint("1 " + RUB_COIN);
+            additionaledit.setHint("Any other additions (in Roubles)");
+
+            // Set visibilities
+            note5000edit.setVisibility(View.VISIBLE);
+            note1000edit.setVisibility(View.VISIBLE);
+            note500edit.setVisibility(View.VISIBLE);
+            note100edit.setVisibility(View.VISIBLE);
+            note50edit.setVisibility(View.VISIBLE);
+            note20edit.setVisibility(View.GONE);
+            note10edit.setVisibility(View.GONE);
+            note5edit.setVisibility(View.VISIBLE);
+            note1edit.setVisibility(View.GONE);
+            coin2edit.setVisibility(View.VISIBLE);
+            coin1edit.setVisibility(View.VISIBLE);
+            cent50edit.setVisibility(View.VISIBLE);
+            cent25edit.setVisibility(View.GONE);
+            cent20edit.setVisibility(View.GONE);
+            cent10edit.setVisibility(View.VISIBLE);
+            cent5edit.setVisibility(View.VISIBLE);
+            cent2edit.setVisibility(View.GONE);
+            cent1edit.setVisibility(View.VISIBLE);
+            additionaledit.setVisibility(View.VISIBLE);
         }
     }
 }
