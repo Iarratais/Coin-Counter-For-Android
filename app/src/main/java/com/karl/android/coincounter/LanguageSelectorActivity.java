@@ -79,7 +79,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
     }
 
     public static final String PREFS_NAME = "PREFS";
-    public static final String PREFS_KEY = "PREFS_String";
+    public static final String PREFS_KEY = "PREFS_Lang";
 
     public void saveLanguage(String text) {
         SharedPreferences lang;

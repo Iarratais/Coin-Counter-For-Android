@@ -85,8 +85,6 @@ public class MainActivity extends ActionBarActivity {
         SharedPreferences settings = this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
-        SharedPreferences lang = this.getSharedPreferences(
-                getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
         note100edit      = (EditText) findViewById (R.id.notes100);
         note50edit       = (EditText) findViewById (R.id.notes50);
