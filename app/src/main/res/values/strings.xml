@@ -34,4 +34,14 @@
     <string name="toolbar">Toolbar</string>
 
     <string name="overlay">0.00</string>
+    <string name="title_activity_feedback">Feedback</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <!-- Feedback screen strings -->
+    <string name="feedback_name_edit">Your name</string>
+    <string name="feedback_email_edit">Email</string>
+    <string name="feedback_comment_edit">Your comment</string>
+    <string name="feedback_submit">Submit</string>
+    <string name="feedback_myemail">coincountr@gmail.com</string>
 </resources>

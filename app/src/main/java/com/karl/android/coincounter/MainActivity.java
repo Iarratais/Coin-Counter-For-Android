@@ -479,6 +479,12 @@ public class MainActivity extends ActionBarActivity {
             case R.id.action_about:
                 openAbout();
                 return true;
+            case R.id.action_clear_all:
+                clearAll();
+                return true;
+            case R.id.action_feedback:
+                give_feedback();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         } // End switch
@@ -494,6 +500,26 @@ public class MainActivity extends ActionBarActivity {
     public void openAbout() {
         Intent intent = new Intent(MainActivity.this, AboutActivity.class);
         startActivity(intent);
+    }
+
+    public void give_feedback() {
+        Intent intent = new Intent(MainActivity.this, FeedbackActivity.class);
+        startActivity(intent);
+    }
+
+    public void clearAll() {
+        note50edit.setText("");
+        note20edit.setText("");
+        note10edit.setText("");
+        note5edit.setText("");
+        coin2edit.setText("");
+        coin1edit.setText("");
+        cent50edit.setText("");
+        cent20edit.setText("");
+        cent10edit.setText("");
+        cent5edit.setText("");
+        cent2edit.setText("");
+        cent1edit.setText("");
     }
 
     public static double calcTotal() {
