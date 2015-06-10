@@ -1,6 +1,7 @@
 package com.karl.android.coincounter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.support.v7.app.ActionBarActivity;
@@ -54,10 +55,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         config.locale = locale;
         this.getApplicationContext().getResources().updateConfiguration(config, null);
         saveLanguage("Spanish");
-        Toast.makeText(this, getResources().getString(R.string.lang_spanish), Toast.LENGTH_SHORT).show();
-
-        String title = getString(R.string.language_title);
-        
+        Toast.makeText(this, getResources().getString(R.string.lang_english), Toast.LENGTH_SHORT).show();
     }
 
     public void change_to_ENGLISH(View view) {
@@ -77,7 +75,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         config.locale = locale;
         this.getApplicationContext().getResources().updateConfiguration(config, null);
         saveLanguage("German");
-        Toast.makeText(this, getResources().getString(R.string.lang_german), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getResources().getString(R.string.lang_english), Toast.LENGTH_SHORT).show();
     }
 
     public static final String PREFS_NAME = "PREFS";

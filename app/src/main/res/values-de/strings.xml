@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title">Über</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="clear_all_title">Alles klar</string>
+    <string name="currency_title">Währung</string>
+    <string name="description">Erstellt am "9. Juni 2015" \nCopyright © Karl Jones \ncoincountr@gmail.com \n \nIst ist willkommen</string>
+    <string name="feedback_comment_edit">Ihr kommentar</string>
+    <string name="feedback_email_edit">Email</string>
+    <string name="feedback_name_edit">Ihren namen</string>
+    <string name="feedback_submit">Einreichen</string>
+    <string name="feedback_title">Rückkopplung</string>
+    <string name="howto"><b>Welcome to Coin Countr \n \n \n \n </b></string>
+    <string name="howto_title">Wie</string>
+    <string name="lang_english">Sprache zu Deutsch verändert</string>
+    <string name="language_title">Sprache</string>
+    <string name="rate_on_play"><b>Preis auf die Play-Shop</b></string>
+    <string name="title_activity_currency_selector">Währung</string>
+    <string name="title_activity_feedback">Rückkopplung</string>
+    <string name="title_activity_language_selector">Sprache</string>
+</resources>

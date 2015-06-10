@@ -2,7 +2,6 @@
 <resources>
     <string name="about_title">Sobre Esto</string>
     <string name="action_settings">Ajustes</string>
-    <string name="extraAdditionsedit_euro">Cualesquiera otras adiciones (en euros)</string>
     <string name="feedback_comment_edit">Tu comentario</string>
     <string name="feedback_email_edit">Correo</string>
     <string name="feedback_name_edit">Su nombre</string>
@@ -18,4 +17,6 @@
     <string name="feedback_title">Realimentación</string>
     <string name="language_title">Idioma</string>
     <string name="clear_all_title">Limpiar todo</string>
+    <string name="title_activity_language_selector">Idioma</string>
+    <string name="lang_english">Idioma cambiado a Español</string>
 </resources>
