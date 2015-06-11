@@ -92,7 +92,7 @@
     <Button
         android:layout_width="207dp"
         android:layout_height="wrap_content"
-        android:text="Rate on the Play Store!"
+        android:text="@string/rate_on_play"
         android:id="@+id/button"
         android:layout_gravity="center_horizontal"
         style="?android:attr/borderlessButtonStyle"

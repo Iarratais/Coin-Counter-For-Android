@@ -18,4 +18,8 @@
     <string name="title_activity_currency_selector">Währung</string>
     <string name="title_activity_feedback">Rückkopplung</string>
     <string name="title_activity_language_selector">Sprache</string>
+    <string name="spanish">Spanisch</string>
+    <string name="german">Alemán</string>
+    <string name="english">Inglés</string>
+    <string name="request_language">Anfrage sprache</string>
 </resources>

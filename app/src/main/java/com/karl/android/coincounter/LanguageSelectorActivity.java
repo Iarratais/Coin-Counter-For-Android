@@ -92,6 +92,10 @@ public class LanguageSelectorActivity extends ActionBarActivity {
 
         startActivity(intent);
     }
+    public void request_language(View view) {
+        Intent intent = new Intent(this, FeedbackActivity.class);
+        startActivity(intent);
+    }
 
     public static final String PREFS_NAME = "PREFS";
     public static final String PREFS_KEY = "PREFS_Lang";

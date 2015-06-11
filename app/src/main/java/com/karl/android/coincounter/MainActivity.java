@@ -52,8 +52,6 @@ public class MainActivity extends ActionBarActivity {
     public static String additionalCoins = "0";
     private static String total = "0";
 
-    public final static String EXTRA_MESSAGE = "com.karl.android.coincounter.MESSAGE";
-
     private Toolbar toolbar;
 
     // All edittexts
@@ -80,6 +78,8 @@ public class MainActivity extends ActionBarActivity {
 
     public AdView adView;
 
+    SharedPreferences settings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,8 +88,9 @@ public class MainActivity extends ActionBarActivity {
         toolbar    = (Toolbar) findViewById (R.id.tool_bar);
         setSupportActionBar(toolbar);
 
-        SharedPreferences settings = this.getSharedPreferences(
+        settings = this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+
 
         note5000edit     = (EditText) findViewById (R.id.notes5000);
         note1000edit     = (EditText) findViewById (R.id.notes1000);
@@ -634,7 +635,6 @@ public class MainActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
         switch (item.getItemId()) {
@@ -758,10 +758,7 @@ public class MainActivity extends ActionBarActivity {
 
         DecimalFormat formatter = new DecimalFormat("#,###.00");
 
-        StringBuilder sb = new StringBuilder();
-        sb.append(formatter.format(total_numb));
-
-        setTotal(sb.toString());
+        setTotal(formatter.format(total_numb));
 
         System.out.println("Total: " + getTotal());
 
@@ -778,8 +775,7 @@ public class MainActivity extends ActionBarActivity {
 
     // Convert String to Integer
     public static int toInt(String number) {
-        int new_num = Integer.parseInt(number);
-        return new_num;
+        return Integer.parseInt(number);
     }
 
     // Convert String into double
@@ -799,52 +795,28 @@ public class MainActivity extends ActionBarActivity {
 
     public static String getTotal() { return total; }
 
-    // Takes a String and double and adds to the total using these two values
-    public static String add_to_total(String incoming_addition, double multiple) {
-        String totalNum = getTotal();
-        System.out.println("add_to_total: " + totalNum + " - totalNum");
-
-        double total_number = toDouble (totalNum);
-        System.out.println("add_to_total: " + total_number + " - total_number");
-
-        double incoming = toDouble (incoming_addition);
-        System.out.println("add_to_total: " + incoming + " - incoming");
-
-        double current = incoming * multiple;
-        System.out.println("add_to_total: " + current + " - current");
-
-        double final_num = total_number + current;
-        System.out.println("add_to_total: " + final_num + " - final_num");
-
-        StringBuilder sb = new StringBuilder();
-        sb.append(final_num);
-
-        String total_final = sb.toString();
-        System.out.println("add_to_total: " + total_final + " - total_final");
-
-        setTotal(total_final);
-
-        return total_final;
-    }
-
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public static void make_a_toast(){
-        String curr = "";
-        if(currentCurrency.equals("EUR")){
-            curr = "Euro";
-        } else if (currentCurrency.equals("USD")) {
-            curr = "Dollars";
-        } else if (currentCurrency.equals("RUB")) {
-            curr = "Roubles";
-        } else if (currentCurrency.equals("GBP")) {
-            curr = "Pounds";
-        } else {
-            curr = "monies";
-        }
-        StringBuilder toSpeak = new StringBuilder();
-        toSpeak.append("Your total is: " + getTotal()).append(curr);
+        String curr;
+        switch (currentCurrency) {
+            case "EUR":
+                curr = "Euro";
+                break;
+            case "RUB":
+                curr = "Roubles";
+                break;
+            case "USD":
+                curr = "Dollars";
+                break;
+            case "GBP":
+                curr = "Pounds";
+                break;
+            default:
+                curr = "Monies";
+                break;
+        } // End switch
 
-        String Speak = toSpeak.toString();
+        String Speak = ("Your total is: " + getTotal()) + curr;
         System.out.println("make_a_toast (TTS): " + Speak);
 
 
@@ -867,30 +839,32 @@ public class MainActivity extends ActionBarActivity {
         String text;
         settings = this.getSharedPreferences(PREFS_NAME, this.MODE_PRIVATE);
         text = settings.getString(PREFS_KEY, null);
+        if(text == null) {
+            text = "EUR";
+        }
         currentCurrency = text;
         System.out.println("getCurrency: finished.");
         return text;
     }
 
     public static final String EUR = "\u20AC";
-    public static final String USD = "\u0024";
+    public static final String USD_ = "\u0024";
     public static final String USD_CENT = "\u00A2";
     public static final String GBP = "\u00a3";
     public static final String RUB = "rubles";
     public static final String RUB_COIN = "kopeks";
 
     public void hintChecks() {
-        String currency = getCurrency();
         System.out.println("hintChecked: " + getCurrency());
 
-        if(currency.equals("USD")) {
+        if(currentCurrency.equals("USD")){
             // Set hints
-            note100edit.setHint(USD + "100");
-            note50edit.setHint(USD + "50");
-            note20edit.setHint(USD + "20");
-            note10edit.setHint(USD + "10");
-            note5edit.setHint(USD + "5");
-            note1edit.setHint(USD + "1");
+            note100edit.setHint(USD_ + "100");
+            note50edit.setHint(USD_ + "50");
+            note20edit.setHint(USD_ + "20");
+            note10edit.setHint(USD_ + "10");
+            note5edit.setHint(USD_ + "5");
+            note1edit.setHint(USD_ + "1");
             cent25edit.setHint("25" + USD_CENT);
             cent10edit.setHint("10" + USD_CENT);
             cent5edit.setHint("5" + USD_CENT);
@@ -916,8 +890,8 @@ public class MainActivity extends ActionBarActivity {
             cent5edit.setVisibility(View.VISIBLE);
             cent2edit.setVisibility(View.GONE);
             cent1edit.setVisibility(View.VISIBLE);
-
-        } else if (currency.equals("EUR")) {
+        } // End USD
+        else if (currentCurrency.equals("EUR")){
             // Set hints
             note50edit.setHint(EUR + "50");
             note20edit.setHint(EUR + "20");
@@ -953,7 +927,8 @@ public class MainActivity extends ActionBarActivity {
             cent2edit.setVisibility(View.VISIBLE);
             cent1edit.setVisibility(View.VISIBLE);
             additionaledit.setVisibility(View.VISIBLE);
-        } else if (currency.equals("GBP")) {
+        } // End EUR
+        else if (currentCurrency.equals("GBP")){
             // Set hints
             note50edit.setHint(GBP + "50");
             note20edit.setHint(GBP + "20");
@@ -989,7 +964,8 @@ public class MainActivity extends ActionBarActivity {
             cent2edit.setVisibility(View.VISIBLE);
             cent1edit.setVisibility(View.VISIBLE);
             additionaledit.setVisibility(View.VISIBLE);
-        } else if(currency.equals("RUB")) {
+        } // End GBP
+        else if (currentCurrency.equals("RUB")){
             note5000edit.setHint("5,000 " + RUB);
             note1000edit.setHint("1,000 " + RUB);
             note500edit.setHint("500 " + RUB);
@@ -1024,7 +1000,8 @@ public class MainActivity extends ActionBarActivity {
             cent2edit.setVisibility(View.GONE);
             cent1edit.setVisibility(View.VISIBLE);
             additionaledit.setVisibility(View.VISIBLE);
-        }
+        } // End RUB
+
     }
 }
 
