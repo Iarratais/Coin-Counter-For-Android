@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android.support.design:hintTextAppearance="@style/TextAppearance.AppCompat">
         <EditText
-            android:maxLength="4"
+            android:maxLength="140"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
@@ -40,7 +40,7 @@
             android:fontFamily="sans-serif"
             android:id="@+id/total_title"
             android:hint="@string/total_title_"
-            android:inputType="textCapSentences"
+            android:inputType="textCapWords"
             />
     </android.support.design.widget.TextInputLayout>
 

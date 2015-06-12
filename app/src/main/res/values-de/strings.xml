@@ -3,7 +3,7 @@
     <string name="about_title">Über</string>
     <string name="action_settings">Einstellungen</string>
     <string name="currency_title">Währung</string>
-    <string name="description">Erstellt am "9. Juni 2015" \nCopyright © Karl Jones \ncoincountr@gmail.com \n \nIst ist willkommen</string>
+    <string name="description">Copyright © Karl Jones \ncoincountr@gmail.com \n \nIst ist willkommen</string>
     <string name="feedback_comment_edit">Ihr kommentar</string>
     <string name="feedback_email_edit">Email</string>
     <string name="feedback_name_edit">Ihren namen</string>
@@ -20,7 +20,6 @@
     <string name="spanish">Spanisch</string>
     <string name="german">Alemán</string>
     <string name="english">Inglés</string>
-    <string name="request_language">Anfrage sprache</string>
     <string name="lithuanian">Litauisch</string>
     <string name="italian">Italienisch</string>
     <string name="russian">Russisch</string>
@@ -30,4 +29,22 @@
     <string name="romanian">Rumänisch</string>
     <string name="french">Französisch</string>
     <string name="total_title_">Titel</string>
+    <string name="bulgarian">Bulgarisch</string>
+    <string name="croatian">Kroatisch</string>
+    <string name="czech">Tschechisch</string>
+    <string name="danish">Dänisch</string>
+    <string name="dutch">Holländisch</string>
+    <string name="estonian">Estnisch</string>
+    <string name="greek">Griechisch</string>
+    <string name="hungarian">Ungarisch</string>
+    <string name="irish">Irisch</string>
+    <string name="latvian">Lettisch</string>
+    <string name="maltese">Maltesisch</string>
+    <string name="portuguese">Portugiesisch</string>
+    <string name="slovak">Slowakisch</string>
+    <string name="slovienian">Slowenisch</string>
+    <string name="swedish">Schwedisch</string>
+    <string name="ukrainian">Ukrainisch</string>
+    <string name="changed_curr">Geändert Währung:</string>
+    <string name="finnish">Finnisch</string>
 </resources>

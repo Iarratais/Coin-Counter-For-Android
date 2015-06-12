@@ -4,7 +4,7 @@
     <string name="action_settings">Setari</string>
     <string name="clear_all_title">Curata tot</string>
     <string name="currency_title">Valuta</string>
-    <string name="description">Elaborate pe "09 iunie 2015 \nDrepturi de autor © de Karl Jones \ncoincountr@gmail.com \nFeedback este apreciat</string>
+    <string name="description">Drepturi de autor © de Karl Jones \ncoincountr@gmail.com \nFeedback este apreciat</string>
     <string name="english">Engleză</string>
     <string name="feedback_comment_edit">Comentariul tau</string>
     <string name="feedback_email_edit">Email</string>
@@ -20,7 +20,6 @@
     <string name="lithuanian">Lituaniană</string>
     <string name="polish">Polonez</string>
     <string name="rate_on_play">Rata de pe magazinul Play!</string>
-    <string name="request_language">Solicita o limbă</string>
     <string name="russian">Rusă</string>
     <string name="spanish">Spaniolă</string>
     <string name="title_activity_currency_selector">Valuta</string>
@@ -30,4 +29,22 @@
     <string name="romanian">Român</string>
     <string name="french">Franceză</string>
     <string name="total_title_">Titlu</string>
+    <string name="changed_curr">Valută a fost schimbat la:</string>
+    <string name="bulgarian">bulgară</string>
+    <string name="croatian">croat</string>
+    <string name="czech">cehă</string>
+    <string name="danish">daneză</string>
+    <string name="dutch">olandeză</string>
+    <string name="estonian">eston</string>
+    <string name="finnish">finlandeză</string>
+    <string name="greek">greacă</string>
+    <string name="hungarian">maghiară</string>
+    <string name="irish">irlandez</string>
+    <string name="latvian">letonă</string>
+    <string name="maltese">maltez</string>
+    <string name="portuguese">portugheză</string>
+    <string name="slovak">slovacă</string>
+    <string name="slovienian">sloven</string>
+    <string name="swedish">suedeză</string>
+    <string name="ukrainian">ucraineană</string>
 </resources>

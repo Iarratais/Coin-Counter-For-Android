@@ -14,7 +14,6 @@
     <string name="lang_english">Ora disponibile in Italiano</string>
     <string name="language_title">Lingua</string>
     <string name="rate_on_play">Prezzo sul Play Store</string>
-    <string name="request_language">Richiedi una lingua</string>
     <string name="spanish">Spagnolo</string>
     <string name="title_activity_currency_selector">Valuta</string>
     <string name="title_activity_feedback">Feedback</string>
@@ -24,10 +23,28 @@
     <string name="howto">Benvenuti a Coin Countr</string>
     <string name="lithuanian">Lituano</string>
     <string name="russian">Russo</string>
-    <string name="description">Compilato il "9 giu 2015" \nCopyright © Karl Jones \ncoincountr@gmail.com \n \nFeedback è apprezzato</string>
+    <string name="description">Copyright © Karl Jones \ncoincountr@gmail.com \n \nFeedback è apprezzato</string>
     <string name="polish">Polacco</string>
     <string name="additions">Eventuali altre aggiunte, in: </string>
     <string name="romanian">Rumeno</string>
     <string name="french">Francese</string>
     <string name="total_title_">Titolo</string>
+    <string name="changed_curr">Cambiato valuta in:</string>
+    <string name="bulgarian">bulgaro</string>
+    <string name="croatian">croato</string>
+    <string name="czech">Ceco</string>
+    <string name="danish">danese</string>
+    <string name="dutch">olandese</string>
+    <string name="estonian">Estone</string>
+    <string name="finnish">Finlandese</string>
+    <string name="greek">Greco</string>
+    <string name="hungarian">Ungherese</string>
+    <string name="irish">Irlandese</string>
+    <string name="latvian">Lettone</string>
+    <string name="maltese">Maltese</string>
+    <string name="portuguese">portoghese</string>
+    <string name="slovak">Slovacco</string>
+    <string name="slovienian">Sloveno</string>
+    <string name="swedish">Svedese</string>
+    <string name="ukrainian">Ucraino</string>
 </resources>

@@ -16,7 +16,6 @@
     <string name="language_title">Зыбратв язык</string>
     <string name="title_activity_feedback">Отзывы</string>
     <string name="rate_on_play">Оцени аппликацино в „Play Store”</string>
-    <string name="request_language">Поиск нужного языка</string>
     <string name="spanish">Испанский</string>
     <string name="title_activity_language_selector">Зыбратв язык</string>
     <string name="english">Английский</string>
@@ -25,9 +24,27 @@
     <string name="polish">Польский</string>
     <string name="lithuanian">Литовский</string>
     <string name="howto">Добро пожаловать в Coin Countr</string>
-    <string name="description">Составитель на "9 июня 2015" \nCopyright © Карла Джонса \ncoincountr@gmail.com \п \nFeedback ценится</string>
+    <string name="description">Copyright © Карла Джонса \ncoincountr@gmail.com \п \nFeedback ценится</string>
     <string name="additions">Любые другие дополнения, в:</string>
     <string name="romanian">Pумынский</string>
     <string name="french">французский</string>
     <string name="total_title_">Hазвание</string>
+    <string name="changed_curr">Изменено валюту:</string>
+    <string name="bulgarian">болгарский</string>
+    <string name="croatian">хорватский</string>
+    <string name="czech">чешский</string>
+    <string name="danish">датский</string>
+    <string name="dutch">голландский</string>
+    <string name="estonian">эстонский</string>
+    <string name="finnish">финский</string>
+    <string name="greek">греческий</string>
+    <string name="hungarian">венгерский</string>
+    <string name="irish">ирландский</string>
+    <string name="latvian">латышский</string>
+    <string name="maltese">мальтийский</string>
+    <string name="portuguese">португальский</string>
+    <string name="slovak">словацкий</string>
+    <string name="slovienian">словенский</string>
+    <string name="swedish">шведский</string>
+    <string name="ukrainian">украинский</string>
 </resources>

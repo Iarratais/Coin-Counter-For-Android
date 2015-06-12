@@ -49,28 +49,28 @@ public class CurrencySelectorActivity extends ActionBarActivity{
 
     public void change_to_USD(View view) {
         saveCurrency("USD");
-        Toast.makeText(this, "Changed currency to USD", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.changed_curr) + " USD", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
     public void change_to_GBP(View view) {
         saveCurrency("GBP");
-        Toast.makeText(this, "Changed currency to GBP", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.changed_curr) + " GBP", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
     public void change_to_EUR(View view) {
         saveCurrency("EUR");
-        Toast.makeText(this, "Changed currency to EUR", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.changed_curr) + " EUR", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
     public void change_to_RUB(View view) {
         saveCurrency("RUB");
-        Toast.makeText(this, "Changed currency to RUB", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.changed_curr) + " RUB", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

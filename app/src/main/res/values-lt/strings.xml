@@ -14,12 +14,11 @@
     <string name="howto_title">Kaip nalidotis</string>
     <string name="lang_english">Pakeista į lietuvių kalbą</string>
     <string name="language_title">Kalba</string>
-    <string name="request_language">Ieškoha kalba</string>
     <string name="rate_on_play">Įvertink Play Store!</string>
     <string name="spanish">Ispanų</string>
     <string name="title_activity_currency_selector">Valiuta</string>
     <string name="title_activity_feedback">Atsiliepimai</string>
-    <string name="description">Parengė ant "9 Bir 2015" \nAutortiesības © Karl Jones \ncoincountr@gmail.com \n \nFeedback yra vertinama</string>
+    <string name="description">Autortiesības © Karl Jones \ncoincountr@gmail.com \n \nFeedback yra vertinama</string>
     <string name="lithuanian">Lietuvos</string>
     <string name="russian">Rusijos</string>
     <string name="title_activity_language_selector">Kalba</string>
@@ -30,4 +29,22 @@
     <string name="romanian">Rumunų</string>
     <string name="french">Prancūzų</string>
     <string name="total_title_">Pavadinimas</string>
+    <string name="changed_curr">Pasikeitė valiutą:</string>
+    <string name="bulgarian">bulgarų</string>
+    <string name="croatian">kroatų</string>
+    <string name="czech">Čekijos</string>
+    <string name="danish">Danijos</string>
+    <string name="dutch">olandų</string>
+    <string name="estonian">Estijos</string>
+    <string name="finnish">suomių</string>
+    <string name="greek">graikų</string>
+    <string name="hungarian">vengrų</string>
+    <string name="irish">airių</string>
+    <string name="latvian">Latvijos</string>
+    <string name="maltese">Maltos</string>
+    <string name="portuguese">portugalų</string>
+    <string name="slovak">slovakų</string>
+    <string name="slovienian">slovėnų</string>
+    <string name="swedish">švedų</string>
+    <string name="ukrainian">ukrainiečių</string>
 </resources>

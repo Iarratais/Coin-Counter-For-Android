@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_title">O aplikacji</string>
-    <string name="action_settings">Ustawienia</string>
+    <string name="action_settings">Opcje</string>
     <string name="clear_all_title">Jasny</string>
     <string name="currency_title">Waluta</string>
     <string name="english">Angielski</string>
@@ -14,7 +14,6 @@
     <string name="howto_title">Jak vżywać</string>
     <string name="lang_english">Jezyk na Polski zmieniono</string>
     <string name="language_title">Język</string>
-    <string name="request_language">Oceń a tlumaczenie w innym język</string>
     <string name="spanish">Hiszpański</string>
     <string name="title_activity_currency_selector">Waluta</string>
     <string name="title_activity_feedback">Opinie o aplikacji</string>
@@ -24,10 +23,28 @@
     <string name="lithuanian">Litewski</string>
     <string name="italian">Włoski</string>
     <string name="howto">Witamy w Coin Countr</string>
-    <string name="description">Opracowano na "09 czerwca 2015" \nCopyright © Karla Jones \ncoincountr@gmail.com \n \nFeedback jest doceniana</string>
+    <string name="description">Copyright © Karl Jones \ncoincountr@gmail.com \n \nFeedback jest doceniana</string>
     <string name="russian">Rosyjski</string>
     <string name="additions">Wszelkie inne dodatki, w: </string>
     <string name="romanian">Rumuński</string>
     <string name="french">Francuski</string>
     <string name="total_title_">Tytuł</string>
+    <string name="changed_curr">Zmieniono walutę:</string>
+    <string name="bulgarian">bułgarski</string>
+    <string name="croatian">chorwacki</string>
+    <string name="czech">Czech</string>
+    <string name="danish">duński</string>
+    <string name="dutch">holenderski</string>
+    <string name="estonian">estoński</string>
+    <string name="finnish">fiński</string>
+    <string name="greek">grecki</string>
+    <string name="hungarian">węgierski</string>
+    <string name="irish">irlandzki</string>
+    <string name="latvian">łotewski</string>
+    <string name="maltese">Maltańczyk</string>
+    <string name="slovak">słowacki</string>
+    <string name="slovienian">słoweński</string>
+    <string name="swedish">szwedzki</string>
+    <string name="ukrainian">ukraiński</string>
+    <string name="portuguese">portugalski</string>
 </resources>
