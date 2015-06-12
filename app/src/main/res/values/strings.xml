@@ -95,5 +95,5 @@
     <string name="swedish">Swedish</string>
 
     <string name="button_placeholder" translatable="false">Placeholder</string>
-    <string name="description">Compiled on "9 June 2015\nCopyright © of Karl Jones\ncoincountr@gmail.com\nFeedback is appreciated</string>
+    <string name="description">Copyright © of Karl Jones\ncoincountr@gmail.com\nFeedback is appreciated</string>
 </resources>
