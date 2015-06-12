@@ -58,6 +58,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         strings.add(getString(R.string.czech));         // 3
         strings.add(getString(R.string.danish));        // 4
         strings.add(getString(R.string.dutch));         // 5
+        strings.add(getString(R.string.esperanto));
         strings.add(getString(R.string.english));       // 6
         strings.add(getString(R.string.estonian));      // 7
         strings.add(getString(R.string.finnish));       // 8
@@ -94,7 +95,6 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         }
     }
 
-
     View.OnClickListener btnclick = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -115,66 +115,69 @@ public class LanguageSelectorActivity extends ActionBarActivity {
                     change_to_DUTCH(view);
                     break;
                 case 5:
-                    change_to_ENGLISH(view);
+                    change_to_ESPERANTO(view);
                     break;
                 case 6:
-                    change_to_ESTONIAN(view);
+                    change_to_ENGLISH(view);
                     break;
                 case 7:
-                    change_to_FINNISH(view);
+                    change_to_ESTONIAN(view);
                     break;
                 case 8:
-                    change_to_FRENCH(view);
+                    change_to_FINNISH(view);
                     break;
                 case 9:
-                    change_to_GERMAN(view);
+                    change_to_FRENCH(view);
                     break;
                 case 10:
-                    change_to_GREEK(view);
+                    change_to_GERMAN(view);
                     break;
                 case 11:
-                    change_to_HUNGARIAN(view);
+                    change_to_GREEK(view);
                     break;
                 case 12:
-                    change_to_IRISH(view);
+                    change_to_HUNGARIAN(view);
                     break;
                 case 13:
-                    change_to_ITALIAN(view);
+                    change_to_IRISH(view);
                     break;
                 case 14:
-                    change_to_LATVIAN(view);
+                    change_to_ITALIAN(view);
                     break;
                 case 15:
-                    change_to_LITHUANIAN(view);
+                    change_to_LATVIAN(view);
                     break;
                 case 16:
-                    change_to_MALTESE(view);
+                    change_to_LITHUANIAN(view);
                     break;
                 case 17:
-                    change_to_POLISH(view);
+                    change_to_MALTESE(view);
                     break;
                 case 18:
-                    change_to_PORTUGUESE(view);
+                    change_to_POLISH(view);
                     break;
                 case 19:
-                    change_to_ROMANIAN(view);
+                    change_to_PORTUGUESE(view);
                     break;
                 case 20:
-                    change_to_RUSSIAN(view);
+                    change_to_ROMANIAN(view);
                     break;
                 case 21:
-                    change_to_SLOVAK(view);
+                    change_to_RUSSIAN(view);
                     break;
                 case 22:
-                    change_to_SLOVENIAN(view);
+                    change_to_SLOVAK(view);
                     break;
                 case 23:
-                    change_to_SPANISH(view);
+                    change_to_SLOVENIAN(view);
                     break;
                 case 24:
-                    change_to_SWEDISH(view);
+                    change_to_SPANISH(view);
                     break;
                 case 25:
+                    change_to_SWEDISH(view);
+                    break;
+                case 26:
                     change_to_UKRAINIAN(view);
                     break;
                 default:
@@ -247,6 +250,20 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         config.locale = locale;
         this.getApplicationContext().getResources().updateConfiguration(config, null);
         saveLanguage("Russian");
+
+        Intent intent = new Intent(this, MainActivity.class);
+
+        Toast.makeText(this, getResources().getString(R.string.lang_english), Toast.LENGTH_SHORT).show();
+
+        startActivity(intent);
+    }
+    public void change_to_ESPERANTO(View view) {
+        Locale locale = new Locale("eo");
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        this.getApplicationContext().getResources().updateConfiguration(config, null);
+        saveLanguage("Esperanto");
 
         Intent intent = new Intent(this, MainActivity.class);
 
