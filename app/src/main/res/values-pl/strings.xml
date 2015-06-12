@@ -26,4 +26,7 @@
     <string name="howto">Witamy w Coin Countr</string>
     <string name="description">Opracowano na "09 czerwca 2015" \nCopyright © Karla Jones \ncoincountr@gmail.com \n \nFeedback jest doceniana</string>
     <string name="russian">Rosyjski</string>
+    <string name="additions">Wszelkie inne dodatki, w: </string>
+    <string name="romanian">Rumuński</string>
+    <string name="french">Francuski</string>
 </resources>

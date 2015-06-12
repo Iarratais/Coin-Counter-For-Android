@@ -79,6 +79,7 @@ public class MainActivity extends ActionBarActivity {
     public AdView adView;
 
     SharedPreferences settings;
+    SharedPreferences lang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +91,6 @@ public class MainActivity extends ActionBarActivity {
 
         settings = this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-
 
         note5000edit     = (EditText) findViewById (R.id.notes5000);
         note1000edit     = (EditText) findViewById (R.id.notes1000);
@@ -838,10 +838,8 @@ public class MainActivity extends ActionBarActivity {
         SharedPreferences settings;
         String text;
         settings = this.getSharedPreferences(PREFS_NAME, this.MODE_PRIVATE);
-        text = settings.getString(PREFS_KEY, null);
-        if(text == null) {
-            text = "EUR";
-        }
+        text = settings.getString(PREFS_KEY, "EUR");
+
         currentCurrency = text;
         System.out.println("getCurrency: finished.");
         return text;
@@ -851,7 +849,7 @@ public class MainActivity extends ActionBarActivity {
     public static final String USD_ = "\u0024";
     public static final String USD_CENT = "\u00A2";
     public static final String GBP = "\u00a3";
-    public static final String RUB = "rubles";
+    public static final String RUB = "\u20BD";
     public static final String RUB_COIN = "kopeks";
 
     public void hintChecks() {
@@ -869,7 +867,7 @@ public class MainActivity extends ActionBarActivity {
             cent10edit.setHint("10" + USD_CENT);
             cent5edit.setHint("5" + USD_CENT);
             cent1edit.setHint("1" + USD_CENT);
-            additionaledit.setHint("Any other additions (in USD)");
+            additionaledit.setHint(getResources().getString(R.string.additions) + " " + USD_);
 
             // Set visibilities
             note5000edit.setVisibility(View.GONE);
@@ -905,7 +903,7 @@ public class MainActivity extends ActionBarActivity {
             cent5edit.setHint("5c");
             cent2edit.setHint("2c");
             cent1edit.setHint("1c");
-            additionaledit.setHint("Any other additions (in euro)");
+            additionaledit.setHint(getResources().getString(R.string.additions) + " " + EUR);
 
             // Set visibilities
             note5000edit.setVisibility(View.GONE);
@@ -942,7 +940,7 @@ public class MainActivity extends ActionBarActivity {
             cent5edit.setHint("5p");
             cent2edit.setHint("2p");
             cent1edit.setHint("1p");
-            additionaledit.setHint("Any other additions (in pound)");
+            additionaledit.setHint(getResources().getString(R.string.additions) + " " + GBP);
 
             // Set visibilities
             note5000edit.setVisibility(View.GONE);
@@ -966,19 +964,19 @@ public class MainActivity extends ActionBarActivity {
             additionaledit.setVisibility(View.VISIBLE);
         } // End GBP
         else if (currentCurrency.equals("RUB")){
-            note5000edit.setHint("5,000 " + RUB);
-            note1000edit.setHint("1,000 " + RUB);
-            note500edit.setHint("500 " + RUB);
-            note100edit.setHint("100 " + RUB);
-            note50edit.setHint("50 " + RUB);
-            note5edit.setHint("5 " + RUB);
-            coin2edit.setHint("2 " + RUB);
-            coin1edit.setHint("1 " + RUB);
+            note5000edit.setHint(RUB + "5,000 ");
+            note1000edit.setHint(RUB + "1,000 ");
+            note500edit.setHint(RUB + "500 ");
+            note100edit.setHint(RUB + "100 ");
+            note50edit.setHint(RUB + "50 ");
+            note5edit.setHint(RUB + "5 ");
+            coin2edit.setHint(RUB + "2 ");
+            coin1edit.setHint(RUB + "1 ");
             cent50edit.setHint("50 " + RUB_COIN);
             cent10edit.setHint("10 " + RUB_COIN);
             cent5edit.setHint("5 " + RUB_COIN);
             cent1edit.setHint("1 " + RUB_COIN);
-            additionaledit.setHint("Any other additions (in Roubles)");
+            additionaledit.setHint(getResources().getString(R.string.additions) + " " + RUB);
 
             // Set visibilities
             note5000edit.setVisibility(View.VISIBLE);
@@ -1001,7 +999,6 @@ public class MainActivity extends ActionBarActivity {
             cent1edit.setVisibility(View.VISIBLE);
             additionaledit.setVisibility(View.VISIBLE);
         } // End RUB
-
     }
 }
 

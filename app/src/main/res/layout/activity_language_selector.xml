@@ -72,6 +72,22 @@
                 style="?android:attr/borderlessButtonStyle"
                 android:onClick="change_to_LITHUANIAN"
                 />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:text="@string/romanian"
+                android:id="@+id/button10"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="change_to_ROMANIAN"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:text="@string/french"
+                android:id="@+id/button11"
+                style="?android:attr/borderlessButtonStyle"
+                android:onClick="change_to_FRENCH"
+                />
 
             <Button
                 android:layout_width="match_parent"

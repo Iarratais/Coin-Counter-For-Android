@@ -2,7 +2,6 @@
 <resources>
     <string name="about_title">Über</string>
     <string name="action_settings">Einstellungen</string>
-    <string name="clear_all_title">Alles klar</string>
     <string name="currency_title">Währung</string>
     <string name="description">Erstellt am "9. Juni 2015" \nCopyright © Karl Jones \ncoincountr@gmail.com \n \nIst ist willkommen</string>
     <string name="feedback_comment_edit">Ihr kommentar</string>
@@ -26,4 +25,8 @@
     <string name="italian">Italienisch</string>
     <string name="russian">Russisch</string>
     <string name="polish">Polnisch</string>
+    <string name="additions">Alle anderen Zusätzen, in: </string>
+    <string name="clear_all_title">Löschen</string>
+    <string name="romanian">Rumänisch</string>
+    <string name="french">Französisch</string>
 </resources>

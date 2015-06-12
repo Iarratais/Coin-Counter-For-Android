@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title">Environ</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="additions">Tous les autres ajouts, à:</string>
+    <string name="clear_all_title">Effacer tout</string>
+    <string name="currency_title">Monnaie</string>
+    <string name="description">Compilé sur "9 Juin 2015 \nCopyright © de Karl Jones \ncoincountr@gmail.com \nFeedback est apprécié</string>
+    <string name="english">Anglais</string>
+    <string name="feedback_comment_edit">Votre commentaire</string>
+    <string name="feedback_email_edit">Email</string>
+    <string name="feedback_name_edit">Votre nom</string>
+    <string name="feedback_submit">Soumettez</string>
+    <string name="feedback_title">Réaction</string>
+    <string name="german">Allemand</string>
+    <string name="howto">Bienvenue à Coin Countr</string>
+    <string name="howto_title">Comment utiliser</string>
+    <string name="italian">Italien</string>
+    <string name="lang_english">Changement de la langue française</string>
+    <string name="language_title">Langue</string>
+    <string name="lithuanian">Lituanien</string>
+    <string name="polish">Polonais</string>
+    <string name="rate_on_play">Prix sur le magasin Play</string>
+    <string name="request_language">Demander une langue</string>
+    <string name="romanian">Roumain</string>
+    <string name="russian">Russe</string>
+    <string name="spanish">Espagnol</string>
+    <string name="title_activity_currency_selector">Monnaie</string>
+    <string name="title_activity_feedback">Réaction</string>
+    <string name="title_activity_language_selector">Langue</string>
+    <string name="french">Français</string>
+</resources>

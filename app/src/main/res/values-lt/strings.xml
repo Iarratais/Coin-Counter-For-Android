@@ -26,4 +26,7 @@
     <string name="howto"><b> Sveiki Coin countr</b></string>
     <string name="italian">Italų</string>
     <string name="polish">Lenkų</string>
+    <string name="additions">Ar noretum dar ka nors prideti, į: </string>
+    <string name="romanian">Rumunų</string>
+    <string name="french">Prancūzų</string>
 </resources>

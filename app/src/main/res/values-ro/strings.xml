@@ -26,4 +26,7 @@
     <string name="title_activity_currency_selector">Valuta</string>
     <string name="title_activity_feedback">Feedback</string>
     <string name="title_activity_language_selector">Limba</string>
+    <string name="additions">Orice alte adăugiri, în: </string>
+    <string name="romanian">Român</string>
+    <string name="french">Franceză</string>
 </resources>

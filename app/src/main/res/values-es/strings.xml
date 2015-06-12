@@ -26,4 +26,7 @@
     <string name="italian">Italiano</string>
     <string name="lithuanian">Lituano</string>
     <string name="polish">Polaco</string>
+    <string name="additions">Cualesquiera otras adiciones, en: </string>
+    <string name="romanian">Rumano</string>
+    <string name="french">Francés</string>
 </resources>
