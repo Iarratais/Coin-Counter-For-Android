@@ -9,10 +9,22 @@ To use:
   <li>Get output!</li>
 </ol>
 
-To do:
+Languages:
 <ul>
-  <li>Add the ability to save and to name your save</li>
-  <li>Have saves in a card view</li>
-  <li>Ability to add more if needed</li>
-  <li>Nicer transitions</li>
+  <li>English</li>
+  <li>German</li>
+  <li>Spanish</li>
+  <li>Romanian</li>
+  <li>Russian</li>
+  <li>Italian</li>
+  <li>Polish</li>
+  <li>Lithuanian</li>
+</ul>
+
+Currencies:
+<ul>
+  <li>EUR</li>
+  <li>USD</li>
+  <li>RUB</li>
+  <li>GBP</li>
 </ul>
