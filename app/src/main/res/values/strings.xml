@@ -3,6 +3,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="appDescription" translatable="false">Coin Counter</string>
+    <string name="total_title_">Title</string>
     <string name="notes5000edit" translatable="false"> </string>
     <string name="notes1000edit" translatable="false"> </string>
     <string name="notes500edit" translatable="false"> </string>

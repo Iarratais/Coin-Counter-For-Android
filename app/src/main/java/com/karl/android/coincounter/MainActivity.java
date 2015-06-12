@@ -31,6 +31,7 @@ public class MainActivity extends ActionBarActivity {
 
     public static TextToSpeech t1;
 
+    public static String total_title_ = "";
     public static String note5000Amt = "0";
     public static String note1000Amt = "0";
     public static String note500Amt = "0";
@@ -55,6 +56,7 @@ public class MainActivity extends ActionBarActivity {
     private Toolbar toolbar;
 
     // All edittexts
+    private EditText total_title;
     private EditText note5000edit;
     private EditText note1000edit;
     private EditText note500edit;
@@ -92,6 +94,7 @@ public class MainActivity extends ActionBarActivity {
         settings = this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
+        total_title      = (EditText) findViewById (R.id.total_title);
         note5000edit     = (EditText) findViewById (R.id.notes5000);
         note1000edit     = (EditText) findViewById (R.id.notes1000);
         note500edit      = (EditText) findViewById (R.id.notes500);
@@ -114,6 +117,7 @@ public class MainActivity extends ActionBarActivity {
         overlay          = (TextView) findViewById (R.id.OverlayTotal);
 
         // Set text watchers
+        total_title.addTextChangedListener(total_title_listener);
         note5000edit.addTextChangedListener(note5000listener);
         note1000edit.addTextChangedListener(note1000listener);
         note500edit.addTextChangedListener(note500listener);
@@ -158,6 +162,7 @@ public class MainActivity extends ActionBarActivity {
         adView.loadAd(adRequest);
 
         hintChecks();
+        clearAll();
     } // End onCreate()
 
 
@@ -188,7 +193,27 @@ public class MainActivity extends ActionBarActivity {
         }
         super.onDestroy();
     }
+    private final TextWatcher total_title_listener = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
 
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (!total_title.getText().toString().equals("")){
+                total_title_ = total_title.getText().toString();
+                System.out.println("total_title_listener: " + total_title.getText().toString());
+            }
+            if (total_title.getText().toString().equals("")) {
+                total_title_ = "0";
+                calcTotal();
+            }
+        }
+    };
     private final TextWatcher note5000listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -210,7 +235,8 @@ public class MainActivity extends ActionBarActivity {
                 calcTotal();
             }
         }
-    }; private final TextWatcher note1000listener = new TextWatcher() {
+    };
+    private final TextWatcher note1000listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         }
@@ -689,6 +715,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void clearAll() {
+        total_title.setText("");
         note5000edit.setText("");
         note1000edit.setText("");
         note500edit.setText("");
