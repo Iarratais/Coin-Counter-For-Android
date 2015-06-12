@@ -10,7 +10,7 @@
     <string name="feedback_name_edit">Ihren namen</string>
     <string name="feedback_submit">Einreichen</string>
     <string name="feedback_title">Rückkopplung</string>
-    <string name="howto"><b>Welcome to Coin Countr \n \n \n \n </b></string>
+    <string name="howto"><b>Willkommen auf Coin Countr \n \n \n \n </b></string>
     <string name="howto_title">Wie</string>
     <string name="lang_english">Sprache zu Deutsch verändert</string>
     <string name="language_title">Sprache</string>
@@ -22,4 +22,8 @@
     <string name="german">Alemán</string>
     <string name="english">Inglés</string>
     <string name="request_language">Anfrage sprache</string>
+    <string name="lithuanian">Litauisch</string>
+    <string name="italian">Italienisch</string>
+    <string name="russian">Russisch</string>
+    <string name="polish">Polnisch</string>
 </resources>

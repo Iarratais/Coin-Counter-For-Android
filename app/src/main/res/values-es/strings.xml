@@ -10,7 +10,7 @@
     <string name="howto_title">Cómo</string>
     <string name="howto"><b> Bienvenido a Coin Countr \n\n \n \n </b></string>
     <string name="description">Compilado de "09 de junio 2015" \nCopyright © de Karl Jones \ncoincountr@gmail.com \n \nFeedback se agradece</string>
-    <string name="title_activity_currency_selector">Selector de moneda</string>
+    <string name="title_activity_currency_selector">Moneda</string>
     <string name="title_activity_feedback">Realimentación</string>
     <string name="currency_title">Moneda</string>
     <string name="feedback_title">Realimentación</string>
@@ -22,4 +22,8 @@
     <string name="german">Deutsch</string>
     <string name="english">Inglés</string>
     <string name="request_language">Solicitud idioma</string>
+    <string name="russian">Ruso</string>
+    <string name="italian">Italiano</string>
+    <string name="lithuanian">Lituano</string>
+    <string name="polish">Polaco</string>
 </resources>

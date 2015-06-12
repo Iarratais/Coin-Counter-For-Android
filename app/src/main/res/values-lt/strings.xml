@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title">Apie šį aap</string>
+    <string name="action_settings">Nustatymai</string>
+    <string name="clear_all_title">Viska išvalyti</string>
+    <string name="currency_title">Valiuta</string>
+    <string name="english">Anglų</string>
+    <string name="feedback_comment_edit">Jūsų komentaras</string>
+    <string name="feedback_email_edit">Email</string>
+    <string name="feedback_name_edit">Jūsų vardas</string>
+    <string name="feedback_submit">Išsiūsti</string>
+    <string name="feedback_title">Atsiliepimai</string>
+    <string name="german">Vokiečių</string>
+    <string name="howto_title">Kaip nalidotis</string>
+    <string name="lang_english">Pakeista į lietuvių kalbą</string>
+    <string name="language_title">Kalba</string>
+    <string name="request_language">Ieškoha kalba</string>
+    <string name="rate_on_play">Įvertink Play Store!</string>
+    <string name="spanish">Ispanų</string>
+    <string name="title_activity_currency_selector">Valiuta</string>
+    <string name="title_activity_feedback">Atsiliepimai</string>
+    <string name="description">Parengė ant "9 Bir 2015" \nAutortiesības © Karl Jones \ncoincountr@gmail.com \n \nFeedback yra vertinama</string>
+    <string name="lithuanian">Lietuvos</string>
+    <string name="russian">Rusijos</string>
+    <string name="title_activity_language_selector">Kalba</string>
+    <string name="howto"><b> Sveiki Coin countr</b></string>
+    <string name="italian">Italų</string>
+    <string name="polish">Lenkų</string>
+</resources>

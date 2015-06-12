@@ -69,7 +69,7 @@ public class FeedbackActivity extends ActionBarActivity {
         i.putExtra(Intent.EXTRA_SUBJECT, "Coin Countr feedback");
         i.putExtra(Intent.EXTRA_TEXT   , feedback_com.getText().toString() + "\n\n" + feedback_name.getText().toString());
         try {
-            startActivity(Intent.createChooser(i, "Choose an application"));
+            startActivity(Intent.createChooser(i, "Choose an email application.."));
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(FeedbackActivity.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
         }

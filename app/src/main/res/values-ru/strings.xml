@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title">О апплиачии</string>
+    <string name="action_settings">Настройки</string>
+    <string name="clear_all_title">Чдалить все</string>
+    <string name="currency_title">Валюта</string>
+    <string name="title_activity_currency_selector">Валюта</string>
+    <string name="feedback_comment_edit">Ваще комментарии</string>
+    <string name="feedback_email_edit">Электронная почта</string>
+    <string name="feedback_name_edit">Ваще имя</string>
+    <string name="feedback_submit">Отправитв</string>
+    <string name="feedback_title">Отзывы</string>
+    <string name="german">Немецкий</string>
+    <string name="howto_title">Как полвзоватвся</string>
+    <string name="lang_english">Заменено на русскнй язык</string>
+    <string name="language_title">Зыбратв язык</string>
+    <string name="title_activity_feedback">Отзывы</string>
+    <string name="rate_on_play">Оцени аппликацино в „Play Store”</string>
+    <string name="request_language">Поиск нужного языка</string>
+    <string name="spanish">Испанский</string>
+    <string name="title_activity_language_selector">Зыбратв язык</string>
+    <string name="english">Английский</string>
+    <string name="italian">Итальянский</string>
+    <string name="russian">Русский</string>
+    <string name="polish">Польский</string>
+    <string name="lithuanian">Литовский</string>
+    <string name="howto">Добро пожаловать в Coin Countr</string>
+    <string name="description">Составитель на "9 июня 2015" \nCopyright © Карла Джонса \ncoincountr@gmail.com \п \nFeedback ценится</string>
+</resources>

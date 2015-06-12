@@ -26,8 +26,6 @@
     <string name="feedback_title">Feedback</string>
     <string name="currency_title">Currency</string>
     <string name="language_title">Language</string>
-    <string name="description">
-        Compiled on "9 June 2015"\nCopyright © of Karl Jones \ncoincountr@gmail.com \n\nFeedback is appreciated </string>
     <string name="about_title">About</string>
 
     <string name="howto">
@@ -68,5 +66,12 @@
     <string name="english">English</string>
     <string name="spanish">Spanish</string>
     <string name="german">German</string>
+    <string name="lithuanian">Lithuanian</string>
+    <string name="russian">Russian</string>
+    <string name="polish">Polish</string>
+    <string name="italian">Italian</string>
     <string name="request_language">Request a language</string>
+
+    <string name="button_placeholder" translatable="false">Placeholder</string>
+    <string name="description">Compiled on "9 June 2015\nCopyright © of Karl Jones\ncoincountr@gmail.com\nFeedback is appreciated</string>
 </resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title">A questo proposito</string>
+    <string name="action_settings">Impostazioni</string>
+    <string name="clear_all_title">Cancella tutto</string>
+    <string name="currency_title">Valuta</string>
+    <string name="feedback_comment_edit">Il tuo commento</string>
+    <string name="feedback_email_edit">Email</string>
+    <string name="feedback_name_edit">Il tuo nome</string>
+    <string name="feedback_submit">Invia</string>
+    <string name="feedback_title">Feedback</string>
+    <string name="german">Germán</string>
+    <string name="howto_title">Come usare</string>
+    <string name="lang_english">Ora disponibile in Italiano</string>
+    <string name="language_title">Lingua</string>
+    <string name="rate_on_play">Prezzo sul Play Store</string>
+    <string name="request_language">Richiedi una lingua</string>
+    <string name="spanish">Spagnolo</string>
+    <string name="title_activity_currency_selector">Valuta</string>
+    <string name="title_activity_feedback">Feedback</string>
+    <string name="title_activity_language_selector">Lingua</string>
+    <string name="english">Inglese</string>
+    <string name="italian">Italiano</string>
+    <string name="howto">Benvenuti a Coin Countr</string>
+    <string name="lithuanian">Lituano</string>
+    <string name="russian">Russo</string>
+    <string name="description">Compilato il "9 giu 2015" \nCopyright © Karl Jones \ncoincountr@gmail.com \n \nFeedback è apprezzato</string>
+    <string name="polish">Polacco</string>
+</resources>

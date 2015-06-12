@@ -17,26 +17,6 @@ public class CurrencySelectorActivity extends ActionBarActivity{
 
     private Toolbar toolbar;
 
-    private EditText note5000edit;
-    private EditText note1000edit;
-    private EditText note500edit;
-    private EditText note100edit;
-    private EditText note50edit;
-    private EditText note20edit;
-    private EditText note10edit;
-    private EditText note5edit;
-    private EditText note1edit;
-    private EditText coin2edit;
-    private EditText coin1edit;
-    private EditText cent50edit;
-    private EditText cent25edit;
-    private EditText cent20edit;
-    private EditText cent10edit;
-    private EditText cent5edit;
-    private EditText cent2edit;
-    private EditText cent1edit;
-    private EditText additionaledit;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +25,7 @@ public class CurrencySelectorActivity extends ActionBarActivity{
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.currency_title);
 
         SharedPreferences settings = this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
@@ -98,7 +79,6 @@ public class CurrencySelectorActivity extends ActionBarActivity{
     public static final String PREFS_KEY = "PREFS_String";
 
     public void saveCurrency(String text) {
-
         SharedPreferences settings;
         SharedPreferences.Editor editor;
         settings = this.getSharedPreferences(PREFS_NAME, this.MODE_PRIVATE);
@@ -106,6 +86,5 @@ public class CurrencySelectorActivity extends ActionBarActivity{
 
         editor.putString(PREFS_KEY, text);
         editor.commit();
-
     }
 }

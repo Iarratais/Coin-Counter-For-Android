@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title">Despre</string>
+    <string name="action_settings">Setari</string>
+    <string name="clear_all_title">Curata tot</string>
+    <string name="currency_title">Valuta</string>
+    <string name="description">Elaborate pe "09 iunie 2015 \nDrepturi de autor © de Karl Jones \ncoincountr@gmail.com \nFeedback este apreciat</string>
+    <string name="english">Engleză</string>
+    <string name="feedback_comment_edit">Comentariul tau</string>
+    <string name="feedback_email_edit">Email</string>
+    <string name="feedback_name_edit">Numele tau</string>
+    <string name="feedback_submit">Trimita</string>
+    <string name="feedback_title">Feedback</string>
+    <string name="german">Germană</string>
+    <string name="howto">Bun venit la Coin Countr</string>
+    <string name="howto_title">Cum sâ</string>
+    <string name="italian">Italiană</string>
+    <string name="lang_english">Schimbati limba in Romana</string>
+    <string name="language_title">Limba</string>
+    <string name="lithuanian">Lituaniană</string>
+    <string name="polish">Polonez</string>
+    <string name="rate_on_play">Rata de pe magazinul Play!</string>
+    <string name="request_language">Solicita o limbă</string>
+    <string name="russian">Rusă</string>
+    <string name="spanish">Spaniolă</string>
+    <string name="title_activity_currency_selector">Valuta</string>
+    <string name="title_activity_feedback">Feedback</string>
+    <string name="title_activity_language_selector">Limba</string>
+</resources>

@@ -27,6 +27,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.language_title);
 
         SharedPreferences lang = this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
@@ -64,7 +65,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
     }
 
     public void change_to_ENGLISH(View view) {
-        Locale locale = new Locale("en_US");
+        Locale locale = new Locale("en");
         Locale.setDefault(locale);
         Configuration config = new Configuration();
         config.locale = locale;
@@ -78,6 +79,62 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
+    public void change_to_RUSSIAN(View view) {
+        Locale locale = new Locale("ru");
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        this.getApplicationContext().getResources().updateConfiguration(config, null);
+        saveLanguage("Russian");
+
+        Intent intent = new Intent(this, MainActivity.class);
+
+        Toast.makeText(this, getResources().getString(R.string.lang_english), Toast.LENGTH_SHORT).show();
+
+        startActivity(intent);
+    }
+    public void change_to_ITALIAN(View view) {
+        Locale locale = new Locale("it");
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        this.getApplicationContext().getResources().updateConfiguration(config, null);
+        saveLanguage("Italian");
+
+        Intent intent = new Intent(this, MainActivity.class);
+
+        Toast.makeText(this, getResources().getString(R.string.lang_english), Toast.LENGTH_SHORT).show();
+
+        startActivity(intent);
+    }
+    public void change_to_LITHUANIAN(View view) {
+        Locale locale = new Locale("lt");
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        this.getApplicationContext().getResources().updateConfiguration(config, null);
+        saveLanguage("Lithuanian");
+
+        Intent intent = new Intent(this, MainActivity.class);
+
+        Toast.makeText(this, getResources().getString(R.string.lang_english), Toast.LENGTH_SHORT).show();
+
+        startActivity(intent);
+    }
+    public void change_to_POLISH(View view) {
+        Locale locale = new Locale("pl");
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        this.getApplicationContext().getResources().updateConfiguration(config, null);
+        saveLanguage("Polish");
+
+        Intent intent = new Intent(this, MainActivity.class);
+
+        Toast.makeText(this, getResources().getString(R.string.lang_english), Toast.LENGTH_SHORT).show();
+
+        startActivity(intent);
+    }
     public void change_to_GERMAN(View view) {
         Locale locale = new Locale("de");
         Locale.setDefault(locale);
@@ -92,6 +149,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
 
         startActivity(intent);
     }
+
     public void request_language(View view) {
         Intent intent = new Intent(this, FeedbackActivity.class);
         startActivity(intent);
