@@ -5,8 +5,10 @@
     <string name="appDescription" translatable="false">Coin Counter</string>
     <string name="total_title_">Title</string>
     <string name="notes5000edit" translatable="false"> </string>
+    <string name="notes2000edit" translatable="false"> </string>
     <string name="notes1000edit" translatable="false"> </string>
     <string name="notes500edit" translatable="false"> </string>
+    <string name="notes200edit" translatable="false"> </string>
     <string name="notes100edit" translatable="false"> </string>
     <string name="notes50edit" translatable="false"> </string>
     <string name="notes20edit" translatable="false"> </string>

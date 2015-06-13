@@ -31,10 +31,12 @@ public class MainActivity extends ActionBarActivity {
 
     public static TextToSpeech t1;
 
-    public static String total_title_ = "";
+    public static String total_title = " ";
     public static String note5000Amt = "0";
+    public static String note2000Amt = "0";
     public static String note1000Amt = "0";
     public static String note500Amt = "0";
+    public static String note200Amt = "0";
     public static String note100Amt = "0";
     public static String note50Amt = "0";
     public static String note20Amt = "0";
@@ -56,10 +58,12 @@ public class MainActivity extends ActionBarActivity {
     private Toolbar toolbar;
 
     // All edittexts
-    private EditText total_title;
+    private EditText total_title_;
     private EditText note5000edit;
+    private EditText note2000edit;
     private EditText note1000edit;
     private EditText note500edit;
+    private EditText note200edit;
     private EditText note100edit;
     private EditText note50edit;
     private EditText note20edit;
@@ -94,10 +98,12 @@ public class MainActivity extends ActionBarActivity {
         settings = this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
-        total_title      = (EditText) findViewById (R.id.total_title);
+        overlay          = (TextView) findViewById (R.id.OverlayTotal);
         note5000edit     = (EditText) findViewById (R.id.notes5000);
+        note2000edit     = (EditText) findViewById (R.id.notes2000);
         note1000edit     = (EditText) findViewById (R.id.notes1000);
         note500edit      = (EditText) findViewById (R.id.notes500);
+        note200edit      = (EditText) findViewById (R.id.notes200);
         note100edit      = (EditText) findViewById (R.id.notes100);
         note50edit       = (EditText) findViewById (R.id.notes50);
         note20edit       = (EditText) findViewById (R.id.notes20);
@@ -114,15 +120,14 @@ public class MainActivity extends ActionBarActivity {
         cent2edit        = (EditText) findViewById (R.id.cent2);
         cent1edit        = (EditText) findViewById (R.id.cent1);
         additionaledit   = (EditText) findViewById (R.id.extraAdditions);
-        overlay          = (TextView) findViewById (R.id.OverlayTotal);
-
-        total_title.setVisibility(View.GONE);
+        total_title_     = (EditText) findViewById (R.id.total_title);
 
         // Set text watchers
-        total_title.addTextChangedListener(total_title_listener);
         note5000edit.addTextChangedListener(note5000listener);
+        note2000edit.addTextChangedListener(note2000listener);
         note1000edit.addTextChangedListener(note1000listener);
         note500edit.addTextChangedListener(note500listener);
+        note200edit.addTextChangedListener(note200listener);
         note100edit.addTextChangedListener(note100listener);
         note50edit.addTextChangedListener(note50listener);
         note20edit.addTextChangedListener(note20listener);
@@ -139,6 +144,7 @@ public class MainActivity extends ActionBarActivity {
         cent2edit.addTextChangedListener(cent2listener);
         cent1edit.addTextChangedListener(cent1listener);
         additionaledit.addTextChangedListener(additionallistener);
+        total_title_.addTextChangedListener(total_title_listener);
 
         overlay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -206,12 +212,12 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            if (!total_title.getText().toString().equals("")){
-                total_title_ = total_title.getText().toString();
-                System.out.println("total_title_listener: " + total_title.getText().toString());
+            if (!total_title_.getText().toString().equals("")){
+                total_title = total_title_.getText().toString();
+                System.out.println("total_title_listener: " + total_title_.getText().toString());
             }
-            if (total_title.getText().toString().equals("")) {
-                total_title_ = "0";
+            if (total_title_.getText().toString().equals("")) {
+                total_title = " ";
                 calcTotal();
             }
         }
@@ -234,6 +240,28 @@ public class MainActivity extends ActionBarActivity {
             }
             if (note5000edit.getText().toString().equals("")) {
                 note5000Amt = "0";
+                calcTotal();
+            }
+        }
+    };
+    private final TextWatcher note2000listener = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (!note2000edit.getText().toString().equals("")){
+                note2000Amt = note2000edit.getText().toString();
+                System.out.println("note2000listener: " + note2000edit.getText().toString());
+                calcTotal();
+            }
+            if (note2000edit.getText().toString().equals("")) {
+                note2000Amt = "0";
                 calcTotal();
             }
         }
@@ -281,6 +309,29 @@ public class MainActivity extends ActionBarActivity {
             }
         }
     };
+    private final TextWatcher note200listener = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (!note200edit.getText().toString().equals("")){
+                note200Amt = note200edit.getText().toString();
+                System.out.println("note200listener: " + note200edit.getText().toString());
+                calcTotal();
+            }
+            if (note2000edit.getText().toString().equals("")) {
+                note200Amt = "0";
+                calcTotal();
+            }
+        }
+    };
+
     private final TextWatcher note100listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -717,10 +768,12 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void clearAll() {
-        total_title.setText("");
+        total_title_.setText("");
         note5000edit.setText("");
+        note2000edit.setText("");
         note1000edit.setText("");
         note500edit.setText("");
+        note200edit.setText("");
         note100edit.setText("");
         note50edit.setText("");
         note20edit.setText("");
@@ -743,8 +796,10 @@ public class MainActivity extends ActionBarActivity {
 
     public static double calcTotal() {
         double note5000 = toInt(note5000Amt) * 5000.0;
+        double note2000 = toInt(note2000Amt) * 2000.0;
         double note1000 = toInt(note1000Amt) * 1000.0;
         double note500 = toInt(note500Amt) * 500.0;
+        double note200 = toInt(note200Amt) * 200.0;
         double note100 = toInt(note100Amt) * 100.0;
         double note50 = toInt(note50Amt) * 50.0;
         double note20 = toInt(note20Amt) * 20.0;
@@ -764,8 +819,10 @@ public class MainActivity extends ActionBarActivity {
         double total = 0;
 
         double total_numb = note5000
+                + note2000
                 + note1000
                 + note500
+                + note200
                 + note100
                 + note50
                 + note20
@@ -840,6 +897,12 @@ public class MainActivity extends ActionBarActivity {
             case "GBP":
                 curr = "Pounds";
                 break;
+            case "RON":
+                curr = "Leu";
+                break;
+            case "CSK":
+                curr = "Koruna";
+                break;
             default:
                 curr = "Monies";
                 break;
@@ -880,6 +943,8 @@ public class MainActivity extends ActionBarActivity {
     public static final String GBP = "\u00a3";
     public static final String RUB = "\u20BD";
     public static final String RUB_COIN = "kopeks";
+    public static final String RON = "\u00A5";
+    public static final String CSK = "K?";
 
     public void hintChecks() {
         System.out.println("hintChecked: " + getCurrency());
@@ -900,8 +965,10 @@ public class MainActivity extends ActionBarActivity {
 
             // Set visibilities
             note5000edit.setVisibility(View.GONE);
+            note2000edit.setVisibility(View.GONE);
             note1000edit.setVisibility(View.GONE);
             note500edit.setVisibility(View.GONE);
+            note200edit.setVisibility(View.GONE);
             note100edit.setVisibility(View.VISIBLE);
             note50edit.setVisibility(View.VISIBLE);
             note20edit.setVisibility(View.VISIBLE);
@@ -936,8 +1003,10 @@ public class MainActivity extends ActionBarActivity {
 
             // Set visibilities
             note5000edit.setVisibility(View.GONE);
+            note2000edit.setVisibility(View.GONE);
             note1000edit.setVisibility(View.GONE);
             note500edit.setVisibility(View.GONE);
+            note200edit.setVisibility(View.GONE);
             note100edit.setVisibility(View.GONE);
             note50edit.setVisibility(View.VISIBLE);
             note20edit.setVisibility(View.VISIBLE);
@@ -973,8 +1042,10 @@ public class MainActivity extends ActionBarActivity {
 
             // Set visibilities
             note5000edit.setVisibility(View.GONE);
+            note2000edit.setVisibility(View.GONE);
             note1000edit.setVisibility(View.GONE);
             note500edit.setVisibility(View.GONE);
+            note200edit.setVisibility(View.GONE);
             note100edit.setVisibility(View.GONE);
             note50edit.setVisibility(View.VISIBLE);
             note20edit.setVisibility(View.VISIBLE);
@@ -1009,8 +1080,10 @@ public class MainActivity extends ActionBarActivity {
 
             // Set visibilities
             note5000edit.setVisibility(View.VISIBLE);
+            note2000edit.setVisibility(View.GONE);
             note1000edit.setVisibility(View.VISIBLE);
             note500edit.setVisibility(View.VISIBLE);
+            note200edit.setVisibility(View.GONE);
             note100edit.setVisibility(View.VISIBLE);
             note50edit.setVisibility(View.VISIBLE);
             note20edit.setVisibility(View.GONE);
@@ -1028,6 +1101,72 @@ public class MainActivity extends ActionBarActivity {
             cent1edit.setVisibility(View.VISIBLE);
             additionaledit.setVisibility(View.VISIBLE);
         } // End RUB
+        else if (currentCurrency.equals("RON")){
+            note100edit.setHint(RON + "100");
+            note50edit.setHint(RON + "50");
+            note10edit.setHint(RON + "10");
+            note5edit.setHint(RON + "5 ");
+            note1edit.setHint(RON + "1");
+            cent50edit.setHint("50 bani");
+            cent10edit.setHint("10 bani");
+            cent5edit.setHint("5 bani");
+            cent1edit.setHint("1 bani");
+            additionaledit.setHint("Any other additions (in Leu)");
+
+            // Set visibilities
+            note5000edit.setVisibility(View.GONE);
+            note2000edit.setVisibility(View.GONE);
+            note1000edit.setVisibility(View.GONE);
+            note500edit.setVisibility(View.GONE);
+            note200edit.setVisibility(View.GONE);
+            note100edit.setVisibility(View.VISIBLE);
+            note50edit.setVisibility(View.VISIBLE);
+            note20edit.setVisibility(View.GONE);
+            note10edit.setVisibility(View.VISIBLE);
+            note5edit.setVisibility(View.VISIBLE);
+            note1edit.setVisibility(View.VISIBLE);
+            coin2edit.setVisibility(View.GONE);
+            coin1edit.setVisibility(View.GONE);
+            cent50edit.setVisibility(View.VISIBLE);
+            cent25edit.setVisibility(View.GONE);
+            cent20edit.setVisibility(View.GONE);
+            cent10edit.setVisibility(View.VISIBLE);
+            cent5edit.setVisibility(View.VISIBLE);
+            cent2edit.setVisibility(View.GONE);
+            cent1edit.setVisibility(View.VISIBLE);
+            additionaledit.setVisibility(View.VISIBLE);
+        } // End RON
+        else if (currentCurrency.equals("CSK")){
+            note2000edit.setHint("2000 ");
+            note1000edit.setHint("1000");
+            note500edit.setHint("500");
+            note200edit.setHint("200");
+            note100edit.setHint("100");
+            additionaledit.setHint("Any other additions (in Leu)");
+
+            // Set visibilities
+            note5000edit.setVisibility(View.GONE);
+            note2000edit.setVisibility(View.VISIBLE);
+            note1000edit.setVisibility(View.GONE);
+            note500edit.setVisibility(View.GONE);
+            note200edit.setVisibility(View.VISIBLE);
+            note100edit.setVisibility(View.VISIBLE);
+            note50edit.setVisibility(View.VISIBLE);
+            note20edit.setVisibility(View.GONE);
+            note10edit.setVisibility(View.VISIBLE);
+            note5edit.setVisibility(View.GONE);
+            note1edit.setVisibility(View.GONE);
+            coin2edit.setVisibility(View.GONE);
+            coin1edit.setVisibility(View.GONE);
+            cent50edit.setVisibility(View.VISIBLE);
+            cent25edit.setVisibility(View.GONE);
+            cent20edit.setVisibility(View.GONE);
+            cent10edit.setVisibility(View.VISIBLE);
+            cent5edit.setVisibility(View.VISIBLE);
+            cent2edit.setVisibility(View.GONE);
+            cent1edit.setVisibility(View.VISIBLE);
+            additionaledit.setVisibility(View.VISIBLE);
+        } // End RON
     }
 }
 
