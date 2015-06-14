@@ -2,7 +2,7 @@
 <resources>
     <string name="about_title">O aplikacji</string>
     <string name="action_settings">Opcje</string>
-    <string name="clear_all_title">Jasny</string>
+    <string name="clear_all_title">Wyczyść wszystko</string>
     <string name="currency_title">Waluta</string>
     <string name="english">Angielski</string>
     <string name="feedback_comment_edit">Twój komentarz</string>
@@ -23,7 +23,7 @@
     <string name="lithuanian">Litewski</string>
     <string name="italian">Włoski</string>
     <string name="howto">Witamy w Coin Counter \n\n\nDziękujemy za pobranie mojej aplikacji. \n\nSposób użycia: \n1. Policzyć ilość każdej monety masz. \n2. Wprowadź je do aplikacji. \n3. Uzyskaj wynik!</string>
-    <string name="description">Copyright © Karl Jones \ncoincountr@gmail.com \n \nFeedback jest doceniana</string>
+    <string name="description">Copyright © Karl Jones \ncoincountr@gmail.com \n \nFeedback jest doceniany</string>
     <string name="russian">Rosyjski</string>
     <string name="additions">Wszelkie inne dodatki, w: </string>
     <string name="romanian">Rumuński</string>

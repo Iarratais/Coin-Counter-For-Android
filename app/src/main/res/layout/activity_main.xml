@@ -430,6 +430,46 @@
                     android:inputType="number"
                     />
             </android.support.design.widget.TextInputLayout>
+            <Button
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:text="@string/save_string"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal"
+            style="?android:attr/borderlessButtonStyle"
+            android:elevation="4dp"
+            android:fontFamily="sans serif"
+            android:focusable="false"
+            android:longClickable="true"
+            android:typeface="serif"
+            android:visibility="visible" />
+            <Button
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:text="Show!"
+                android:id="@+id/button1"
+                android:layout_gravity="center_horizontal"
+                style="?android:attr/borderlessButtonStyle"
+                android:elevation="4dp"
+                android:fontFamily="sans serif"
+                android:focusable="false"
+                android:longClickable="true"
+                android:typeface="serif"
+                android:visibility="visible"
+                android:onClick="showSaves"/>
+            <Button
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:id="@+id/button2"
+                android:layout_gravity="center_horizontal"
+                style="?android:attr/borderlessButtonStyle"
+                android:elevation="4dp"
+                android:fontFamily="sans serif"
+                android:focusable="false"
+                android:longClickable="true"
+                android:typeface="serif"
+                android:visibility="visible" />
 
             <com.google.android.gms.ads.AdView
                 xmlns:ads="http://schemas.android.com/apk/res-auto"

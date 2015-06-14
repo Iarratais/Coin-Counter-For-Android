@@ -4,9 +4,11 @@ package com.karl.android.coincounter;
 
 
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Build;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
@@ -17,17 +19,23 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 public class MainActivity extends ActionBarActivity {
+
+    MySQLiteHelper myDB;
 
     public static TextToSpeech t1;
 
@@ -82,10 +90,12 @@ public class MainActivity extends ActionBarActivity {
     private EditText additionaledit;
     public static TextView overlay;
 
+    public Button btnadd;
+    public Button btnUpdate;
+
     public AdView adView;
 
     SharedPreferences settings;
-    SharedPreferences lang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +107,8 @@ public class MainActivity extends ActionBarActivity {
 
         settings = this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+
+        myDB = new MySQLiteHelper(this);
 
         overlay          = (TextView) findViewById (R.id.OverlayTotal);
         note5000edit     = (EditText) findViewById (R.id.notes5000);
@@ -122,7 +134,8 @@ public class MainActivity extends ActionBarActivity {
         additionaledit   = (EditText) findViewById (R.id.extraAdditions);
         total_title_     = (EditText) findViewById (R.id.total_title);
 
-        total_title_.setVisibility(View.GONE);
+        btnadd = (Button) findViewById(R.id.button);
+        btnUpdate = (Button) findViewById(R.id.button2);
 
         // Set text watchers
         note5000edit.addTextChangedListener(note5000listener);
@@ -171,11 +184,40 @@ public class MainActivity extends ActionBarActivity {
 
         adView.loadAd(adRequest);
 
+        AddDate();
+
         hintChecks();
         clearAll();
     } // End onCreate()
 
+    public void AddDate() {
+        btnadd.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        boolean isInserted = myDB.insertData(getFormatDate(), total_title_.getText().toString(), overlay.getText().toString() );
+                        if(isInserted) {
+                            Toast.makeText(MainActivity.this, "Saved!", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(MainActivity.this, "Error saving total.. :(", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+        );
+    }
 
+    public void showMessage(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
+    }
+
+    public void showSaves(View view) {
+        Intent intent = new Intent(MainActivity.this, ShowSaves.class);
+        startActivity(intent);
+    }
     /** Called when leaving the activity */
     @Override
     public void onPause() {
@@ -203,6 +245,13 @@ public class MainActivity extends ActionBarActivity {
         }
         super.onDestroy();
     }
+
+    public String getFormatDate() {
+        Date now = new Date();
+        String nowAsString;
+        return nowAsString = new SimpleDateFormat("dd-MMM-yy").format(now);
+    }
+
     private final TextWatcher total_title_listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -737,6 +786,7 @@ public class MainActivity extends ActionBarActivity {
             case R.id.action_language_selector:
                 openLanguage();
                 return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         } // End switch
