@@ -31,9 +31,7 @@
     <string name="language_title">Language</string>
     <string name="about_title">About</string>
 
-    <string name="howto">
-        <b>Welcome to Coin Countr \n\n\n\n</b>In order to use this app there are three simple steps: \n\n1. Count the amount of coins you have\n2. Input into the app\n3. Get result!\n
-    </string>
+    <string name="howto">Welcome to Coin Counter \n \n \n Thank you for downloading my app. \n\n To use: \n1. Coin the amount of each coin you have. \n2. Input them into the app. \n3. Get the result! </string>
     <string name="howto_title">How To</string>
 
     <string name="title_activity_about" translatable="false">AboutActivity</string>

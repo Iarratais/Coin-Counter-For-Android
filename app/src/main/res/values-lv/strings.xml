@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Coin Countr</string>
     <string name="about_title">Apmēram</string>
     <string name="action_settings">Uzstàdïjumi</string>
     <string name="additions">Jebkuras citas papildinājumi, jo: </string>
@@ -25,7 +24,7 @@
     <string name="french">franču</string>
     <string name="german">vācu</string>
     <string name="greek">grieķu</string>
-    <string name="howto">Laipni lūdzam Monētu countr </string>
+    <string name="howto">Laipni lūdzam Coin Countr \n\n\nPaldies par lejupielādi manu app. \n\nLai izmantotu: \n1. Count summu katrai monētai esat. \n2. Ieejas tos app. \n3. Get rezultāts!</string>
     <string name="howto_title">Kā pareizi</string>
     <string name="hungarian">Ungārijas</string>
     <string name="irish">Īrijas</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Coin Countr</string>
     <string name="about_title">O tome</string>
     <string name="action_settings">Postavke</string>
     <string name="additions">Bilo koji drugi dodaci, u:</string>
@@ -24,7 +23,7 @@
     <string name="french">Francuzi</string>
     <string name="german">njemački</string>
     <string name="greek">grčki</string>
-    <string name="howto">Dobrodošli u Coin countr</string>
+    <string name="howto">Dobrodošli na kovanica Brojač \n\n\nHvala vam za preuzimanje moju aplikaciju. \n\nZa korištenje: \n1. Točka iznos svaki novčić imate. \n2. Unesite ih u aplikaciju. \n3. dobiti rezultat!</string>
     <string name="howto_title">Kako</string>
     <string name="hungarian">Mađarski</string>
     <string name="irish">irski</string>

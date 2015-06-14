@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Coin Countr</string>
     <string name="about_title">Dawr</string>
     <string name="action_settings">Issettjar</string>
     <string name="additions">Kwalunkwe żidiet oħra, fi: </string>
@@ -25,7 +24,7 @@
     <string name="french">Franċiż</string>
     <string name="german">Ġermaniż</string>
     <string name="greek">Grieg</string>
-    <string name="howto">Merħba lill Coin Countr</string>
+    <string name="howto">Merħba lill Coin Counter \n\n\nGrazzi għall-tniżżil app tiegħi. \n\nGħall-użu: \n1. Għodd in ammont ta \'kull munita għandek. \n2. Input minnhom fil-app. \n3. Niżżel ir-riżultat!</string>
     <string name="howto_title">Kif biex</string>
     <string name="hungarian">Ungeriż</string>
     <string name="irish">Irlandiż</string>

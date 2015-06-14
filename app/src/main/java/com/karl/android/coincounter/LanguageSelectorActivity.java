@@ -20,6 +20,9 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -33,6 +36,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
     private LinearLayout llo;
     private ScrollView sv;
 
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +97,40 @@ public class LanguageSelectorActivity extends ActionBarActivity {
             b.setOnClickListener(btnclick);
             llo.addView(b);
         }
+
+        adView = (AdView) findViewById(R.id.adView1);
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+
+        adView.loadAd(adRequest);
+    }
+
+    /** Called when leaving the activity */
+    @Override
+    public void onPause() {
+        if (adView != null) {
+            adView.pause();
+        }
+        super.onPause();
+    }
+
+    /** Called when returning to the activity */
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (adView != null) {
+            adView.resume();
+        }
+    }
+
+    /** Called before the activity is destroyed */
+    @Override
+    public void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
     }
 
     View.OnClickListener btnclick = new View.OnClickListener() {

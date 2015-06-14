@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Coin Countr</string>
     <string name="about_title">Noin</string>
     <string name="action_settings">Asetukset</string>
     <string name="additions">Muita lisäyksiä, in:</string>
@@ -25,7 +24,7 @@
     <string name="french">ranska</string>
     <string name="german">Saksa</string>
     <string name="greek">Kreikka</string>
-    <string name="howto">Tervetuloa Coin Countr</string>
+    <string name="howto">Tervetuloa Coin Counter \n\n\nKiitos, että lataat minun app. \n\nVoit käyttää: \n1. Laske määrä kunkin kolikon olet. \n2. Syötä ne app. \n3. Hanki tulos!</string>
     <string name="howto_title">Kuinka</string>
     <string name="hungarian">Unkari</string>
     <string name="irish">irlantilainen</string>

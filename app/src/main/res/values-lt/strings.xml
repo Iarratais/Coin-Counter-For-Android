@@ -22,7 +22,7 @@
     <string name="lithuanian">Lietuvos</string>
     <string name="russian">Rusijos</string>
     <string name="title_activity_language_selector">Kalba</string>
-    <string name="howto"><b> Sveiki Coin countr</b></string>
+    <string name="howto">Sveiki Monetų Skaitliukas \n\n\nDėkojame už siuntimą mano app. \n\nNorėdami naudoti: \n1. Suskaičiuokite kiekvienos monetos turite kiekį. \n2. Įvesties juos į app. \n3. Gaukite rezultatą!</string>
     <string name="italian">Italų</string>
     <string name="polish">Lenkų</string>
     <string name="additions">Ar noretum dar ka nors prideti, į: </string>

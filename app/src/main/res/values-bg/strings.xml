@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Coin Countr</string>
     <string name="about_title">Oколо</string>
     <string name="action_settings">Настройки</string>
     <string name="additions">Всякакви други допълнения, в:</string>
@@ -23,7 +22,6 @@
     <string name="french">френски</string>
     <string name="german">немски</string>
     <string name="greek">гръцки</string>
-    <string name="howto">Добре дошли в Coin Countr</string>
     <string name="howto_title">Kак да</string>
     <string name="hungarian">унгарски</string>
     <string name="irish">ирландски</string>
@@ -49,4 +47,5 @@
     <string name="ukrainian">украински</string>
     <string name="changed_curr">Променени валута за:</string>
     <string name="esperanto">Esperanto</string>
+    <string name="howto">Добре дошли в монети Брояч \n\n\nБлагодаря ви за сваляне на моя ап. \n\nЗа да използвате: \n1. Coin сумата на всяка монета имате. \n2. Въведете ги в приложението. \n3. Вземете резултат!</string>
 </resources>

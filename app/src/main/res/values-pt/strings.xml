@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Coin Countr</string>
     <string name="about_title">Sobre</string>
     <string name="action_settings">Definições</string>
     <string name="additions">Quaisquer outras adições, em: </string>
@@ -25,7 +24,7 @@
     <string name="french">francês</string>
     <string name="german">alemão</string>
     <string name="greek">grego</string>
-    <string name="howto">Bem-vindo ao Coin Countr </string>
+    <string name="howto">Bem-vindo ao Coin Contador \n\n\nObrigado por baixar meu aplicativo. \n\nPara usar: \n1. Conte a quantidade de cada moeda que você tem. \n2. Entrada-los para o aplicativo. \n3. Obter o resultado!</string>
     <string name="howto_title">Como</string>
     <string name="hungarian">húngaro</string>
     <string name="irish">irlandês</string>

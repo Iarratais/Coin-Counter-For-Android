@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Coin Countr</string>
     <string name="about_title">Pri</string>
     <string name="action_settings">Agordoj</string>
     <string name="additions">Ajna aliaj aldonoj, en: </string>
@@ -25,7 +24,7 @@
     <string name="french">Franca</string>
     <string name="german">Germanaj</string>
     <string name="greek">Grekaj</string>
-    <string name="howto">Bonvenon Coin Countr</string>
+    <string name="howto">Bonvenon Coin Counter \n\n\nDankon por elŝuti mia app. \n\nUzi: \n1. Grafo la kvanto de ĉiu monero vi havas. \n2. Input ilin en la app. \n3. Akiri la rezulto!</string>
     <string name="howto_title">Kiel</string>
     <string name="hungarian">Hungara</string>
     <string name="irish">Irelandano</string>

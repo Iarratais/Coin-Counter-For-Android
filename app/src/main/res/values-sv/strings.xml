@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Coin Countr</string>
     <string name="about_title">Ungefär</string>
     <string name="action_settings">Inställningar</string>
     <string name="additions">Alla andra tillsatser, i:</string>
@@ -24,7 +23,7 @@
     <string name="french">franska</string>
     <string name="german">tysk</string>
     <string name="greek">grekisk</string>
-    <string name="howto">Välkommen till Coin Countr</string>
+    <string name="howto">Välkommen till mynträknare \n\n\nTack för att du laddar ner min app. \n\nOm du vill använda: \n1. Räkna beloppet för varje mynt du har. \n2. Skriv in dem i appen. \n3. Få resultatet!</string>
     <string name="howto_title">Hur</string>
     <string name="hungarian">ungerska</string>
     <string name="irish">Irländskt</string>

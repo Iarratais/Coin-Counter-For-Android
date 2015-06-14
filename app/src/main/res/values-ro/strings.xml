@@ -12,7 +12,7 @@
     <string name="feedback_submit">Trimita</string>
     <string name="feedback_title">Feedback</string>
     <string name="german">Germană</string>
-    <string name="howto">Bun venit la Coin Countr</string>
+    <string name="howto">Bine ati venit la Coin Counter \n\n\nVă mulțumim pentru descărcarea app mea. \n\nPentru a utiliza: \n1. Contele cantitatea din fiecare monedă ai. \n2. Introduceți-le în aplicația. \n3. Ia rezultatul!</string>
     <string name="howto_title">Cum sâ</string>
     <string name="italian">Italiană</string>
     <string name="lang_english">Schimbati limba in Romana</string>
@@ -26,7 +26,7 @@
     <string name="title_activity_feedback">Feedback</string>
     <string name="title_activity_language_selector">Limba</string>
     <string name="additions">Orice alte adăugiri, în: </string>
-    <string name="romanian">Român</string>
+    <string name="romanian">Româna</string>
     <string name="french">Franceză</string>
     <string name="total_title_">Titlu</string>
     <string name="changed_curr">Valută a fost schimbat la:</string>

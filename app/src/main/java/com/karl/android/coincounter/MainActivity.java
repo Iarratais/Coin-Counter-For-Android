@@ -122,6 +122,8 @@ public class MainActivity extends ActionBarActivity {
         additionaledit   = (EditText) findViewById (R.id.extraAdditions);
         total_title_     = (EditText) findViewById (R.id.total_title);
 
+        total_title_.setVisibility(View.GONE);
+
         // Set text watchers
         note5000edit.addTextChangedListener(note5000listener);
         note2000edit.addTextChangedListener(note2000listener);

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Coin Countr</string>
     <string name="polish">lesk</string>
     <string name="about_title">O</string>
     <string name="action_settings">Nastavenie</string>
@@ -26,7 +25,7 @@
     <string name="french">Francúzsky</string>
     <string name="german">Nemec</string>
     <string name="greek">gréčtina</string>
-    <string name="howto">Vitajte na mince</string>
+    <string name="howto">Vitajte Coin Counter \n\n\nĎakujeme za stiahnutie mojej aplikácie. \n\nAk chcete použiť: \n1. gróf množstvo jednotlivých mincí máte. \n2. Vstup je do aplikácie. \n3. Získať výsledok!</string>
     <string name="howto_title">Ako</string>
     <string name="hungarian">maďarčina</string>
     <string name="irish">írsky</string>

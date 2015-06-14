@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Coin Countr</string>
     <string name="about_title">Přibližně</string>
     <string name="action_settings">Nastavení</string>
     <string name="additions">Jakékoliv jiné doplňky, v:</string>
@@ -24,7 +23,7 @@
     <string name="french">francouzština</string>
     <string name="german">Němec</string>
     <string name="greek">řečtina</string>
-    <string name="howto">Vítejte na mince Countr</string>
+    <string name="howto">Vítejte Coin Counter \n\n\nDěkujeme za stažení mé aplikace. \n\nChcete-li použít: \n1. hrabě množství jednotlivých mincí máte. \n2. Vstup je do aplikace. \n3. Získat výsledek!</string>
     <string name="howto_title">Jak</string>
     <string name="hungarian">maďarština</string>
     <string name="irish">irský</string>

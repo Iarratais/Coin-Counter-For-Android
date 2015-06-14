@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Coin Countr</string>
     <string name="about_title">Cirka</string>
     <string name="action_settings">Indstillinger</string>
     <string name="additions">Alle andre tilføjelser, i:</string>
@@ -25,7 +24,7 @@
     <string name="french">Fransk</string>
     <string name="german">Tysk</string>
     <string name="greek">græsk</string>
-    <string name="howto">Velkommen til Coin Countr</string>
+    <string name="howto">Velkommen til Coin Counter \n\n\nTak fordi du downloadede min app. \n\nAt bruge: \n1. Tæl mængden af hver mønt, du har. \n2. Indtast dem i app\'en. \n3. Få resultatet!</string>
     <string name="howto_title">Sådan</string>
     <string name="hungarian">Hungarian</string>
     <string name="irish">Irish</string>

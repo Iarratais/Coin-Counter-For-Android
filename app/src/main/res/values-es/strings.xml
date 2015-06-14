@@ -8,7 +8,7 @@
     <string name="feedback_submit">Presentar</string>
     <string name="rate_on_play"><b>Precio en la tienda de Google!</b></string>
     <string name="howto_title">Cómo</string>
-    <string name="howto"><b> Bienvenido a Coin Countr \n\n \n \n </b></string>
+    <string name="howto">Bienvenido a la moneda contador \n\n\nGracias por descargar mi aplicación ti. \n\nModo de empleo: \n1. Cuente la cantidad de cada moneda que usted tiene. \n2. Entrada de ellos en la aplicación. \n3. Obtener el resultado!</string>
     <string name="description">Copyright © de Karl Jones \ncoincountr@gmail.com \n \nFeedback se agradece</string>
     <string name="title_activity_currency_selector">Moneda</string>
     <string name="title_activity_feedback">Realimentación</string>
