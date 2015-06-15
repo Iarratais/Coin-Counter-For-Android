@@ -5,7 +5,7 @@
     <string name="additions">Ajna aliaj aldonoj, en: </string>
     <string name="bulgarian">Bulgara</string>
     <string name="changed_curr">Ŝanĝita monero al: </string>
-    <string name="clear_all_title">Klaraj ĉiuj </string>
+    <string name="clear_all_title">Klara</string>
     <string name="croatian">Kroata</string>
     <string name="currency_title">Valuto</string>
     <string name="czech">ĉeĥa</string>
@@ -48,4 +48,14 @@
     <string name="title_activity_language_selector">Lingvo</string>
     <string name="total_title_">Titolo</string>
     <string name="ukrainian">Ukrainia</string>
+    <string name="check_if_empty_overlay_errror">Ne povas savi kiam entute estas 0. </string>
+    <string name="check_if_empty_title_error">Ne eblis konservi sen titolo. </string>
+    <string name="save_string">Konservi</string>
+    <string name="show_string">Sekurigas</string>
+    <string name="add_data_error">Eraro ŝparado entute </string>
+    <string name="add_data_success">Savitaj</string>
+    <string name="save_amount">Kvanto:</string>
+    <string name="save_date">Dato:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Titolo:</string>
 </resources>

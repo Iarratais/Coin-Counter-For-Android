@@ -3,7 +3,7 @@
     <string name="about_title">Environ</string>
     <string name="action_settings">Paramètres</string>
     <string name="additions">Tous les autres ajouts, à:</string>
-    <string name="clear_all_title">Effacer tout</string>
+    <string name="clear_all_title">Clair</string>
     <string name="currency_title">Monnaie</string>
     <string name="description">Copyright © de Karl Jones \ncoincountr@gmail.com \nFeedback est apprécié</string>
     <string name="english">Anglais</string>
@@ -48,4 +48,14 @@
     <string name="swedish">suédois</string>
     <string name="ukrainian">ukrainien</string>
     <string name="esperanto">Esperanto</string>
+    <string name="check_if_empty_overlay_errror">Impossible d\'enregistrer si le montant total est de 0. </string>
+    <string name="check_if_empty_title_error">Impossible d\'enregistrer sans titre. </string>
+    <string name="save_string">Sauvegarder</string>
+    <string name="show_string">Enregistre</string>
+    <string name="add_data_error">Erreur économie totale </string>
+    <string name="add_data_success">Enregistré</string>
+    <string name="save_amount">Montant:</string>
+    <string name="save_date">Date:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Titre:</string>
 </resources>

@@ -2,7 +2,7 @@
 <resources>
     <string name="about_title">O aplikacji</string>
     <string name="action_settings">Opcje</string>
-    <string name="clear_all_title">Wyczyść wszystko</string>
+    <string name="clear_all_title">Wyczyść</string>
     <string name="currency_title">Waluta</string>
     <string name="english">Angielski</string>
     <string name="feedback_comment_edit">Twój komentarz</string>
@@ -48,4 +48,14 @@
     <string name="ukrainian">ukraiński</string>
     <string name="portuguese">portugalski</string>
     <string name="esperanto">Esperanto</string>
+    <string name="check_if_empty_overlay_errror">Nie można zapisać, gdy suma wynosi 0. </string>
+    <string name="check_if_empty_title_error">Nie można zapisać bez tytułu. </string>
+    <string name="save_string">Zapisz</string>
+    <string name="show_string">Zapisuje</string>
+    <string name="add_data_error">Błąd oszczędności ogółem </string>
+    <string name="add_data_success">Zapisane</string>
+    <string name="save_amount">Ilość</string>
+    <string name="save_date">Data:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Tytuł:</string>
 </resources>

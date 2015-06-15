@@ -5,7 +5,7 @@
     <string name="additions">Οποιεσδήποτε άλλες προσθήκες, σε: </string>
     <string name="bulgarian">Βούλγαρος</string>
     <string name="changed_curr">Άλλαξε το νόμισμα σε: </string>
-    <string name="clear_all_title">Διαγραφή όλων </string>
+    <string name="clear_all_title">σαφής</string>
     <string name="croatian">Κροατία</string>
     <string name="currency_title">νόμισμα</string>
     <string name="czech">Τσέχος</string>
@@ -48,4 +48,14 @@
     <string name="title_activity_language_selector">γλώσσα</string>
     <string name="total_title_">γλώσσα</string>
     <string name="ukrainian">Ουκρανός</string>
+    <string name="check_if_empty_overlay_errror">Δεν είναι δυνατή η αποθήκευση όταν σύνολο είναι μηδέν. </string>
+    <string name="check_if_empty_title_error">Δεν είναι δυνατή η αποθήκευση χωρίς τίτλο. </string>
+    <string name="save_string">Αποθήκευση</string>
+    <string name="show_string">αποθηκεύει</string>
+    <string name="add_data_error">Σφάλμα συνολική εξοικονόμηση </string>
+    <string name="add_data_success">Αποθηκευμένα</string>
+    <string name="save_amount">ποσό</string>
+    <string name="save_date">ημερομηνία:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Τίτλος:</string>
 </resources>

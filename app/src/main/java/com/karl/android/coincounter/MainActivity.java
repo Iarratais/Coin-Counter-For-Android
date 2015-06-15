@@ -2,13 +2,11 @@
 
 package com.karl.android.coincounter;
 
-
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.os.Build;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
@@ -63,8 +61,6 @@ public class MainActivity extends ActionBarActivity {
     public static String additionalCoins = "0";
     private static String total = "0";
 
-    private Toolbar toolbar;
-
     // All edittexts
     private EditText total_title_;
     private EditText note5000edit;
@@ -91,7 +87,6 @@ public class MainActivity extends ActionBarActivity {
     public static TextView overlay;
 
     public Button btnadd;
-    public Button btnUpdate;
 
     public AdView adView;
 
@@ -102,7 +97,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar    = (Toolbar) findViewById (R.id.tool_bar);
+        Toolbar toolbar    = (Toolbar) findViewById (R.id.tool_bar);
         setSupportActionBar(toolbar);
 
         settings = this.getSharedPreferences(
@@ -135,7 +130,6 @@ public class MainActivity extends ActionBarActivity {
         total_title_     = (EditText) findViewById (R.id.total_title);
 
         btnadd = (Button) findViewById(R.id.button);
-        btnUpdate = (Button) findViewById(R.id.button2);
 
         // Set text watchers
         note5000edit.addTextChangedListener(note5000listener);
@@ -184,22 +178,25 @@ public class MainActivity extends ActionBarActivity {
 
         adView.loadAd(adRequest);
 
-        AddDate();
+        AddData();
 
         hintChecks();
         clearAll();
     } // End onCreate()
 
-    public void AddDate() {
+    public void AddData() {
         btnadd.setOnClickListener(
-                new View.OnClickListener(){
+                new View.OnClickListener() {
                     @Override
-                    public void onClick(View v){
-                        boolean isInserted = myDB.insertData(getFormatDate(), total_title_.getText().toString(), overlay.getText().toString() );
-                        if(isInserted) {
-                            Toast.makeText(MainActivity.this, "Saved!", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(MainActivity.this, "Error saving total.. :(", Toast.LENGTH_SHORT).show();
+                    public void onClick(View v) {
+                        boolean isEmpty = checkIfEmpty();
+                        if (!isEmpty) {
+                            boolean isInserted = myDB.insertData(getFormatDate(), total_title_.getText().toString(), overlay.getText().toString());
+                            if (isInserted) {
+                                Toast.makeText(MainActivity.this, R.string.add_data_success, Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(MainActivity.this, R.string.add_data_error, Toast.LENGTH_SHORT).show();
+                            }
                         }
                     }
                 }
@@ -214,11 +211,8 @@ public class MainActivity extends ActionBarActivity {
         builder.show();
     }
 
-    public void showSaves(View view) {
-        Intent intent = new Intent(MainActivity.this, ShowSaves.class);
-        startActivity(intent);
-    }
-    /** Called when leaving the activity */
+    // ----------------------------------- ACTIVITY RELATED METHODS ---------------------------------------------------
+
     @Override
     public void onPause() {
         if (adView != null) {
@@ -227,7 +221,6 @@ public class MainActivity extends ActionBarActivity {
         super.onPause();
     }
 
-    /** Called when returning to the activity */
     @Override
     public void onResume() {
         super.onResume();
@@ -237,7 +230,6 @@ public class MainActivity extends ActionBarActivity {
         hintChecks();
     }
 
-    /** Called before the activity is destroyed */
     @Override
     public void onDestroy() {
         if (adView != null) {
@@ -252,6 +244,7 @@ public class MainActivity extends ActionBarActivity {
         return nowAsString = new SimpleDateFormat("dd-MMM-yy").format(now);
     }
 
+    // --------------------------------------------------- TEXT WATCHERS --------------------------------------------------------------------
     private final TextWatcher total_title_listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -338,7 +331,8 @@ public class MainActivity extends ActionBarActivity {
                 calcTotal();
             }
         }
-    }; private final TextWatcher note500listener = new TextWatcher() {
+    };
+    private final TextWatcher note500listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         }
@@ -382,7 +376,6 @@ public class MainActivity extends ActionBarActivity {
             }
         }
     };
-
     private final TextWatcher note100listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -754,7 +747,6 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
@@ -762,11 +754,6 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-
-        //noinspection SimplifiableIfStatement
         switch (item.getItemId()) {
             case R.id.action_settings:
                 openHowTo();
@@ -786,39 +773,51 @@ public class MainActivity extends ActionBarActivity {
             case R.id.action_language_selector:
                 openLanguage();
                 return true;
-
+            case R.id.action_show_saves:
+                showsaves();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         } // End switch
     }
 
-    // Open the howto activity
+    public boolean checkIfEmpty() {
+        if (total_title_.getText().toString().equals("")) {
+            Toast.makeText(MainActivity.this, R.string.check_if_empty_title_error, Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        if(toDouble(getTotal()) < 0.01){
+             Toast.makeText(MainActivity.this, R.string.check_if_empty_overlay_errror, Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        return false;
+    }
+
+    // ----------------------------------- MENU SETTINGS ------------------------------
+    public void showsaves() {
+        Intent intent = new Intent (MainActivity.this, ShowSaves.class);
+        startActivity(intent);
+    }
     public void openHowTo() {
         Intent intent = new Intent(MainActivity.this, HowtoActivity.class);
         startActivity(intent);
     }
-
-    // Open the search activity
     public void openAbout() {
         Intent intent = new Intent(MainActivity.this, AboutActivity.class);
         startActivity(intent);
     }
-
     public void give_feedback() {
         Intent intent = new Intent(MainActivity.this, FeedbackActivity.class);
         startActivity(intent);
     }
-
     public void openCurrency() {
         Intent intent = new Intent(MainActivity.this, CurrencySelectorActivity.class);
         startActivity(intent);
     }
-
     public void openLanguage() {
         Intent intent = new Intent(MainActivity.this, LanguageSelectorActivity.class);
         startActivity(intent);
     }
-
     public void clearAll() {
         total_title_.setText("");
         note5000edit.setText("");
@@ -846,6 +845,7 @@ public class MainActivity extends ActionBarActivity {
         System.out.println("clearAll: All inputs cleared");
     }
 
+    // ------------------------ CALCULATION METHODS ---------------------------------------------------------------------------------
     public static double calcTotal() {
         double note5000 = toInt(note5000Amt) * 5000.0;
         double note2000 = toInt(note2000Amt) * 2000.0;
@@ -867,7 +867,6 @@ public class MainActivity extends ActionBarActivity {
         double cent5 = toInt(cent5Amt) * 0.05;
         double cent2 = toInt(cent2Amt) * 0.02;
         double cent1 = toInt(cent1Amt) * 0.01;
-
         double total = 0;
 
         double total_numb = note5000
@@ -895,7 +894,6 @@ public class MainActivity extends ActionBarActivity {
         System.out.println("Done with calculating total");
 
         DecimalFormat formatter = new DecimalFormat("#,###.00");
-
         setTotal(formatter.format(total_numb));
 
         System.out.println("Total: " + getTotal());
@@ -924,14 +922,13 @@ public class MainActivity extends ActionBarActivity {
         System.out.println("toDouble: " + value);
         return value;
     }
-
-    // Total Accessors
     public static void setTotal(String incoming_total) {
         total = incoming_total;
         System.out.println("setTotal: " + total + " - total");
     }
-
     public static String getTotal() { return total; }
+
+    // ---------------- CURRENCY METHODS --------------------------------------------
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public static void make_a_toast(){
@@ -970,7 +967,6 @@ public class MainActivity extends ActionBarActivity {
             t1.speak(Speak, TextToSpeech.QUEUE_FLUSH, null);
         }
     }
-    // --------------- All methods to change the currency of the app-----------------------
 
     public static final String PREFS_NAME = "PREFS";
     public static final String PREFS_KEY = "PREFS_String";
@@ -981,7 +977,7 @@ public class MainActivity extends ActionBarActivity {
         System.out.println("getCurrency: Starting..");
         SharedPreferences settings;
         String text;
-        settings = this.getSharedPreferences(PREFS_NAME, this.MODE_PRIVATE);
+        settings = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         text = settings.getString(PREFS_KEY, "EUR");
 
         currentCurrency = text;
@@ -995,9 +991,6 @@ public class MainActivity extends ActionBarActivity {
     public static final String GBP = "\u00a3";
     public static final String RUB = "\u20BD";
     public static final String RUB_COIN = "kopeks";
-    public static final String RON = "\u00A5";
-    public static final String CSK = "K?";
-
     public void hintChecks() {
         System.out.println("hintChecked: " + getCurrency());
 
@@ -1153,72 +1146,6 @@ public class MainActivity extends ActionBarActivity {
             cent1edit.setVisibility(View.VISIBLE);
             additionaledit.setVisibility(View.VISIBLE);
         } // End RUB
-        else if (currentCurrency.equals("RON")){
-            note100edit.setHint(RON + "100");
-            note50edit.setHint(RON + "50");
-            note10edit.setHint(RON + "10");
-            note5edit.setHint(RON + "5 ");
-            note1edit.setHint(RON + "1");
-            cent50edit.setHint("50 bani");
-            cent10edit.setHint("10 bani");
-            cent5edit.setHint("5 bani");
-            cent1edit.setHint("1 bani");
-            additionaledit.setHint("Any other additions (in Leu)");
-
-            // Set visibilities
-            note5000edit.setVisibility(View.GONE);
-            note2000edit.setVisibility(View.GONE);
-            note1000edit.setVisibility(View.GONE);
-            note500edit.setVisibility(View.GONE);
-            note200edit.setVisibility(View.GONE);
-            note100edit.setVisibility(View.VISIBLE);
-            note50edit.setVisibility(View.VISIBLE);
-            note20edit.setVisibility(View.GONE);
-            note10edit.setVisibility(View.VISIBLE);
-            note5edit.setVisibility(View.VISIBLE);
-            note1edit.setVisibility(View.VISIBLE);
-            coin2edit.setVisibility(View.GONE);
-            coin1edit.setVisibility(View.GONE);
-            cent50edit.setVisibility(View.VISIBLE);
-            cent25edit.setVisibility(View.GONE);
-            cent20edit.setVisibility(View.GONE);
-            cent10edit.setVisibility(View.VISIBLE);
-            cent5edit.setVisibility(View.VISIBLE);
-            cent2edit.setVisibility(View.GONE);
-            cent1edit.setVisibility(View.VISIBLE);
-            additionaledit.setVisibility(View.VISIBLE);
-        } // End RON
-        else if (currentCurrency.equals("CSK")){
-            note2000edit.setHint("2000 ");
-            note1000edit.setHint("1000");
-            note500edit.setHint("500");
-            note200edit.setHint("200");
-            note100edit.setHint("100");
-            additionaledit.setHint("Any other additions (in Leu)");
-
-            // Set visibilities
-            note5000edit.setVisibility(View.GONE);
-            note2000edit.setVisibility(View.VISIBLE);
-            note1000edit.setVisibility(View.GONE);
-            note500edit.setVisibility(View.GONE);
-            note200edit.setVisibility(View.VISIBLE);
-            note100edit.setVisibility(View.VISIBLE);
-            note50edit.setVisibility(View.VISIBLE);
-            note20edit.setVisibility(View.GONE);
-            note10edit.setVisibility(View.VISIBLE);
-            note5edit.setVisibility(View.GONE);
-            note1edit.setVisibility(View.GONE);
-            coin2edit.setVisibility(View.GONE);
-            coin1edit.setVisibility(View.GONE);
-            cent50edit.setVisibility(View.VISIBLE);
-            cent25edit.setVisibility(View.GONE);
-            cent20edit.setVisibility(View.GONE);
-            cent10edit.setVisibility(View.VISIBLE);
-            cent5edit.setVisibility(View.VISIBLE);
-            cent2edit.setVisibility(View.GONE);
-            cent1edit.setVisibility(View.VISIBLE);
-            additionaledit.setVisibility(View.VISIBLE);
-        } // End RON
     }
 }
 

@@ -4,7 +4,7 @@
     <string name="action_settings">Socruithe</string>
     <string name="additions">Aon breiseanna eile, i:</string>
     <string name="bulgarian">Bulgáiris</string>
-    <string name="clear_all_title">Soiléir go léir</string>
+    <string name="clear_all_title">Geal</string>
     <string name="changed_curr">Airgeadra Athraigh chuig:</string>
     <string name="croatian">Cróitis</string>
     <string name="currency_title">Airgeadra</string>
@@ -48,4 +48,14 @@
     <string name="total_title_">Teideal</string>
     <string name="ukrainian">Úcráinis</string>
     <string name="esperanto">Esperanto</string>
+    <string name="check_if_empty_overlay_errror">Ní féidir a shábháil nuair atá iomlán 0. </string>
+    <string name="check_if_empty_title_error">Ní féidir a shábháil gan teideal. </string>
+    <string name="save_string">Sábháil</string>
+    <string name="show_string">Sábháil</string>
+    <string name="add_data_error">Iomlán a shábháil Earráid </string>
+    <string name="add_data_success">Sábháilte</string>
+    <string name="save_amount">Méid: </string>
+    <string name="save_date">Dáta:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Teideal:</string>
 </resources>

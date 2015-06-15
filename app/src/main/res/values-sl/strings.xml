@@ -5,7 +5,7 @@
     <string name="additions">Vse druge dodatke, v: </string>
     <string name="bulgarian">bolgarščina</string>
     <string name="changed_curr">Spremenjeno valute: </string>
-    <string name="clear_all_title">Počisti vse </string>
+    <string name="clear_all_title">Počisti</string>
     <string name="croatian">Hrvaški</string>
     <string name="currency_title">Valuta</string>
     <string name="czech">češčina</string>
@@ -48,4 +48,14 @@
     <string name="title_activity_language_selector">Jezik</string>
     <string name="total_title_">Naslov</string>
     <string name="ukrainian">Ukrajinski</string>
+    <string name="check_if_empty_overlay_errror">Ne more rešiti, ko je skupno 0. </string>
+    <string name="check_if_empty_title_error">Ne more rešiti brez naslova. </string>
+    <string name="save_string">Shrani</string>
+    <string name="show_string">Prihrani</string>
+    <string name="add_data_error">Napaka varčevanje skupno </string>
+    <string name="add_data_success">Shranjen</string>
+    <string name="save_id">ID:</string>
+    <string name="save_amount">Količina:</string>
+    <string name="save_date">Datum:</string>
+    <string name="save_title">Naslov:</string>
 </resources>

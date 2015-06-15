@@ -25,7 +25,7 @@
     <string name="russian">Russisch</string>
     <string name="polish">Polnisch</string>
     <string name="additions">Alle anderen Zusätzen, in: </string>
-    <string name="clear_all_title">Löschen</string>
+    <string name="clear_all_title">Klar</string>
     <string name="romanian">Rumänisch</string>
     <string name="french">Französisch</string>
     <string name="total_title_">Titel</string>
@@ -48,4 +48,14 @@
     <string name="changed_curr">Geändert Währung:</string>
     <string name="finnish">Finnisch</string>
     <string name="esperanto">Esperanto</string>
+    <string name="check_if_empty_overlay_errror">Kann nicht gespeichert werden, wenn insgesamt 0.</string>
+    <string name="check_if_empty_title_error">Kann nicht gespeichert werden ohne Titel. </string>
+    <string name="save_string">Speichern</string>
+    <string name="show_string">Spart</string>
+    <string name="add_data_error">Fehler beim Speichern Gesamt </string>
+    <string name="add_data_success">Gespeichert</string>
+    <string name="save_amount">Betrag:</string>
+    <string name="save_date">Datum:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Titel:</string>
 </resources>

@@ -2,7 +2,7 @@
 <resources>
     <string name="about_title">A questo proposito</string>
     <string name="action_settings">Impostazioni</string>
-    <string name="clear_all_title">Cancella tutto</string>
+    <string name="clear_all_title">Chiaro</string>
     <string name="currency_title">Valuta</string>
     <string name="feedback_comment_edit">Il tuo commento</string>
     <string name="feedback_email_edit">Email</string>
@@ -48,4 +48,15 @@
     <string name="swedish">Svedese</string>
     <string name="ukrainian">Ucraino</string>
     <string name="esperanto">Esperanto</string>
+    <string name="check_if_empty_overlay_errror">Impossibile salvare quando totale è 0. </string>
+    <string name="check_if_empty_title_error">Impossibile salvare senza un titolo. </string>
+    <string name="coin1edit" translatable="false"></string>
+    <string name="save_string">Salva</string>
+    <string name="show_string">Risparmio</string>
+    <string name="add_data_error">Risparmio complessivo errore</string>
+    <string name="add_data_success">Salvato</string>
+    <string name="save_id">ID:</string>
+    <string name="save_amount">Importo:</string>
+    <string name="save_date">Data:</string>
+    <string name="save_title">Titolo:</string>
 </resources>

@@ -5,7 +5,7 @@
     <string name="additions">Alla andra tillsatser, i:</string>
     <string name="bulgarian">bulgariska</string>
     <string name="changed_curr">Ändrade valutakurser till:</string>
-    <string name="clear_all_title">Rensa alla</string>
+    <string name="clear_all_title">Klar</string>
     <string name="croatian">kroatiska</string>
     <string name="currency_title">Valuta</string>
     <string name="czech">Tjeckiska</string>
@@ -48,4 +48,14 @@
     <string name="total_title_">Titel</string>
     <string name="ukrainian">Ukrainsk</string>
     <string name="esperanto">Esperanto</string>
+    <string name="check_if_empty_overlay_errror">Det går inte att spara när totala är 0. </string>
+    <string name="check_if_empty_title_error">Det går inte att spara utan en titel. </string>
+    <string name="save_string">Spara</string>
+    <string name="show_string">Sparar</string>
+    <string name="add_data_error">Fel sparande totalt </string>
+    <string name="add_data_success">Sparad</string>
+    <string name="save_id">ID:</string>
+    <string name="save_amount">Belopp:</string>
+    <string name="save_date">Datum:</string>
+    <string name="save_title">Titel:</string>
 </resources>

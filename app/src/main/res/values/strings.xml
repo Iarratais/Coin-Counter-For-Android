@@ -25,12 +25,14 @@
     <string name="cent2edit" translatable="false"> </string>
     <string name="cent1edit" translatable="false"> </string>
 
-    <string name="clear_all_title">Clear all</string>
+    <string name="clear_all_title">Clear</string>
     <string name="feedback_title">Feedback</string>
     <string name="currency_title">Currency</string>
     <string name="language_title">Language</string>
     <string name="about_title">About</string>
     <string name="save_string">Save</string>
+    <string name="check_if_empty_title_error">Can\'t save without a title.</string>
+    <string name="check_if_empty_overlay_errror">Can\'t save when total is 0.</string>
 
     <string name="howto">Welcome to Coin Counter \n \n \n Thank you for downloading my app. \n\n To use: \n1. Coin the amount of each coin you have. \n2. Input them into the app. \n3. Get the result! </string>
     <string name="howto_title">How To</string>
@@ -44,12 +46,12 @@
     <string name="title_activity_feedback">Feedback</string>
 
     <!-- Feedback screen strings -->
-    <string name="feedback_name_edit">Your name</string>
+    <string name="feedback_name_edit">Name</string>
     <string name="feedback_email_edit">Email</string>
-    <string name="feedback_comment_edit">Your comment</string>
+    <string name="feedback_comment_edit">Comment</string>
     <string name="feedback_submit">Submit</string>
     <string name="feedback_myemail" translatable="false">coincountr@gmail.com</string>
-    <string name="rate_on_play"><b>Rate on the Play store!</b></string>
+    <string name="rate_on_play">Rate on the Play store</string>
     <string name="title_activity_currency_selector">Currency</string>
     <string name="extraAdditionsedit" translatable="false"> </string>
 
@@ -62,6 +64,7 @@
 
     <string name="preference_file_key" translatable="false">com.karl.android.coincouter.PREFERENCE_FILE_KEY</string>
     <string name="title_activity_language_selector">Language</string>
+    <string name="show_string">Saves</string>
 
     <!-- Language changed notifications -->
     <string name="lang_english">Changed language to English</string>
@@ -97,8 +100,17 @@
 
     <string name="button_placeholder" translatable="false">Placeholder</string>
     <string name="description">Copyright © of Karl Jones\ncoincountr@gmail.com\nFeedback is appreciated</string>
-    <string name="title_activity_show_totals">ShowTotals</string>
+    <string name="title_activity_show_totals" translatable="false">ShowTotals</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_show_saves">ShowSaves</string>
+    <string name="add_data_error">Error saving total</string>
+    <string name="add_data_success">Saved</string>
+
+    <!-- saves screen -->
+    <string name="save_id">ID:</string>
+    <string name="save_title">Title:</string>
+    <string name="save_amount">Amount:</string>
+    <string name="save_date">Date: </string>
+
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="title_activity_show_saves" translatable="false">ShowSaves</string>
 </resources>

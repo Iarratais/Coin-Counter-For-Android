@@ -6,23 +6,18 @@ import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
-
 public class CurrencySelectorActivity extends ActionBarActivity{
-
-    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_currency_selector);
 
-        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.currency_title);
@@ -81,7 +76,7 @@ public class CurrencySelectorActivity extends ActionBarActivity{
     public void saveCurrency(String text) {
         SharedPreferences settings;
         SharedPreferences.Editor editor;
-        settings = this.getSharedPreferences(PREFS_NAME, this.MODE_PRIVATE);
+        settings = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         editor = settings.edit();
 
         editor.putString(PREFS_KEY, text);

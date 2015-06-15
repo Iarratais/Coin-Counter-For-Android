@@ -2,7 +2,7 @@
 <resources>
     <string name="about_title">О апплиачии</string>
     <string name="action_settings">Настройки</string>
-    <string name="clear_all_title">Чдалить все</string>
+    <string name="clear_all_title">ясно</string>
     <string name="currency_title">Валюта</string>
     <string name="title_activity_currency_selector">Валюта</string>
     <string name="feedback_comment_edit">Ваще комментарии</string>
@@ -48,4 +48,14 @@
     <string name="swedish">шведский</string>
     <string name="ukrainian">украинский</string>
     <string name="esperanto">Esperanto</string>
+    <string name="check_if_empty_overlay_errror">Не удается сохранить, когда общая сумма 0. </string>
+    <string name="check_if_empty_title_error">Не удается сохранить без названия. </string>
+    <string name="save_string">Сохранить</string>
+    <string name="show_string">Сохраняет</string>
+    <string name="add_data_error">Ошибка общая экономия </string>
+    <string name="add_data_success">Сохраненные</string>
+    <string name="save_amount">Сумма:</string>
+    <string name="save_date">Дата:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Название:</string>
 </resources>

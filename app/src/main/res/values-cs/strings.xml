@@ -5,7 +5,7 @@
     <string name="additions">Jakékoliv jiné doplňky, v:</string>
     <string name="bulgarian">bulharština</string>
     <string name="changed_curr">Změněno měnu na: </string>
-    <string name="clear_all_title">Vymazat vše </string>
+    <string name="clear_all_title">Vymazat</string>
     <string name="croatian">chorvatský</string>
     <string name="currency_title">Měna</string>
     <string name="czech">čeština</string>
@@ -48,4 +48,14 @@
     <string name="total_title_">Název</string>
     <string name="ukrainian">ukrajinský</string>
     <string name="esperanto">Esperanto</string>
+    <string name="check_if_empty_overlay_errror">Nelze uložit, pokud Celková je 0.</string>
+    <string name="check_if_empty_title_error">Nelze uložit bez titulu. </string>
+    <string name="save_string">Uložit</string>
+    <string name="show_string">Šetří</string>
+    <string name="add_data_error">Chyba úspora celkem </string>
+    <string name="add_data_success">Uloženo</string>
+    <string name="save_amount">částka:</string>
+    <string name="save_date">Datum:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Název:</string>
 </resources>

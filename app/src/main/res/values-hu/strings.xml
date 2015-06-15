@@ -5,7 +5,7 @@
     <string name="additions">Minden más kiegészítéseket, in: </string>
     <string name="bulgarian">bolgár</string>
     <string name="changed_curr">Megváltozott valuta: </string>
-    <string name="clear_all_title">Mindent kitöröl</string>
+    <string name="clear_all_title">világos</string>
     <string name="croatian">horvát</string>
     <string name="currency_title">Valuta</string>
     <string name="czech">cseh</string>
@@ -48,4 +48,14 @@
     <string name="title_activity_language_selector">Nyelv</string>
     <string name="total_title_">Cím</string>
     <string name="ukrainian">ukrán</string>
+    <string name="check_if_empty_overlay_errror">Nem lehet menteni, ha a teljes 0. </string>
+    <string name="check_if_empty_title_error">Nem lehet menteni cím nélkül. </string>
+    <string name="save_string">Mentés</string>
+    <string name="show_string">Menti</string>
+    <string name="add_data_error">Hiba történt a mentés teljes </string>
+    <string name="add_data_success">Mentett</string>
+    <string name="save_id">ID:</string>
+    <string name="save_amount">összeg:</string>
+    <string name="save_date">Dátum:</string>
+    <string name="save_title">Cím:</string>
 </resources>

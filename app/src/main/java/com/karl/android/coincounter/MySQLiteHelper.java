@@ -5,10 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
-
-import java.util.LinkedList;
-import java.util.List;
 
 public class MySQLiteHelper extends SQLiteOpenHelper{
     private static final int DATABASE_VERSION = 1;
@@ -45,11 +41,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
         values.put(KEY_AMOUNT, amount);
 
         long result = db.insert(TABLE_NAME, null, values);
-        if(result == -1) {
-            return false;
-        } else {
-            return true;
-        }
+        return result != -1;
     }
 
     public Cursor getAllData() {

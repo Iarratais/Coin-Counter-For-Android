@@ -2,7 +2,7 @@
 <resources>
     <string name="about_title">Apie šį aap</string>
     <string name="action_settings">Nustatymai</string>
-    <string name="clear_all_title">Viska išvalyti</string>
+    <string name="clear_all_title">Išvalyti</string>
     <string name="currency_title">Valiuta</string>
     <string name="english">Anglų</string>
     <string name="feedback_comment_edit">Jūsų komentaras</string>
@@ -48,4 +48,14 @@
     <string name="swedish">švedų</string>
     <string name="ukrainian">ukrainiečių</string>
     <string name="esperanto">Esperanto</string>
+    <string name="check_if_empty_overlay_errror">Negalima išsaugoti, kai suma yra 0. </string>
+    <string name="check_if_empty_title_error">Negalima išsaugoti be pavadinimo. </string>
+    <string name="save_string">Išsaugoti</string>
+    <string name="show_string">Sutaupo</string>
+    <string name="add_data_error">Klaida taupymas viso </string>
+    <string name="add_data_success">Išsaugota</string>
+    <string name="save_id">ID:</string>
+    <string name="save_amount">Kiekis:</string>
+    <string name="save_date">Data:</string>
+    <string name="save_title">Pavadinimas:</string>
 </resources>

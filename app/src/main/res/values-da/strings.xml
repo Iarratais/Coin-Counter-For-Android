@@ -5,7 +5,7 @@
     <string name="additions">Alle andre tilføjelser, i:</string>
     <string name="bulgarian">Bulgarian</string>
     <string name="changed_curr">Ændrede valuta: </string>
-    <string name="clear_all_title">Ryd alt</string>
+    <string name="clear_all_title">Ryd</string>
     <string name="croatian">Kroatisk</string>
     <string name="currency_title">Valuta</string>
     <string name="czech">Czech</string>
@@ -48,4 +48,14 @@
     <string name="title_activity_language_selector">Sprog</string>
     <string name="total_title_">Titel</string>
     <string name="ukrainian">ukrainsk</string>
+    <string name="check_if_empty_overlay_errror">Kan ikke gemme når alt er 0.</string>
+    <string name="check_if_empty_title_error">Kan ikke gemme uden en titel. </string>
+    <string name="save_string">Gem</string>
+    <string name="show_string">Sparer</string>
+    <string name="add_data_error">Fejl besparelse total </string>
+    <string name="add_data_success">Gemt</string>
+    <string name="save_amount">Beløb:</string>
+    <string name="save_date">Dato: </string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Titel:</string>
 </resources>

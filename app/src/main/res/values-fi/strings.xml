@@ -5,7 +5,7 @@
     <string name="additions">Muita lisäyksiä, in:</string>
     <string name="bulgarian">Bulgarialainen</string>
     <string name="changed_curr">Muuttunut valuutta on:</string>
-    <string name="clear_all_title">Tyhjennä kaikki</string>
+    <string name="clear_all_title">Kirkas</string>
     <string name="croatian">kroatialainen</string>
     <string name="currency_title">Valuutta</string>
     <string name="czech">czech</string>
@@ -48,4 +48,14 @@
     <string name="title_activity_language_selector">Kieli</string>
     <string name="total_title_">Otsikko</string>
     <string name="ukrainian">ukrainalainen</string>
+    <string name="check_if_empty_overlay_errror">Ei voi tallentaa, jos koko on 0. </string>
+    <string name="check_if_empty_title_error">Ei voi pelastaa ilman otsikkoa. </string>
+    <string name="save_string">Tallenna</string>
+    <string name="show_string">Säästää</string>
+    <string name="add_data_error">Virhe säästö yhteensä </string>
+    <string name="add_data_success">Tallennetut</string>
+    <string name="save_amount">Määrä:</string>
+    <string name="save_date">Date:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Otsikko:</string>
 </resources>

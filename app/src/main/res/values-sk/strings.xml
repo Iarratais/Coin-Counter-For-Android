@@ -6,7 +6,7 @@
     <string name="additions">Akékoľvek iné doplnky, v: </string>
     <string name="bulgarian">bulharčina</string>
     <string name="changed_curr">Zmenené menu na: </string>
-    <string name="clear_all_title">Vymazať všetko </string>
+    <string name="clear_all_title">jasný</string>
     <string name="croatian">chorvátsky</string>
     <string name="currency_title">Mena</string>
     <string name="czech">Čeština</string>
@@ -48,4 +48,14 @@
     <string name="title_activity_language_selector">Jazyk</string>
     <string name="total_title_">Názov</string>
     <string name="ukrainian">ukrajinský</string>
+    <string name="check_if_empty_overlay_errror">Nemožno uložiť, ak Celková je 0. </string>
+    <string name="check_if_empty_title_error">Nemožno uložiť bez titulu. </string>
+    <string name="save_string">Save</string>
+    <string name="show_string">šetrí</string>
+    <string name="add_data_error">Chyba úspora celkom </string>
+    <string name="add_data_success">Uložené</string>
+    <string name="save_amount">čiastka:</string>
+    <string name="save_date">Dátum:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Názov:</string>
 </resources>

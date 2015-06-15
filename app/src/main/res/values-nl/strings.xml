@@ -5,7 +5,7 @@
     <string name="additions">Iedere andere toevoegingen, in:</string>
     <string name="bulgarian">Bulgarian</string>
     <string name="changed_curr">Veranderd valuta naar:</string>
-    <string name="clear_all_title">Verwijder alles</string>
+    <string name="clear_all_title">duidelijk</string>
     <string name="croatian">Kroatisch</string>
     <string name="currency_title">Valuta</string>
     <string name="czech">Tsjechisch</string>
@@ -48,4 +48,14 @@
     <string name="title_activity_language_selector">Taal</string>
     <string name="total_title_">Titel</string>
     <string name="ukrainian">Oekraïens</string>
+    <string name="check_if_empty_overlay_errror">Kan niet opslaan als totaal is 0. </string>
+    <string name="check_if_empty_title_error">Kan niet opslaan zonder titel. </string>
+    <string name="save_string">Opslaan</string>
+    <string name="show_string">Bespaart</string>
+    <string name="add_data_error">Fout bij het opslaan in totaal </string>
+    <string name="add_data_success">Opgeslagen</string>
+    <string name="save_amount">Bedrag:</string>
+    <string name="save_date">Datum:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Titel:</string>
 </resources>

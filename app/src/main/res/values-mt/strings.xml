@@ -5,7 +5,7 @@
     <string name="additions">Kwalunkwe żidiet oħra, fi: </string>
     <string name="bulgarian">Bulgaru</string>
     <string name="changed_curr">Munita mibdul għal: </string>
-    <string name="clear_all_title">ċara kollha </string>
+    <string name="clear_all_title">ċara</string>
     <string name="croatian">Kroat</string>
     <string name="currency_title">Munita</string>
     <string name="czech">Ċeka</string>
@@ -48,4 +48,14 @@
     <string name="title_activity_language_selector">Lingwa</string>
     <string name="total_title_">Titolu</string>
     <string name="ukrainian">Ukrain</string>
+    <string name="check_if_empty_overlay_errror">Ma tista \'tiffranka meta total huwa 0. </string>
+    <string name="check_if_empty_title_error">Mhux tista \'tiffranka mingħajr titolu. </string>
+    <string name="save_string">Ħlief</string>
+    <string name="show_string">Jiffranka</string>
+    <string name="add_data_error">Iżball iffrankar totali </string>
+    <string name="add_data_success">Ssejvjata</string>
+    <string name="save_amount">Ammont:</string>
+    <string name="save_date">Data:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Titolu:</string>
 </resources>

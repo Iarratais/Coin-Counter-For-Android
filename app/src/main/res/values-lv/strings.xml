@@ -5,7 +5,7 @@
     <string name="additions">Jebkuras citas papildinājumi, jo: </string>
     <string name="bulgarian">Bulgārijas</string>
     <string name="changed_curr">Mainīts valūtu: </string>
-    <string name="clear_all_title">Notīrīt visu </string>
+    <string name="clear_all_title">Skaidrs</string>
     <string name="croatian">Horvātijas</string>
     <string name="currency_title">Valūta</string>
     <string name="czech">čehu</string>
@@ -48,4 +48,14 @@
     <string name="title_activity_language_selector">Valoda</string>
     <string name="total_title_">Virsraksts</string>
     <string name="ukrainian">ukraiņu</string>
+    <string name="check_if_empty_overlay_errror">Nevar saglabāt, ja kopējā summa ir 0. </string>
+    <string name="check_if_empty_title_error">Nevar saglabāt bez nosaukuma. </string>
+    <string name="save_string">Saglabāt</string>
+    <string name="show_string">Ietaupa</string>
+    <string name="add_data_error">Kļūda, saglabājot kopējo </string>
+    <string name="add_data_success">Saglabāts</string>
+    <string name="save_amount">Summa:</string>
+    <string name="save_date">Datums</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Nosaukums:</string>
 </resources>

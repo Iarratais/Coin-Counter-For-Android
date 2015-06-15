@@ -5,7 +5,7 @@
     <string name="additions">Muid lisandumine:</string>
     <string name="bulgarian">Bulgaaria</string>
     <string name="changed_curr">Muutunud valuuta:</string>
-    <string name="clear_all_title">Puhasta kõik</string>
+    <string name="clear_all_title">Selge</string>
     <string name="croatian">Horvaatia</string>
     <string name="currency_title">Valuuta</string>
     <string name="czech">tšehhi</string>
@@ -48,4 +48,14 @@
     <string name="title_activity_language_selector">Keel</string>
     <string name="total_title_">Pealkiri</string>
     <string name="ukrainian">Ukraina</string>
+    <string name="check_if_empty_overlay_errror">Ei saa salvestada, kui kokku on 0. </string>
+    <string name="check_if_empty_title_error">Ei saa salvestada ilma tiitli. </string>
+    <string name="save_string">Salvesta</string>
+    <string name="show_string">Säästab</string>
+    <string name="add_data_error">Viga kokkuhoiu kokku </string>
+    <string name="add_data_success">Salvestatud</string>
+    <string name="save_amount">Kogus:</string>
+    <string name="save_date">Kuupäev:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Pealkiri:</string>
 </resources>

@@ -1,10 +1,11 @@
+// Copyright of Karl Jones
+
 package com.karl.android.coincounter;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -14,7 +15,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,10 +25,6 @@ import java.util.ArrayList;
 
 public class ShowSaves extends ActionBarActivity {
 
-    private LinearLayout ll;
-
-    private Toolbar toolbar;
-
     MySQLiteHelper myDB;
 
     @Override
@@ -36,19 +32,19 @@ public class ShowSaves extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_saves);
 
-        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Saves");
 
-        ll = (LinearLayout) findViewById(R.id.llo2);
+        LinearLayout ll = (LinearLayout) findViewById(R.id.llo2);
         myDB = new MySQLiteHelper(this);
 
         viewAll();
 
         ContextThemeWrapper newContext = new ContextThemeWrapper(getBaseContext(), R.style.FancyText);
 
-        for (int i = 0 ; i < displays.size() ; i++) {
+        for (int i = displays.size() - 1 ; i >= 0 ; i--) {
             TextView b = new TextView(newContext);
             b.setText(displays.get(i));
             b.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -72,7 +68,11 @@ public class ShowSaves extends ActionBarActivity {
         }
         while(res.moveToNext()) {
             StringBuffer buffer = new StringBuffer();
-            buffer.append("DATE: " + res.getString(2).toUpperCase() + "\nTITLE: " + res.getString(3).toUpperCase() + "\nAMOUNT: " + res.getString(1) + "\nID: " + res.getString(0));
+            buffer.append(
+                    res.getString(2).toUpperCase() + "\n"
+                    + res.getString(3).toUpperCase() + "\n"
+                    + res.getString(1) + "\n"
+                    + getResources().getString(R.string.save_id) + " " + res.getString(0) + "\n\n");
             displays.add(buffer);
         }
     }
@@ -129,5 +129,11 @@ public class ShowSaves extends ActionBarActivity {
         } else {
             Toast.makeText(ShowSaves.this, "No data deleted", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        finish();
+        super.onDestroy();
     }
 }

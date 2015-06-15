@@ -1,39 +1,28 @@
 package com.karl.android.coincounter;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.ContextThemeWrapper;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Locale;
 
 
 public class LanguageSelectorActivity extends ActionBarActivity {
-
-    private Toolbar toolbar;
-
-    private LinearLayout llo;
 
     private AdView adView;
     SharedPreferences lang;
@@ -43,7 +32,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language_selector);
 
-        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.language_title);
@@ -51,7 +40,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         lang = this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
-        llo = (LinearLayout) findViewById(R.id.llo2);
+        LinearLayout llo = (LinearLayout) findViewById(R.id.llo2);
 
         ArrayList<String> strings = new ArrayList<String>();
 
@@ -128,6 +117,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         if (adView != null) {
             adView.destroy();
         }
+        finish();
         super.onDestroy();
     }
 
@@ -622,7 +612,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
     public void saveLanguage(String text) {
         SharedPreferences lang;
         SharedPreferences.Editor editor;
-        lang = this.getSharedPreferences(PREFS_NAME, this.MODE_PRIVATE);
+        lang = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         editor = lang.edit();
 
         editor.putString(PREFS_KEY_LANG, text);

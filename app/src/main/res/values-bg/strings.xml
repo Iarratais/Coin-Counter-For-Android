@@ -4,7 +4,7 @@
     <string name="action_settings">Настройки</string>
     <string name="additions">Всякакви други допълнения, в:</string>
     <string name="bulgarian">български</string>
-    <string name="clear_all_title">Изчисти всичко</string>
+    <string name="clear_all_title">ясно</string>
     <string name="croatian">хърватски</string>
     <string name="currency_title">Bалута</string>
     <string name="czech">Чешки</string>
@@ -48,4 +48,14 @@
     <string name="changed_curr">Променени валута за:</string>
     <string name="esperanto">Esperanto</string>
     <string name="howto">Добре дошли в монети Брояч \n\n\nБлагодаря ви за сваляне на моя ап. \n\nЗа да използвате: \n1. Coin сумата на всяка монета имате. \n2. Въведете ги в приложението. \n3. Вземете резултат!</string>
+    <string name="check_if_empty_overlay_errror">Не може да се спаси, когато общият е 0.</string>
+    <string name="check_if_empty_title_error">Не може да се спаси, без заглавие. </string>
+    <string name="save_string">Запази</string>
+    <string name="show_string">спестява</string>
+    <string name="add_data_error">Грешка при запазване на общия </string>
+    <string name="add_data_success">Спасен</string>
+    <string name="save_amount">сума:</string>
+    <string name="save_date">Дата:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Заглавие: </string>
 </resources>

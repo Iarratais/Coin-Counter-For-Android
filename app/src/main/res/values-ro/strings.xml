@@ -2,7 +2,7 @@
 <resources>
     <string name="about_title">Despre</string>
     <string name="action_settings">Setari</string>
-    <string name="clear_all_title">Curata tot</string>
+    <string name="clear_all_title">Clar</string>
     <string name="currency_title">Valuta</string>
     <string name="description">Drepturi de autor © de Karl Jones \ncoincountr@gmail.com \nFeedback este apreciat</string>
     <string name="english">Engleză</string>
@@ -48,4 +48,14 @@
     <string name="swedish">suedeză</string>
     <string name="ukrainian">ucraineană</string>
     <string name="esperanto">Esperanto</string>
+    <string name="check_if_empty_overlay_errror">Nu pot salva când totală este 0. </string>
+    <string name="check_if_empty_title_error">Nu poate salva fără un titlu. </string>
+    <string name="save_string">Salvare</string>
+    <string name="show_string">salvează</string>
+    <string name="add_data_error">Eroare economie totală </string>
+    <string name="add_data_success">Salvat</string>
+    <string name="save_amount">Suma:</string>
+    <string name="save_date">Data:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Titlu:</string>
 </resources>

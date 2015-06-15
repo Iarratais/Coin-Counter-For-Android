@@ -15,7 +15,7 @@
     <string name="currency_title">Moneda</string>
     <string name="feedback_title">Realimentación</string>
     <string name="language_title">Idioma</string>
-    <string name="clear_all_title">Limpiar todo</string>
+    <string name="clear_all_title">Claro</string>
     <string name="title_activity_language_selector">Idioma</string>
     <string name="lang_english">Idioma cambiado a Español</string>
     <string name="spanish">Español</string>
@@ -48,4 +48,14 @@
     <string name="swedish">sueco</string>
     <string name="ukrainian">ucranio</string>
     <string name="esperanto">Esperanto</string>
+    <string name="check_if_empty_overlay_errror">No se puede guardar cuando total es de 0. </string>
+    <string name="check_if_empty_title_error">No se puede guardar sin un título. </string>
+    <string name="save_string">Guardar</string>
+    <string name="show_string">Guarda</string>
+    <string name="add_data_error">Eraro ŝparado entute </string>
+    <string name="add_data_success">Guardado</string>
+    <string name="save_amount">Monto:</string>
+    <string name="save_date">Fecha:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Título:</string>
 </resources>

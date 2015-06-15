@@ -5,7 +5,7 @@
     <string name="additions">Будь-які інші доповнення, в</string>
     <string name="bulgarian">болгарський</string>
     <string name="changed_curr">Поміняти вапюту на: </string>
-    <string name="clear_all_title">Очистити всі</string>
+    <string name="clear_all_title">Ясно</string>
     <string name="croatian">Хорватська</string>
     <string name="currency_title">вапютa</string>
     <string name="czech">чеський</string>
@@ -48,4 +48,14 @@
     <string name="title_activity_language_selector">Мова</string>
     <string name="total_title_">Назва</string>
     <string name="ukrainian">Український</string>
+    <string name="check_if_empty_overlay_errror">Не вдається зберегти, коли загальна сума 0. </string>
+    <string name="check_if_empty_title_error">Неможливо зберегти без назви. </string>
+    <string name="save_string">зберегти</string>
+    <string name="show_string">зберігає</string>
+    <string name="add_data_error">Помилка загальна економія </string>
+    <string name="add_data_success">збережені</string>
+    <string name="save_id">ID:</string>
+    <string name="save_amount">Cума:</string>
+    <string name="save_date">Дата:</string>
+    <string name="save_title">Назва:</string>
 </resources>

@@ -5,7 +5,7 @@
     <string name="additions">Quaisquer outras adições, em: </string>
     <string name="bulgarian">búlgaro</string>
     <string name="changed_curr">Mudou a moeda: </string>
-    <string name="clear_all_title">limpar tudo </string>
+    <string name="clear_all_title">Claro</string>
     <string name="croatian">Croata</string>
     <string name="currency_title">Moeda</string>
     <string name="czech">Tcheco</string>
@@ -48,4 +48,14 @@
     <string name="title_activity_language_selector">Língua</string>
     <string name="total_title_">Título</string>
     <string name="ukrainian">Ucraniano</string>
+    <string name="check_if_empty_overlay_errror">Não é possível salvar quando total é 0. </string>
+    <string name="check_if_empty_title_error">Não é possível salvar sem um título. </string>
+    <string name="save_string">Salvar</string>
+    <string name="show_string">Salva</string>
+    <string name="add_data_error">Erro economia total </string>
+    <string name="add_data_success">Salvo</string>
+    <string name="save_amount">Quantidade:</string>
+    <string name="save_date">Data:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_title">Título:</string>
 </resources>

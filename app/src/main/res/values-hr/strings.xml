@@ -5,7 +5,7 @@
     <string name="additions">Bilo koji drugi dodaci, u:</string>
     <string name="bulgarian">bugarski</string>
     <string name="changed_curr">Promijenjen valutu u:</string>
-    <string name="clear_all_title">Obriši sve</string>
+    <string name="clear_all_title">Jasno</string>
     <string name="croatian">hrvatski</string>
     <string name="currency_title">Valuta</string>
     <string name="czech">češki</string>
@@ -48,4 +48,14 @@
     <string name="total_title_">Naslov</string>
     <string name="ukrainian">Ukrajinski</string>
     <string name="esperanto">Esperanto</string>
+    <string name="check_if_empty_overlay_errror">Ne mogu spremiti kada Ukupno je 0. </string>
+    <string name="check_if_empty_title_error">Ne može spasiti bez naslova. </string>
+    <string name="save_string">Spremi</string>
+    <string name="show_string">Sprema</string>
+    <string name="add_data_error">Ušteda ukupna pogreška </string>
+    <string name="add_data_success">Spremljeno</string>
+    <string name="save_id">ID:</string>
+    <string name="save_amount">Količina:</string>
+    <string name="save_date">Datum</string>
+    <string name="save_title">Naslov:</string>
 </resources>
