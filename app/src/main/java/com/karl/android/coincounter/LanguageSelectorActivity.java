@@ -34,9 +34,9 @@ public class LanguageSelectorActivity extends ActionBarActivity {
     private Toolbar toolbar;
 
     private LinearLayout llo;
-    private ScrollView sv;
 
     private AdView adView;
+    SharedPreferences lang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,12 +48,10 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.language_title);
 
-        SharedPreferences lang = this.getSharedPreferences(
+        lang = this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
         llo = (LinearLayout) findViewById(R.id.llo2);
-        sv = (ScrollView) findViewById(R.id.sv1);
-
 
         ArrayList<String> strings = new ArrayList<String>();
 
@@ -615,11 +613,6 @@ public class LanguageSelectorActivity extends ActionBarActivity {
 
         Toast.makeText(this, getResources().getString(R.string.lang_english), Toast.LENGTH_SHORT).show();
 
-        startActivity(intent);
-    }
-
-    public void request_language(View view) {
-        Intent intent = new Intent(this, FeedbackActivity.class);
         startActivity(intent);
     }
 

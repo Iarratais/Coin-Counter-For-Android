@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -45,10 +46,12 @@ public class ShowSaves extends ActionBarActivity {
 
         viewAll();
 
+        ContextThemeWrapper newContext = new ContextThemeWrapper(getBaseContext(), R.style.FancyText);
+
         for (int i = 0 ; i < displays.size() ; i++) {
-            TextView b = new TextView(this);
+            TextView b = new TextView(newContext);
             b.setText(displays.get(i));
-            b.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 200));
+            b.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             b.setId(i);
             b.setTag(i);
             b.setBackgroundResource(getResources().getColor(android.R.color.transparent));
@@ -69,7 +72,7 @@ public class ShowSaves extends ActionBarActivity {
         }
         while(res.moveToNext()) {
             StringBuffer buffer = new StringBuffer();
-            buffer.append("Id: " + res.getString(0) + "\nDate: " + res.getString(1) + "\nTitle: " + res.getString(2) + "\nAmount: " + res.getString(3));
+            buffer.append("DATE: " + res.getString(2).toUpperCase() + "\nTITLE: " + res.getString(3).toUpperCase() + "\nAMOUNT: " + res.getString(1) + "\nID: " + res.getString(0));
             displays.add(buffer);
         }
     }
