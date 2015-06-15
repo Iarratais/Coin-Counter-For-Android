@@ -69,7 +69,7 @@ public class ShowSaves extends ActionBarActivity {
         while(res.moveToNext()) {
             StringBuffer buffer = new StringBuffer();
             buffer.append(
-                    res.getString(2).toUpperCase() + "\n"
+                    res.getString(2) + "\n"
                     + res.getString(3).toUpperCase() + "\n"
                     + res.getString(1) + "\n"
                     + getResources().getString(R.string.save_id) + " " + res.getString(0) + "\n\n");

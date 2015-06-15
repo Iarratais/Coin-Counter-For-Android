@@ -4,9 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.ContextThemeWrapper;
 import android.view.MenuItem;
 import android.view.View;
@@ -92,6 +94,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
 
         adView.loadAd(adRequest);
     }
+
 
     /** Called when leaving the activity */
     @Override
@@ -233,7 +236,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         Configuration config = new Configuration();
         config.locale = locale;
         this.getApplicationContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-        saveLanguage("Bulgarian");
+        //saveLanguage("Bulgarian");
 
         Intent intent = new Intent(this, MainActivity.class);
 
@@ -247,7 +250,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         Configuration config = new Configuration();
         config.locale = locale;
         this.getApplicationContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-        saveLanguage("Croatian");
+        //saveLanguage("Croatian");
 
         Intent intent = new Intent(this, MainActivity.class);
 

@@ -7,11 +7,14 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Build;
+import android.preference.PreferenceManager;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -94,8 +97,11 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        updateLanguage(this);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         Toolbar toolbar    = (Toolbar) findViewById (R.id.tool_bar);
         setSupportActionBar(toolbar);
@@ -182,7 +188,28 @@ public class MainActivity extends ActionBarActivity {
 
         hintChecks();
         clearAll();
+
     } // End onCreate()
+
+    public static void updateLanguage(Context ctx) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
+        String lang = prefs.getString("locale_override", "");
+        updateLanguage(ctx, lang);
+    }
+
+    public static void updateLanguage(Context ctx, String lang) {
+        Configuration cfg = new Configuration();
+        if(!TextUtils.isEmpty(lang)) {
+            cfg.locale = new Locale(lang);
+        } else {
+            cfg.locale = Locale.getDefault();
+        }
+        ctx.getResources().updateConfiguration(cfg, null);
+    }
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        setContentView(R.layout.activity_main);
+    }
 
     public void AddData() {
         btnadd.setOnClickListener(
@@ -240,8 +267,9 @@ public class MainActivity extends ActionBarActivity {
 
     public String getFormatDate() {
         Date now = new Date();
-        String nowAsString;
-        return nowAsString = new SimpleDateFormat("dd-MMM-yy").format(now);
+        String nowAsString = new SimpleDateFormat("dd-MM-yy", getResources().getConfiguration().locale).format(now);
+        String andMins = nowAsString + " at " + new SimpleDateFormat("HH:mm", getResources().getConfiguration().locale).format(now);
+        return andMins;
     }
 
     // --------------------------------------------------- TEXT WATCHERS --------------------------------------------------------------------
@@ -776,6 +804,9 @@ public class MainActivity extends ActionBarActivity {
             case R.id.action_show_saves:
                 showsaves();
                 return true;
+            case R.id.action_share_via_SMS:
+                sendTotals();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         } // End switch
@@ -843,6 +874,18 @@ public class MainActivity extends ActionBarActivity {
         additionaledit.setText("");
 
         System.out.println("clearAll: All inputs cleared");
+    }
+    public void sendTotals() {
+        boolean isEmpty = checkIfEmpty();
+        if(!isEmpty) {
+            StringBuilder message = new StringBuilder();
+            message.append("Your total is " + overlay.getText().toString() + " for: " + total_title_.getText().toString() + " on " + getFormatDate());
+
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.putExtra(intent.EXTRA_TEXT, message.toString());
+            intent.setType("text/plain");
+            startActivity(intent);
+        }
     }
 
     // ------------------------ CALCULATION METHODS ---------------------------------------------------------------------------------

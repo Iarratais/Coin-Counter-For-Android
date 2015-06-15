@@ -111,6 +111,8 @@
     <string name="save_amount">Amount:</string>
     <string name="save_date">Date: </string>
 
+    <string name="share_settings">Share</string>
+
     <string name="hello_world" translatable="false">Hello world!</string>
     <string name="title_activity_show_saves" translatable="false">ShowSaves</string>
 </resources>

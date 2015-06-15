@@ -6,6 +6,12 @@
         android:title="@string/show_string"
         />
     <item
+        android:id="@+id/action_share_via_SMS"
+        android:title="@string/share_settings"
+        app:showAsAction="ifRoom"
+        android:actionProviderClass="android.widget.ShareActionProvider"
+        />
+    <item
         android:id="@+id/action_language_selector"
         android:title="@string/language_title"
         app:showAsAction="never" />
