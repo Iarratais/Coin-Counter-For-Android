@@ -55,6 +55,7 @@ public class ShowSaves extends ActionBarActivity {
         }
         result = (EditText) findViewById(R.id.temp_edit);
     }
+
     public Cursor res;
     public ArrayList<StringBuffer> displays;
 
@@ -65,6 +66,7 @@ public class ShowSaves extends ActionBarActivity {
             Toast.makeText(ShowSaves.this, "No saves found", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(ShowSaves.this, MainActivity.class);
             startActivity(intent);
+
         }
         while(res.moveToNext()) {
             StringBuffer buffer = new StringBuffer();
@@ -88,9 +90,6 @@ public class ShowSaves extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -116,7 +115,6 @@ public class ShowSaves extends ActionBarActivity {
                             }
                         }).create().show();
             } // end case
-
         return super.onOptionsItemSelected(item);
     }
 

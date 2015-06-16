@@ -41,18 +41,19 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
         values.put(KEY_AMOUNT, amount);
 
         long result = db.insert(TABLE_NAME, null, values);
+
         return result != -1;
     }
 
     public Cursor getAllData() {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
-
         return res;
     }
 
     public Integer deleteData(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete(TABLE_NAME, "id = ?", new String[] {id});
+        Integer delete = db.delete(TABLE_NAME, "id = ?", new String[] {id});
+        return delete;
     }
 }

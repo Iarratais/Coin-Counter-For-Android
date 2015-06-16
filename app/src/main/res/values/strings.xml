@@ -70,33 +70,33 @@
     <string name="lang_english">Changed language to English</string>
 
     <!-- Languages -->
-    <string name="english">English</string>
-    <string name="esperanto">Esperanto</string>
-    <string name="spanish">Spanish</string>
-    <string name="german">German</string>
-    <string name="lithuanian">Lithuanian</string>
-    <string name="russian">Russian</string>
-    <string name="polish">Polish</string>
-    <string name="italian">Italian</string>
-    <string name="romanian">Romanian</string>
-    <string name="french">French</string>
-    <string name="bulgarian">Bulgarian</string>
-    <string name="ukrainian">Ukrainian</string>
-    <string name="croatian">Croatian</string>
-    <string name="czech">Czech</string>
-    <string name="danish">Danish</string>
-    <string name="dutch">Dutch</string>
-    <string name="estonian">Estonian</string>
-    <string name="finnish">Finnish</string>
-    <string name="greek">Greek</string>
-    <string name="hungarian">Hungarian</string>
-    <string name="irish">Irish</string>
-    <string name="latvian">Latvian</string>
-    <string name="maltese">Maltese</string>
-    <string name="portuguese">Portuguese</string>
-    <string name="slovak">Slovak</string>
-    <string name="slovienian">Slovenian</string>
-    <string name="swedish">Swedish</string>
+    <string name="english" translatable="false">English</string>
+    <string name="esperanto" translatable="false">Esperanto</string>
+    <string name="spanish" translatable="false">Español</string>
+    <string name="german" translatable="false">Alemán</string>
+    <string name="lithuanian" translatable="false">Lietuvos</string>
+    <string name="russian" translatable="false">Русский</string>
+    <string name="polish" translatable="false">Polski</string>
+    <string name="italian" translatable="false">Italiano</string>
+    <string name="romanian" translatable="false">Româna</string>
+    <string name="french" translatable="false">Français</string>
+    <string name="bulgarian" translatable="false">български</string>
+    <string name="ukrainian" translatable="false">Український</string>
+    <string name="croatian" translatable="false">Hrvatski</string>
+    <string name="czech" translatable="false">čeština</string>
+    <string name="danish" translatable="false">Dansk</string>
+    <string name="dutch" translatable="false">Nederlands</string>
+    <string name="estonian" translatable="false">Eesti</string>
+    <string name="finnish" translatable="false">Suomalainen</string>
+    <string name="greek" translatable="false">ελληνικά</string>
+    <string name="hungarian" translatable="false">Magyar</string>
+    <string name="irish" translatable="false">Gaeilge</string>
+    <string name="latvian" translatable="false">Latvijas</string>
+    <string name="maltese" translatable="false">Maltese</string>
+    <string name="portuguese" translatable="false">Português</string>
+    <string name="slovak" translatable="false">slovaščina</string>
+    <string name="slovienian" translatable="false">Slovenščina</string>
+    <string name="swedish" translatable="false">Svenska</string>
 
     <string name="button_placeholder" translatable="false">Placeholder</string>
     <string name="description">Copyright © of Karl Jones\ncoincountr@gmail.com\nFeedback is appreciated</string>

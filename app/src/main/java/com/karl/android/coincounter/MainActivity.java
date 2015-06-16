@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Build;
@@ -34,8 +35,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class MainActivity extends ActionBarActivity {
 
+public class MainActivity extends ActionBarActivity {
     MySQLiteHelper myDB;
 
     public static TextToSpeech t1;
@@ -65,27 +66,9 @@ public class MainActivity extends ActionBarActivity {
     private static String total = "0";
 
     // All edittexts
-    private EditText total_title_;
-    private EditText note5000edit;
-    private EditText note2000edit;
-    private EditText note1000edit;
-    private EditText note500edit;
-    private EditText note200edit;
-    private EditText note100edit;
-    private EditText note50edit;
-    private EditText note20edit;
-    private EditText note10edit;
-    private EditText note5edit;
-    private EditText note1edit;
-    private EditText coin2edit;
-    private EditText coin1edit;
-    private EditText cent50edit;
-    private EditText cent25edit;
-    private EditText cent20edit;
-    private EditText cent10edit;
-    private EditText cent5edit;
-    private EditText cent2edit;
-    private EditText cent1edit;
+    private EditText total_title_, note5000edit, note2000edit, note1000edit, note500edit, note200edit, note100edit, note50edit, note20edit, note10edit, note5edit, note1edit;
+    private EditText coin2edit, coin1edit;
+    private EditText cent50edit, cent25edit, cent20edit, cent10edit, cent5edit, cent2edit, cent1edit;
     private EditText additionaledit;
     public static TextView overlay;
 
@@ -101,7 +84,6 @@ public class MainActivity extends ActionBarActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         Toolbar toolbar    = (Toolbar) findViewById (R.id.tool_bar);
         setSupportActionBar(toolbar);
@@ -188,8 +170,8 @@ public class MainActivity extends ActionBarActivity {
 
         hintChecks();
         clearAll();
-
     } // End onCreate()
+
 
     public static void updateLanguage(Context ctx) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);

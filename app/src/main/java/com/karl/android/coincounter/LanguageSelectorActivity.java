@@ -4,11 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
 import android.view.ContextThemeWrapper;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,6 +19,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Locale;
 
 
@@ -74,6 +73,8 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         strings.add(getString(R.string.swedish));       // 25
         strings.add(getString(R.string.ukrainian));     // 26
 
+        Collections.sort(strings);
+
         ContextThemeWrapper newContext = new ContextThemeWrapper(getBaseContext(), R.style.ButtonStyle);
 
         for (int i = 0 ; i < strings.size() ; i++) {
@@ -89,12 +90,14 @@ public class LanguageSelectorActivity extends ActionBarActivity {
 
         adView = (AdView) findViewById(R.id.adView1);
 
+
         AdRequest adRequest = new AdRequest.Builder()
                 .build();
 
         adView.loadAd(adRequest);
-    }
 
+        adView.setVisibility(View.VISIBLE);
+    }
 
     /** Called when leaving the activity */
     @Override
@@ -129,85 +132,85 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         public void onClick(View view) {
             switch(view.getId()) {
                 case 0:
-                    change_to_BULGARIAN(view);
+                    change_to_GERMAN(view);
                     break;
                 case 1:
-                    change_to_CROATIAN(view);
-                    break;
-                case 2:
-                    change_to_CZECH(view);
-                    break;
-                case 3:
                     change_to_DANISH(view);
                     break;
+                case 2:
+                    change_to_ESTONIAN(view);
+                    break;
+                case 3:
+                    change_to_ENGLISH(view);
+                    break;
                 case 4:
-                    change_to_DUTCH(view);
+                    change_to_SPANISH(view);
                     break;
                 case 5:
                     change_to_ESPERANTO(view);
                     break;
                 case 6:
-                    change_to_ENGLISH(view);
-                    break;
-                case 7:
-                    change_to_ESTONIAN(view);
-                    break;
-                case 8:
-                    change_to_FINNISH(view);
-                    break;
-                case 9:
                     change_to_FRENCH(view);
                     break;
+                case 7:
+                    change_to_IRISH(view);
+                    break;
+                case 8:
+                    change_to_CROATIAN(view);
+                    break;
+                case 9:
+                    change_to_ITALIAN(view);
+                    break;
                 case 10:
-                    change_to_GERMAN(view);
+                    change_to_LATVIAN(view);
                     break;
                 case 11:
-                    change_to_GREEK(view);
+                    change_to_LITHUANIAN(view);
                     break;
                 case 12:
                     change_to_HUNGARIAN(view);
                     break;
                 case 13:
-                    change_to_IRISH(view);
-                    break;
-                case 14:
-                    change_to_ITALIAN(view);
-                    break;
-                case 15:
-                    change_to_LATVIAN(view);
-                    break;
-                case 16:
-                    change_to_LITHUANIAN(view);
-                    break;
-                case 17:
                     change_to_MALTESE(view);
                     break;
-                case 18:
+                case 14:
+                    change_to_DUTCH(view);
+                    break;
+                case 15:
                     change_to_POLISH(view);
                     break;
-                case 19:
+                case 16:
                     change_to_PORTUGUESE(view);
                     break;
-                case 20:
+                case 17:
                     change_to_ROMANIAN(view);
                     break;
-                case 21:
-                    change_to_RUSSIAN(view);
-                    break;
-                case 22:
-                    change_to_SLOVAK(view);
-                    break;
-                case 23:
+                case 18:
                     change_to_SLOVENIAN(view);
                     break;
-                case 24:
-                    change_to_SPANISH(view);
+                case 19:
+                    change_to_FINNISH(view);
                     break;
-                case 25:
+                case 20:
                     change_to_SWEDISH(view);
                     break;
-                case 26:
+                case 21:
+                    change_to_SLOVAK(view);
+                    break;
+                case 22:
+                    change_to_CZECH(view);
+                    break;
+                case 23:
+                    change_to_GREEK(view);
+                    break;
+                case 24:
+                    change_to_RUSSIAN(view);
+                    break;
+                case 25:
                     change_to_UKRAINIAN(view);
+                    break;
+                case 26:
+                    change_to_BULGARIAN(view);
                     break;
                 default:
                     break;
@@ -264,7 +267,7 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         Configuration config = new Configuration();
         config.locale = locale;
         this.getApplicationContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-        saveLanguage("Spanish");
+        //saveLanguage("Spanish");
 
         Intent intent = new Intent(this, MainActivity.class);
 
@@ -278,13 +281,14 @@ public class LanguageSelectorActivity extends ActionBarActivity {
         Configuration config = new Configuration();
         config.locale = locale;
         this.getApplicationContext().getResources().updateConfiguration(config, null);
-        saveLanguage("Russian");
+        //saveLanguage("Russian");
 
         Intent intent = new Intent(this, MainActivity.class);
 
         Toast.makeText(this, getResources().getString(R.string.lang_english), Toast.LENGTH_SHORT).show();
 
         startActivity(intent);
+
     }
     public void change_to_ESPERANTO(View view) {
         Locale locale = new Locale("eo");
