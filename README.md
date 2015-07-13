@@ -11,14 +11,7 @@ To use:
 
 Languages:
 <ul>
-  <li>English</li>
-  <li>German</li>
-  <li>Spanish</li>
-  <li>Romanian</li>
-  <li>Russian</li>
-  <li>Italian</li>
-  <li>Polish</li>
-  <li>Lithuanian</li>
+  <li>All European languages aswell as Russian and Ukrainian</li>
 </ul>
 
 Currencies:
