@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false"></string>
+    <string name="about_title">אודות </string>
+    <string name="action_settings">הגדרות </string>
+    <string name="add_data_error">התרחשה שגיאה בעת שמירת הסכום </string>
+    <string name="add_data_success">נשמר </string>
+    <string name="additions">תוספות, ב: </string>
+    <string name="changed_curr">מטבע השתנה ל: </string>
+    <string name="check_if_empty_overlay_errror">לא ניתן לשמור כשהסכום הוא אפס </string>
+    <string name="check_if_empty_title_error">לא ניתן לשמור ללא כותרת </string>
+    <string name="clear_all_title">נקה </string>
+    <string name="currency_title">מטבע </string>
+    <string name="description">ברוכים הבאים ל Coin Counter </string>
+    <string name="feedback_comment_edit">תגובה </string>
+    <string name="feedback_email_edit">דוא"\ל </string>
+    <string name="feedback_name_edit">שם </string>
+    <string name="feedback_submit">שלח </string>
+    <string name="feedback_title">משוב </string>
+    <string name="howto">ברוכים הבאים ל Coin Countr</string>
+    <string name="howto_title">הדרכה </string>
+    <string name="lang_english">שפה השתנתה לעברית </string>
+    <string name="language_title">שפה </string>
+    <string name="rate_on_play">דרג את האפליקציה הזו ב- Google Play </string>
+    <string name="save_amount">סכום:</string>
+    <string name="save_date">תאריך:</string>
+    <string name="save_id">מספר הפריט השמור:</string>
+    <string name="save_string">פריטים שנשמרו </string>
+    <string name="save_title">כותרת:</string>
+    <string name="share_settings">שתף </string>
+    <string name="show_string">פריטים שנשמרו </string>
+    <string name="title_activity_currency_selector">מטבע </string>
+    <string name="title_activity_feedback">משוב </string>
+    <string name="title_activity_language_selector">שפה </string>
+    <string name="total_title_">כותרת </string>
+</resources>

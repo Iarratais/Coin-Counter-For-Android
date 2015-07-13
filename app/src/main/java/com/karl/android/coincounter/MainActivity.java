@@ -6,7 +6,6 @@ import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Build;
@@ -780,9 +779,9 @@ public class MainActivity extends ActionBarActivity {
             case R.id.action_currency_selector:
                 openCurrency();
                 return true;
-            case R.id.action_language_selector:
-                openLanguage();
-                return true;
+            //case R.id.action_language_selector:
+                //openLanguage();
+                //return true;
             case R.id.action_show_saves:
                 showsaves();
                 return true;
@@ -1077,7 +1076,7 @@ public class MainActivity extends ActionBarActivity {
             note1000edit.setVisibility(View.GONE);
             note500edit.setVisibility(View.GONE);
             note200edit.setVisibility(View.GONE);
-            note100edit.setVisibility(View.GONE);
+            note100edit.setVisibility(View.VISIBLE);
             note50edit.setVisibility(View.VISIBLE);
             note20edit.setVisibility(View.VISIBLE);
             note10edit.setVisibility(View.VISIBLE);

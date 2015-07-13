@@ -11,6 +11,8 @@
         app:showAsAction="ifRoom"
         android:actionProviderClass="android.widget.ShareActionProvider"
         />
+
+    <!-- Button for the user to get to the language selection, disabled until the bug with saving the language is fixed -->
     <item
         android:id="@+id/action_language_selector"
         android:title="@string/language_title"
