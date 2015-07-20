@@ -11,7 +11,14 @@ To use:
 
 Languages:
 <ul>
-  <li>All European languages aswell as Russian and Ukrainian</li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
 </ul>
 
 Currencies:
