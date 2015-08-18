@@ -1,30 +1,9 @@
-# Coin Calculator for Android
+#Dev blog
 
-This is a simple coin calculator
+https://carlitojones.wordpress.com/
 
-To use:
-<ol>
-  <li>Count the amounts of each coin you have</li>
-  <li>Put the numbers into the program when asked</li>
-  <li>Get output!</li>
-</ol>
+#Coin Countr languages:
+https://carlitojones.wordpress.com/2015/08/12/coin-countr-languages-2/
 
-Languages:
-<ul>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
-
-Currencies:
-<ul>
-  <li>EUR</li>
-  <li>USD</li>
-  <li>RUB</li>
-  <li>GBP</li>
-</ul>
+#Coin Countr currencies:
+https://carlitojones.wordpress.com/2015/08/18/coin-countr-currencies/
