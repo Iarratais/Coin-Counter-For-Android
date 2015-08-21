@@ -32,4 +32,5 @@
     <string name="save_id">ID:</string>
     <string name="save_title">Titel:</string>
     <string name="share_settings">Andel</string>
+    <string name="app_name" translatable="false">Coin Countr</string>
 </resources>

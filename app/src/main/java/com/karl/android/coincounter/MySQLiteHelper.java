@@ -14,6 +14,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
     private static final String KEY_TITLE = "title";
     private static final String KEY_AMOUNT = "amount";
     private static final String KEY_DATE = "date";
+    private static final String KEY_COMMENT = "comment";
 
 
     public MySQLiteHelper(Context context) {
@@ -23,12 +24,12 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAME + "(" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_DATE + " TEXT," + KEY_TITLE + " TEXT," + KEY_AMOUNT + " TEXT)");
+        db.execSQL("create table " + TABLE_NAME + "(" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_DATE + " TEXT," + KEY_TITLE + " TEXT," + KEY_AMOUNT + " TEXT " + KEY_COMMENT + " TEXT)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISITS " + TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
 

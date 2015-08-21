@@ -32,4 +32,5 @@
     <string name="save_id">ID:</string>
     <string name="save_title">Pealkiri:</string>
     <string name="share_settings">Osa</string>
+    <string name="app_name" translatable="false">Mündi Counter</string>
 </resources>

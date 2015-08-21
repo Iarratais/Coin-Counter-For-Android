@@ -41,6 +41,7 @@ public class MainActivity extends ActionBarActivity {
     public static TextToSpeech t1;
 
     public static String total_title = " ";
+    public static String note10000Amt = "0";
     public static String note5000Amt = "0";
     public static String note2000Amt = "0";
     public static String note1000Amt = "0";
@@ -65,7 +66,7 @@ public class MainActivity extends ActionBarActivity {
     private static String total = "0";
 
     // All edittexts
-    private EditText total_title_, note5000edit, note2000edit, note1000edit, note500edit, note200edit, note100edit, note50edit, note20edit, note10edit, note5edit, note1edit;
+    private EditText total_title_, note10000edit, note5000edit, note2000edit, note1000edit, note500edit, note200edit, note100edit, note50edit, note20edit, note10edit, note5edit, note1edit;
     private EditText coin2edit, coin1edit;
     private EditText cent50edit, cent25edit, cent20edit, cent10edit, cent5edit, cent2edit, cent1edit;
     private EditText additionaledit;
@@ -93,6 +94,7 @@ public class MainActivity extends ActionBarActivity {
         myDB = new MySQLiteHelper(this);
 
         overlay          = (TextView) findViewById (R.id.OverlayTotal);
+        note10000edit    = (EditText) findViewById (R.id.notes10000);
         note5000edit     = (EditText) findViewById (R.id.notes5000);
         note2000edit     = (EditText) findViewById (R.id.notes2000);
         note1000edit     = (EditText) findViewById (R.id.notes1000);
@@ -119,6 +121,7 @@ public class MainActivity extends ActionBarActivity {
         btnadd = (Button) findViewById(R.id.button);
 
         // Set text watchers
+        note10000edit.addTextChangedListener(note10000listener);
         note5000edit.addTextChangedListener(note5000listener);
         note2000edit.addTextChangedListener(note2000listener);
         note1000edit.addTextChangedListener(note1000listener);
@@ -249,7 +252,7 @@ public class MainActivity extends ActionBarActivity {
     public String getFormatDate() {
         Date now = new Date();
         String nowAsString = new SimpleDateFormat("dd-MM-yy", getResources().getConfiguration().locale).format(now);
-        String andMins = nowAsString + " at " + new SimpleDateFormat("HH:mm", getResources().getConfiguration().locale).format(now);
+        String andMins = nowAsString + new SimpleDateFormat("HH:mm", getResources().getConfiguration().locale).format(now);
         return andMins;
     }
 
@@ -271,6 +274,28 @@ public class MainActivity extends ActionBarActivity {
             }
             if (total_title_.getText().toString().equals("")) {
                 total_title = " ";
+                calcTotal();
+            }
+        }
+    };
+    private final TextWatcher note10000listener = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (!note10000edit.getText().toString().equals("")){
+                note10000Amt = note10000edit.getText().toString();
+                System.out.println("note10000listener: " + note10000edit.getText().toString());
+                calcTotal();
+            }
+            if (note10000edit.getText().toString().equals("")) {
+                note10000Amt = "0";
                 calcTotal();
             }
         }
@@ -660,12 +685,10 @@ public class MainActivity extends ActionBarActivity {
     private final TextWatcher cent5listener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
         }
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-
         }
 
         @Override
@@ -764,24 +787,12 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_settings:
-                openHowTo();
-                return true;
-            case R.id.action_about:
-                openAbout();
+            case R.id.action_main_settings:
+                openSettings();
                 return true;
             case R.id.action_clear_all:
                 clearAll();
                 return true;
-            case R.id.action_feedback:
-                give_feedback();
-                return true;
-            case R.id.action_currency_selector:
-                openCurrency();
-                return true;
-            //case R.id.action_language_selector:
-                //openLanguage();
-                //return true;
             case R.id.action_show_saves:
                 showsaves();
                 return true;
@@ -810,28 +821,11 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent (MainActivity.this, ShowSaves.class);
         startActivity(intent);
     }
-    public void openHowTo() {
-        Intent intent = new Intent(MainActivity.this, HowtoActivity.class);
-        startActivity(intent);
-    }
-    public void openAbout() {
-        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
-        startActivity(intent);
-    }
-    public void give_feedback() {
-        Intent intent = new Intent(MainActivity.this, FeedbackActivity.class);
-        startActivity(intent);
-    }
-    public void openCurrency() {
-        Intent intent = new Intent(MainActivity.this, CurrencySelectorActivity.class);
-        startActivity(intent);
-    }
-    public void openLanguage() {
-        Intent intent = new Intent(MainActivity.this, LanguageSelectorActivity.class);
-        startActivity(intent);
-    }
+
+
     public void clearAll() {
         total_title_.setText("");
+        note10000edit.setText("");
         note5000edit.setText("");
         note2000edit.setText("");
         note1000edit.setText("");
@@ -860,7 +854,7 @@ public class MainActivity extends ActionBarActivity {
         boolean isEmpty = checkIfEmpty();
         if(!isEmpty) {
             StringBuilder message = new StringBuilder();
-            message.append("Your total is " + overlay.getText().toString() + " for: " + total_title_.getText().toString() + " on " + getFormatDate());
+            message.append(overlay.getText().toString() + "\n" + total_title_.getText().toString() + "\n" + getFormatDate());
 
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.putExtra(intent.EXTRA_TEXT, message.toString());
@@ -871,6 +865,7 @@ public class MainActivity extends ActionBarActivity {
 
     // ------------------------ CALCULATION METHODS ---------------------------------------------------------------------------------
     public static double calcTotal() {
+        double note10000 = toInt(note10000Amt) * 10000.0;
         double note5000 = toInt(note5000Amt) * 5000.0;
         double note2000 = toInt(note2000Amt) * 2000.0;
         double note1000 = toInt(note1000Amt) * 1000.0;
@@ -893,7 +888,8 @@ public class MainActivity extends ActionBarActivity {
         double cent1 = toInt(cent1Amt) * 0.01;
         double total = 0;
 
-        double total_numb = note5000
+        double total_numb = note10000
+                + note5000
                 + note2000
                 + note1000
                 + note500
@@ -934,9 +930,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     // Convert String to Integer
-    public static int toInt(String number) {
-        return Integer.parseInt(number);
-    }
+    public static int toInt(String number) { return Integer.parseInt(number); }
 
     // Convert String into double
     public static double toDouble(String number){
@@ -976,12 +970,15 @@ public class MainActivity extends ActionBarActivity {
             case "CSK":
                 curr = "Koruna";
                 break;
+            case "ISK":
+                curr = "Korona";
+                break;
             default:
                 curr = "Monies";
                 break;
         } // End switch
 
-        String Speak = ("Your total is: " + getTotal()) + curr;
+        String Speak = (getTotal()) + curr;
         System.out.println("make_a_toast (TTS): " + Speak);
 
 
@@ -1015,6 +1012,8 @@ public class MainActivity extends ActionBarActivity {
     public static final String GBP = "\u00a3";
     public static final String RUB = "\u20BD";
     public static final String RUB_COIN = "kopeks";
+    public static final String ISK = "kr";
+
     public void hintChecks() {
         System.out.println("hintChecked: " + getCurrency());
 
@@ -1033,6 +1032,7 @@ public class MainActivity extends ActionBarActivity {
             additionaledit.setHint(getResources().getString(R.string.additions) + " " + USD_);
 
             // Set visibilities
+            note10000edit.setVisibility(View.GONE);
             note5000edit.setVisibility(View.GONE);
             note2000edit.setVisibility(View.GONE);
             note1000edit.setVisibility(View.GONE);
@@ -1056,6 +1056,7 @@ public class MainActivity extends ActionBarActivity {
         } // End USD
         else if (currentCurrency.equals("EUR")){
             // Set hints
+            note100edit.setHint(EUR + "100");
             note50edit.setHint(EUR + "50");
             note20edit.setHint(EUR + "20");
             note10edit.setHint(EUR + "10");
@@ -1071,6 +1072,7 @@ public class MainActivity extends ActionBarActivity {
             additionaledit.setHint(getResources().getString(R.string.additions) + " " + EUR);
 
             // Set visibilities
+            note10000edit.setVisibility(View.GONE);
             note5000edit.setVisibility(View.GONE);
             note2000edit.setVisibility(View.GONE);
             note1000edit.setVisibility(View.GONE);
@@ -1110,6 +1112,7 @@ public class MainActivity extends ActionBarActivity {
             additionaledit.setHint(getResources().getString(R.string.additions) + " " + GBP);
 
             // Set visibilities
+            note10000edit.setVisibility(View.GONE);
             note5000edit.setVisibility(View.GONE);
             note2000edit.setVisibility(View.GONE);
             note1000edit.setVisibility(View.GONE);
@@ -1148,6 +1151,7 @@ public class MainActivity extends ActionBarActivity {
             additionaledit.setHint(getResources().getString(R.string.additions) + " " + RUB);
 
             // Set visibilities
+            note10000edit.setVisibility(View.GONE);
             note5000edit.setVisibility(View.VISIBLE);
             note2000edit.setVisibility(View.GONE);
             note1000edit.setVisibility(View.VISIBLE);
@@ -1169,7 +1173,44 @@ public class MainActivity extends ActionBarActivity {
             cent2edit.setVisibility(View.GONE);
             cent1edit.setVisibility(View.VISIBLE);
             additionaledit.setVisibility(View.VISIBLE);
-        } // End RUB
+        } // eND rub
+        else if (currentCurrency.equals("ISK")){
+            note10000edit.setHint("10,000" + ISK);
+            note5000edit.setHint("5,000" + ISK);
+            note2000edit.setHint("2,000" + ISK);
+            note1000edit.setHint("1,000" + ISK);
+            note500edit.setHint("500" + ISK);
+            note100edit.setHint("100" + ISK);
+            note50edit.setHint("50" + ISK);
+            note10edit.setHint("10" + ISK);
+            note5edit.setHint("5" + ISK);
+            note1edit.setHint("1" + ISK);
+            additionaledit.setHint(getResources().getString(R.string.additions) + " " + ISK);
+
+            // Set visibilities
+            note10000edit.setVisibility(View.VISIBLE);
+            note5000edit.setVisibility(View.VISIBLE);
+            note2000edit.setVisibility(View.VISIBLE);
+            note1000edit.setVisibility(View.VISIBLE);
+            note500edit.setVisibility(View.VISIBLE);
+            note200edit.setVisibility(View.GONE);
+            note100edit.setVisibility(View.VISIBLE);
+            note50edit.setVisibility(View.VISIBLE);
+            note20edit.setVisibility(View.GONE);
+            note10edit.setVisibility(View.VISIBLE);
+            note5edit.setVisibility(View.VISIBLE);
+            note1edit.setVisibility(View.VISIBLE);
+            coin2edit.setVisibility(View.GONE);
+            coin1edit.setVisibility(View.GONE);
+            cent50edit.setVisibility(View.GONE);
+            cent25edit.setVisibility(View.GONE);
+            cent20edit.setVisibility(View.GONE);
+            cent10edit.setVisibility(View.GONE);
+            cent5edit.setVisibility(View.GONE);
+            cent2edit.setVisibility(View.GONE);
+            cent1edit.setVisibility(View.GONE);
+            additionaledit.setVisibility(View.VISIBLE);
+        } // end ISK
     }
 }
 

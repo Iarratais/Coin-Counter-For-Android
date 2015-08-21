@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title">Um</string>
+    <string name="action_settings">Stillingar</string>
+    <string name="add_data_error">Villa við að vista alls</string>
+    <string name="add_data_success">Vistað</string>
+    <string name="additions">Allar aðrar viðbætur, í:</string>
+    <string name="changed_curr">Breytt gjaldeyri til:</string>
+    <string name="check_if_empty_overlay_errror">Get ekki vistað þegar alls er 0</string>
+    <string name="check_if_empty_title_error">Get ekki vistað án titils</string>
+    <string name="clear_all_title">Hreinsa</string>
+    <string name="currency_title">Gjaldmiðill</string>
+    <string name="description">Copyright Karl Jones</string>
+    <string name="feedback_name_edit">Nafn</string>
+    <string name="feedback_comment_edit">Athugasemd</string>
+    <string name="feedback_email_edit">Email</string>
+    <string name="feedback_submit">Senda inn</string>
+    <string name="feedback_title">Viðbrögð</string>
+    <string name="howto">Velkomin mynt gegn \n \n \n Takk fyrir að sækja app minn. \n \n að nota: \n1. Mynt upphæð hverrar myntar sem þú hefur. \n2. Inntak þá í app. \n3. Fá niðurstöðuna!</string>
+    <string name="howto_title">Hvernig á að</string>
+    <string name="lang_english">Breytt tungumál á íslensku</string>
+    <string name="language_title">Tungumál</string>
+    <string name="rate_on_play">Rate á Play Store</string>
+    <string name="save_amount">Magn:</string>
+    <string name="save_date">Dagsetning:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_string">Vista</string>
+    <string name="save_title">Title:</string>
+    <string name="share_settings">Deila með</string>
+    <string name="show_string">Sparar</string>
+    <string name="title_activity_currency_selector">Gjaldmiðill</string>
+    <string name="title_activity_language_selector">Tungumál</string>
+    <string name="title_activity_feedback">Viðbrögð</string>
+    <string name="total_title_">Magn</string>
+    <string name="app_name" translatable="false">Coin Countr</string>
+</resources>

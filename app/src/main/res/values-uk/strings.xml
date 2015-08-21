@@ -32,4 +32,5 @@
     <string name="save_date">Дата:</string>
     <string name="save_title">Назва:</string>
     <string name="share_settings">частка</string>
+    <string name="app_name" translatable="false">монета лічильника</string>
 </resources>

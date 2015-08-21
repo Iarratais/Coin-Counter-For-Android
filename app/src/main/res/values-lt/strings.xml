@@ -32,4 +32,5 @@
     <string name="save_date">Data:</string>
     <string name="save_title">Pavadinimas:</string>
     <string name="share_settings">Dalis</string>
+    <string name="app_name" translatable="false">Monetų Skaitliukas</string>
 </resources>

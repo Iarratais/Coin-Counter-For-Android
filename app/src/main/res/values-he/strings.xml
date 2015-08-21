@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false"></string>
     <string name="about_title">אודות </string>
     <string name="action_settings">הגדרות </string>
     <string name="add_data_error">התרחשה שגיאה בעת שמירת הסכום </string>
@@ -33,4 +32,5 @@
     <string name="title_activity_feedback">משוב </string>
     <string name="title_activity_language_selector">שפה </string>
     <string name="total_title_">כותרת </string>
+    <string name="app_name" translatable="false">מטבע מונה</string>
 </resources>

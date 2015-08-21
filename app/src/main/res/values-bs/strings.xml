@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title">Oko</string>
+    <string name="action_settings">Postavke</string>
+    <string name="add_data_error">Greška ukupna ušteda</string>
+    <string name="add_data_success">Sačuvane</string>
+    <string name="additions">Bilo koji drugi dodaci, u:</string>
+    <string name="changed_curr">Promijenjen valutu u:</string>
+    <string name="check_if_empty_overlay_errror">Ne može spasiti kada ukupno je 0</string>
+    <string name="check_if_empty_title_error">Ne može spasiti bez naslova</string>
+    <string name="clear_all_title">Jasan</string>
+    <string name="currency_title">Valuta</string>
+    <string name="description">Copyright © Karl Jones \ncoincountr@gmail.com \nFeedback je dobrodošla</string>
+    <string name="feedback_comment_edit">Komentar</string>
+    <string name="feedback_email_edit">Email</string>
+    <string name="feedback_name_edit">Ime</string>
+    <string name="feedback_submit">Podnijeti</string>
+    <string name="feedback_title">Feedback</string>
+    <string name="howto">Dobrodošli u Brojač kovanica \n \n \n Hvala na preuzimanju moju aplikaciju. \n \n Da biste koristili: \n1. Kovanja iznos od svakog novčića imate. \n2. Ulazni ih u aplikaciju. \n3. Uzmi rezultat!</string>
+    <string name="howto_title">Kako</string>
+    <string name="lang_english">Promijenjena jezika na bosanski</string>
+    <string name="language_title">Jezik</string>
+    <string name="rate_on_play">Stopa na Google Play Store</string>
+    <string name="save_amount">Iznos:</string>
+    <string name="save_date">Datum:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_string">Spasiti</string>
+    <string name="save_title">Naslov:</string>
+    <string name="share_settings">Udio</string>
+    <string name="show_string">štedi</string>
+    <string name="title_activity_currency_selector">Valuta</string>
+    <string name="title_activity_feedback">Feedback</string>
+    <string name="title_activity_language_selector">Jezik</string>
+    <string name="total_title_">Naslov</string>
+    <string name="app_name" translatable="false">Brojač Kovanica</string>
+</resources>

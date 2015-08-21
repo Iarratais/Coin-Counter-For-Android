@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title">約</string>
+    <string name="action_settings">[設定]</string>
+    <string name="add_data_error">エラー省合計</string>
+    <string name="add_data_success">保存されました</string>
+    <string name="additions">任意の他の付加、中：</string>
+    <string name="changed_curr">通貨に変更：</string>
+    <string name="check_if_empty_overlay_errror">合計が0のときは保存できません</string>
+    <string name="check_if_empty_title_error">タイトルなしで保存することができません。</string>
+    <string name="clear_all_title">クリア</string>
+    <string name="currency_title">通貨</string>
+    <string name="description">カール・ジョーンズの著作権©は\ncoincountr@gmail.com\n個のフィードバックが理解されます</string>
+    <string name="feedback_comment_edit">コメント</string>
+    <string name="feedback_email_edit">メール</string>
+    <string name="feedback_name_edit">名前</string>
+    <string name="feedback_submit">提出します</string>
+    <string name="feedback_title">フィードバック</string>
+    <string name="howto">コインカウンター\n\n\nへようこそ私のアプリをダウンロードしていただき、ありがとうございます。 \n個の\ nを使用するには：\n1。あなたが持っているそれぞれの硬貨の量をコイン。 \n2は。アプリに入力し、それらを。 \n3。結果を入手</string>
+    <string name="howto_title">方法</string>
+    <string name="lang_english">日本への変更言語</string>
+    <string name="language_title">言語</string>
+    <string name="rate_on_play">グーグルプレイストアでレート</string>
+    <string name="save_amount">金額：</string>
+    <string name="save_date">日付：</string>
+    <string name="save_id">ID:</string>
+    <string name="save_string">保存</string>
+    <string name="save_title">タイトル：</string>
+    <string name="share_settings">シェア</string>
+    <string name="show_string">保存します</string>
+    <string name="title_activity_currency_selector">通貨</string>
+    <string name="title_activity_feedback">フィードバック</string>
+    <string name="title_activity_language_selector">言語</string>
+    <string name="total_title_">タイトル</string>
+    <string name="app_name" translatable="false">コインカウンター</string>
+</resources>
