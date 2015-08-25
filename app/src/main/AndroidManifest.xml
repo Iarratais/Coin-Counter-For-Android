@@ -9,8 +9,8 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_action"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:supportsRtl="true" >
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
 
         <!-- This meta-data tag is required to use Google Play Services. -->
         <meta-data
@@ -21,35 +21,14 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
+
             <!-- this needs to be moved when changing the launch activity -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Activity for About -->
-        <activity
-            android:name=".AboutActivity"
-            android:label="@string/about_title"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-
-        <!-- Activity for How To -->
-        <activity
-            android:name=".HowtoActivity"
-            android:label="@string/howto_title"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
         </activity>
 
         <!-- Include the AdActivity configChanges and theme. -->
@@ -63,37 +42,25 @@
             android:name=".FeedbackActivity"
             android:label="@string/title_activity_feedback"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity
-            android:name=".CurrencySelectorActivity"
-            android:label="@string/title_activity_currency_selector"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
-            android:name=".LanguageSelectorActivity"
-            android:label="@string/language_title"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
+
+        <!-- Show saves activity -->
         <activity
             android:name=".ShowSaves"
             android:label="@string/title_activity_show_saves"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.karl.android.coincounter.MainActivity" />
         </activity>
     </application>
 

@@ -32,5 +32,5 @@
     <string name="save_id">ID:</string>
     <string name="save_title">Titolo:</string>
     <string name="share_settings">Konigi</string>
-    <string name="app_name" translatable="false">Coin kontraŭreformacio</string>
+    <string name="countActivity" >Grafo</string>
 </resources>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Coin Countr</string>
+    <string name="app_name" translatable="false">Coin Countr</string>
 
     <string name="action_settings">Settings</string>
     <string name="appDescription" translatable="false">Coin Counter</string>
@@ -45,6 +45,8 @@
 
     <string name="overlay" translatable="false">0.00</string>
     <string name="title_activity_feedback">Feedback</string>
+
+    <string name="countActivity">Count</string>
 
     <!-- Feedback screen strings -->
     <string name="feedback_name_edit">Name</string>
@@ -110,7 +112,7 @@
     <string name="save_id">ID:</string>
     <string name="save_title">Title:</string>
     <string name="save_amount">Amount:</string>
-    <string name="save_date">Date: </string>
+    <string name="save_date">Date:</string>
 
     <string name="share_settings">Share</string>
 

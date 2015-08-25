@@ -32,5 +32,5 @@
     <string name="title_activity_language_selector">Tungumál</string>
     <string name="title_activity_feedback">Viðbrögð</string>
     <string name="total_title_">Magn</string>
-    <string name="app_name" translatable="false">Coin Countr</string>
+    <string name="countActivity">Talning</string>
 </resources>

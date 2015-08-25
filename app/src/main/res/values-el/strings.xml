@@ -32,5 +32,5 @@
     <string name="save_id">ID:</string>
     <string name="save_title">Τίτλος:</string>
     <string name="share_settings">μερίδιο</string>
-    <string name="app_name" translatable="false">Μετρητής κερμάτων</string>
+    <string name="countActivity">Μετρήστε</string>
 </resources>

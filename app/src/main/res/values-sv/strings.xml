@@ -32,5 +32,5 @@
     <string name="save_date">Datum:</string>
     <string name="save_title">Titel:</string>
     <string name="share_settings">Del</string>
-    <string name="app_name" translatable="false">Mynträknare</string>
+    <string name="countActivity">räkna</string>
 </resources>

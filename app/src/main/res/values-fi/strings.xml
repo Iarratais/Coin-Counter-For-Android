@@ -32,5 +32,5 @@
     <string name="save_id">ID:</string>
     <string name="save_title">Otsikko:</string>
     <string name="share_settings">Osake</string>
-    <string name="app_name" translatable="false">Coin Countr</string>
+    <string name="countActivity">laskea</string>
 </resources>

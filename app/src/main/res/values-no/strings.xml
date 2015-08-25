@@ -32,5 +32,5 @@
     <string name="title_activity_feedback">Tilbakemelding</string>
     <string name="title_activity_language_selector">Språk</string>
     <string name="total_title_">Tittel</string>
-    <string name="app_name" translatable="false">Coin Countr</string>
+    <string name="countActivity">telle</string>
 </resources>

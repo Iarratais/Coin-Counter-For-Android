@@ -25,7 +25,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -35,7 +34,7 @@ import java.util.Date;
 import java.util.Locale;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity{
     MySQLiteHelper myDB;
 
     public static TextToSpeech t1;
@@ -73,6 +72,7 @@ public class MainActivity extends ActionBarActivity {
     public static TextView overlay;
 
     public Button btnadd;
+    public Button btnsave;
 
     public AdView adView;
 
@@ -87,6 +87,7 @@ public class MainActivity extends ActionBarActivity {
 
         Toolbar toolbar    = (Toolbar) findViewById (R.id.tool_bar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(R.string.app_name);
 
         settings = this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
@@ -119,6 +120,7 @@ public class MainActivity extends ActionBarActivity {
         total_title_     = (EditText) findViewById (R.id.total_title);
 
         btnadd = (Button) findViewById(R.id.button);
+        btnsave = (Button) findViewById(R.id.btnSaves);
 
         // Set text watchers
         note10000edit.addTextChangedListener(note10000listener);
@@ -168,7 +170,21 @@ public class MainActivity extends ActionBarActivity {
 
         adView.loadAd(adRequest);
 
-        AddData();
+        btnadd.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        AddData();
+                    }
+                });
+
+        btnsave.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        showsaves();
+                    }
+                });
 
         hintChecks();
         clearAll();
@@ -196,22 +212,15 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void AddData() {
-        btnadd.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        boolean isEmpty = checkIfEmpty();
-                        if (!isEmpty) {
-                            boolean isInserted = myDB.insertData(getFormatDate(), total_title_.getText().toString(), overlay.getText().toString());
-                            if (isInserted) {
-                                Toast.makeText(MainActivity.this, R.string.add_data_success, Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(MainActivity.this, R.string.add_data_error, Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    }
-                }
-        );
+        boolean isEmpty = checkIfEmpty();
+        if (!isEmpty) {
+            boolean isInserted = myDB.insertData(getFormatDate(), total_title_.getText().toString(), overlay.getText().toString());
+            if (isInserted) {
+                Toast.makeText(MainActivity.this, R.string.add_data_success, Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(MainActivity.this, R.string.add_data_error, Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     public void showMessage(String title, String message) {
@@ -223,7 +232,6 @@ public class MainActivity extends ActionBarActivity {
     }
 
     // ----------------------------------- ACTIVITY RELATED METHODS ---------------------------------------------------
-
     @Override
     public void onPause() {
         if (adView != null) {
@@ -259,12 +267,10 @@ public class MainActivity extends ActionBarActivity {
     // --------------------------------------------------- TEXT WATCHERS --------------------------------------------------------------------
     private final TextWatcher total_title_listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -280,12 +286,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher note10000listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -302,12 +306,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher note5000listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -324,12 +326,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher note2000listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -346,12 +346,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher note1000listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -368,12 +366,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher note500listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -390,12 +386,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher note200listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -412,12 +406,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher note100listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -434,12 +426,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher note50listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -456,12 +446,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher note20listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -478,12 +466,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher note10listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -500,12 +486,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher note5listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -522,12 +506,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher note1listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -544,12 +526,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher coin2listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -566,12 +546,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher coin1listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -588,14 +566,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher cent50listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -612,14 +586,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher cent25listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -636,14 +606,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher cent20listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -660,14 +626,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher cent10listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -684,12 +646,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher cent5listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -706,14 +666,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher cent2listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -730,14 +686,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher cent1listener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -754,14 +706,10 @@ public class MainActivity extends ActionBarActivity {
     };
     private final TextWatcher additionallistener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
         @Override
         public void afterTextChanged(Editable s) {
@@ -793,9 +741,6 @@ public class MainActivity extends ActionBarActivity {
             case R.id.action_clear_all:
                 clearAll();
                 return true;
-            case R.id.action_show_saves:
-                showsaves();
-                return true;
             case R.id.action_share_via_SMS:
                 sendTotals();
                 return true;
@@ -804,25 +749,43 @@ public class MainActivity extends ActionBarActivity {
         } // End switch
     }
 
+    // This checks if the total or title is empty. Returns true if they are empty
     public boolean checkIfEmpty() {
         if (total_title_.getText().toString().equals("")) {
             Toast.makeText(MainActivity.this, R.string.check_if_empty_title_error, Toast.LENGTH_SHORT).show();
             return true;
         }
         if(toDouble(getTotal()) < 0.01){
-             Toast.makeText(MainActivity.this, R.string.check_if_empty_overlay_errror, Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, R.string.check_if_empty_overlay_errror, Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        return false;
+    }
+   // Same as above minus the toasts
+    public boolean fieldsAreEmpty() {
+        if (total_title_.getText().toString().equals("")) {
+            return true;
+        }
+        if(toDouble(getTotal()) < 0.01){
             return true;
         }
         return false;
     }
 
     // ----------------------------------- MENU SETTINGS ------------------------------
+    // Method brings the user to the saves activity, showing them their saved data.
     public void showsaves() {
-        Intent intent = new Intent (MainActivity.this, ShowSaves.class);
+        Intent intent = new Intent(MainActivity.this, ShowSaves.class);
         startActivity(intent);
     }
 
+    // Method opens the settings from the menu in the main activity.
+    public void openSettings() {
+        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+        startActivity(intent);
+    }
 
+    // Clears all the data that the user has input.
     public void clearAll() {
         total_title_.setText("");
         note10000edit.setText("");
@@ -850,6 +813,8 @@ public class MainActivity extends ActionBarActivity {
 
         System.out.println("clearAll: All inputs cleared");
     }
+
+    // Method to allow the user to share the data via whatever method they would like to.
     public void sendTotals() {
         boolean isEmpty = checkIfEmpty();
         if(!isEmpty) {
@@ -940,6 +905,8 @@ public class MainActivity extends ActionBarActivity {
         System.out.println("toDouble: " + value);
         return value;
     }
+
+    // Sets the total
     public static void setTotal(String incoming_total) {
         total = incoming_total;
         System.out.println("setTotal: " + total + " - total");
@@ -1014,6 +981,7 @@ public class MainActivity extends ActionBarActivity {
     public static final String RUB_COIN = "kopeks";
     public static final String ISK = "kr";
 
+    // This sets the right hints depending on the currency that is currently selected by the user.
     public void hintChecks() {
         System.out.println("hintChecked: " + getCurrency());
 

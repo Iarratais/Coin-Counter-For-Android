@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -27,6 +28,8 @@ public class ShowSaves extends ActionBarActivity {
 
     MySQLiteHelper myDB;
 
+    public Button btncount;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +37,7 @@ public class ShowSaves extends ActionBarActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Saves");
+        getSupportActionBar().setTitle(R.string.app_name);
 
         LinearLayout ll = (LinearLayout) findViewById(R.id.llo2);
         myDB = new MySQLiteHelper(this);
@@ -50,11 +52,27 @@ public class ShowSaves extends ActionBarActivity {
             b.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             b.setId(i);
             b.setTag(i);
-            b.setBackgroundResource(getResources().getColor(android.R.color.transparent));
             ll.addView(b);
         }
         result = (EditText) findViewById(R.id.temp_edit);
+
+        btncount = (Button) findViewById(R.id.btnCount);
+
+        btncount.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                public void onClick(View v) {
+                        goToCount();
+                    }
+                } );
     }
+
+    public void goToCount() {
+        Intent intent = new Intent(ShowSaves.this, MainActivity.class);
+        finish();
+        startActivity(intent);
+    }
+
 
     public Cursor res;
     public ArrayList<StringBuffer> displays;

@@ -10,6 +10,39 @@
         android:id="@+id/tool_bar"
         layout="@layout/tool_bar"> </include>
 
+    <!-- This code is for the buttons on the top of the app -->
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btnCount"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/countActivity"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@color/ColorPrimary"
+            android:clickable="false"
+            android:textColor="@color/white"
+            android:capitalize="words" />
+
+        <Button
+            android:id="@+id/btnSaves"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/show_string"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@color/ColorPrimary"
+            android:textColor="@color/white"
+            android:capitalize="words"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

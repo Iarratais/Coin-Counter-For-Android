@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title">око</string>
+    <string name="action_settings">Подешавања</string>
+    <string name="add_data_error">Грешка уштеда укупна</string>
+    <string name="add_data_success">Савед</string>
+    <string name="additions">Било који други додаци, у:</string>
+    <string name="changed_curr">Цхангед валуту:</string>
+    <string name="check_if_empty_overlay_errror">Није могуће сачувати када Укупно је 0</string>
+    <string name="check_if_empty_title_error">Није могуће сачувати без тотал</string>
+    <string name="clear_all_title">Ведро</string>
+    <string name="currency_title">Валута</string>
+    <string name="title_activity_currency_selector">Валута</string>
+    <string name="description">Ауторска права © од Karl Jones \ncoincountr@gmail.com\nФеедбацк је добродошла</string>
+    <string name="feedback_comment_edit">Коментар</string>
+    <string name="feedback_email_edit">Е-маил</string>
+    <string name="feedback_name_edit">назив</string>
+    <string name="feedback_submit">Пошаљи</string>
+    <string name="feedback_title">Контактирајте нас</string>
+    <string name="howto">Добродошли на Цоин Цоунтер \n\n\n Тханк иоу фор довнлоадинг своју апликацију. \n\nДа бисте користили: \n1. Цоин износ сваког новчића имате. \n2. Улаз их у апликацију. \n3. Гет резултат!</string>
+    <string name="lang_english">Промењен језика на српски</string>
+    <string name="language_title">Језик</string>
+    <string name="rate_on_play">Курс на Гоогле Плаи Сторе</string>
+    <string name="save_amount">Износ:</string>
+    <string name="save_date">Датум:</string>
+    <string name="save_id">ID:</string>
+    <string name="save_string">Сачувај</string>
+    <string name="save_title">Наслов:</string>
+    <string name="share_settings">удео</string>
+    <string name="show_string">Савес</string>
+    <string name="title_activity_feedback">Контактирајте нас</string>
+    <string name="title_activity_language_selector">Језик</string>
+    <string name="total_title_">назив</string>
+    <string name="howto_title">Kako da</string>
+    <string name="countActivity">рачунати</string>
+</resources>
