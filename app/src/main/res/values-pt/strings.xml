@@ -33,4 +33,26 @@
     <string name="save_title">Título:</string>
     <string name="share_settings">Ação</string>
     <string name="countActivity">contar</string>
+    <string name="allow_google_analytics">Permitir que o Google Analytics</string>
+    <string name="clear_all_data">Limpar dados \nAviso: Este não pode ser desfeita</string>
+    <string name="danger_zone">Zona de perigo</string>
+    <string name="detect_device_language">Detectar idioma do dispositivo</string>
+    <string name="feature_currently_unavailable">Recurso está disponível no momento</string>
+    <string name="locations_and_currency">Localização e moeda</string>
+    <string name="other">Outros</string>
+    <string name="send_feedback">Enviar comentários</string>
+    <string name="include_location_with_saves">Incluir local com salva</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Excluir</string>
+    <string name="delete_entry">Excluir entrada</string>
+    <string name="enter_id_for_deletion">Por favor insira o ID da entrada que gostaria de apagar</string>
+    <string name="entry_deleted">Entrada excluída</string>
+    <string name="entry_not_deleted">Entrada não foi excluído</string>
+    <string name="are_you_sure_you_want_to_delete">Tem certeza de que deseja apagar tudo?</string>
+    <string name="done">Feito!</string>
+    <string name="changelog">Registro de alterações</string>
+    <string name="you_are_exiting_the_application">Você está saindo do aplicativo.</string>
+    <string name="no_email_clients_installed">Não há clientes de e-mail instalados.</string>
+    <string name="error">Erro</string>
+    <string name="choose_an_email_application">Escolha um aplicativo de email.</string>
 </resources>

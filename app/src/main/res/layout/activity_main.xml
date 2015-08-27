@@ -5,8 +5,7 @@
     xmlns:android.support.design="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <include
         android:id="@+id/tool_bar"
@@ -480,6 +479,25 @@
                     android:id="@+id/extraAdditions"
                     android:hint="@string/extraAdditionsedit"
                     android:inputType="number"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til29"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android.support.design:hintTextAppearance="@style/TextAppearance.AppCompat">
+                <EditText
+                    android:maxLength="140"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:fontFamily="sans-serif"
+                    android:id="@+id/comment"
+                    android:hint="@string/feedback_comment_edit"
+                    android:inputType="textCapSentences|textAutoCorrect"
                     />
             </android.support.design.widget.TextInputLayout>
 

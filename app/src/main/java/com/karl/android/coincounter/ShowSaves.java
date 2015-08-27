@@ -54,6 +54,7 @@ public class ShowSaves extends ActionBarActivity {
             b.setTag(i);
             ll.addView(b);
         }
+
         result = (EditText) findViewById(R.id.temp_edit);
 
         btncount = (Button) findViewById(R.id.btnCount);
@@ -61,7 +62,7 @@ public class ShowSaves extends ActionBarActivity {
         btncount.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
-                public void onClick(View v) {
+                    public void onClick(View v) {
                         goToCount();
                     }
                 } );
@@ -90,9 +91,10 @@ public class ShowSaves extends ActionBarActivity {
             StringBuffer buffer = new StringBuffer();
             buffer.append(
                     res.getString(2) + "\n"
-                    + res.getString(3).toUpperCase() + "\n"
+                    + res.getString(3) + "\n"
                     + res.getString(1) + "\n"
-                    + getResources().getString(R.string.save_id) + " " + res.getString(0) + "\n\n");
+                    + getResources().getString(R.string.save_id) + " " + res.getString(0) + "\n"
+                    + res.getString(4) + "\n\n");
             displays.add(buffer);
         }
     }
@@ -120,14 +122,14 @@ public class ShowSaves extends ActionBarActivity {
                 final EditText userInput = (EditText) promptsView.findViewById(R.id.editTextDialogUserInput);
                 alert
                         .setCancelable(true)
-                        .setTitle("Delete entry")
-                        .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                        .setTitle(R.string.delete_entry)
+                        .setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 result.setText(userInput.getText());
                                 deleteEntry(result.getText().toString());
                             }
                         })
-                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 dialog.cancel();
                             }
@@ -141,9 +143,9 @@ public class ShowSaves extends ActionBarActivity {
         if(result > 0) {
             Intent intent = new Intent(ShowSaves.this, ShowSaves.class);
             startActivity(intent);
-            Toast.makeText(ShowSaves.this, "Data deleted", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ShowSaves.this, R.string.entry_deleted, Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(ShowSaves.this, "No data deleted", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ShowSaves.this, R.string.entry_not_deleted, Toast.LENGTH_SHORT).show();
         }
     }
 

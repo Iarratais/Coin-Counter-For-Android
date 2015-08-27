@@ -33,4 +33,26 @@
     <string name="title_activity_language_selector">Språk</string>
     <string name="total_title_">Tittel</string>
     <string name="countActivity">telle</string>
+    <string name="allow_google_analytics">Tillat Google Analytics</string>
+    <string name="clear_all_data">Klar alle data \nAdvarsel: Dette kan ikke angres</string>
+    <string name="danger_zone">Faresonen</string>
+    <string name="detect_device_language">Finne enheten språk</string>
+    <string name="feature_currently_unavailable">Feature utilgjengelig for øyeblikket</string>
+    <string name="locations_and_currency">Plassering og valuta</string>
+    <string name="other">Andre</string>
+    <string name="send_feedback">Gi tilbakemelding</string>
+    <string name="include_location_with_saves">Inkluder beliggenhet med sparer</string>
+    <string name="cancel">Avbryt</string>
+    <string name="delete">Slett</string>
+    <string name="delete_entry">Slett oppføring</string>
+    <string name="enter_id_for_deletion">Vennligst oppgi ID for oppføringen du vil slette</string>
+    <string name="entry_deleted">Innreise slettet</string>
+    <string name="entry_not_deleted">Innreise slettes ikke</string>
+    <string name="are_you_sure_you_want_to_delete">Er du sikker på at du vil slette alt?</string>
+    <string name="done">Ferdig!</string>
+    <string name="changelog">Endringslogg</string>
+    <string name="error">Feil</string>
+    <string name="no_email_clients_installed">Det er ingen e-postklienter installert.</string>
+    <string name="choose_an_email_application">Velg et e-postprogram.</string>
+    <string name="you_are_exiting_the_application">Du avslutter programmet.</string>
 </resources>

@@ -2,214 +2,214 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="42a1ee578b62fd1bd28b3307a679dc9ba0791587">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-0f6c0472146a676c274d48183d49bdd3f32e4ff4.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="98137c4d12c50923f5809852b1ef4d1c4e162081">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-f143826d61dc8266c59be4e08d9356c40086c465.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="77a9dcb5f8b1dba36aacaa9c150eb0942dbea158">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-451b72a6e9d7871d255f34ef1c7a0f844dc2f517.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AppData\Local\Android\sdk2\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\support-annotations-23.0.0-b398660bd57b241edecc89b76f2743ef9654a7b1.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\design\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8a5238e4bdcd6568b82db669d41817de670586b8">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-a753c02ff57b52f0f5dc1206316a8ddbd808180f.jar" />
-    </item>
-    <item
         jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.8.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="1ff30fa49c07a08c3035d7218a3efebf5680d522">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-e5dc6a2b023bdab7c07db4772a071fcebbb6621b.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="d11330ea68c0d964d30d5caed1f27e6b1488b189">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-d735cfe1d920c6b67a66e3688c43cf40dbce3ae7.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-ed1839fa6c667f7c316000734f646367e91363f0.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-352bbd7b5c3e44969cd27ebb29fc165469c5b2a7.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="c5cafb324568d954780abb858c25db7ce675ab3c">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-8b1637f38274dfcbd45d14127f790ff7516c4a89.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="130b32ed466fa0f63efd4c7d6250ccd2ed506790">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-fd1e11dfe1820756922e9e6b794e81f7bb156bac.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-f1565d310754b771569995789fc890f92fd10b24.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\internal_impl-22.2.0-92ba452a22e0c51c74f976681bade56c41c90547.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="cb6fab7a71fa9ec1f483d44c5fca65ab469d8aca">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-aaffe92d38f402178f0669555bbeccbb89cf8e90.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="b99f0b78bbcb76b915bc6529a83b65d4d46990dd">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-bfee58688773c1eedccaa54c5a94f4b31874b51f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="c2ac04c5b232f6f0658ee4f1c13be09cd76406e2">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-3b28c6a45771a3bf3ca0ce22b16e1ba06eac6a86.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="edea92852b40eee716e910af8dad9eeaa58fb0e1">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-95e0f043b401f8ee47b5cc8ed5835d43ad8c3ff3.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-e654ecd36ab734fb722307ae05b12e1f59f96ceb.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-c01393b49082515f2d8835bded10d6336aa00ddf.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="0124ce31248c0e8acfa2b28283c6d1a4d76e73d2">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-d849bc4ac251a08efeb98b7f73422aa9e1fe49fd.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="e23ea11124bb700eeddd4ab7aa848c615f493850">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-78f93db8f29f14fb64badcb7af1fa8ba61a9e75d.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="1ccbc26be2c465c622a48310e8092241b01abe80">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-44cdb358e886a565fb2b6bf0d7e3fe4147f01c62.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\internal_impl-23.0.0-01e6b4b0009b73f75ec514f270f2e41acb8fc1ee.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="adebe28e0c0c05d34a3bfd76f3275bf4d8ff87b6">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-13cd5787c51c3f1e5ada561bdc0df167f6924017.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="6e85edfc9b5346d216e50ccef1f8e825504144a3">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-51ed4d609525e4a244db159b42164a4e4eae8b9f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="166e458ee3b5fb5fcff0f936df3f3a788e6c54f3">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-9f65bdf649f02fadbd00266bd6cb47ca93edbd67.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-192b6f04766f6c76b7395b9830ada1efb400dd8d.jar" />
-    </item>
-    <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="4a135d56554069e5d0ff80e3220e887e57146ee5">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-af2bdf44aba98d44eb539cfeed99d2dd9aacc240.jar" />
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-e5dc6a2b023bdab7c07db4772a071fcebbb6621b.jar" />
     </item>
     <item
         jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="40e7757d9b06db670062ddb3cf5b30c129b2fd8c">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-606ae3e8fcb955d840fe1fc39ec02ed103436f4f.jar" />
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-606ae3e8fcb955d840fe1fc39ec02ed103436f4f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="130b32ed466fa0f63efd4c7d6250ccd2ed506790">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-fd1e11dfe1820756922e9e6b794e81f7bb156bac.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\design\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8a5238e4bdcd6568b82db669d41817de670586b8">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-a753c02ff57b52f0f5dc1206316a8ddbd808180f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="166e458ee3b5fb5fcff0f936df3f3a788e6c54f3">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-9f65bdf649f02fadbd00266bd6cb47ca93edbd67.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="6e85edfc9b5346d216e50ccef1f8e825504144a3">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-51ed4d609525e4a244db159b42164a4e4eae8b9f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="0124ce31248c0e8acfa2b28283c6d1a4d76e73d2">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-d849bc4ac251a08efeb98b7f73422aa9e1fe49fd.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-192b6f04766f6c76b7395b9830ada1efb400dd8d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4a135d56554069e5d0ff80e3220e887e57146ee5">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-af2bdf44aba98d44eb539cfeed99d2dd9aacc240.jar" />
     </item>
     <item
         jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.8.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="2e24e5f1b11170163028277de63f709e42525db4">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-fd1a5b3ae2fb8ed262380201403ae8768db52486.jar" />
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-fd1a5b3ae2fb8ed262380201403ae8768db52486.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="e23ea11124bb700eeddd4ab7aa848c615f493850">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-78f93db8f29f14fb64badcb7af1fa8ba61a9e75d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1ccbc26be2c465c622a48310e8092241b01abe80">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-44cdb358e886a565fb2b6bf0d7e3fe4147f01c62.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="c2ac04c5b232f6f0658ee4f1c13be09cd76406e2">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-3b28c6a45771a3bf3ca0ce22b16e1ba06eac6a86.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-c01393b49082515f2d8835bded10d6336aa00ddf.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="adebe28e0c0c05d34a3bfd76f3275bf4d8ff87b6">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-13cd5787c51c3f1e5ada561bdc0df167f6924017.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="b99f0b78bbcb76b915bc6529a83b65d4d46990dd">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-bfee58688773c1eedccaa54c5a94f4b31874b51f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-01e6b4b0009b73f75ec514f270f2e41acb8fc1ee.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="cb6fab7a71fa9ec1f483d44c5fca65ab469d8aca">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-aaffe92d38f402178f0669555bbeccbb89cf8e90.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-f1565d310754b771569995789fc890f92fd10b24.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="d11330ea68c0d964d30d5caed1f27e6b1488b189">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-d735cfe1d920c6b67a66e3688c43cf40dbce3ae7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-92ba452a22e0c51c74f976681bade56c41c90547.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="42a1ee578b62fd1bd28b3307a679dc9ba0791587">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-0f6c0472146a676c274d48183d49bdd3f32e4ff4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="edea92852b40eee716e910af8dad9eeaa58fb0e1">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-95e0f043b401f8ee47b5cc8ed5835d43ad8c3ff3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-ed1839fa6c667f7c316000734f646367e91363f0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="77a9dcb5f8b1dba36aacaa9c150eb0942dbea158">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-451b72a6e9d7871d255f34ef1c7a0f844dc2f517.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="98137c4d12c50923f5809852b1ef4d1c4e162081">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-f143826d61dc8266c59be4e08d9356c40086c465.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-e654ecd36ab734fb722307ae05b12e1f59f96ceb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AppData\Local\Android\sdk2\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.0-b398660bd57b241edecc89b76f2743ef9654a7b1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-352bbd7b5c3e44969cd27ebb29fc165469c5b2a7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="c5cafb324568d954780abb858c25db7ce675ab3c">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\debug\classes-8b1637f38274dfcbd45d14127f790ff7516c4a89.jar" />
     </item>
 
 </items>

@@ -33,4 +33,26 @@
     <string name="save_title">Título:</string>
     <string name="share_settings">Cuota</string>
     <string name="countActivity">contar</string>
+    <string name="allow_google_analytics">Permitir Google Analytics</string>
+    <string name="clear_all_data">Borrar todos los datos \nAdvertencia: Esto no se puede deshacer</string>
+    <string name="danger_zone">Zona peligrosa</string>
+    <string name="feature_currently_unavailable">Característica disponible en este momento</string>
+    <string name="include_location_with_saves">Incluya ubicación en guarda</string>
+    <string name="locations_and_currency">Ubicación y moneda</string>
+    <string name="other">Otros</string>
+    <string name="send_feedback">Envía comentarios</string>
+    <string name="detect_device_language">Detectar idioma del dispositivo</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Borrar</string>
+    <string name="delete_entry">Borrar entrada</string>
+    <string name="enter_id_for_deletion">Por favor, introduzca el ID de la entrada que desea eliminar</string>
+    <string name="entry_deleted">Eliminado entrada</string>
+    <string name="entry_not_deleted">La entrada no borra</string>
+    <string name="are_you_sure_you_want_to_delete">¿Seguro que quieres borrar todo?</string>
+    <string name="done">¡Hecho!</string>
+    <string name="changelog">Cambio de registro</string>
+    <string name="choose_an_email_application">Elija una aplicación de correo electrónico</string>
+    <string name="error">Error</string>
+    <string name="no_email_clients_installed">No hay clientes de correo instalados.</string>
+    <string name="you_are_exiting_the_application">Está saliendo de la aplicación.</string>
 </resources>

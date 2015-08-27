@@ -33,4 +33,26 @@
     <string name="save_title">Nosaukums:</string>
     <string name="share_settings">Akcija</string>
     <string name="countActivity">skaitīt</string>
+    <string name="allow_google_analytics">Atļaut Google Analytics</string>
+    <string name="clear_all_data">Notīrīt visi dati \nBrīdinājums: šī nevar atsaukt</string>
+    <string name="danger_zone">Bīstamā zona</string>
+    <string name="detect_device_language">Noteikt ierīces valodu</string>
+    <string name="feature_currently_unavailable">Funkcija pašlaik nav pieejama</string>
+    <string name="locations_and_currency">Atrašanās vieta un valūta</string>
+    <string name="other">Cits</string>
+    <string name="send_feedback">Nosūtīt atsauksmes</string>
+    <string name="include_location_with_saves">Iekļaut vietu ar ietaupa</string>
+    <string name="cancel">Atcelt</string>
+    <string name="delete">Izdzēst</string>
+    <string name="delete_entry">Dzēst ierakstu</string>
+    <string name="enter_id_for_deletion">Ievadiet ID ieraksta jūs vēlētos, lai izdzēstu</string>
+    <string name="entry_deleted">Ieraksts svītrots</string>
+    <string name="entry_not_deleted">Ierakstu nav svītrots</string>
+    <string name="are_you_sure_you_want_to_delete">Vai jūs tiešām vēlaties izdzēst visu?</string>
+    <string name="done">Gatavs!</string>
+    <string name="changelog">Mainīt log</string>
+    <string name="error">Kļūda</string>
+    <string name="no_email_clients_installed">Nav e-pasta klientiem, kas uzstādītas.</string>
+    <string name="choose_an_email_application">Izvēlieties e-pasta programmu.</string>
+    <string name="you_are_exiting_the_application">Jūs aizejošais pieteikumu.</string>
 </resources>

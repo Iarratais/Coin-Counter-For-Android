@@ -33,4 +33,26 @@
     <string name="save_title">Pavadinimas:</string>
     <string name="share_settings">Dalis</string>
     <string name="countActivity">skaičiuoti</string>
+    <string name="allow_google_analytics">Leiskite \"Google Analytics\"</string>
+    <string name="clear_all_data">Išvalyti visus duomenis \nĮspėjimas: Tai negali būti atšauktas</string>
+    <string name="danger_zone">Pavojinga zona</string>
+    <string name="detect_device_language">Aptikti prietaiso kalbą</string>
+    <string name="feature_currently_unavailable">Žanras metu nepasiekiamas</string>
+    <string name="locations_and_currency">Vieta ir valiutos</string>
+    <string name="other">Kitas</string>
+    <string name="send_feedback">Siųsti atsiliepimą</string>
+    <string name="include_location_with_saves">Įtraukti vietą su taupo</string>
+    <string name="entry_not_deleted">Įėjimo neištrinami</string>
+    <string name="entry_deleted">Įrašas ištrintas</string>
+    <string name="enter_id_for_deletion">Prašome įvesti įrašo ID norėtumėte ištrinti</string>
+    <string name="delete_entry">Ištrinti įrašą</string>
+    <string name="delete">Ištrinti</string>
+    <string name="cancel">Atšaukti</string>
+    <string name="are_you_sure_you_want_to_delete">Ar tikrai norite ištrinti viską?</string>
+    <string name="done">Priimta!</string>
+    <string name="changelog">Pakeisti Prisijungti</string>
+    <string name="error">Klaida</string>
+    <string name="no_email_clients_installed">Nėra pašto klientai sumontuoti.</string>
+    <string name="choose_an_email_application">Pasirinkite elektroninio pašto programą.</string>
+    <string name="you_are_exiting_the_application">Jūs esate išeinant paraišką.</string>
 </resources>

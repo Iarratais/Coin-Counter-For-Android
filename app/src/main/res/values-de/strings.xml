@@ -33,4 +33,26 @@
     <string name="save_title">Titel:</string>
     <string name="share_settings">Aktie</string>
     <string name="countActivity">zählen</string>
+    <string name="allow_google_analytics">Lassen Sie Google Analytics</string>
+    <string name="clear_all_data">Alle löschen Daten \nWarnung: Dies kann nicht rückgängig gemacht werden</string>
+    <string name="danger_zone">Gefahrenzone</string>
+    <string name="feature_currently_unavailable">Feature derzeit nicht verfügbar</string>
+    <string name="include_location_with_saves">Fügen Lage in spart</string>
+    <string name="locations_and_currency">Land und Währung</string>
+    <string name="other">Andere</string>
+    <string name="send_feedback">Feedback abschicken</string>
+    <string name="detect_device_language">Erkennen Gerätesprache</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="delete">löschen</string>
+    <string name="delete_entry">Eintrag löschen</string>
+    <string name="enter_id_for_deletion">Bitte geben Sie die ID des Eintrags Sie möchten, um zu löschen</string>
+    <string name="entry_deleted">Eintrag gelöscht</string>
+    <string name="entry_not_deleted">Eintrag nicht gelöscht</string>
+    <string name="are_you_sure_you_want_to_delete">Sind sie sicher, dass sie wollen alles löschen?</string>
+    <string name="done">Fertig!</string>
+    <string name="changelog">Änderungsprotokoll</string>
+    <string name="choose_an_email_application">Wählen Sie eine E-Mail-Anwendung</string>
+    <string name="error">Fehler</string>
+    <string name="no_email_clients_installed">Es sind keine E-Mail-Clients installiert.</string>
+    <string name="you_are_exiting_the_application">Sie sind die Anwendung beenden.</string>
 </resources>

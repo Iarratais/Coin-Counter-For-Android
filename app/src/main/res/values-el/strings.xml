@@ -33,4 +33,26 @@
     <string name="save_title">Τίτλος:</string>
     <string name="share_settings">μερίδιο</string>
     <string name="countActivity">Μετρήστε</string>
+    <string name="allow_google_analytics">Αφήστε το Google Analytics</string>
+    <string name="clear_all_data">Εκκαθάριση όλων των δεδομένων \nΠροειδοποίηση: Αυτό δεν μπορεί να αναιρεθεί</string>
+    <string name="danger_zone">επικίνδυνη ζώνη</string>
+    <string name="feature_currently_unavailable">Χαρακτηριστικό διαθέσιμο προς το παρόν</string>
+    <string name="include_location_with_saves">Συμπεριλάβετε στην τοποθεσία αποθηκεύει</string>
+    <string name="locations_and_currency">Τοποθεσία και νόμισμα</string>
+    <string name="other">Άλλα</string>
+    <string name="send_feedback">Στέλνω κριτική και σχόλια</string>
+    <string name="detect_device_language">Εντοπισμός γλώσσα της συσκευής</string>
+    <string name="cancel">Ακύρωση</string>
+    <string name="delete">Διαγραφή</string>
+    <string name="delete_entry">Διαγραφή καταχώρισης</string>
+    <string name="enter_id_for_deletion">Παρακαλώ εισάγετε το ID της εγγραφής που θέλετε να διαγράψετε</string>
+    <string name="entry_deleted">έναρξη διαγράφεται</string>
+    <string name="entry_not_deleted">Έναρξη δεν διαγράφεται</string>
+    <string name="are_you_sure_you_want_to_delete">Είστε σίγουροι ότι θέλετε να διαγράψετε τα πάντα;</string>
+    <string name="done">Έγινε!</string>
+    <string name="changelog">Αλλαγή log</string>
+    <string name="choose_an_email_application">Επιλέξτε μια εφαρμογή ηλεκτρονικού ταχυδρομείου</string>
+    <string name="error">Σφάλμα</string>
+    <string name="no_email_clients_installed">Δεν υπάρχουν πελάτες ηλεκτρονικού ταχυδρομείου εγκατασταθεί.</string>
+    <string name="you_are_exiting_the_application">Είστε έξοδο από την εφαρμογή.</string>
 </resources>

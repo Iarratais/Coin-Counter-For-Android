@@ -33,4 +33,26 @@
     <string name="title_activity_feedback">Viðbrögð</string>
     <string name="total_title_">Magn</string>
     <string name="countActivity">Talning</string>
+    <string name="allow_google_analytics">Leyfa Google Analytics</string>
+    <string name="clear_all_data">Hreinsa öllum gögnum \nAðvörun: Þetta er ekki hægt að afturkalla</string>
+    <string name="danger_zone">Danger zone</string>
+    <string name="detect_device_language">Fundið tækið tungumál</string>
+    <string name="locations_and_currency">Staðsetning og mynt</string>
+    <string name="other">Annað</string>
+    <string name="send_feedback">Senda viðbrögð</string>
+    <string name="feature_currently_unavailable">Lögun nú ófáanlegur</string>
+    <string name="include_location_with_saves">Eru stað með vistar</string>
+    <string name="entry_not_deleted">Færslu ekki eytt</string>
+    <string name="entry_deleted">Færslu eytt</string>
+    <string name="enter_id_for_deletion">Vinsamlegast sláðu inn auðkenni á færslu sem þú vilt eyða</string>
+    <string name="delete_entry">Eyða færslu</string>
+    <string name="delete">Eyða</string>
+    <string name="cancel">Hætta</string>
+    <string name="are_you_sure_you_want_to_delete">Ertu viss um að þú viljir eyða öllu?</string>
+    <string name="done">Lokið!</string>
+    <string name="changelog">Breyta Log</string>
+    <string name="error">Villa</string>
+    <string name="no_email_clients_installed">Engir email viðskiptavinur uppsett.</string>
+    <string name="choose_an_email_application">Veldu tölvupóst umsókn.</string>
+    <string name="you_are_exiting_the_application">Þú ert að loka forritinu.</string>
 </resources>

@@ -33,4 +33,26 @@
     <string name="save_title">Заглавие: </string>
     <string name="share_settings">дял</string>
     <string name="countActivity">броене</string>
+    <string name="allow_google_analytics">Позволете на Google Анализ</string>
+    <string name="clear_all_data">Изчистване на всички данни \nВнимание: Това не може да бъде отменено</string>
+    <string name="danger_zone">Опасност зона</string>
+    <string name="feature_currently_unavailable">Feature работи в момента</string>
+    <string name="include_location_with_saves">Включи място в спасявания</string>
+    <string name="locations_and_currency">Местоположение и валута</string>
+    <string name="other">друг</string>
+    <string name="send_feedback">Изпратете отзиви</string>
+    <string name="detect_device_language">Разпознаване на езика Detect jezik uređaja</string>
+    <string name="cancel">Отказ</string>
+    <string name="delete">изтривам</string>
+    <string name="delete_entry">Изтрий запис</string>
+    <string name="enter_id_for_deletion">Моля, въведете ID на записа, който искате да изтриете</string>
+    <string name="entry_deleted">Влизане изтрит</string>
+    <string name="entry_not_deleted">Влизане не заличава</string>
+    <string name="are_you_sure_you_want_to_delete">Сигурни ли сте, че искате да изтриете всичко?</string>
+    <string name="done">Готово!</string>
+    <string name="changelog">Промяна дневник</string>
+    <string name="choose_an_email_application">Изберете приложение за електронна поща</string>
+    <string name="error">Грешка</string>
+    <string name="no_email_clients_installed">Не са открити имейл клиенти монтирани.</string>
+    <string name="you_are_exiting_the_application">Вие излизате от приложението.</string>
 </resources>

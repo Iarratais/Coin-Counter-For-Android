@@ -33,4 +33,26 @@
     <string name="save_title">Název:</string>
     <string name="share_settings">Podíl</string>
     <string name="countActivity" >spočítat</string>
+    <string name="allow_google_analytics">Povolit Google Analytics</string>
+    <string name="clear_all_data">Vymazat všechna data \nUpozornění: Tento nelze vrátit zpět</string>
+    <string name="danger_zone">Danger zone</string>
+    <string name="feature_currently_unavailable">Funkce momentálně nedostupná</string>
+    <string name="include_location_with_saves">Zahrnout umístění v šetří</string>
+    <string name="locations_and_currency">Umístění a měna</string>
+    <string name="other">Jiný</string>
+    <string name="send_feedback">Poslat zpětnou vazbu</string>
+    <string name="detect_device_language">Rozpoznat jazyk zařízení</string>
+    <string name="cancel">Zrušit</string>
+    <string name="delete">Smazat</string>
+    <string name="delete_entry">Smazat záznam</string>
+    <string name="enter_id_for_deletion">Prosím, zadejte ID záznamu, který chcete smazat</string>
+    <string name="entry_deleted">Vstup vypouští</string>
+    <string name="entry_not_deleted">Vstup není odstraněn</string>
+    <string name="are_you_sure_you_want_to_delete">Jste si jisti, že chcete smazat vše?</string>
+    <string name="done">Hotovo!</string>
+    <string name="changelog">Změna log</string>
+    <string name="choose_an_email_application">Vyberte e-mailovou aplikaci</string>
+    <string name="error">Chyba</string>
+    <string name="no_email_clients_installed">Nejsou žádné e-mailových klientů nainstalovány.</string>
+    <string name="you_are_exiting_the_application">Jste ukončení aplikace.</string>
 </resources>

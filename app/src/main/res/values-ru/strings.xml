@@ -33,4 +33,26 @@
     <string name="save_title">Название:</string>
     <string name="share_settings">доля</string>
     <string name="countActivity">считать</string>
+    <string name="allow_google_analytics">Разрешить Google Analytics</string>
+    <string name="clear_all_data">Очистить все данные \nВнимание: Это не может быть отменено</string>
+    <string name="danger_zone">Зона опасности</string>
+    <string name="detect_device_language">Определить язык устройства</string>
+    <string name="feature_currently_unavailable">Особенность в настоящее время недоступен</string>
+    <string name="locations_and_currency">Место и валюта</string>
+    <string name="other">другой</string>
+    <string name="send_feedback">Отправить отзыв</string>
+    <string name="include_location_with_saves">Включить местоположение с экономит</string>
+    <string name="cancel">отменить</string>
+    <string name="delete">Удалить</string>
+    <string name="delete_entry">Удалить запись</string>
+    <string name="enter_id_for_deletion">Пожалуйста, введите идентификатор записи, которую вы хотите удалить</string>
+    <string name="entry_deleted">Вступление удален</string>
+    <string name="entry_not_deleted">Вступление не удаляются</string>
+    <string name="are_you_sure_you_want_to_delete">Вы уверены, что хотите удалить все?</string>
+    <string name="done">Готово!</string>
+    <string name="changelog">Список изменений</string>
+    <string name="you_are_exiting_the_application">Вы выхода из приложения.</string>
+    <string name="no_email_clients_installed">Там нет почтовые клиенты, установленные.</string>
+    <string name="error">Ошибка</string>
+    <string name="choose_an_email_application">Выберите приложение электронной почты.</string>
 </resources>

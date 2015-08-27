@@ -33,4 +33,26 @@
     <string name="save_title">Teideal:</string>
     <string name="share_settings">Comhroinn</string>
     <string name="countActivity">comhaireamh</string>
+    <string name="allow_google_analytics">Ceadaigh Google Analytics</string>
+    <string name="clear_all_data">Soiléir go léir \nRabhadh sonraí: Ní féidir é seo a aisiompú</string>
+    <string name="danger_zone">Crios baol</string>
+    <string name="detect_device_language">Braith teanga gléas</string>
+    <string name="locations_and_currency">Suíomh agus airgeadra</string>
+    <string name="other">Eile</string>
+    <string name="send_feedback">Seol aiseolas</string>
+    <string name="feature_currently_unavailable">Gné ar fáil faoi láthair</string>
+    <string name="include_location_with_saves">I measc suíomh le Sábhálann</string>
+    <string name="entry_not_deleted">Teacht nach scriosadh</string>
+    <string name="entry_deleted">Teacht scriosadh</string>
+    <string name="enter_id_for_deletion">Cuir isteach an ID an iontráil ar mhaith leat a scriosadh</string>
+    <string name="delete_entry">Scrios iontráil</string>
+    <string name="delete">Scrios</string>
+    <string name="cancel">Cealaigh</string>
+    <string name="are_you_sure_you_want_to_delete">An bhfuil tú cinnte go bhfuil tú ag iarraidh gach rud a scriosadh?</string>
+    <string name="done">Arna!</string>
+    <string name="changelog">Athrú logáil</string>
+    <string name="choose_an_email_application">Roghnaigh iarratas ríomhphoist</string>
+    <string name="error">Earráid</string>
+    <string name="no_email_clients_installed">Níl aon cliaint r-phost shuiteáil.</string>
+    <string name="you_are_exiting_the_application">Tá tú ag fágáil an t-iarratas.</string>
 </resources>

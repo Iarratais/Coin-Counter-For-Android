@@ -2,19 +2,20 @@
 
 package com.karl.android.coincounter;
 
+
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
+
 import android.os.Build;
-import android.preference.PreferenceManager;
+
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.TextUtils;
+
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -63,12 +64,13 @@ public class MainActivity extends ActionBarActivity{
     public static String cent1Amt = "0";
     public static String additionalCoins = "0";
     private static String total = "0";
+    public static String comment = " ";
 
     // All edittexts
     private EditText total_title_, note10000edit, note5000edit, note2000edit, note1000edit, note500edit, note200edit, note100edit, note50edit, note20edit, note10edit, note5edit, note1edit;
     private EditText coin2edit, coin1edit;
     private EditText cent50edit, cent25edit, cent20edit, cent10edit, cent5edit, cent2edit, cent1edit;
-    private EditText additionaledit;
+    private EditText additionaledit, commentedit;
     public static TextView overlay;
 
     public Button btnadd;
@@ -80,7 +82,6 @@ public class MainActivity extends ActionBarActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        updateLanguage(this);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -117,6 +118,7 @@ public class MainActivity extends ActionBarActivity{
         cent2edit        = (EditText) findViewById (R.id.cent2);
         cent1edit        = (EditText) findViewById (R.id.cent1);
         additionaledit   = (EditText) findViewById (R.id.extraAdditions);
+        commentedit      = (EditText) findViewById (R.id.comment);
         total_title_     = (EditText) findViewById (R.id.total_title);
 
         btnadd = (Button) findViewById(R.id.button);
@@ -145,6 +147,7 @@ public class MainActivity extends ActionBarActivity{
         cent2edit.addTextChangedListener(cent2listener);
         cent1edit.addTextChangedListener(cent1listener);
         additionaledit.addTextChangedListener(additionallistener);
+        commentedit.addTextChangedListener(commentlistener);
         total_title_.addTextChangedListener(total_title_listener);
 
         overlay.setOnClickListener(new View.OnClickListener() {
@@ -191,30 +194,10 @@ public class MainActivity extends ActionBarActivity{
     } // End onCreate()
 
 
-    public static void updateLanguage(Context ctx) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
-        String lang = prefs.getString("locale_override", "");
-        updateLanguage(ctx, lang);
-    }
-
-    public static void updateLanguage(Context ctx, String lang) {
-        Configuration cfg = new Configuration();
-        if(!TextUtils.isEmpty(lang)) {
-            cfg.locale = new Locale(lang);
-        } else {
-            cfg.locale = Locale.getDefault();
-        }
-        ctx.getResources().updateConfiguration(cfg, null);
-    }
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        setContentView(R.layout.activity_main);
-    }
-
     public void AddData() {
         boolean isEmpty = checkIfEmpty();
         if (!isEmpty) {
-            boolean isInserted = myDB.insertData(getFormatDate(), total_title_.getText().toString(), overlay.getText().toString());
+            boolean isInserted = myDB.insertData(getFormatDate(), total_title_.getText().toString(), overlay.getText().toString(), commentedit.getText().toString());
             if (isInserted) {
                 Toast.makeText(MainActivity.this, R.string.add_data_success, Toast.LENGTH_SHORT).show();
             } else {
@@ -223,6 +206,7 @@ public class MainActivity extends ActionBarActivity{
         }
     }
 
+    // Shows an alert to the user
     public void showMessage(String title, String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
@@ -260,7 +244,7 @@ public class MainActivity extends ActionBarActivity{
     public String getFormatDate() {
         Date now = new Date();
         String nowAsString = new SimpleDateFormat("dd-MM-yy", getResources().getConfiguration().locale).format(now);
-        String andMins = nowAsString + new SimpleDateFormat("HH:mm", getResources().getConfiguration().locale).format(now);
+        String andMins = nowAsString + " " + new SimpleDateFormat("HH:mm", getResources().getConfiguration().locale).format(now);
         return andMins;
     }
 
@@ -280,7 +264,6 @@ public class MainActivity extends ActionBarActivity{
             }
             if (total_title_.getText().toString().equals("")) {
                 total_title = " ";
-                calcTotal();
             }
         }
     };
@@ -724,6 +707,24 @@ public class MainActivity extends ActionBarActivity{
             }
         }
     };
+    private final TextWatcher commentlistener = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (!commentedit.getText().toString().equals("")){
+                comment = commentedit.getText().toString();
+                System.out.println("commentlistener: " + commentedit.getText().toString());
+            }
+            if (commentedit.getText().toString().equals("")) {
+                comment = " ";
+            }
+        }
+    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -810,6 +811,7 @@ public class MainActivity extends ActionBarActivity{
         cent2edit.setText("");
         cent1edit.setText("");
         additionaledit.setText("");
+        commentedit.setText("");
 
         System.out.println("clearAll: All inputs cleared");
     }
@@ -819,7 +821,7 @@ public class MainActivity extends ActionBarActivity{
         boolean isEmpty = checkIfEmpty();
         if(!isEmpty) {
             StringBuilder message = new StringBuilder();
-            message.append(overlay.getText().toString() + "\n" + total_title_.getText().toString() + "\n" + getFormatDate());
+            message.append(overlay.getText().toString() + "\n" + total_title_.getText().toString() + "\n" + getFormatDate() + "\n" + commentedit.getText().toString());
 
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.putExtra(intent.EXTRA_TEXT, message.toString());

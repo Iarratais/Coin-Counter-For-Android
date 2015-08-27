@@ -33,4 +33,26 @@
     <string name="title_activity_language_selector">언어</string>
     <string name="total_title_">이름</string>
     <string name="countActivity">계산</string>
+    <string name="allow_google_analytics">Google 웹 로그 분석을 허용</string>
+    <string name="clear_all_data">지우기 모든 데이터 \n개의 경고 :이 취소 할 수 없습니다</string>
+    <string name="danger_zone">위험 지역</string>
+    <string name="detect_device_language">장치 언어를 감지</string>
+    <string name="locations_and_currency">위치 및 통화</string>
+    <string name="other">다른</string>
+    <string name="send_feedback">피드백을 보내다</string>
+    <string name="feature_currently_unavailable">현재 사용할 수없는 기능</string>
+    <string name="include_location_with_saves">저장 위치를 포함</string>
+    <string name="entry_not_deleted">항목이 삭제되지</string>
+    <string name="entry_deleted">항목 삭제</string>
+    <string name="enter_id_for_deletion">삭제하고자하는 항목의 ID를 입력하십시오</string>
+    <string name="delete_entry">항목을 삭제</string>
+    <string name="delete">삭제</string>
+    <string name="cancel">취소</string>
+    <string name="are_you_sure_you_want_to_delete">당신은 모든 것을 삭제 하시겠습니까?</string>
+    <string name="done">완료!</string>
+    <string name="changelog">변경 로그</string>
+    <string name="error">오류</string>
+    <string name="no_email_clients_installed">설치된 이메일 클라이언트가 없습니다.</string>
+    <string name="choose_an_email_application">이메일 응용 프로그램을 선택합니다.</string>
+    <string name="you_are_exiting_the_application">당신은 응용 프로그램을 종료합니다.</string>
 </resources>

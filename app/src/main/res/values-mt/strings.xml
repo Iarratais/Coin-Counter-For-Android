@@ -33,4 +33,26 @@
     <string name="save_title">Titolu:</string>
     <string name="share_settings">Sahem</string>
     <string name="countActivity">għadd</string>
+    <string name="allow_google_analytics">Ħalli Google Analytics</string>
+    <string name="clear_all_data">Ċar data kollha \nTwissija: Dan ma can not be undone</string>
+    <string name="danger_zone">Zona ta \'perikolu</string>
+    <string name="detect_device_language">Tinduna lingwa apparat</string>
+    <string name="feature_currently_unavailable">Karatteristika bħalissa mhux disponibbli</string>
+    <string name="locations_and_currency">Post u l-munita</string>
+    <string name="other">Oħra</string>
+    <string name="send_feedback">Ibgħat rispons</string>
+    <string name="include_location_with_saves">Inkludi post ma jiffranka</string>
+    <string name="cancel">Ikkanċella</string>
+    <string name="delete">Ħassar</string>
+    <string name="delete_entry">Ħassar dħul</string>
+    <string name="enter_id_for_deletion">Jekk jogħġbok ikteb l-ID tad-dħul inti tixtieq li tħassar</string>
+    <string name="entry_deleted">Dħul imħassar</string>
+    <string name="entry_not_deleted">Dħul mhux imħassra</string>
+    <string name="are_you_sure_you_want_to_delete">Inti żgur li int tixtieq li tħassar kollox?</string>
+    <string name="done">Magħmul!</string>
+    <string name="changelog">Log bidla</string>
+    <string name="error">Error</string>
+    <string name="no_email_clients_installed">M\'hemm l-ebda klijenti email installati.</string>
+    <string name="choose_an_email_application">Agħżel applikazzjoni email.</string>
+    <string name="you_are_exiting_the_application">Inti qed joħorġu mill-applikazzjoni.</string>
 </resources>

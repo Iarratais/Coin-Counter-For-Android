@@ -33,4 +33,26 @@
     <string name="title_activity_language_selector">言語</string>
     <string name="total_title_">タイトル</string>
     <string name="countActivity">カウント</string>
+    <string name="allow_google_analytics">Google Analyticsのを許可します</string>
+    <string name="clear_all_data">クリアすべてのデータの\n警告：これは元に戻すことはできません</string>
+    <string name="danger_zone">危険区域</string>
+    <string name="detect_device_language">デバイスの言語を検出</string>
+    <string name="locations_and_currency">場所および通貨</string>
+    <string name="other">その他</string>
+    <string name="send_feedback">フィードバックを送信</string>
+    <string name="feature_currently_unavailable">現在使用できない機能</string>
+    <string name="include_location_with_saves">保存して場所を含めます</string>
+    <string name="entry_not_deleted">エントリーは削除されません</string>
+    <string name="entry_deleted">エントリを削除</string>
+    <string name="enter_id_for_deletion">削除したいエントリのIDを入力してください</string>
+    <string name="delete_entry">エントリを削除します</string>
+    <string name="delete">削除</string>
+    <string name="cancel">キャンセル</string>
+    <string name="are_you_sure_you_want_to_delete">あなたはすべてを削除してもよろしいですか？</string>
+    <string name="done">完了！</string>
+    <string name="changelog">変更ログ</string>
+    <string name="error">エラー</string>
+    <string name="no_email_clients_installed">インストールなしの電子メールクライアントはありません。</string>
+    <string name="choose_an_email_application">メールアプリケーションを選択してください。</string>
+    <string name="you_are_exiting_the_application">あなたは、アプリケーションを終了しています。</string>
 </resources>

@@ -33,4 +33,26 @@
     <string name="save_title">Pealkiri:</string>
     <string name="share_settings">Osa</string>
     <string name="countActivity">loendama</string>
+    <string name="allow_google_analytics">Laske Google Analytics</string>
+    <string name="clear_all_data">Kustutab kõik andmed \nHoiatus: See ei saa tagasi võtta</string>
+    <string name="danger_zone">Ohuala</string>
+    <string name="feature_currently_unavailable">Feature hetkel kättesaadav</string>
+    <string name="include_location_with_saves">Kaasa asukoht säästab</string>
+    <string name="locations_and_currency">Asukoht ja valuuta</string>
+    <string name="other">Muud</string>
+    <string name="send_feedback">Saada tagasisidet</string>
+    <string name="detect_device_language">Avastada seade keeles</string>
+    <string name="cancel">Tühista</string>
+    <string name="delete">Kustutama</string>
+    <string name="delete_entry">Kustuta kanne</string>
+    <string name="enter_id_for_deletion">Palun sisesta ID kande soovid kustutada</string>
+    <string name="entry_deleted">Kanne kustutatud</string>
+    <string name="entry_not_deleted">Kanne ei kustutata</string>
+    <string name="are_you_sure_you_want_to_delete">Olete kindel, et soovite kustutada kõik?</string>
+    <string name="done">Valmis!</string>
+    <string name="changelog">Muudatuste logi</string>
+    <string name="choose_an_email_application">Vali talle taotluse</string>
+    <string name="error">Viga</string>
+    <string name="no_email_clients_installed">Puuduvad e-posti kliendid paigaldatud.</string>
+    <string name="you_are_exiting_the_application">Sa rakendusest väljumata.</string>
 </resources>

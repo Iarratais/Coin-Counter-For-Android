@@ -33,4 +33,26 @@
     <string name="save_title">Назва:</string>
     <string name="share_settings">частка</string>
     <string name="countActivity">Рахувати</string>
+    <string name="allow_google_analytics">Дозволити Google Analytics</string>
+    <string name="clear_all_data">Очистити всі дані \nУвага: Це не може бути скасоване</string>
+    <string name="danger_zone">небезпечна зона</string>
+    <string name="detect_device_language">Визначити мову пристрою</string>
+    <string name="feature_currently_unavailable">Особливість в даний час недоступний</string>
+    <string name="include_location_with_saves">Включити місце розташування з економить</string>
+    <string name="locations_and_currency">Місце і валюта</string>
+    <string name="other">Інший</string>
+    <string name="send_feedback">Надіслати відгук</string>
+    <string name="cancel">Скасувати</string>
+    <string name="delete">видаляти</string>
+    <string name="delete_entry">видалити запис</string>
+    <string name="enter_id_for_deletion">Будь ласка, введіть ідентифікатор записи, яку ви хочете видалити</string>
+    <string name="entry_deleted">вступ видалений</string>
+    <string name="entry_not_deleted">Вступ не стираються</string>
+    <string name="are_you_sure_you_want_to_delete">Ви впевнені, що хочете видалити все?</string>
+    <string name="done">Вчинено!</string>
+    <string name="changelog">список змін</string>
+    <string name="you_are_exiting_the_application">Ви виходу з програми.</string>
+    <string name="no_email_clients_installed">Там немає поштові клієнти, встановлені.</string>
+    <string name="error">Помилка</string>
+    <string name="choose_an_email_application">Виберіть програму електронної пошти.</string>
 </resources>

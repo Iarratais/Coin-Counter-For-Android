@@ -33,4 +33,26 @@
     <string name="save_title">Titlu:</string>
     <string name="share_settings">Acțiune</string>
     <string name="countActivity">conta</string>
+    <string name="allow_google_analytics">Permiteți Google Analytics</string>
+    <string name="clear_all_data">Șterge toate datele \nAtenție: Acest lucru nu poate fi anulată</string>
+    <string name="danger_zone">Zonă periculoasă</string>
+    <string name="detect_device_language">Detectare limbă dispozitiv</string>
+    <string name="feature_currently_unavailable">Caracteristică disponibilă în prezent</string>
+    <string name="locations_and_currency">Locul de amplasare și valută</string>
+    <string name="other">Alte</string>
+    <string name="send_feedback">Trimite feedback</string>
+    <string name="include_location_with_saves">Includeți locație cu economisește</string>
+    <string name="cancel">Anulare</string>
+    <string name="delete">șterge</string>
+    <string name="delete_entry">Ștergeți intrare</string>
+    <string name="enter_id_for_deletion">Vă rugăm să introduceți ID-ul de la intrarea pe care doriți să o ștergeți</string>
+    <string name="entry_deleted">Intrarea eliminat</string>
+    <string name="entry_not_deleted">Intrare nu eliminat</string>
+    <string name="are_you_sure_you_want_to_delete">Sigur doriți să ștergeți totul?</string>
+    <string name="done">Adoptatà!</string>
+    <string name="changelog">Jurnal modificari</string>
+    <string name="you_are_exiting_the_application">Sunteți părăsi aplicația.</string>
+    <string name="no_email_clients_installed">Nu exista clienti de e-mail instalat.</string>
+    <string name="error">Eroare</string>
+    <string name="choose_an_email_application">Alegeți o aplicație de e-mail.</string>
 </resources>

@@ -33,4 +33,26 @@
     <string name="save_title">Titel:</string>
     <string name="share_settings">Del</string>
     <string name="countActivity">räkna</string>
+    <string name="allow_google_analytics">Tillåt Google Analytics</string>
+    <string name="clear_all_data">Rensa alla data \nVarning: Detta kan inte ångras</string>
+    <string name="danger_zone">Riskzon</string>
+    <string name="detect_device_language">Identifiera anordning språk</string>
+    <string name="feature_currently_unavailable">Feature inte tillgänglig för tillfället</string>
+    <string name="include_location_with_saves">Inkludera plats med sparar</string>
+    <string name="locations_and_currency">Plats och valuta</string>
+    <string name="other">Övrigt</string>
+    <string name="send_feedback">Skicka respons</string>
+    <string name="cancel">Annullera</string>
+    <string name="delete">Radera</string>
+    <string name="delete_entry">Radera post</string>
+    <string name="enter_id_for_deletion">Ange ID för den post du vill ta bort</string>
+    <string name="entry_deleted">Har trätt bort</string>
+    <string name="entry_not_deleted">Har trätt raderas inte</string>
+    <string name="are_you_sure_you_want_to_delete">Är du säker på att du vill ta bort allt?</string>
+    <string name="done">Klart!</string>
+    <string name="changelog">Ändringslogg</string>
+    <string name="you_are_exiting_the_application">Du avsluta programmet.</string>
+    <string name="no_email_clients_installed">Det finns inga e-postklienter installerade.</string>
+    <string name="error">Fel</string>
+    <string name="choose_an_email_application">Välj ett e-postprogram.</string>
 </resources>

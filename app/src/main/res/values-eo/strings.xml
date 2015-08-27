@@ -33,4 +33,26 @@
     <string name="save_title">Titolo:</string>
     <string name="share_settings">Konigi</string>
     <string name="countActivity" >Grafo</string>
+    <string name="allow_google_analytics">Permesu Google Analytics</string>
+    <string name="clear_all_data">Klara ĉiujn datumojn \nAverto: Tio ne povas esti malfarita</string>
+    <string name="danger_zone">Danĝero zono</string>
+    <string name="feature_currently_unavailable">Karakterizaĵo nuntempe neatingebla</string>
+    <string name="include_location_with_saves">Inkluzivas lokon en ŝparas</string>
+    <string name="locations_and_currency">Situo kaj valuto</string>
+    <string name="other">Aliaj</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="detect_device_language">Detekti aparato lingvo</string>
+    <string name="cancel">Rezignu</string>
+    <string name="delete">Forigi</string>
+    <string name="delete_entry">Forigi eniro</string>
+    <string name="enter_id_for_deletion">Bonvolu eniri la ID de la eniro vi ŝatus forviŝi</string>
+    <string name="entry_deleted">Eniraj forigita</string>
+    <string name="entry_not_deleted">Eniraj ne forigita</string>
+    <string name="are_you_sure_you_want_to_delete">Ĉu vi certas ke vi volas forigi ĉion?</string>
+    <string name="done">Donacas!</string>
+    <string name="changelog">ŝanĝi log</string>
+    <string name="choose_an_email_application">Elekti retpoŝtan apliko</string>
+    <string name="error">Eraro</string>
+    <string name="no_email_clients_installed">Ne estas retpoŝtaj klientoj instalita.</string>
+    <string name="you_are_exiting_the_application">Vi estas eliranta la apliko.</string>
 </resources>

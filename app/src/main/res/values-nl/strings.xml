@@ -33,4 +33,26 @@
     <string name="save_title">Titel:</string>
     <string name="share_settings">Aandeel</string>
     <string name="countActivity">tellen</string>
+    <string name="allow_google_analytics">Toestaan Google Analytics</string>
+    <string name="clear_all_data">Wis alle gegevens \nWaarschuwing: Dit kan niet ongedaan gemaakt worden</string>
+    <string name="danger_zone">Gevarenzone</string>
+    <string name="detect_device_language">Detecteren taal apparaat</string>
+    <string name="feature_currently_unavailable">Functie momenteel niet beschikbaar</string>
+    <string name="locations_and_currency">Locatie en valuta</string>
+    <string name="other">Ander</string>
+    <string name="send_feedback">Stuur feedback</string>
+    <string name="include_location_with_saves">Omvatten locatie met bespaart</string>
+    <string name="cancel">Annuleer</string>
+    <string name="delete">Verwijderen</string>
+    <string name="delete_entry">Wis ingave</string>
+    <string name="enter_id_for_deletion">Voer de ID van de vermelding die u wilt verwijderen</string>
+    <string name="entry_deleted">Binnenkomst verwijderd</string>
+    <string name="entry_not_deleted">Binnenkomst niet verwijderd</string>
+    <string name="are_you_sure_you_want_to_delete">Bent u zeker dat u alles wilt verwijderen?</string>
+    <string name="done">Gedaan!</string>
+    <string name="changelog">Verander log</string>
+    <string name="error">Fout</string>
+    <string name="no_email_clients_installed">Er zijn geen e-mail clients geïnstalleerd.</string>
+    <string name="choose_an_email_application">Kies een e-mailtoepassing.</string>
+    <string name="you_are_exiting_the_application">U bent het verlaten van de toepassing.</string>
 </resources>

@@ -33,4 +33,26 @@
     <string name="save_title">Naslov:</string>
     <string name="share_settings">Udio</string>
     <string name="countActivity">Brojanje</string>
+    <string name="allow_google_analytics">Dopusti Google Analytics</string>
+    <string name="clear_all_data">Vedro svi podaci \nUpozorenje: Ovo se ne može poništiti</string>
+    <string name="danger_zone">Opasnost zona</string>
+    <string name="detect_device_language">Otkrij jezik uređaja</string>
+    <string name="locations_and_currency">Mjesto i valuta</string>
+    <string name="other">Ostalo</string>
+    <string name="send_feedback">Pošalji povratne informacije</string>
+    <string name="feature_currently_unavailable">Značajka trenutno nije dostupan</string>
+    <string name="include_location_with_saves">Uključi lokaciju štedi</string>
+    <string name="entry_not_deleted">Ulaz se ne brišu</string>
+    <string name="entry_deleted">Stupanje izbrisana</string>
+    <string name="enter_id_for_deletion">Unesite šifru stupanja želite izbrisati</string>
+    <string name="delete_entry">Brisanje unosa</string>
+    <string name="delete">Izbrišite</string>
+    <string name="cancel">Odustani</string>
+    <string name="are_you_sure_you_want_to_delete">Jeste li sigurni da želite obrisati sve?</string>
+    <string name="done">Gotovo!</string>
+    <string name="changelog">Promijeni dnevnik</string>
+    <string name="error">Pogreška</string>
+    <string name="no_email_clients_installed">Nema klijenti e instalirani.</string>
+    <string name="choose_an_email_application">Odaberite e-aplikacije.</string>
+    <string name="you_are_exiting_the_application">Vi ste zatvaranja programa.</string>
 </resources>

@@ -33,4 +33,26 @@
     <string name="save_title">Titel:</string>
     <string name="share_settings">Andel</string>
     <string name="countActivity" >Tæl</string>
+    <string name="allow_google_analytics">Tillad Google Analytics</string>
+    <string name="clear_all_data">Ryd alle data \nAdvarsel: Dette kan ikke fortrydes</string>
+    <string name="danger_zone">Fare zone</string>
+    <string name="feature_currently_unavailable">Funktion ikke tilgængelig i øjeblikket</string>
+    <string name="include_location_with_saves">Medtag placering i sparer</string>
+    <string name="locations_and_currency">Beliggenhed og valuta</string>
+    <string name="other">Andet</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="detect_device_language">Detect enhedens sprog</string>
+    <string name="cancel">Annuller</string>
+    <string name="delete">Slet</string>
+    <string name="delete_entry">Slet post</string>
+    <string name="enter_id_for_deletion">Indtast ID post, du vil slette</string>
+    <string name="entry_deleted">Indtastning slettet</string>
+    <string name="entry_not_deleted">Post ikke slettet</string>
+    <string name="are_you_sure_you_want_to_delete">Er du sikker på, at du vil slette alt?</string>
+    <string name="done">Færdig!</string>
+    <string name="changelog">Skift log</string>
+    <string name="choose_an_email_application">Vælg en e-mail program</string>
+    <string name="error">Fejl</string>
+    <string name="no_email_clients_installed">Der er ingen e-mail-klienter installeret.</string>
+    <string name="you_are_exiting_the_application">Du forlader programmet.</string>
 </resources>

@@ -33,4 +33,26 @@
     <string name="save_title">Názov:</string>
     <string name="share_settings">Podiel</string>
     <string name="countActivity">spočítať</string>
+    <string name="allow_google_analytics">Povoliť Google Analytics</string>
+    <string name="clear_all_data">Vymazať všetky dáta \nUpozornenie: Tento nemožno vrátiť späť</string>
+    <string name="danger_zone">Nebezpečenstvo zóna</string>
+    <string name="detect_device_language">Rozpoznať jazyk zariadenie</string>
+    <string name="feature_currently_unavailable">Funkcia momentálne nedostupná</string>
+    <string name="include_location_with_saves">Zahrnúť umiestnenia sa uloží</string>
+    <string name="locations_and_currency">Umiestnenie a mena</string>
+    <string name="other">Iný</string>
+    <string name="send_feedback">Poslať spätnú väzbu</string>
+    <string name="cancel">Zrušiť</string>
+    <string name="delete">Zmazať</string>
+    <string name="delete_entry">Zmazať záznam</string>
+    <string name="enter_id_for_deletion">Prosím, zadajte ID záznamu, ktorý chcete zmazať</string>
+    <string name="entry_deleted">Vstup vypúšťa</string>
+    <string name="entry_not_deleted">Vstup nie je odstránený</string>
+    <string name="are_you_sure_you_want_to_delete">Ste si istí, že chcete zmazať všetko?</string>
+    <string name="done">Hotovo!</string>
+    <string name="changelog">Changelog</string>
+    <string name="you_are_exiting_the_application">Ste ukončenie aplikácie.</string>
+    <string name="no_email_clients_installed">Nie sú žiadne e-mailových klientov nainštalované.</string>
+    <string name="error">Chyba</string>
+    <string name="choose_an_email_application">Vyberte e-mailovú aplikáciu.</string>
 </resources>

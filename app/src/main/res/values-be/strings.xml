@@ -33,4 +33,26 @@
     <string name="title_activity_language_selector">мова</string>
     <string name="total_title_">Назва</string>
     <string name="countActivity">лічыць</string>
+    <string name="allow_google_analytics">Дазволіць Google Analytics</string>
+    <string name="clear_all_data">Ачысціць ўсе дадзеныя \nУвага: Гэта не можа быць адменена</string>
+    <string name="danger_zone">небяспечная зона</string>
+    <string name="feature_currently_unavailable">Асаблівасць у цяперашні час недаступны</string>
+    <string name="include_location_with_saves">Ўключыць становішча ў эканоміць</string>
+    <string name="locations_and_currency">Месца і валюта</string>
+    <string name="other">іншы</string>
+    <string name="send_feedback">Aдправіць водгук</string>
+    <string name="detect_device_language">Вызначыць мову прылады</string>
+    <string name="cancel">адмяніць</string>
+    <string name="delete">выдаляць</string>
+    <string name="delete_entry">выдаліць запіс</string>
+    <string name="enter_id_for_deletion">Калі ласка, увядзіце ідэнтыфікатар запісу, якую вы хочаце выдаліць</string>
+    <string name="entry_deleted">ўступленне выдалены</string>
+    <string name="entry_not_deleted">Ўступленне не выдаляюцца</string>
+    <string name="are_you_sure_you_want_to_delete">Вы ўпэўненыя, што хочаце выдаліць усе?</string>
+    <string name="done">Здзейснена!</string>
+    <string name="changelog">змяненняў</string>
+    <string name="choose_an_email_application">Выберыце дадатак электроннай пошты</string>
+    <string name="error">Памылка</string>
+    <string name="no_email_clients_installed">Там няма паштовыя кліенты, устаноўленыя.</string>
+    <string name="you_are_exiting_the_application">Вы выхаду з прыкладання.</string>
 </resources>

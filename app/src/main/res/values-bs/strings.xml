@@ -33,4 +33,26 @@
     <string name="title_activity_language_selector">Jezik</string>
     <string name="total_title_">Naslov</string>
     <string name="countActivity">računati</string>
+    <string name="allow_google_analytics">Dopustite Google Analytics</string>
+    <string name="clear_all_data">Brisanje svih podataka \nUpozorenje: To se ne može poništiti</string>
+    <string name="danger_zone">Opasnoj zoni</string>
+    <string name="feature_currently_unavailable">Karakteristike trenutno nedostupan</string>
+    <string name="include_location_with_saves">Uključiti lokacija u štedi</string>
+    <string name="locations_and_currency">Lokacija i valuta</string>
+    <string name="other">Ostali</string>
+    <string name="send_feedback">Pošaljite povratne informacije</string>
+    <string name="detect_device_language">Detect jezik uređaja</string>
+    <string name="cancel">Otkazati</string>
+    <string name="delete">Izbrisati</string>
+    <string name="delete_entry">Brisanje unosa</string>
+    <string name="enter_id_for_deletion">Molimo unesite broj unosa želite izbrisati</string>
+    <string name="entry_deleted">Unos izbrisan</string>
+    <string name="entry_not_deleted">Unos ne brišu</string>
+    <string name="are_you_sure_you_want_to_delete">Jeste li sigurni da želite izbrisati sve?</string>
+    <string name="done">Gotovo!</string>
+    <string name="changelog">Promijeni dnevnik</string>
+    <string name="choose_an_email_application">Odaberite aplikaciju e-mail</string>
+    <string name="error">Greška</string>
+    <string name="no_email_clients_installed">Ne postoje klijenti e-pošte instaliran.</string>
+    <string name="you_are_exiting_the_application">Vi izlaska iz aplikacije.</string>
 </resources>

@@ -35,7 +35,7 @@
     <string name="check_if_empty_title_error">Can not save without a title.</string>
     <string name="check_if_empty_overlay_errror">Can not save when total is 0.</string>
 
-    <string name="howto">Welcome to Coin Counter \n \n \n Thank you for downloading my app. \n\n To use: \n1. Coin the amount of each coin you have. \n2. Input them into the app. \n3. Get the result! </string>
+    <string name="howto">Welcome to Coin Counter \n \n \nThank you for downloading my app. \n\nTo use: \n1. Coin the amount of each coin you have. \n2. Input them into the app. \n3. Get the result! </string>
     <string name="howto_title">How To</string>
 
     <string name="title_activity_about" translatable="false">AboutActivity</string>
@@ -68,6 +68,22 @@
     <string name="preference_file_key" translatable="false">com.karl.android.coincouter.PREFERENCE_FILE_KEY</string>
     <string name="title_activity_language_selector">Language</string>
     <string name="show_string">Saves</string>
+    <string name="locations_and_currency">Location and Currency</string>
+    <string name="include_location_with_saves">Include location with saves</string>
+    <string name="other">Other</string>
+    <string name="allow_google_analytics">Allow Google Analytics</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="danger_zone">Danger zone</string>
+    <string name="clear_all_data">Clear all data \nWarning: This can not be undone</string>
+    <string name="detect_device_language">Detect device language</string>
+    <string name="feature_currently_unavailable">Feature currently unavailable</string>
+    <string name="are_you_sure_you_want_to_delete">Are you sure you want to delete everything?</string>
+    <string name="done">Done!</string>
+    <string name="changelog">Changelog</string>
+    <string name="choose_an_email_application">Choose an email application</string>
+    <string name="no_email_clients_installed">There are no email clients installed</string>
+    <string name="error">Error</string>
+    <string name="you_are_exiting_the_application">You are exiting the application</string>
 
     <!-- Language changed notifications -->
     <string name="lang_english">Changed language to English</string>
@@ -118,4 +134,11 @@
 
     <string name="hello_world" translatable="false">Hello world!</string>
     <string name="title_activity_show_saves" translatable="false">ShowSaves</string>
+
+    <string name="entry_deleted">Entry deleted</string>
+    <string name="entry_not_deleted">Entry not deleted</string>
+    <string name="delete">Delete</string>
+    <string name="delete_entry">Delete entry</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_id_for_deletion">Please enter the ID of the entry you would like to delete</string>
 </resources>

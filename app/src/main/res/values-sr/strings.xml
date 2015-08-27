@@ -33,4 +33,26 @@
     <string name="total_title_">назив</string>
     <string name="howto_title">Kako da</string>
     <string name="countActivity">рачунати</string>
+    <string name="allow_google_analytics">Дозволи Гоогле Аналитицс</string>
+    <string name="clear_all_data">Ведро сви подаци \nУпозорење: Ово се не може поништити</string>
+    <string name="danger_zone">Дангер зоне</string>
+    <string name="detect_device_language">Откриј језик уређаја</string>
+    <string name="feature_currently_unavailable">Функција тренутно није доступан</string>
+    <string name="include_location_with_saves">Укључи локацију са штеди</string>
+    <string name="locations_and_currency">Локација и валута</string>
+    <string name="other">Друго</string>
+    <string name="send_feedback">Pošalji povratne informacije</string>
+    <string name="cancel">отказати</string>
+    <string name="delete">Делете</string>
+    <string name="delete_entry">Делете ентри</string>
+    <string name="enter_id_for_deletion">Молимо Вас да унесете ИД уласка желите да избришете</string>
+    <string name="entry_deleted">Ступање избрисан</string>
+    <string name="entry_not_deleted">Ступање није избрисан</string>
+    <string name="are_you_sure_you_want_to_delete">Да ли сте сигурни да желите да избришете све?</string>
+    <string name="done">Gotovo!</string>
+    <string name="changelog">Цхангелог</string>
+    <string name="you_are_exiting_the_application">Ви изласка из апликације.</string>
+    <string name="no_email_clients_installed">Не постоје клијенти е-поште инсталирани.</string>
+    <string name="error">Грешка</string>
+    <string name="choose_an_email_application">Изаберите апликацију е-поште.</string>
 </resources>

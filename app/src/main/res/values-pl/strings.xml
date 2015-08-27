@@ -33,4 +33,26 @@
     <string name="save_title">Tytuł:</string>
     <string name="share_settings">Udział</string>
     <string name="countActivity">liczyć</string>
+    <string name="allow_google_analytics">Pozwól Google Analytics</string>
+    <string name="clear_all_data">Wyczyść wszystkie dane \nOstrzeżenie: nie można cofnąć</string>
+    <string name="danger_zone">Strefa niebezpieczeństwa</string>
+    <string name="detect_device_language">Wykrywanie języka urządzenia</string>
+    <string name="feature_currently_unavailable">Funkcja obecnie niedostępna</string>
+    <string name="locations_and_currency">Lokalizacja i waluta</string>
+    <string name="other">Inny</string>
+    <string name="send_feedback">Wyślij opinię</string>
+    <string name="include_location_with_saves">Obejmują lokalizację oszczędza</string>
+    <string name="cancel">Anuluj</string>
+    <string name="delete">Kasować</string>
+    <string name="delete_entry">Usuń wpis</string>
+    <string name="enter_id_for_deletion">Proszę wpisać identyfikator wpisu chcesz usunąć</string>
+    <string name="entry_deleted">Wejście usunięte</string>
+    <string name="entry_not_deleted">Wejście nie usunięte</string>
+    <string name="are_you_sure_you_want_to_delete">Czy na pewno chcesz usunąć wszystko?</string>
+    <string name="done">Gotowe!</string>
+    <string name="changelog">Dziennik zmian</string>
+    <string name="you_are_exiting_the_application">Jesteś wychodzenia z aplikacji.</string>
+    <string name="no_email_clients_installed">Brak klientów pocztowych zainstalowanych.</string>
+    <string name="error">Błąd</string>
+    <string name="choose_an_email_application">Wybierz aplikację e-mail.</string>
 </resources>

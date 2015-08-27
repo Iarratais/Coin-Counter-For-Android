@@ -33,4 +33,26 @@
     <string name="save_title">Naslov:</string>
     <string name="share_settings">Delež</string>
     <string name="countActivity">grof</string>
+    <string name="allow_google_analytics">Dovoli Google Analytics</string>
+    <string name="clear_all_data">Počisti vse podatke \nOpozorilo: To ni mogoče razveljaviti</string>
+    <string name="danger_zone">Nevarno območje</string>
+    <string name="detect_device_language">Zaznaj jezik naprave</string>
+    <string name="feature_currently_unavailable">Funkcija trenutno ni na voljo</string>
+    <string name="include_location_with_saves">Vključi lokacijo prihrani</string>
+    <string name="locations_and_currency">Lokacija in valuta</string>
+    <string name="other">Drugi</string>
+    <string name="send_feedback">Pošlji povratne informacije</string>
+    <string name="cancel">Prekliči</string>
+    <string name="delete">Izbriši</string>
+    <string name="delete_entry">Zbriši vpis</string>
+    <string name="enter_id_for_deletion">Vnesite ID vnosa, ki ga želite izbrisati</string>
+    <string name="entry_deleted">Vnos izbrisan</string>
+    <string name="entry_not_deleted">Začetek ni izbrisan</string>
+    <string name="are_you_sure_you_want_to_delete">Ali ste prepričani, da želite izbrisati vse?</string>
+    <string name="done">Končano!</string>
+    <string name="changelog">Dnevnik sprememb</string>
+    <string name="you_are_exiting_the_application">Ste zaprli aplikacijo.</string>
+    <string name="no_email_clients_installed">Ni email varovanci nameščeni.</string>
+    <string name="error">Napaka</string>
+    <string name="choose_an_email_application">Izberite aplikacijo e-pošte.</string>
 </resources>

@@ -33,4 +33,26 @@
     <string name="save_title">Otsikko:</string>
     <string name="share_settings">Osake</string>
     <string name="countActivity">laskea</string>
+    <string name="allow_google_analytics">Salli Google Analytics</string>
+    <string name="clear_all_data">Tyhjennä kaikki tiedot \nVaroitus: Tämä ei voi peruuttaa</string>
+    <string name="danger_zone">Vaaravyöhykkeellä</string>
+    <string name="detect_device_language">Tunnista laite kieli</string>
+    <string name="locations_and_currency">Sisällytä paikalla säästää</string>
+    <string name="other">Muut</string>
+    <string name="send_feedback">Lähetä palautetta</string>
+    <string name="feature_currently_unavailable">Ominaisuus tällä hetkellä saatavilla</string>
+    <string name="include_location_with_saves">Sisällytä sijainti säästää</string>
+    <string name="cancel">Peruuttaa</string>
+    <string name="delete">Poistaa</string>
+    <string name="delete_entry">Poista merkintä</string>
+    <string name="enter_id_for_deletion">Anna tunnus merkinnän haluat poistaa</string>
+    <string name="entry_deleted">Merkintä poistettu</string>
+    <string name="entry_not_deleted">Merkintä ei poisteta</string>
+    <string name="are_you_sure_you_want_to_delete">Oletko varma, että haluat poistaa kaiken?</string>
+    <string name="done">Valmis!</string>
+    <string name="changelog">Kanavan tiedot</string>
+    <string name="choose_an_email_application">Valitse sähköpostisovellus</string>
+    <string name="error">Virhe</string>
+    <string name="no_email_clients_installed">Ei ole sähköpostiohjelmia asennettuna.</string>
+    <string name="you_are_exiting_the_application">Olet poistumatta sovelluksesta.</string>
 </resources>

@@ -33,4 +33,26 @@
     <string name="title_activity_language_selector">שפה </string>
     <string name="total_title_">כותרת </string>
     <string name="countActivity">ספירה</string>
+    <string name="allow_google_analytics">לאפשר Google Analytics</string>
+    <string name="clear_all_data">נקה את כל אזהרת \nנתונים: זה לא ניתן לבטל</string>
+    <string name="danger_zone">אזור סכנה</string>
+    <string name="detect_device_language">אתר שפת מכשיר</string>
+    <string name="locations_and_currency">מיקום ומטבע</string>
+    <string name="other">אחר</string>
+    <string name="send_feedback">שלח משוב</string>
+    <string name="feature_currently_unavailable">תכונה זמינה כעת</string>
+    <string name="include_location_with_saves">כולל מיקום בחוסך</string>
+    <string name="entry_not_deleted">כניסה לא נמחקה</string>
+    <string name="entry_deleted">הכניסה נמחקה</string>
+    <string name="enter_id_for_deletion">נא להזין את קוד זיהוי של הרשומה שאתה רוצה למחוק</string>
+    <string name="delete_entry">מחיקת ערך</string>
+    <string name="delete">מחק</string>
+    <string name="cancel">לבטל</string>
+    <string name="are_you_sure_you_want_to_delete">האם אתה בטוח שאתה רוצה למחוק הכל?</string>
+    <string name="done">בוצע!</string>
+    <string name="changelog">יומן שינוי</string>
+    <string name="choose_an_email_application">בחר יישום דואר אלקטרוני</string>
+    <string name="error">שגיאה</string>
+    <string name="no_email_clients_installed">אין לקוחות דואר אלקטרוני המותקנים.</string>
+    <string name="you_are_exiting_the_application">אתה יוצא מהיישום.</string>
 </resources>

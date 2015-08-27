@@ -33,4 +33,26 @@
     <string name="save_title">Titre:</string>
     <string name="share_settings">Part</string>
     <string name="countActivity">compter</string>
+    <string name="allow_google_analytics">Autoriser Google Analytics</string>
+    <string name="clear_all_data">Effacer toutes les données \nAttention: Cela ne peut pas être annulée</string>
+    <string name="danger_zone">Zone dangereuse</string>
+    <string name="detect_device_language">Détecter la langue de l\'appareil</string>
+    <string name="locations_and_currency">Localisation et monnaie</string>
+    <string name="other">Autre</string>
+    <string name="send_feedback">Envoyez vos remarques</string>
+    <string name="feature_currently_unavailable">Caractéristique actuellement indisponible</string>
+    <string name="include_location_with_saves">Inclure endroit avec sauve</string>
+    <string name="entry_not_deleted">Entrée pas supprimé</string>
+    <string name="entry_deleted">Entrée supprimé</string>
+    <string name="enter_id_for_deletion">S\'il vous plaît entrez l\'identifiant de l\'entrée que vous souhaitez supprimer</string>
+    <string name="delete_entry">Supprimer l\'entrée</string>
+    <string name="delete">Effacer</string>
+    <string name="cancel">Annuler</string>
+    <string name="are_you_sure_you_want_to_delete">Êtes-vous sûr de vouloir supprimer tout?</string>
+    <string name="done">Terminé!</string>
+    <string name="changelog">Journal des modifications</string>
+    <string name="choose_an_email_application">Choisissez une application de messagerie</string>
+    <string name="error">Erreur</string>
+    <string name="no_email_clients_installed">Il n\'y a pas les clients de messagerie installés.</string>
+    <string name="you_are_exiting_the_application">Vous quittez l\'application.</string>
 </resources>

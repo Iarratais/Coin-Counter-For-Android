@@ -1,0 +1,10 @@
+Currently only available in English.\n
+Version 3:\n
+----------\n
+Added support for new languages and currencies.\n
+New colour and look.\n
+Add a comment to entries.\n
+Redesign for tablets.\n
+Bug fixes and optimisations.\n
+Language fixes.\n
+New settings menu.\n

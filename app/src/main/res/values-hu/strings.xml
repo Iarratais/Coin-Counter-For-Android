@@ -33,4 +33,26 @@
     <string name="save_title">Cím:</string>
     <string name="share_settings">Részvény</string>
     <string name="countActivity">számolás</string>
+    <string name="allow_google_analytics">Hagyjuk a Google Analytics</string>
+    <string name="clear_all_data">Tiszta minden adatot \nFigyelmeztetés: Ez nem lehet visszavonni</string>
+    <string name="danger_zone">Veszély zóna</string>
+    <string name="detect_device_language">Érzékeli a készülék nyelvi</string>
+    <string name="locations_and_currency">Elhelyezkedés és valuta</string>
+    <string name="other">Más</string>
+    <string name="send_feedback">Visszajelzés küldése</string>
+    <string name="feature_currently_unavailable">Funkció jelenleg nem</string>
+    <string name="include_location_with_saves">Tartalmazzák helyen tárolja</string>
+    <string name="entry_not_deleted">Nevezési nem törlődnek</string>
+    <string name="entry_deleted">Bejegyzés törölve</string>
+    <string name="enter_id_for_deletion">Kérjük, adja meg azonosítóját bejegyzést szeretne törölni</string>
+    <string name="delete_entry">Bejegyzés törlése</string>
+    <string name="delete">Törlés</string>
+    <string name="cancel">Mégsem</string>
+    <string name="are_you_sure_you_want_to_delete">Biztos benne, hogy törölni szeretné mindent?</string>
+    <string name="done">Kész!</string>
+    <string name="changelog">Változás napló</string>
+    <string name="error">Hiba</string>
+    <string name="no_email_clients_installed">Nincs e-mail kliensek telepítve.</string>
+    <string name="choose_an_email_application">Válasszon egy e-mail alkalmazás.</string>
+    <string name="you_are_exiting_the_application">Ön bezárná az alkalmazást.</string>
 </resources>
