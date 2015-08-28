@@ -63,6 +63,8 @@ public class SettingsActivity extends AppCompatActivity {
         btnlangSel = (Button) findViewById(R.id.button3);
         //includeLocation = (Switch) findViewById(R.id.Location);
 
+        btncurr.setText(getCurrency());
+
         btncurr.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -78,6 +80,8 @@ public class SettingsActivity extends AppCompatActivity {
                     }
                 }
         );
+
+        // Temporarily disabled, not a valid option for the time being.
         /*includeLocation.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -207,6 +211,12 @@ public class SettingsActivity extends AppCompatActivity {
         Toast.makeText(SettingsActivity.this, "includeLocationOff", Toast.LENGTH_SHORT).show();
     } */
 
+    @Override
+    public void onDestroy() {
+        finish();
+        super.onDestroy();
+    }
+
     public void changeCurrency() {
         final String[] currencies = {"EUR", "ISK", "RUB", "USD", "GBP"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -246,21 +256,39 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void saveCurrency(String currency) {
-        // Debugging code
-        showToast("Currency set to: " + currency);
+        // Let the user know
+        showToast(getString(R.string.changed_curr) + " " + currency);
 
         SharedPreferences curr = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = curr.edit();
         editor.putString("currency", currency);
         editor.commit();
+
+        btncurr.setText(getCurrency());
+    }
+
+    public String getCurrency() {
+        SharedPreferences curr = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        String defaultValue = "EUR";
+        String currency = "";
+        currency = curr.getString("currency", currency);
+        if (currency.equals("")) {
+            currency = defaultValue;
+        }
+        return currency;
     }
 
     public void analyticsSwitch(boolean isChecked) {
-        showToast("Analytics: " + isChecked);
+        // Let the user know
+        if(isChecked) {
+            showToast(getString(R.string.google_analytics_activated));
+        } else {
+            showToast(getString(R.string.google_analytics_deactivated));
+        }
 
         SharedPreferences analytics = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = analytics.edit();
-        editor.putBoolean("Analytics set to: ", isChecked);
+        editor.putBoolean("analytics", isChecked);
         editor.commit();
     }
 

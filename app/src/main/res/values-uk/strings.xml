@@ -57,4 +57,8 @@
     <string name="choose_an_email_application">Виберіть програму електронної пошти.</string>
     <string name="can_not_share_when_total_is_0">Не можете поділитися, коли загальна сума 0.</string>
     <string name="can_not_share_without_a_title">Не можете поділитися без назви.</string>
+    <string name="google_analytics_deactivated">Відключається Google Analytics.</string>
+    <string name="google_analytics_activated">Google Analytics активована.</string>
+    <string name="are_you_sure_data_loss_inevidable">Ви впевнені, що хочете піти? Дані, введені будуть видалені, якщо не зберігаються.</string>
+    <string name="sample_example">Свята.</string>
 </resources>

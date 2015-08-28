@@ -57,4 +57,8 @@
     <string name="you_are_exiting_the_application">Вие излизате от приложението.</string>
     <string name="can_not_share_when_total_is_0">Не може да се споделя, когато общият е 0.</string>
     <string name="can_not_share_without_a_title">Не може да се споделя без заглавие.</string>
+    <string name="google_analytics_activated">Активиран Google Analytics.</string>
+    <string name="google_analytics_deactivated">Деактивира Google Analytics.</string>
+    <string name="are_you_sure_data_loss_inevidable">Наистина ли искате да оставите ли сте? Данните, вписани ще бъдат изтрити, освен ако спасен.</string>
+    <string name="sample_example">Почивка.</string>
 </resources>

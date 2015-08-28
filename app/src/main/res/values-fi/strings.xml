@@ -57,4 +57,8 @@
     <string name="you_are_exiting_the_application">Olet poistumatta sovelluksesta.</string>
     <string name="can_not_share_when_total_is_0">Voi jakaa, jos Yhteensä on 0.</string>
     <string name="can_not_share_without_a_title">Voi jakaa ilman otsikkoa.</string>
+    <string name="google_analytics_activated">Google Analytics aktivoitu.</string>
+    <string name="google_analytics_deactivated">Google Analytics deaktivoitu.</string>
+    <string name="are_you_sure_data_loss_inevidable">Oletko varma, että haluat lähteä? Tiedot syötetyn ellei tallennetaan.</string>
+    <string name="sample_example">Vapaapäiviä.</string>
 </resources>

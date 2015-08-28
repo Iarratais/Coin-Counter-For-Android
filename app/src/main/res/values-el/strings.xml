@@ -57,4 +57,8 @@
     <string name="you_are_exiting_the_application">Είστε έξοδο από την εφαρμογή.</string>
     <string name="can_not_share_when_total_is_0">Δεν μπορεί να μοιραστεί, όταν σύνολο είναι 0.</string>
     <string name="can_not_share_without_a_title">Δεν είναι δυνατή η κοινή χρήση χωρίς τίτλο.</string>
+    <string name="google_analytics_activated">Ενεργοποιείται το Google Analytics.</string>
+    <string name="google_analytics_deactivated">Google Analytics απενεργοποιηθεί.</string>
+    <string name="are_you_sure_data_loss_inevidable">Είστε σίγουροι ότι θέλετε να φύγετε? Τα δεδομένα που εισάγονται θα διαγραφούν, εκτός αν σωθεί.</string>
+    <string name="sample_example">Διακοπές.</string>
 </resources>

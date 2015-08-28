@@ -57,4 +57,8 @@
     <string name="choose_an_email_application">Wybierz aplikację e-mail.</string>
     <string name="can_not_share_without_a_title">Nie można dzielić bez tytułu.</string>
     <string name="can_not_share_when_total_is_0">Nie można dzielić, gdy suma wynosi 0.</string>
+    <string name="google_analytics_activated">Aktywowane Google Analytics.</string>
+    <string name="google_analytics_deactivated">Wyłączona Google Analytics.</string>
+    <string name="are_you_sure_data_loss_inevidable">Czy jesteś pewien, że chcesz odejść? Dane wprowadzone zostaną usunięte, chyba że zapisane.</string>
+    <string name="sample_example">Ferie.</string>
 </resources>

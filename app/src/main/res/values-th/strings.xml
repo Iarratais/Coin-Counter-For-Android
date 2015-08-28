@@ -57,4 +57,8 @@
     <string name="show_string">บันทึก</string>
     <string name="can_not_share_when_total_is_0">ไม่สามารถใช้ร่วมเมื่อทั้งหมด 0</string>
     <string name="can_not_share_without_a_title">ไม่สามารถใช้ร่วมโดยไม่มีชื่อ</string>
+    <string name="google_analytics_deactivated">ปิดการใช้งาน Google Analytics</string>
+    <string name="google_analytics_activated">เปิดใช้งาน Google Analytics</string>
+    <string name="are_you_sure_data_loss_inevidable">คุณแน่ใจหรือว่าต้องการที่จะออก? ข้อมูลที่ป้อนจะถูกลบเว้นแต่ที่บันทึกไว้</string>
+    <string name="sample_example">วันหยุด</string>
 </resources>

@@ -57,4 +57,8 @@
     <string name="you_are_exiting_the_application">Sie sind die Anwendung beenden.</string>
     <string name="can_not_share_when_total_is_0">Nicht teilen kann, wenn insgesamt 0.</string>
     <string name="can_not_share_without_a_title">Nicht teilen kann ohne Titel.</string>
+    <string name="google_analytics_activated">Google Analytics aktiviert.</string>
+    <string name="google_analytics_deactivated">Google Analytics deaktiviert.</string>
+    <string name="are_you_sure_data_loss_inevidable">Sind sie sicher, dass Sie wirklich verlassen? Eingegebenen daten werden gelöscht, es sei denn, gespeichert werden.</string>
+    <string name="sample_example">Feiertage.</string>
 </resources>

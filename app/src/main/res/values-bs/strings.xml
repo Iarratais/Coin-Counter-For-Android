@@ -57,4 +57,8 @@
     <string name="you_are_exiting_the_application">Vi izlaska iz aplikacije.</string>
     <string name="can_not_share_when_total_is_0">Ne mogu dijeliti kada je ukupno 0.</string>
     <string name="can_not_share_without_a_title">Ne mogu dijeliti bez naslova.</string>
+    <string name="google_analytics_activated">Google Analytics uskoro.</string>
+    <string name="google_analytics_deactivated">Google Analytics deaktivirani.</string>
+    <string name="are_you_sure_data_loss_inevidable">Jeste li sigurni da želite otići? Podataka unesenih će biti izbrisani, osim ako sačuvana.</string>
+    <string name="sample_example">Odmor.</string>
 </resources>

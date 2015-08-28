@@ -57,4 +57,8 @@
     <string name="you_are_exiting_the_application">Ön bezárná az alkalmazást.</string>
     <string name="can_not_share_without_a_title">Nem lehet megosztani cím nélkül.</string>
     <string name="can_not_share_when_total_is_0">Nem lehet megosztani, ha a teljes 0.</string>
+    <string name="google_analytics_activated">Google Analytics aktiválva.</string>
+    <string name="google_analytics_deactivated">Google Analytics kikapcsol.</string>
+    <string name="are_you_sure_data_loss_inevidable">Biztosan el szeretné hagyni? A bevitt adatok a törlésre kerül, kivéve, ha menteni.</string>
+    <string name="sample_example">Ünnepek.</string>
 </resources>

@@ -6,6 +6,7 @@ package com.karl.android.coincounter;
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
@@ -120,6 +121,7 @@ public class MainActivity extends ActionBarActivity{
         additionaledit   = (EditText) findViewById (R.id.extraAdditions);
         commentedit      = (EditText) findViewById (R.id.comment);
         total_title_     = (EditText) findViewById (R.id.total_title);
+
 
         btnadd = (Button) findViewById(R.id.button);
         btnsave = (Button) findViewById(R.id.btnSaves);
@@ -750,34 +752,55 @@ public class MainActivity extends ActionBarActivity{
         } // End switch
     }
 
-    // This checks if the total or title is empty. Returns true if they are empty
+    // This checks if the total or title is empty.
+    // Returns true if they are empty
     public boolean checkIfEmpty() {
         if (total_title_.getText().toString().equals("")) {
             Toast.makeText(MainActivity.this, R.string.check_if_empty_title_error, Toast.LENGTH_SHORT).show();
             return true;
-        }
-        if(toDouble(getTotal()) < 0.01){
+        } else if(toDouble(getTotal()) < 0.01){
             Toast.makeText(MainActivity.this, R.string.check_if_empty_overlay_errror, Toast.LENGTH_SHORT).show();
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
-   // Same as above minus the toasts
+    // Same as above minus the toasts.
+    // Returns true if fields are empty
     public boolean fieldsAreEmpty() {
         if (total_title_.getText().toString().equals("")) {
             return true;
-        }
-        if(toDouble(getTotal()) < 0.01){
+        } else if(toDouble(getTotal()) < 0.01){
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
 
     // ----------------------------------- MENU SETTINGS ------------------------------
     // Method brings the user to the saves activity, showing them their saved data.
     public void showsaves() {
-        Intent intent = new Intent(MainActivity.this, ShowSaves.class);
-        startActivity(intent);
+        if(!fieldsAreEmpty()) {
+            new AlertDialog.Builder(this)
+                    .setMessage(R.string.are_you_sure_data_loss_inevidable)
+                    .setTitle("")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            Intent intent = new Intent(MainActivity.this, ShowSaves.class);
+                            finish();
+                            startActivity(intent);
+                        }
+                    })
+                    .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // User has cancelled the action, does not change the activity
+                        }
+                    }).show();
+        } else {
+            Intent intent = new Intent(MainActivity.this, ShowSaves.class);
+            finish();
+            startActivity(intent);
+        }
     }
 
     // Method opens the settings from the menu in the main activity.

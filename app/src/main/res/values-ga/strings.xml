@@ -57,4 +57,8 @@
     <string name="you_are_exiting_the_application">Tá tú ag fágáil an t-iarratas.</string>
     <string name="can_not_share_when_total_is_0">Ní féidir le roinnt nuair is-iomlán 0.</string>
     <string name="can_not_share_without_a_title">Ní féidir le roinnt gan teideal.</string>
+    <string name="google_analytics_activated">Google Analytics ngníomh.</string>
+    <string name="google_analytics_deactivated">Google Analytics a dhíghníomhachtú.</string>
+    <string name="are_you_sure_data_loss_inevidable">An bhfuil tú cinnte gur mian leat a fhágáil? Beidh sonraí a chuirtear isteach a scriosadh ach amháin má shábháil.</string>
+    <string name="sample_example">Laethanta saoire.</string>
 </resources>

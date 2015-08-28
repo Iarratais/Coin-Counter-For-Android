@@ -57,4 +57,8 @@
     <string name="you_are_exiting_the_application">Jūs esate išeinant paraišką.</string>
     <string name="can_not_share_without_a_title">Negali pasidalinti be pavadinimo.</string>
     <string name="can_not_share_when_total_is_0">Negali pasidalinti kai viso yra 0.</string>
+    <string name="google_analytics_activated">Aktyvuota \"Google Analytics\".</string>
+    <string name="google_analytics_deactivated">Išjungta \"Google Analytics\".</string>
+    <string name="are_you_sure_data_loss_inevidable">Ar tikrai norite išeiti? Įrašyti duomenys bus ištrinti, jei išsaugotas.</string>
+    <string name="sample_example">Švenčių dienomis.</string>
 </resources>

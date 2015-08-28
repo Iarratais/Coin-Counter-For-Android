@@ -57,4 +57,8 @@
     <string name="you_are_exiting_the_application">Du avslutter programmet.</string>
     <string name="can_not_share_without_a_title">Kan ikke dele uten tittel.</string>
     <string name="can_not_share_when_total_is_0">Kan ikke dele når totale er 0.</string>
+    <string name="google_analytics_activated">Google Analytics aktivert.</string>
+    <string name="google_analytics_deactivated">Google Analytics deaktivert.</string>
+    <string name="are_you_sure_data_loss_inevidable">Er du sikker på at du vil forlate? Opplysninger som er registrert vil bli slettet med mindre frelst.</string>
+    <string name="sample_example">Helligdager.</string>
 </resources>
