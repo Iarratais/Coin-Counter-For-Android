@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">インストールなしの電子メールクライアントはありません。</string>
     <string name="choose_an_email_application">メールアプリケーションを選択してください。</string>
     <string name="you_are_exiting_the_application">あなたは、アプリケーションを終了しています。</string>
+    <string name="can_not_share_without_a_title">タイトルなしで共有することはできません。</string>
+    <string name="can_not_share_when_total_is_0">合計が0である場合に共有することができません。</string>
 </resources>

@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Там немає поштові клієнти, встановлені.</string>
     <string name="error">Помилка</string>
     <string name="choose_an_email_application">Виберіть програму електронної пошти.</string>
+    <string name="can_not_share_when_total_is_0">Не можете поділитися, коли загальна сума 0.</string>
+    <string name="can_not_share_without_a_title">Не можете поділитися без назви.</string>
 </resources>

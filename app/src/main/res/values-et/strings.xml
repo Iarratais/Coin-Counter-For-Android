@@ -55,4 +55,6 @@
     <string name="error">Viga</string>
     <string name="no_email_clients_installed">Puuduvad e-posti kliendid paigaldatud.</string>
     <string name="you_are_exiting_the_application">Sa rakendusest väljumata.</string>
+    <string name="can_not_share_when_total_is_0">Ei saa jagada, kui kokku on 0.</string>
+    <string name="can_not_share_without_a_title">Ei saa jagada ilma tiitli.</string>
 </resources>

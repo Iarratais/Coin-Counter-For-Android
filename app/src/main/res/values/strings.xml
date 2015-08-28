@@ -84,6 +84,8 @@
     <string name="no_email_clients_installed">There are no email clients installed</string>
     <string name="error">Error</string>
     <string name="you_are_exiting_the_application">You are exiting the application</string>
+    <string name="can_not_share_without_a_title">Can not share without a title</string>
+    <string name="can_not_share_when_total_is_0">Can not share when total is 0</string>
 
     <!-- Language changed notifications -->
     <string name="lang_english">Changed language to English</string>

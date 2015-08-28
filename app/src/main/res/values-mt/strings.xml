@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">M\'hemm l-ebda klijenti email installati.</string>
     <string name="choose_an_email_application">Agħżel applikazzjoni email.</string>
     <string name="you_are_exiting_the_application">Inti qed joħorġu mill-applikazzjoni.</string>
+    <string name="can_not_share_without_a_title">Ma tista \'taqsam mingħajr titolu.</string>
+    <string name="can_not_share_when_total_is_0">Ma tista \'taqsam meta total huwa 0.</string>
 </resources>

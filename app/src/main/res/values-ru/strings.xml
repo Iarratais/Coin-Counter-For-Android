@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Там нет почтовые клиенты, установленные.</string>
     <string name="error">Ошибка</string>
     <string name="choose_an_email_application">Выберите приложение электронной почты.</string>
+    <string name="can_not_share_when_total_is_0">Не можете поделиться, когда общая сумма 0.</string>
+    <string name="can_not_share_without_a_title">Не можете поделиться без названия.</string>
 </resources>

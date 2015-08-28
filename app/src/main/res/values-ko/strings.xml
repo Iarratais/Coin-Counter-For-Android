@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">설치된 이메일 클라이언트가 없습니다.</string>
     <string name="choose_an_email_application">이메일 응용 프로그램을 선택합니다.</string>
     <string name="you_are_exiting_the_application">당신은 응용 프로그램을 종료합니다.</string>
+    <string name="can_not_share_without_a_title">제목없이 공유 할 수 없습니다.</string>
+    <string name="can_not_share_when_total_is_0">총 0 인 경우 공유 할 수 없습니다.</string>
 </resources>

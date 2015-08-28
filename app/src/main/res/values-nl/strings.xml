@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Er zijn geen e-mail clients geïnstalleerd.</string>
     <string name="choose_an_email_application">Kies een e-mailtoepassing.</string>
     <string name="you_are_exiting_the_application">U bent het verlaten van de toepassing.</string>
+    <string name="can_not_share_without_a_title">Kan niet delen zonder een titel.</string>
+    <string name="can_not_share_when_total_is_0">Kan niet delen wanneer totaal is 0.</string>
 </resources>

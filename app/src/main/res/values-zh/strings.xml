@@ -55,4 +55,6 @@
     <string name="send_feedback">发送反馈</string>
     <string name="share_settings">股票</string>
     <string name="show_string">节省</string>
+    <string name="can_not_share_when_total_is_0">不能共享时总为0。</string>
+    <string name="can_not_share_without_a_title">不能共享没有标题。</string>
 </resources>

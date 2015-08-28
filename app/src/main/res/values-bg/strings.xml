@@ -55,4 +55,6 @@
     <string name="error">Грешка</string>
     <string name="no_email_clients_installed">Не са открити имейл клиенти монтирани.</string>
     <string name="you_are_exiting_the_application">Вие излизате от приложението.</string>
+    <string name="can_not_share_when_total_is_0">Не може да се споделя, когато общият е 0.</string>
+    <string name="can_not_share_without_a_title">Не може да се споделя без заглавие.</string>
 </resources>

@@ -55,4 +55,6 @@
     <string name="error">Virhe</string>
     <string name="no_email_clients_installed">Ei ole sähköpostiohjelmia asennettuna.</string>
     <string name="you_are_exiting_the_application">Olet poistumatta sovelluksesta.</string>
+    <string name="can_not_share_when_total_is_0">Voi jakaa, jos Yhteensä on 0.</string>
+    <string name="can_not_share_without_a_title">Voi jakaa ilman otsikkoa.</string>
 </resources>

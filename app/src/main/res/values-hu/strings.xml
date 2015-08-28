@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Nincs e-mail kliensek telepítve.</string>
     <string name="choose_an_email_application">Válasszon egy e-mail alkalmazás.</string>
     <string name="you_are_exiting_the_application">Ön bezárná az alkalmazást.</string>
+    <string name="can_not_share_without_a_title">Nem lehet megosztani cím nélkül.</string>
+    <string name="can_not_share_when_total_is_0">Nem lehet megosztani, ha a teljes 0.</string>
 </resources>

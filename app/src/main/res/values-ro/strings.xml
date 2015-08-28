@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Nu exista clienti de e-mail instalat.</string>
     <string name="error">Eroare</string>
     <string name="choose_an_email_application">Alegeți o aplicație de e-mail.</string>
+    <string name="can_not_share_without_a_title">Nu pot partaja fără titlu.</string>
+    <string name="can_not_share_when_total_is_0">Nu pot partaja când totală este 0.</string>
 </resources>

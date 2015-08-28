@@ -55,4 +55,6 @@
     <string name="send_feedback">Geribildirim yolla</string>
     <string name="share_settings">Paylaş</string>
     <string name="show_string">Kaydeder</string>
+    <string name="can_not_share_when_total_is_0">Toplam 0 olduğunda paylaşamaz.</string>
+    <string name="can_not_share_without_a_title">Bir başlık olmadan veremiyoruz.</string>
 </resources>

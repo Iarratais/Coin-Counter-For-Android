@@ -55,4 +55,6 @@
     <string name="error">Σφάλμα</string>
     <string name="no_email_clients_installed">Δεν υπάρχουν πελάτες ηλεκτρονικού ταχυδρομείου εγκατασταθεί.</string>
     <string name="you_are_exiting_the_application">Είστε έξοδο από την εφαρμογή.</string>
+    <string name="can_not_share_when_total_is_0">Δεν μπορεί να μοιραστεί, όταν σύνολο είναι 0.</string>
+    <string name="can_not_share_without_a_title">Δεν είναι δυνατή η κοινή χρήση χωρίς τίτλο.</string>
 </resources>

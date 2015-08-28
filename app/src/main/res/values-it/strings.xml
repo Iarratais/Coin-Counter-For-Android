@@ -55,4 +55,6 @@
     <string name="choose_an_email_application">Scegli un\'applicazione di posta elettronica.</string>
     <string name="you_are_exiting_the_application">Stai uscendo applicazione.</string>
     <string name="locations_and_currency">Posizione e la valuta</string>
+    <string name="can_not_share_without_a_title">Non è possibile condividere senza un titolo.</string>
+    <string name="can_not_share_when_total_is_0">Impossibile condividere quando totale è 0.</string>
 </resources>

@@ -1,9 +1,11 @@
 package com.karl.android.coincounter;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.audiofx.BassBoost;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -94,9 +96,9 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked) {
-                    analyticsOn();
+                    analyticsSwitch(true);
                 } else {
-                    analyticsOff();
+                    analyticsSwitch(false);
                 }
             }
         });
@@ -188,31 +190,78 @@ public class SettingsActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        // Disabled because there is no need for settings here.
+        /*if (id == R.id.action_settings) {
             return true;
-        }
+        } */
 
         return super.onOptionsItemSelected(item);
     }
 
+    /*
     public void includeLocationOn() {
         Toast.makeText(SettingsActivity.this, "includeLocationOn", Toast.LENGTH_SHORT).show();
     }
 
     public void includeLocationOff() {
         Toast.makeText(SettingsActivity.this, "includeLocationOff", Toast.LENGTH_SHORT).show();
-    }
+    } */
 
     public void changeCurrency() {
-        Toast.makeText(SettingsActivity.this, "changeCurrency", Toast.LENGTH_SHORT).show();
+        final String[] currencies = {"EUR", "ISK", "RUB", "USD", "GBP"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.currency_title)
+                .setItems(currencies, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case 0:
+                                // EUR
+                                saveCurrency(currencies[0]);
+                                break;
+                            case 1:
+                                // ISK
+                                saveCurrency(currencies[1]);
+                                break;
+                            case 2:
+                                // RUB
+                                saveCurrency(currencies[2]);
+                                break;
+                            case 3:
+                                // USD
+                                saveCurrency(currencies[3]);
+                                break;
+                            case 4:
+                                // GBP
+                                saveCurrency(currencies[4]);
+                                break;
+                        }
+                    }
+                })
+                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User has cancelled the action, returns to the previous screen
+                    }
+                })
+                .show();
     }
 
-    public void analyticsOn() {
-        Toast.makeText(SettingsActivity.this, "AnalyticsOn", Toast.LENGTH_SHORT).show();
+    public void saveCurrency(String currency) {
+        // Debugging code
+        showToast("Currency set to: " + currency);
+
+        SharedPreferences curr = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = curr.edit();
+        editor.putString("currency", currency);
+        editor.commit();
     }
 
-    public void analyticsOff() {
-        Toast.makeText(SettingsActivity.this, "AnalyticsOff", Toast.LENGTH_SHORT).show();
+    public void analyticsSwitch(boolean isChecked) {
+        showToast("Analytics: " + isChecked);
+
+        SharedPreferences analytics = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = analytics.edit();
+        editor.putBoolean("Analytics set to: ", isChecked);
+        editor.commit();
     }
 
     public void about() {
@@ -309,5 +358,9 @@ public class SettingsActivity extends AppCompatActivity {
         builder.setTitle(title);
         builder.setMessage(message);
         builder.show();
+    }
+
+    public void showToast(String message) {
+        Toast.makeText(SettingsActivity.this, message, Toast.LENGTH_SHORT).show();
     }
 }

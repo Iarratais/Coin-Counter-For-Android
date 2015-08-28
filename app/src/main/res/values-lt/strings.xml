@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Nėra pašto klientai sumontuoti.</string>
     <string name="choose_an_email_application">Pasirinkite elektroninio pašto programą.</string>
     <string name="you_are_exiting_the_application">Jūs esate išeinant paraišką.</string>
+    <string name="can_not_share_without_a_title">Negali pasidalinti be pavadinimo.</string>
+    <string name="can_not_share_when_total_is_0">Negali pasidalinti kai viso yra 0.</string>
 </resources>

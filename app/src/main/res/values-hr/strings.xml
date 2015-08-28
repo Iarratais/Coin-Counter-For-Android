@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Nema klijenti e instalirani.</string>
     <string name="choose_an_email_application">Odaberite e-aplikacije.</string>
     <string name="you_are_exiting_the_application">Vi ste zatvaranja programa.</string>
+    <string name="can_not_share_when_total_is_0">Ne može dijeliti kada Ukupno je 0.</string>
+    <string name="can_not_share_without_a_title">Ne mogu dijeliti bez naslova.</string>
 </resources>

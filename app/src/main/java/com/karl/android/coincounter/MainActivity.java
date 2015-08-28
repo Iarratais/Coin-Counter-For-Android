@@ -78,7 +78,7 @@ public class MainActivity extends ActionBarActivity{
 
     public AdView adView;
 
-    SharedPreferences settings;
+    SharedPreferences curr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +90,7 @@ public class MainActivity extends ActionBarActivity{
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.app_name);
 
-        settings = this.getSharedPreferences(
+        curr = this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
         myDB = new MySQLiteHelper(this);
@@ -916,11 +916,10 @@ public class MainActivity extends ActionBarActivity{
     public static String getTotal() { return total; }
 
     // ---------------- CURRENCY METHODS --------------------------------------------
-
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public static void make_a_toast(){
-        String curr;
-        switch (currentCurrency) {
+    public void make_a_toast(){
+        String curr = getCurrency();
+        switch (curr) {
             case "EUR":
                 curr = "Euro";
                 break;
@@ -958,23 +957,18 @@ public class MainActivity extends ActionBarActivity{
         }
     }
 
-    public static final String PREFS_NAME = "PREFS";
-    public static final String PREFS_KEY = "PREFS_String";
-
-    public static String currentCurrency;
-
     public String getCurrency() {
-        System.out.println("getCurrency: Starting..");
-        SharedPreferences settings;
-        String text;
-        settings = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        text = settings.getString(PREFS_KEY, "EUR");
-
-        currentCurrency = text;
-        System.out.println("getCurrency: finished.");
-        return text;
+        SharedPreferences curr = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        String defaultValue = "EUR";
+        String currency = "";
+        currency = curr.getString("currency", currency);
+        if (currency.equals("")) {
+            currency = defaultValue;
+        }
+        return currency;
     }
 
+    // Symbols for currencies
     public static final String EUR = "\u20AC";
     public static final String USD_ = "\u0024";
     public static final String USD_CENT = "\u00A2";
@@ -987,7 +981,7 @@ public class MainActivity extends ActionBarActivity{
     public void hintChecks() {
         System.out.println("hintChecked: " + getCurrency());
 
-        if(currentCurrency.equals("USD")){
+        if(getCurrency().equals("USD")){
             // Set hints
             note100edit.setHint(USD_ + "100");
             note50edit.setHint(USD_ + "50");
@@ -1024,7 +1018,7 @@ public class MainActivity extends ActionBarActivity{
             cent2edit.setVisibility(View.GONE);
             cent1edit.setVisibility(View.VISIBLE);
         } // End USD
-        else if (currentCurrency.equals("EUR")){
+        else if (getCurrency().equals("EUR")){
             // Set hints
             note100edit.setHint(EUR + "100");
             note50edit.setHint(EUR + "50");
@@ -1065,7 +1059,7 @@ public class MainActivity extends ActionBarActivity{
             cent1edit.setVisibility(View.VISIBLE);
             additionaledit.setVisibility(View.VISIBLE);
         } // End EUR
-        else if (currentCurrency.equals("GBP")){
+        else if (getCurrency().equals("GBP")){
             // Set hints
             note50edit.setHint(GBP + "50");
             note20edit.setHint(GBP + "20");
@@ -1105,7 +1099,7 @@ public class MainActivity extends ActionBarActivity{
             cent1edit.setVisibility(View.VISIBLE);
             additionaledit.setVisibility(View.VISIBLE);
         } // End GBP
-        else if (currentCurrency.equals("RUB")){
+        else if (getCurrency().equals("RUB")){
             note5000edit.setHint(RUB + "5,000 ");
             note1000edit.setHint(RUB + "1,000 ");
             note500edit.setHint(RUB + "500 ");
@@ -1144,7 +1138,7 @@ public class MainActivity extends ActionBarActivity{
             cent1edit.setVisibility(View.VISIBLE);
             additionaledit.setVisibility(View.VISIBLE);
         } // eND rub
-        else if (currentCurrency.equals("ISK")){
+        else if (getCurrency().equals("ISK")){
             note10000edit.setHint("10,000" + ISK);
             note5000edit.setHint("5,000" + ISK);
             note2000edit.setHint("2,000" + ISK);

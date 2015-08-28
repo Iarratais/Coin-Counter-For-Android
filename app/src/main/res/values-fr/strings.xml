@@ -55,4 +55,6 @@
     <string name="error">Erreur</string>
     <string name="no_email_clients_installed">Il n\'y a pas les clients de messagerie installés.</string>
     <string name="you_are_exiting_the_application">Vous quittez l\'application.</string>
+    <string name="can_not_share_when_total_is_0">Vous ne pouvez pas partager quand totale est 0.</string>
+    <string name="can_not_share_without_a_title">Vous ne pouvez pas partager sans titre.</string>
 </resources>

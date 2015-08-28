@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Nav e-pasta klientiem, kas uzstādītas.</string>
     <string name="choose_an_email_application">Izvēlieties e-pasta programmu.</string>
     <string name="you_are_exiting_the_application">Jūs aizejošais pieteikumu.</string>
+    <string name="can_not_share_without_a_title">Nevar dalīties bez nosaukuma.</string>
+    <string name="can_not_share_when_total_is_0">Nevar dalīties, ja kopējā summa ir 0.</string>
 </resources>

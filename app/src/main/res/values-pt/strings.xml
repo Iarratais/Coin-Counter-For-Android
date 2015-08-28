@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Não há clientes de e-mail instalados.</string>
     <string name="error">Erro</string>
     <string name="choose_an_email_application">Escolha um aplicativo de email.</string>
+    <string name="can_not_share_without_a_title">Não é possível partilhar sem um título.</string>
+    <string name="can_not_share_when_total_is_0">Não pode compartilhar quando total é 0.</string>
 </resources>

@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Det finns inga e-postklienter installerade.</string>
     <string name="error">Fel</string>
     <string name="choose_an_email_application">Välj ett e-postprogram.</string>
+    <string name="can_not_share_when_total_is_0">Det går inte att dela när totala är 0.</string>
+    <string name="can_not_share_without_a_title">Det går inte att dela utan en titel.</string>
 </resources>

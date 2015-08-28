@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Engir email viðskiptavinur uppsett.</string>
     <string name="choose_an_email_application">Veldu tölvupóst umsókn.</string>
     <string name="you_are_exiting_the_application">Þú ert að loka forritinu.</string>
+    <string name="can_not_share_without_a_title">Get ekki deila án titils.</string>
+    <string name="can_not_share_when_total_is_0">Get ekki deila þegar alls er 0.</string>
 </resources>

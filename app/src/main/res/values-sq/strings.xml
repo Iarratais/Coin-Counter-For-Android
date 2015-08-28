@@ -55,4 +55,6 @@
     <string name="send_feedback">Dërgo reagime</string>
     <string name="share_settings">Aksion</string>
     <string name="show_string">Kursen</string>
+    <string name="can_not_share_when_total_is_0">Nuk mund të ndajnë kur total është 0.</string>
+    <string name="can_not_share_without_a_title">Nuk mund të ndajnë pa një titull.</string>
 </resources>

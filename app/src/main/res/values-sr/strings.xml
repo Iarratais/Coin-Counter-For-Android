@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Не постоје клијенти е-поште инсталирани.</string>
     <string name="error">Грешка</string>
     <string name="choose_an_email_application">Изаберите апликацију е-поште.</string>
+    <string name="can_not_share_when_total_is_0">Не могу да деле када Укупно је 0.</string>
+    <string name="can_not_share_without_a_title">Не могу да деле без наслова.</string>
 </resources>

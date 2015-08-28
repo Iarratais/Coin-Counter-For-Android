@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Ni email varovanci nameščeni.</string>
     <string name="error">Napaka</string>
     <string name="choose_an_email_application">Izberite aplikacijo e-pošte.</string>
+    <string name="can_not_share_when_total_is_0">Ne more deliti, ko je skupno 0.</string>
+    <string name="can_not_share_without_a_title">Ne more deliti brez naslova.</string>
 </resources>

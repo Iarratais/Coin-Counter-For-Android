@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Brak klientów pocztowych zainstalowanych.</string>
     <string name="error">Błąd</string>
     <string name="choose_an_email_application">Wybierz aplikację e-mail.</string>
+    <string name="can_not_share_without_a_title">Nie można dzielić bez tytułu.</string>
+    <string name="can_not_share_when_total_is_0">Nie można dzielić, gdy suma wynosi 0.</string>
 </resources>

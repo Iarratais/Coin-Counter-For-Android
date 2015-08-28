@@ -55,4 +55,6 @@
     <string name="error">Earráid</string>
     <string name="no_email_clients_installed">Níl aon cliaint r-phost shuiteáil.</string>
     <string name="you_are_exiting_the_application">Tá tú ag fágáil an t-iarratas.</string>
+    <string name="can_not_share_when_total_is_0">Ní féidir le roinnt nuair is-iomlán 0.</string>
+    <string name="can_not_share_without_a_title">Ní féidir le roinnt gan teideal.</string>
 </resources>

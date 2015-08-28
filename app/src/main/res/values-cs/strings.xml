@@ -55,4 +55,6 @@
     <string name="error">Chyba</string>
     <string name="no_email_clients_installed">Nejsou žádné e-mailových klientů nainstalovány.</string>
     <string name="you_are_exiting_the_application">Jste ukončení aplikace.</string>
+    <string name="can_not_share_when_total_is_0">Nelze sdílet, pokud Celková je 0.</string>
+    <string name="can_not_share_without_a_title">Kan ikke dele uden en titel.</string>
 </resources>

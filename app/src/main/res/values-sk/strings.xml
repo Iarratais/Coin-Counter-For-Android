@@ -55,4 +55,6 @@
     <string name="no_email_clients_installed">Nie sú žiadne e-mailových klientov nainštalované.</string>
     <string name="error">Chyba</string>
     <string name="choose_an_email_application">Vyberte e-mailovú aplikáciu.</string>
+    <string name="can_not_share_when_total_is_0">Nemožno zdieľať, ak Celková je 0.</string>
+    <string name="can_not_share_without_a_title">Nemožno zdieľať bez titulu.</string>
 </resources>
