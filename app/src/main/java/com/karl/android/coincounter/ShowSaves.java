@@ -122,7 +122,6 @@ public class ShowSaves extends ActionBarActivity {
                 final EditText userInput = (EditText) promptsView.findViewById(R.id.editTextDialogUserInput);
                 alert
                         .setCancelable(true)
-                        .setTitle(R.string.delete_entry)
                         .setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 result.setText(userInput.getText());
@@ -139,6 +138,7 @@ public class ShowSaves extends ActionBarActivity {
     }
 
     public void deleteEntry(String id) {
+
         int result = myDB.deleteData(id);
         if(result > 0) {
             Intent intent = new Intent(ShowSaves.this, ShowSaves.class);
@@ -147,6 +147,7 @@ public class ShowSaves extends ActionBarActivity {
         } else {
             Toast.makeText(ShowSaves.this, R.string.entry_not_deleted, Toast.LENGTH_SHORT).show();
         }
+
     }
 
     @Override
