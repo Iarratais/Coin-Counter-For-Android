@@ -61,4 +61,5 @@
     <string name="google_analytics_deactivated">Google Analytics απενεργοποιηθεί.</string>
     <string name="are_you_sure_data_loss_inevidable">Είστε σίγουροι ότι θέλετε να φύγετε? Τα δεδομένα που εισάγονται θα διαγραφούν, εκτός αν σωθεί.</string>
     <string name="sample_example">Διακοπές.</string>
+    <string name="your_total_is">Συνολική σας είναι</string>
 </resources>

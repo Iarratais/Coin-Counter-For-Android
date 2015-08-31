@@ -61,4 +61,5 @@
     <string name="google_analytics_activated">谷歌分析激活。</string>
     <string name="are_you_sure_data_loss_inevidable">你确定你要离开？输入的数据将被删除，除非保存。</string>
     <string name="sample_example">假期。</string>
+    <string name="your_total_is">您总量</string>
 </resources>

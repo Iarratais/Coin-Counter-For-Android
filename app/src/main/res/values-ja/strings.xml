@@ -61,4 +61,5 @@
     <string name="google_analytics_deactivated">Google Analyticsでは、非アクティブに。</string>
     <string name="are_you_sure_data_loss_inevidable">あなたが残してしてもよろしいですか？保存されない限り、入力されたデータは消去されます。</string>
     <string name="sample_example">休日。</string>
+    <string name="your_total_is">あなたの合計は、</string>
 </resources>

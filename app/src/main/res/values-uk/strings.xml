@@ -61,4 +61,5 @@
     <string name="google_analytics_activated">Google Analytics активована.</string>
     <string name="are_you_sure_data_loss_inevidable">Ви впевнені, що хочете піти? Дані, введені будуть видалені, якщо не зберігаються.</string>
     <string name="sample_example">Свята.</string>
+    <string name="your_total_is">Ваш Всього</string>
 </resources>

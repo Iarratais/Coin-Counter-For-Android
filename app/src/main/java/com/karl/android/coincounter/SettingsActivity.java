@@ -23,6 +23,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 
 
 public class SettingsActivity extends AppCompatActivity {
@@ -218,31 +219,48 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void changeCurrency() {
-        final String[] currencies = {"EUR", "ISK", "RUB", "USD", "GBP"};
+        final String[] currencies = {"EUR", "ISK", "RUB", "USD", "GBP", "JPY", "KRW", "BGN", "CAD", "NZD", "AUD"};
+        Arrays.sort(currencies);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.currency_title)
                 .setItems(currencies, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         switch (which) {
                             case 0:
-                                // EUR
                                 saveCurrency(currencies[0]);
                                 break;
                             case 1:
-                                // ISK
                                 saveCurrency(currencies[1]);
                                 break;
                             case 2:
-                                // RUB
                                 saveCurrency(currencies[2]);
                                 break;
                             case 3:
-                                // USD
                                 saveCurrency(currencies[3]);
                                 break;
                             case 4:
-                                // GBP
                                 saveCurrency(currencies[4]);
+                                break;
+                            case 5:
+                                saveCurrency(currencies[5]);
+                                break;
+                            case 6:
+                                saveCurrency(currencies[6]);
+                                break;
+                            case 7:
+                                saveCurrency(currencies[7]);
+                                break;
+                            case 8:
+                                saveCurrency(currencies[8]);
+                                break;
+                            case 9:
+                                saveCurrency(currencies[9]);
+                                break;
+                            case 10:
+                                saveCurrency(currencies[10]);
+                                break;
+                            case 11:
+                                saveCurrency(currencies[11]);
                                 break;
                         }
                     }
@@ -263,6 +281,7 @@ public class SettingsActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = curr.edit();
         editor.putString("currency", currency);
         editor.commit();
+
 
         btncurr.setText(getCurrency());
     }

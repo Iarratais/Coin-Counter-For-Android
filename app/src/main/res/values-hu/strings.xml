@@ -61,4 +61,5 @@
     <string name="google_analytics_deactivated">Google Analytics kikapcsol.</string>
     <string name="are_you_sure_data_loss_inevidable">Biztosan el szeretné hagyni? A bevitt adatok a törlésre kerül, kivéve, ha menteni.</string>
     <string name="sample_example">Ünnepek.</string>
+    <string name="your_total_is">Az Ön teljes</string>
 </resources>

@@ -4,6 +4,7 @@
     <string name="action_settings">Settings</string>
     <string name="appDescription" translatable="false">Coin Counter</string>
     <string name="total_title_">Title</string>
+    <string name="notes50000edit" translatable="false"> </string>
     <string name="notes10000edit" translatable="false"> </string>
     <string name="notes5000edit" translatable="false"> </string>
     <string name="notes2000edit" translatable="false"> </string>
@@ -90,6 +91,7 @@
     <string name="google_analytics_deactivated">Google Analytics deactivated</string>
     <string name="are_you_sure_data_loss_inevidable">Are you sure you want to leave? Data entered will be erased unless saved.</string>
     <string name="sample_example">Holidays</string>
+    <string name="your_total_is">Your total is</string>
 
     <!-- Language changed notifications -->
     <string name="lang_english">Changed language to English</string>
@@ -147,4 +149,5 @@
     <string name="delete_entry">Delete entry</string>
     <string name="cancel">Cancel</string>
     <string name="enter_id_for_deletion">Please enter the ID of the entry you would like to delete</string>
+    <string name="title_activity_splash_screen" translatable="false">SplashScreen</string>
 </resources>

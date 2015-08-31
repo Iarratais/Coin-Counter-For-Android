@@ -61,4 +61,5 @@
     <string name="google_analytics_activated">Google Analytics aktivirana.</string>
     <string name="are_you_sure_data_loss_inevidable">Ali ste prepričani, da želite zapustiti? Vneseni podatki bodo izbrisani, če shranijo.</string>
     <string name="sample_example">Počitnice.</string>
+    <string name="your_total_is">Vaš Skupno je</string>
 </resources>

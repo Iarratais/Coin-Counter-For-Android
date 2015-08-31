@@ -61,4 +61,5 @@
     <string name="google_analytics_deactivated">Google Analytics deaktiviran.</string>
     <string name="are_you_sure_data_loss_inevidable">Jeste li sigurni da želite otići? Podaci uneseni će biti izbrisani, osim spašen.</string>
     <string name="sample_example">Blagdana.</string>
+    <string name="your_total_is">Vaš Ukupno je</string>
 </resources>

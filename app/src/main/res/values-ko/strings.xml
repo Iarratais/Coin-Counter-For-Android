@@ -61,4 +61,5 @@
     <string name="google_analytics_deactivated">Google Analytics는 비활성화.</string>
     <string name="are_you_sure_data_loss_inevidable">당신은 당신이 떠날 하시겠습니까? 저장하지 않는 입력 데이터는 삭제됩니다.</string>
     <string name="sample_example">휴일.</string>
+    <string name="your_total_is">총은</string>
 </resources>

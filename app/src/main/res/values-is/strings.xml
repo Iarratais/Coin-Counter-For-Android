@@ -61,4 +61,5 @@
     <string name="google_analytics_deactivated">Google Analytics óvirkur.</string>
     <string name="are_you_sure_data_loss_inevidable">Ertu viss um að þú viljir hætta? Gögnin verður eytt nema vistaðar.</string>
     <string name="sample_example">Frídaga.</string>
+    <string name="your_total_is">Heildarkostnaður er</string>
 </resources>

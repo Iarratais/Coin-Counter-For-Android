@@ -61,4 +61,5 @@
     <string name="google_analytics_deactivated">Google Analytics deaktivizēts.</string>
     <string name="are_you_sure_data_loss_inevidable">Vai esat pārliecināts, ka jūs vēlaties atstāt? Ievadītie dati tiks izdzēsti, ja vien saglabātas.</string>
     <string name="sample_example">Brīvdienas.</string>
+    <string name="your_total_is">Jūsu kopējā</string>
 </resources>

@@ -61,4 +61,5 @@
     <string name="google_analytics_deactivated">Google Analytics מנוטרל.</string>
     <string name="are_you_sure_data_loss_inevidable">האם אתה בטוח שאתה רוצה לעזוב? הנתונים שהוזנו יימחקו אלא אם נשמרו.</string>
     <string name="sample_example">חגים.</string>
+    <string name="your_total_is">סך הכל שלך הוא</string>
 </resources>

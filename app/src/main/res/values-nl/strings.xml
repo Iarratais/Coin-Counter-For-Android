@@ -61,4 +61,5 @@
     <string name="google_analytics_deactivated">Google Analytics gedeactiveerd.</string>
     <string name="are_you_sure_data_loss_inevidable">Weet je zeker dat je wilt vertrekken? Ingevoerde gegevens worden gewist, tenzij gered.</string>
     <string name="sample_example">Vakanties.</string>
+    <string name="your_total_is">Uw totaal is</string>
 </resources>

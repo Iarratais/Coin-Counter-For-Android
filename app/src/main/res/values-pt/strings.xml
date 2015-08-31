@@ -61,4 +61,5 @@
     <string name="google_analytics_deactivated">Google Analytics desativado.</string>
     <string name="are_you_sure_data_loss_inevidable">Tem certeza de que deseja sair? Os dados introduzidos serão apagados, a menos que salva.</string>
     <string name="sample_example">Feriados.</string>
+    <string name="your_total_is">Seu total é</string>
 </resources>

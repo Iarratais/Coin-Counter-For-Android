@@ -61,4 +61,5 @@
     <string name="google_analytics_deactivated">Google Analytics deaktiveret.</string>
     <string name="are_you_sure_data_loss_inevidable">Er du sikker på du vil forlade? Indtastede data vil blive slettet, medmindre gemt.</string>
     <string name="sample_example">Helligdage.</string>
+    <string name="your_total_is">Din samlede tal er</string>
 </resources>

@@ -61,4 +61,5 @@
     <string name="google_analytics_activated">เปิดใช้งาน Google Analytics</string>
     <string name="are_you_sure_data_loss_inevidable">คุณแน่ใจหรือว่าต้องการที่จะออก? ข้อมูลที่ป้อนจะถูกลบเว้นแต่ที่บันทึกไว้</string>
     <string name="sample_example">วันหยุด</string>
+    <string name="your_total_is">รวมของคุณคือ</string>
 </resources>

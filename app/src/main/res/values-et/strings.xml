@@ -61,4 +61,5 @@
     <string name="google_analytics_deactivated">Google Analytics lülitada.</string>
     <string name="are_you_sure_data_loss_inevidable">Oled sa kindel, et sa tahad lahkuda? Andmed kantakse kustutatakse, kui salvestatud.</string>
     <string name="sample_example">Pühadel.</string>
+    <string name="your_total_is">Sinu Kokku on</string>
 </resources>

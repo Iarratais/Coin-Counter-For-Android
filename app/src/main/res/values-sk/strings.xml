@@ -61,4 +61,5 @@
     <string name="google_analytics_activated">Google Analytics aktivovaný.</string>
     <string name="are_you_sure_data_loss_inevidable">Ste si istí, že chcete odísť? Údaje budú zadané, budú vymazané, pokiaľ nie je uložený.</string>
     <string name="sample_example">Holidays.</string>
+    <string name="your_total_is">Váš Celková je</string>
 </resources>
