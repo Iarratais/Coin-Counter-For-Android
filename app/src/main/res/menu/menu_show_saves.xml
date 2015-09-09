@@ -2,8 +2,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.karl.android.coincounter.ShowSaves">
+
+    <!--
+
+    This is the menu item for searching the results, needs to be deactivated if search is implemented
+
     <item
-    android:id="@+id/action_delete_entry"
-    android:title="Delete entry"
-    app:showAsAction="always" />
+        android:id="@+id/action_search"
+        android:title=""
+        android:icon="@drawable/ic_search_white_18dp"
+        app:showAsAction="always" />
+        -->
+    <item
+        android:id="@+id/action_delete_entry"
+        android:title="@string/delete_entry"
+        android:icon="@drawable/ic_delete_white_18dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_main_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_settings_white_18dp"/>
+
 </menu>

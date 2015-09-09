@@ -8,10 +8,11 @@ import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
 
+
 public class SplashScreen extends Activity {
 
     // Splash screen timer
-    private static int SPLASH_TIME_OUT = 2500;
+    private static int SPLASH_TIME_OUT = 500; // .5 seconds, this is in bebug mode, needs to be changed back before release
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,8 @@ public class SplashScreen extends Activity {
             public void run() {
                 Intent i = new Intent(SplashScreen.this, MainActivity.class);
                 startActivity(i);
+
+                overridePendingTransition(R.anim.abc_slide_in_top, R.anim.abc_slide_out_bottom);
                 finish();
             }
         }, SPLASH_TIME_OUT);

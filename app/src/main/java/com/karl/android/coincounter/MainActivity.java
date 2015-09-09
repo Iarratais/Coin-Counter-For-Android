@@ -15,14 +15,18 @@ import android.location.Geocoder;
 import android.os.Build;
 
 import android.speech.tts.TextToSpeech;
+import android.support.v4.view.GestureDetectorCompat;
+import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
 
 import android.text.TextWatcher;
+import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -86,6 +90,9 @@ public class MainActivity extends ActionBarActivity {
 
     SharedPreferences curr;
 
+    float x1,x2;
+    float y1, y2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -127,7 +134,6 @@ public class MainActivity extends ActionBarActivity {
         additionaledit = (EditText) findViewById(R.id.extraAdditions);
         commentedit = (EditText) findViewById(R.id.comment);
         total_title_ = (EditText) findViewById(R.id.total_title);
-
 
         btnadd = (Button) findViewById(R.id.button);
         btnsave = (Button) findViewById(R.id.btnSaves);
@@ -202,6 +208,7 @@ public class MainActivity extends ActionBarActivity {
         clearAll();
     } // End onCreate()
 
+
     public void AddData() {
         boolean isEmpty = checkIfEmpty();
         if (!isEmpty) {
@@ -222,6 +229,7 @@ public class MainActivity extends ActionBarActivity {
         builder.setMessage(message);
         builder.show();
     }
+
 
     // ----------------------------------- ACTIVITY RELATED METHODS ---------------------------------------------------
     @Override
@@ -251,9 +259,10 @@ public class MainActivity extends ActionBarActivity {
 
     public String getFormatDate() {
         Date now = new Date();
-        String nowAsString = new SimpleDateFormat("dd-MM-yy", getResources().getConfiguration().locale).format(now);
-        String andMins = nowAsString + " " + new SimpleDateFormat("HH:mm", getResources().getConfiguration().locale).format(now);
-        return andMins;
+        String nowAsString = new SimpleDateFormat("dd-MM-yy", Locale.ENGLISH).format(now);
+        // String andMins = nowAsString + " " + new SimpleDateFormat("HH:mm", getResources().getConfiguration().locale).format(now);
+        // Taken out, change of plan, do not need the time saved for the user to observe, can be added to the comments
+        return nowAsString;
     }
 
     // --------------------------------------------------- TEXT WATCHERS --------------------------------------------------------------------
@@ -877,6 +886,7 @@ public class MainActivity extends ActionBarActivity {
             Intent intent = new Intent(MainActivity.this, ShowSaves.class);
             finish();
             startActivity(intent);
+            overridePendingTransition(R.anim.abc_grow_fade_in_from_bottom, R.anim.abc_shrink_fade_out_from_bottom);
         }
     }
 
@@ -932,7 +942,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     // ------------------------ CALCULATION METHODS ---------------------------------------------------------------------------------
-    public static double calcTotal() {
+    public double calcTotal() {
         double note50000 = toInt(note50000Amt) * 50000.0;
         double note10000 = toInt(note10000Amt) * 10000.0;
         double note5000 = toInt(note5000Amt) * 5000.0;
@@ -1056,7 +1066,7 @@ public class MainActivity extends ActionBarActivity {
                 curr = "Koruna";
                 break;
             case "ISK":
-                curr = "Korona";
+                curr = "Krona";
                 break;
             case "JPY":
                 curr = "Yen";
@@ -1108,6 +1118,18 @@ public class MainActivity extends ActionBarActivity {
     public static final String BGN_leva = "leva";
     public static final String BGN_lev = "lev";
     public static final String BGN_stotinki = "stotinki";
+    public static final String DKK = "kr";
+    public static final String DKK_ore = "øre";
+    public static final String SEK = "kr";
+    public static final String NOK = "kr";
+    public static final String RON_lei = "lei";
+    public static final String RON_leu = "leu";
+    public static final String RON_ban = "ban";
+    public static final String RON_bani = "bani";
+    public static final String CZK = "Kč";
+    public static final String ARS = "\u0024";
+    public static final String BRL = "R$";
+
 
     // This sets the right hints depending on the currency that is currently selected by the user.
     public void hintChecks() {
@@ -1536,6 +1558,269 @@ public class MainActivity extends ActionBarActivity {
             cent2edit.setVisibility(View.GONE);
             cent1edit.setVisibility(View.GONE);
         } // End AUD
+        else if (getCurrency().equals("DKK")) {
+            note1000edit.setHint("1,000" + DKK);
+            note500edit.setHint("500" + DKK);
+            note200edit.setHint("200" + DKK);
+            note100edit.setHint("100" + DKK);
+            note50edit.setHint("50" + DKK);
+            note20edit.setHint("20" + DKK);
+            note10edit.setHint("10" + DKK);
+            note5edit.setHint("5" + DKK);
+            coin2edit.setHint("2" + DKK);
+            coin1edit.setHint("1" + DKK);
+            cent50edit.setHint("50" + DKK_ore);
+            additionaledit.setHint(getResources().getString(R.string.additions) + " " + DKK);
+
+            // Set visibilities
+            note50000edit.setVisibility(View.GONE);
+            note10000edit.setVisibility(View.GONE);
+            note5000edit.setVisibility(View.GONE);
+            note2000edit.setVisibility(View.GONE);
+            note1000edit.setVisibility(View.VISIBLE);
+            note500edit.setVisibility(View.VISIBLE);
+            note200edit.setVisibility(View.VISIBLE);
+            note100edit.setVisibility(View.VISIBLE);
+            note50edit.setVisibility(View.VISIBLE);
+            note20edit.setVisibility(View.VISIBLE);
+            note10edit.setVisibility(View.VISIBLE);
+            note5edit.setVisibility(View.VISIBLE);
+            note1edit.setVisibility(View.GONE);
+            coin2edit.setVisibility(View.VISIBLE);
+            coin1edit.setVisibility(View.VISIBLE);
+            cent50edit.setVisibility(View.VISIBLE);
+            cent25edit.setVisibility(View.GONE);
+            cent20edit.setVisibility(View.GONE);
+            cent10edit.setVisibility(View.GONE);
+            cent5edit.setVisibility(View.GONE);
+            cent2edit.setVisibility(View.GONE);
+            cent1edit.setVisibility(View.GONE);
+        } // End DKK
+        else if (getCurrency().equals("SEK")) {
+            note1000edit.setHint("1,000" + SEK);
+            note500edit.setHint("500" + SEK);
+            note100edit.setHint("100" + SEK);
+            note50edit.setHint("50" + SEK);
+            note20edit.setHint("20" + SEK);
+            note10edit.setHint("10" + SEK);
+            note5edit.setHint("5" + SEK);
+            coin1edit.setHint("1" + SEK);
+            additionaledit.setHint(getResources().getString(R.string.additions) + " " + SEK);
+
+            // Set visibilities
+            note50000edit.setVisibility(View.GONE);
+            note10000edit.setVisibility(View.GONE);
+            note5000edit.setVisibility(View.GONE);
+            note2000edit.setVisibility(View.GONE);
+            note1000edit.setVisibility(View.VISIBLE);
+            note500edit.setVisibility(View.VISIBLE);
+            note200edit.setVisibility(View.GONE);
+            note100edit.setVisibility(View.VISIBLE);
+            note50edit.setVisibility(View.VISIBLE);
+            note20edit.setVisibility(View.VISIBLE);
+            note10edit.setVisibility(View.VISIBLE);
+            note5edit.setVisibility(View.VISIBLE);
+            note1edit.setVisibility(View.GONE);
+            coin2edit.setVisibility(View.GONE);
+            coin1edit.setVisibility(View.VISIBLE);
+            cent50edit.setVisibility(View.GONE);
+            cent25edit.setVisibility(View.GONE);
+            cent20edit.setVisibility(View.GONE);
+            cent10edit.setVisibility(View.GONE);
+            cent5edit.setVisibility(View.GONE);
+            cent2edit.setVisibility(View.GONE);
+            cent1edit.setVisibility(View.GONE);
+        } // End SEK
+        else if (getCurrency().equals("NOK")) {
+            note1000edit.setHint("1,000" + NOK);
+            note500edit.setHint("500" + NOK);
+            note200edit.setHint("200" + NOK);
+            note100edit.setHint("100" + NOK);
+            note50edit.setHint("50" + NOK);
+            note20edit.setHint("20" + NOK);
+            note10edit.setHint("10" + NOK);
+            note5edit.setHint("5" + NOK);
+            coin1edit.setHint("1" + NOK);
+            additionaledit.setHint(getResources().getString(R.string.additions) + " " + NOK);
+
+            // Set visibilities
+            note50000edit.setVisibility(View.GONE);
+            note10000edit.setVisibility(View.GONE);
+            note5000edit.setVisibility(View.GONE);
+            note2000edit.setVisibility(View.GONE);
+            note1000edit.setVisibility(View.VISIBLE);
+            note500edit.setVisibility(View.VISIBLE);
+            note200edit.setVisibility(View.VISIBLE);
+            note100edit.setVisibility(View.VISIBLE);
+            note50edit.setVisibility(View.VISIBLE);
+            note20edit.setVisibility(View.VISIBLE);
+            note10edit.setVisibility(View.VISIBLE);
+            note5edit.setVisibility(View.VISIBLE);
+            note1edit.setVisibility(View.GONE);
+            coin2edit.setVisibility(View.GONE);
+            coin1edit.setVisibility(View.VISIBLE);
+            cent50edit.setVisibility(View.GONE);
+            cent25edit.setVisibility(View.GONE);
+            cent20edit.setVisibility(View.GONE);
+            cent10edit.setVisibility(View.GONE);
+            cent5edit.setVisibility(View.GONE);
+            cent2edit.setVisibility(View.GONE);
+            cent1edit.setVisibility(View.GONE);
+        } // End NOK
+        else if (getCurrency().equals("RON")) {
+            note500edit.setHint("500" + RON_lei);
+            note200edit.setHint("200" + RON_lei);
+            note100edit.setHint("100" + RON_lei);
+            note50edit.setHint("50" + RON_lei);
+            note10edit.setHint("10" + RON_lei);
+            note5edit.setHint("5" + RON_lei);
+            note1edit.setHint("1" + RON_leu);
+            cent50edit.setHint("50" + RON_bani);
+            cent10edit.setHint("10" + RON_bani);
+            cent5edit.setHint("5" + RON_bani);
+            cent1edit.setHint("1" + RON_ban);
+            additionaledit.setHint(getResources().getString(R.string.additions) + " " + RON_leu);
+
+            // Set visibilities
+            note50000edit.setVisibility(View.GONE);
+            note10000edit.setVisibility(View.GONE);
+            note5000edit.setVisibility(View.GONE);
+            note2000edit.setVisibility(View.GONE);
+            note1000edit.setVisibility(View.GONE);
+            note500edit.setVisibility(View.VISIBLE);
+            note200edit.setVisibility(View.VISIBLE);
+            note100edit.setVisibility(View.VISIBLE);
+            note50edit.setVisibility(View.VISIBLE);
+            note20edit.setVisibility(View.GONE);
+            note10edit.setVisibility(View.VISIBLE);
+            note5edit.setVisibility(View.VISIBLE);
+            note1edit.setVisibility(View.VISIBLE);
+            coin2edit.setVisibility(View.GONE);
+            coin1edit.setVisibility(View.GONE);
+            cent50edit.setVisibility(View.VISIBLE);
+            cent25edit.setVisibility(View.GONE);
+            cent20edit.setVisibility(View.GONE);
+            cent10edit.setVisibility(View.VISIBLE);
+            cent5edit.setVisibility(View.VISIBLE);
+            cent2edit.setVisibility(View.GONE);
+            cent1edit.setVisibility(View.VISIBLE);
+        } // End RON
+        else if (getCurrency().equals("CZK")) {
+            note2000edit.setHint("2000" + CZK);
+            note1000edit.setHint("1000" + CZK);
+            note500edit.setHint("500" + CZK);
+            note200edit.setHint("200" + CZK);
+            note100edit.setHint("100" + CZK);
+            note50edit.setHint("50" + CZK);
+            note20edit.setHint("20" + CZK);
+            note10edit.setHint("10" + CZK);
+            note5edit.setHint("5" + CZK);
+            coin2edit.setHint("2" + CZK);
+            note1edit.setHint("1" + CZK);
+            additionaledit.setHint(getResources().getString(R.string.additions) + " " + CZK);
+
+            // Set visibilities
+            note50000edit.setVisibility(View.GONE);
+            note10000edit.setVisibility(View.GONE);
+            note5000edit.setVisibility(View.GONE);
+            note2000edit.setVisibility(View.VISIBLE);
+            note1000edit.setVisibility(View.VISIBLE);
+            note500edit.setVisibility(View.VISIBLE);
+            note200edit.setVisibility(View.VISIBLE);
+            note100edit.setVisibility(View.VISIBLE);
+            note50edit.setVisibility(View.VISIBLE);
+            note20edit.setVisibility(View.VISIBLE);
+            note10edit.setVisibility(View.VISIBLE);
+            note5edit.setVisibility(View.VISIBLE);
+            note1edit.setVisibility(View.VISIBLE);
+            coin2edit.setVisibility(View.VISIBLE);
+            coin1edit.setVisibility(View.GONE);
+            cent50edit.setVisibility(View.GONE);
+            cent25edit.setVisibility(View.GONE);
+            cent20edit.setVisibility(View.GONE);
+            cent10edit.setVisibility(View.GONE);
+            cent5edit.setVisibility(View.GONE);
+            cent2edit.setVisibility(View.GONE);
+            cent1edit.setVisibility(View.GONE);
+        } // End CZK
+        else if (getCurrency().equals("ARS")) {
+            note100edit.setHint(ARS + "100");
+            note50edit.setHint(ARS + "50");
+            note20edit.setHint(ARS + "20");
+            note10edit.setHint(ARS + "10");
+            note5edit.setHint(ARS + "5");
+            coin2edit.setHint(ARS + "2");
+            coin1edit.setHint(ARS + "1");
+            cent50edit.setHint("50c");
+            cent25edit.setHint("25c");
+            cent10edit.setHint("10c");
+            cent5edit.setHint("5c");
+            cent1edit.setHint("1c");
+            additionaledit.setHint(getResources().getString(R.string.additions) + " " + ARS);
+
+            // Set visibilities
+            note50000edit.setVisibility(View.GONE);
+            note10000edit.setVisibility(View.GONE);
+            note5000edit.setVisibility(View.GONE);
+            note2000edit.setVisibility(View.GONE);
+            note1000edit.setVisibility(View.GONE);
+            note500edit.setVisibility(View.GONE);
+            note200edit.setVisibility(View.GONE);
+            note100edit.setVisibility(View.VISIBLE);
+            note50edit.setVisibility(View.VISIBLE);
+            note20edit.setVisibility(View.VISIBLE);
+            note10edit.setVisibility(View.VISIBLE);
+            note5edit.setVisibility(View.VISIBLE);
+            note1edit.setVisibility(View.GONE);
+            coin2edit.setVisibility(View.VISIBLE);
+            coin1edit.setVisibility(View.VISIBLE);
+            cent50edit.setVisibility(View.VISIBLE);
+            cent25edit.setVisibility(View.VISIBLE);
+            cent20edit.setVisibility(View.GONE);
+            cent10edit.setVisibility(View.VISIBLE);
+            cent5edit.setVisibility(View.VISIBLE);
+            cent2edit.setVisibility(View.GONE);
+            cent1edit.setVisibility(View.VISIBLE);
+        } // End ARS
+        else if (getCurrency().equals("BRL")) {
+            note100edit.setHint(BRL + "100");
+            note50edit.setHint(BRL + "50");
+            note20edit.setHint(BRL + "20");
+            note10edit.setHint(BRL + "10");
+            note5edit.setHint(BRL + "5");
+            coin2edit.setHint(BRL + "2");
+            coin1edit.setHint(BRL + "1");
+            cent50edit.setHint("50c");
+            cent25edit.setHint("25c");
+            cent10edit.setHint("10c");
+            cent5edit.setHint("5c");
+            cent1edit.setHint("1c");
+            additionaledit.setHint(getResources().getString(R.string.additions) + " " + BRL);
+
+            // Set visibilities
+            note50000edit.setVisibility(View.GONE);
+            note10000edit.setVisibility(View.GONE);
+            note5000edit.setVisibility(View.GONE);
+            note2000edit.setVisibility(View.GONE);
+            note1000edit.setVisibility(View.GONE);
+            note500edit.setVisibility(View.GONE);
+            note200edit.setVisibility(View.GONE);
+            note100edit.setVisibility(View.VISIBLE);
+            note50edit.setVisibility(View.VISIBLE);
+            note20edit.setVisibility(View.VISIBLE);
+            note10edit.setVisibility(View.VISIBLE);
+            note5edit.setVisibility(View.VISIBLE);
+            note1edit.setVisibility(View.GONE);
+            coin2edit.setVisibility(View.VISIBLE);
+            coin1edit.setVisibility(View.VISIBLE);
+            cent50edit.setVisibility(View.VISIBLE);
+            cent25edit.setVisibility(View.VISIBLE);
+            cent20edit.setVisibility(View.GONE);
+            cent10edit.setVisibility(View.VISIBLE);
+            cent5edit.setVisibility(View.VISIBLE);
+            cent2edit.setVisibility(View.GONE);
+            cent1edit.setVisibility(View.VISIBLE);
+        } // End BRL
     }
 }
 

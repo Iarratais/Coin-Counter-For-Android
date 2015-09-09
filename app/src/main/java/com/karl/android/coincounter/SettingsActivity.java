@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.media.audiofx.BassBoost;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -215,11 +216,12 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     public void onDestroy() {
         finish();
+        overridePendingTransition(R.anim.slideout, R.anim.slidein);
         super.onDestroy();
     }
 
     public void changeCurrency() {
-        final String[] currencies = {"EUR", "ISK", "RUB", "USD", "GBP", "JPY", "KRW", "BGN", "CAD", "NZD", "AUD"};
+        final String[] currencies = {"EUR", "ISK", "RUB", "USD", "GBP", "JPY", "KRW", "BGN", "CAD", "NZD", "AUD", "DKK", "SEK", "NOK", "RON", "CZK", "ARS", "BRL"};
         Arrays.sort(currencies);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.currency_title)
@@ -261,6 +263,27 @@ public class SettingsActivity extends AppCompatActivity {
                                 break;
                             case 11:
                                 saveCurrency(currencies[11]);
+                                break;
+                            case 12:
+                                saveCurrency(currencies[12]);
+                                break;
+                            case 13:
+                                saveCurrency(currencies[13]);
+                                break;
+                            case 14:
+                                saveCurrency(currencies[14]);
+                                break;
+                            case 15:
+                                saveCurrency(currencies[15]);
+                                break;
+                            case 16:
+                                saveCurrency(currencies[16]);
+                                break;
+                            case 17:
+                                saveCurrency(currencies[17]);
+                                break;
+                            case 18:
+                                saveCurrency(currencies[18]);
                                 break;
                         }
                     }
@@ -356,13 +379,15 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void goToWordpress() {
+        final String url = "https://goo.gl/ClW5em";
+
         new AlertDialog.Builder(this)
                 .setMessage(R.string.you_are_exiting_the_application)
                 .setTitle("")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         try {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://goo.gl/ClW5em")));
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
                         } catch (Exception e) {
                             Toast.makeText(SettingsActivity.this, R.string.error + " " + e, Toast.LENGTH_SHORT).show();
                         }
@@ -373,6 +398,7 @@ public class SettingsActivity extends AppCompatActivity {
                         // User has cancelled the action, returns to the previous screen
                     }
                 }).show();
+
     }
     public void rateApplication() {
         try {

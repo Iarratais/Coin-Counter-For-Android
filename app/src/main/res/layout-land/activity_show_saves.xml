@@ -1,0 +1,77 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"> </include>
+
+    <!-- This code is for the buttons on the top of the app -->
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:animateLayoutChanges="true"
+        >
+
+        <Button
+            android:id="@+id/btnCount"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/countActivity"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@color/ColorPrimary"
+            android:clickable="false"
+            android:textColor="@color/white"
+            android:capitalize="words" />
+
+        <Button
+            android:id="@+id/btnSaves"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/show_string"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@color/ColorPrimary"
+            android:textColor="@color/white"
+            android:capitalize="words"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="271dp"
+            android:id="@+id/calendarView"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="20dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sv1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/llo2">
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/temp_edit"
+        android:visibility="gone"
+        android:inputType="number"/>
+
+</LinearLayout>

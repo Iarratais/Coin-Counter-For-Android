@@ -126,7 +126,7 @@
     <string name="swedish" translatable="false">Svenska</string>
 
     <string name="button_placeholder" translatable="false">Placeholder</string>
-    <string name="description">Copyright © of Karl Jones\ncoincountr@gmail.com\nFeedback is appreciated</string>
+    <string name="description">Copyright of Karl Jones \n coincountr@gmail.com</string>
     <string name="title_activity_show_totals" translatable="false">ShowTotals</string>
 
     <string name="add_data_error">Error saving total</string>
@@ -150,4 +150,5 @@
     <string name="cancel">Cancel</string>
     <string name="enter_id_for_deletion">Please enter the ID of the entry you would like to delete</string>
     <string name="title_activity_splash_screen" translatable="false">SplashScreen</string>
+    <string name="title_activity_search_results" translatable="false">SearchResults</string>
 </resources>

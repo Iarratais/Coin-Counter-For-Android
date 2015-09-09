@@ -1,10 +1,14 @@
 package com.karl.android.coincounter;
 
+import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
+
+import java.sql.SQLException;
 
 public class MySQLiteHelper extends SQLiteOpenHelper{
     private static final int DATABASE_VERSION = 2;
@@ -26,7 +30,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + TABLE_NAME
                 + "("
-                + KEY_ID  + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + KEY_DATE + " TEXT, "
                 + KEY_TITLE + " TEXT, "
                 + KEY_AMOUNT + " TEXT, "
@@ -64,7 +68,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
     // Delete a single entry from the database
     public Integer deleteData(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        Integer delete = db.delete(TABLE_NAME, "id = ?", new String[] {id});
+        Integer delete = db.delete(TABLE_NAME, "id = ?", new String[]{id});
         return delete;
     }
 
@@ -72,5 +76,12 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
     public void deleteAll() {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("delete from " + TABLE_NAME);
+    }
+
+    public Cursor searchData(String search){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM " + TABLE_NAME + "WHERE date = ?";
+        Cursor res = db.rawQuery(query, new String[] { search });
+        return res;
     }
 }

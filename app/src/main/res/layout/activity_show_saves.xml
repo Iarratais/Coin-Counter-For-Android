@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:animateLayoutChanges="true"
         >
 
         <Button
@@ -41,6 +42,16 @@
             android:capitalize="words"
             android:textStyle="bold|italic" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="271dp"
+            android:id="@+id/calendarView"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="20dp" />
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -53,6 +64,8 @@
             android:id="@+id/llo2">
         </LinearLayout>
     </ScrollView>
+
+
 
     <EditText
         android:layout_width="wrap_content"

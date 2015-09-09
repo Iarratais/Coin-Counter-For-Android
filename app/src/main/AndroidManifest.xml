@@ -25,6 +25,7 @@
             <!-- this needs to be moved when changing the launch activity -->
             <intent-filter>
                 <action android:name="android.support.PARENT_ACTIVITY" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -35,15 +36,6 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
 
-        <!-- Feedback Activity -->
-        <activity
-            android:name=".FeedbackActivity"
-            android:label="@string/title_activity_feedback"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
 
         <!-- Show saves activity -->
         <activity
@@ -67,6 +59,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

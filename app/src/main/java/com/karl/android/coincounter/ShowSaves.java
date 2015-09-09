@@ -2,6 +2,8 @@
 
 package com.karl.android.coincounter;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,12 +12,17 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.ContextThemeWrapper;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -29,6 +36,8 @@ public class ShowSaves extends ActionBarActivity {
     MySQLiteHelper myDB;
 
     public Button btncount;
+
+    CalendarView calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,12 +75,62 @@ public class ShowSaves extends ActionBarActivity {
                         goToCount();
                     }
                 } );
+
+        // Calendar variables
+        calendar = (CalendarView) findViewById(R.id.calendarView);
+        initializeCalendar();
+    }
+
+    // Method opens the settings from the menu in the main activity.
+    public void openSettings() {
+        Intent intent = new Intent(ShowSaves.this, SettingsActivity.class);
+        startActivity(intent);
     }
 
     public void goToCount() {
         Intent intent = new Intent(ShowSaves.this, MainActivity.class);
-        finish();
         startActivity(intent);
+        finish();
+        overridePendingTransition(R.anim.abc_grow_fade_in_from_bottom, R.anim.abc_shrink_fade_out_from_bottom);
+    }
+
+    public void initializeCalendar() {
+        // sets whether to show the week number.
+        calendar.setShowWeekNumber(false);
+        // sets the first day of week according to Calendar.
+        // here we set Monday as the first day of the Calendar
+        calendar.setFirstDayOfWeek(2);
+
+        //sets the listener to be notified upon selected date change.
+        calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+
+            //show the selected date as a toast
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month, int day) {
+                String newDay;
+                String newMonth;
+                String newYear;
+
+                if (day == 1 || day == 2 || day == 3 || day == 4 || day == 5 || day == 6 || day == 7 || day == 8 || day == 9) {
+                    newDay = "0" + Integer.toString(day);
+                } else {
+                    newDay = Integer.toString(day);
+                }
+                if (month == 1 || month == 2 || month == 3 || month == 4 || month == 5 || month == 6 || month == 7 || month == 8 || month == 9) {
+                    newMonth = "0" + Integer.toString(month+1);
+                }else {
+                    newMonth = Integer.toString(month+1);
+                }
+                newYear = Integer.toString(year).substring(2);
+
+                searchDate(newYear, newMonth, newDay);
+            }
+        });
+        calendar.setVisibility(View.GONE);
+    }
+    // Convert String to Integer
+    public static int toInt(String number) {
+        return Integer.parseInt(number);
     }
 
 
@@ -79,7 +138,7 @@ public class ShowSaves extends ActionBarActivity {
     public ArrayList<StringBuffer> displays;
 
     public void viewAll() {
-        displays = new ArrayList<StringBuffer>();
+        displays = new ArrayList<>();
         res = myDB.getAllData();
         if(res.getCount() == 0) {
             Toast.makeText(ShowSaves.this, "No saves found", Toast.LENGTH_SHORT).show();
@@ -99,6 +158,18 @@ public class ShowSaves extends ActionBarActivity {
         }
     }
 
+    public void searchDate(String year, String month, String day) {
+        Bundle extra = new Bundle();
+
+        extra.putString("year", year);
+        extra.putString("month", month);
+        extra.putString("day", day);
+
+        Intent intent = new Intent(ShowSaves.this, SearchResults.class);
+        intent.putExtras(extra);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -115,6 +186,7 @@ public class ShowSaves extends ActionBarActivity {
         //noinspection SimplifiableIfStatement
         switch (item.getItemId()) {
             case R.id.action_delete_entry:
+                calendar.setVisibility(View.GONE);
                 LayoutInflater li = LayoutInflater.from(this);
                 View promptsView = li.inflate(R.layout.prompts, null);
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -133,7 +205,17 @@ public class ShowSaves extends ActionBarActivity {
                                 dialog.cancel();
                             }
                         }).create().show();
-            } // end case
+                break;
+            /*case R.id.action_search:
+                if(calendar.getVisibility() == View.GONE) {
+                    calendar.setVisibility(View.VISIBLE);
+                } else {
+                    calendar.setVisibility(View.GONE);
+                } */
+            case R.id.action_settings:
+                openSettings();
+                break;
+            }  // end case
         return super.onOptionsItemSelected(item);
     }
 
