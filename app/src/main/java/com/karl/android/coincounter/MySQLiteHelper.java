@@ -1,14 +1,11 @@
 package com.karl.android.coincounter;
 
-import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
 
-import java.sql.SQLException;
 
 public class MySQLiteHelper extends SQLiteOpenHelper{
     private static final int DATABASE_VERSION = 2;

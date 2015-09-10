@@ -24,6 +24,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Savepoint;
 import java.util.Arrays;
 
 
@@ -221,7 +222,7 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void changeCurrency() {
-        final String[] currencies = {"EUR", "ISK", "RUB", "USD", "GBP", "JPY", "KRW", "BGN", "CAD", "NZD", "AUD", "DKK", "SEK", "NOK", "RON", "CZK", "ARS", "BRL"};
+        final String[] currencies = {"EUR", "ISK", "RUB", "USD", "GBP", "JPY", "KRW", "BGN", "CAD", "NZD", "AUD", "DKK", "SEK", "NOK", "RON", "CZK", "ARS", "BRL", "CHF", "ALL", "ILS", "HKD", "RSD", "BYR"};
         Arrays.sort(currencies);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.currency_title)
@@ -284,6 +285,24 @@ public class SettingsActivity extends AppCompatActivity {
                                 break;
                             case 18:
                                 saveCurrency(currencies[18]);
+                                break;
+                            case 19:
+                                saveCurrency(currencies[19]);
+                                break;
+                            case 20:
+                                saveCurrency(currencies[20]);
+                                break;
+                            case 21:
+                                saveCurrency(currencies[21]);
+                                break;
+                            case 22:
+                                saveCurrency(currencies[22]);
+                                break;
+                            case 23:
+                                saveCurrency(currencies[23]);
+                                break;
+                            case 24:
+                                saveCurrency(currencies[24]);
                                 break;
                         }
                     }
