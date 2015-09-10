@@ -127,7 +127,6 @@ public class ShowSaves extends ActionBarActivity {
         return Integer.parseInt(number);
     }
 
-
     public Cursor res;
     public ArrayList<StringBuffer> displays;
 
@@ -206,7 +205,7 @@ public class ShowSaves extends ActionBarActivity {
                 } else {
                     calendar.setVisibility(View.GONE);
                 } */
-            case R.id.action_settings:
+            case R.id.action_main_settings:
                 openSettings();
                 break;
             }  // end case

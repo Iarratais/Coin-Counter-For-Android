@@ -260,8 +260,6 @@ public class MainActivity extends ActionBarActivity {
         return nowAsString;
     }
 
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
