@@ -127,6 +127,23 @@
     <string name="slovak" translatable="false">slovaščina</string>
     <string name="slovienian" translatable="false">Slovenščina</string>
     <string name="swedish" translatable="false">Svenska</string>
+    <string name="hebrew" translatable="false">עברית</string>
+    <string name="icelandic" translatable="false">íslenska</string>
+    <string name="belarusian" translatable="false">беларускі</string>
+    <string name="bosnian" translatable="false">Bosanski</string>
+    <string name="japanese" translatable="false">日本語</string>
+    <string name="korean" translatable="false">한국어</string>
+    <string name="norwegian" translatable="false">Norsk</string>
+    <string name="turkish" translatable="false">Türk</string>
+    <string name="albanian" translatable="false">Shqiptar</string>
+    <string name="serbian" translatable="false">Српски</string>
+    <string name="chinese_simplified" translatable="false">中国</string>
+    <string name="thai" translatable="false">ภาษาไทย</string>
+    <string name="catalan" translatable="false">Català</string>
+    <string name="afrikaans" translatable="false">Afrikaans</string>
+    <string name="basque" translatable="false">Euskal</string>
+    <string name="filipino" translatable="false">Pilipino</string>
+
 
     <string name="button_placeholder" translatable="false">Placeholder</string>
     <string name="description">Copyright of Karl Jones \n coincountr@gmail.com</string>

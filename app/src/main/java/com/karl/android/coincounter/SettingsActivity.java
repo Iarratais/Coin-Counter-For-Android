@@ -73,7 +73,7 @@ public class SettingsActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(SettingsActivity.this, R.string.feature_currently_unavailable, Toast.LENGTH_SHORT).show();
+                        changeLanguage();
                     }
                 }
         );
@@ -192,90 +192,62 @@ public class SettingsActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
+    public void changeLanguage() {
+        final String[] languages = {
+                getString(R.string.english), getString(R.string.bulgarian), getString(R.string.czech), getString(R.string.danish), getString(R.string.german), getString(R.string.greek),
+                getString(R.string.spanish), getString(R.string.estonian), getString(R.string.finnish), getString(R.string.french), getString(R.string.hebrew), getString(R.string.croatian),
+                getString(R.string.hungarian), getString(R.string.lithuanian), getString(R.string.latvian), getString(R.string.maltese), getString(R.string.dutch), getString(R.string.polish),
+                getString(R.string.portuguese), getString(R.string.romanian), getString(R.string.russian), getString(R.string.slovak), getString(R.string.slovienian), getString(R.string.swedish),
+                getString(R.string.ukrainian), getString(R.string.italian), getString(R.string.icelandic), getString(R.string.belarusian), getString(R.string.bosnian), getString(R.string.japanese),
+                getString(R.string.korean), getString(R.string.norwegian), getString(R.string.turkish), getString(R.string.albanian), getString(R.string.serbian), getString(R.string.chinese_simplified),
+                getString(R.string.thai), getString(R.string.catalan), getString(R.string.afrikaans), getString(R.string.basque), getString(R.string.filipino), getString(R.string.detect_device_language)
+        };
+        Arrays.sort(languages);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(getString(R.string.language_title))
+                .setItems(languages, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        saveLanguage(languages[which]);
+                        Toast.makeText(SettingsActivity.this, getString(R.string.language_title) + ": " + languages[which], Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User has cancelled the action, returns to the previous screen
+                    }
+                })
+                .show();
+    }
+
+    public void saveLanguage(String language) {
+        SharedPreferences curr = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = curr.edit();
+        editor.putString("language", language);
+        editor.commit();
+
+        btnlangSel.setText(getLanguage());
+    }
+
+    public String getLanguage() {
+        SharedPreferences lang = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        String defaultValue = getString(R.string.english);
+        String language = "";
+        language = lang.getString("language", language);
+        if (language.equals("")) {
+            language = defaultValue;
+        }
+        return language;
+    }
+
     public void changeCurrency() {
-        final String[] currencies = {"EUR", "ISK", "RUB", "USD", "GBP", "JPY", "KRW", "BGN", "CAD", "NZD", "AUD", "DKK", "SEK", "NOK", "RON", "CZK", "ARS", "BRL", "CHF", "ALL", "ILS", "HKD", "RSD", "BYR"};
+        final String[] currencies = {"EUR", "ISK", "RUB", "USD", "GBP", "JPY", "KRW", "BGN", "CAD", "NZD", "AUD", "DKK", "SEK",
+                "NOK", "RON", "CZK", "ARS", "BRL", "CHF", "ALL", "ILS", "HKD", "RSD", "BYR"};
         Arrays.sort(currencies);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.currency_title)
                 .setItems(currencies, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        switch (which) {
-                            case 0:
-                                saveCurrency(currencies[0]);
-                                break;
-                            case 1:
-                                saveCurrency(currencies[1]);
-                                break;
-                            case 2:
-                                saveCurrency(currencies[2]);
-                                break;
-                            case 3:
-                                saveCurrency(currencies[3]);
-                                break;
-                            case 4:
-                                saveCurrency(currencies[4]);
-                                break;
-                            case 5:
-                                saveCurrency(currencies[5]);
-                                break;
-                            case 6:
-                                saveCurrency(currencies[6]);
-                                break;
-                            case 7:
-                                saveCurrency(currencies[7]);
-                                break;
-                            case 8:
-                                saveCurrency(currencies[8]);
-                                break;
-                            case 9:
-                                saveCurrency(currencies[9]);
-                                break;
-                            case 10:
-                                saveCurrency(currencies[10]);
-                                break;
-                            case 11:
-                                saveCurrency(currencies[11]);
-                                break;
-                            case 12:
-                                saveCurrency(currencies[12]);
-                                break;
-                            case 13:
-                                saveCurrency(currencies[13]);
-                                break;
-                            case 14:
-                                saveCurrency(currencies[14]);
-                                break;
-                            case 15:
-                                saveCurrency(currencies[15]);
-                                break;
-                            case 16:
-                                saveCurrency(currencies[16]);
-                                break;
-                            case 17:
-                                saveCurrency(currencies[17]);
-                                break;
-                            case 18:
-                                saveCurrency(currencies[18]);
-                                break;
-                            case 19:
-                                saveCurrency(currencies[19]);
-                                break;
-                            case 20:
-                                saveCurrency(currencies[20]);
-                                break;
-                            case 21:
-                                saveCurrency(currencies[21]);
-                                break;
-                            case 22:
-                                saveCurrency(currencies[22]);
-                                break;
-                            case 23:
-                                saveCurrency(currencies[23]);
-                                break;
-                            case 24:
-                                saveCurrency(currencies[24]);
-                                break;
-                        }
+                        saveCurrency(currencies[which]);
                     }
                 })
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -294,7 +266,6 @@ public class SettingsActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = curr.edit();
         editor.putString("currency", currency);
         editor.commit();
-
 
         btncurr.setText(getCurrency());
     }

@@ -10,6 +10,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
+import android.content.res.Configuration;
 import android.os.Build;
 
 import android.speech.tts.TextToSpeech;
@@ -201,10 +202,28 @@ public class MainActivity extends ActionBarActivity {
                     }
                 });
 
+        checkLanguage();
         hintChecks();
         clearAll();
     } // End onCreate()
 
+    public void checkLanguage() {
+        Locale locale = Locale.getDefault();
+
+        if(getLanguage().equals(getString(R.string.english))) {
+            locale = new Locale("en_GB");
+        } else if (getLanguage().equals(getString(R.string.bulgarian))) {
+            locale = new Locale("bg_BG");
+        } else if (getLanguage().equals(getString(R.string.czech))) {
+            locale = new Locale("cs_CZ");
+        } else if (getLanguage().equals(getString(R.string.danish))) {
+            locale = new Locale("da_DK");
+        }
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        this.getApplicationContext().getResources().updateConfiguration(config, null);
+    }
 
     public void AddData() {
         boolean isEmpty = checkIfEmpty();
@@ -243,6 +262,7 @@ public class MainActivity extends ActionBarActivity {
             adView.resume();
         }
         hintChecks();
+        checkLanguage();
     }
 
     @Override
@@ -499,6 +519,17 @@ public class MainActivity extends ActionBarActivity {
 
     public static String getTotal() {
         return total;
+    }
+
+    public String getLanguage() {
+        SharedPreferences lang = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        String defaultValue = getString(R.string.english);
+        String language = "";
+        language = lang.getString("language", language);
+        if (language.equals("")) {
+            language = defaultValue;
+        }
+        return language;
     }
 
     // ---------------- CURRENCY METHODS --------------------------------------------
