@@ -223,7 +223,7 @@ public class SettingsActivity extends AppCompatActivity {
         SharedPreferences curr = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = curr.edit();
         editor.putString("language", language);
-        editor.commit();
+        editor.apply();
 
         btnlangSel.setText(getLanguage());
     }
@@ -265,7 +265,7 @@ public class SettingsActivity extends AppCompatActivity {
         SharedPreferences curr = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = curr.edit();
         editor.putString("currency", currency);
-        editor.commit();
+        editor.apply();
 
         btncurr.setText(getCurrency());
     }
@@ -292,20 +292,12 @@ public class SettingsActivity extends AppCompatActivity {
         SharedPreferences analytics = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = analytics.edit();
         editor.putBoolean("analytics", isChecked);
-        editor.commit();
+        editor.apply();
     }
 
-    public void about() {
-        String title = getString(R.string.about_title);
-        String message = getString(R.string.description);;
-        showMessage(title, message);
-    }
+    public void about() {showMessage(getString(R.string.about_title), getString(R.string.description));}
 
-    public void howTo() {
-        String title = getString(R.string.howto_title);
-        String message = getString(R.string.howto);
-        showMessage(title, message);
-    }
+    public void howTo() {showMessage(getString(R.string.howto_title), getString(R.string.howto));}
 
     public void sendFeedback() {
         Intent i = new Intent(Intent.ACTION_SEND);
