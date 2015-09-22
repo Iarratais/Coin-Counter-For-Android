@@ -42,33 +42,33 @@ public class MainActivity extends ActionBarActivity {
     public static TextToSpeech t1;
 
     public static String total_title = " ";
-    public static String note200000Amt = "0";
-    public static String note100000Amt = "0";
-    public static String note50000Amt = "0";
-    public static String note20000Amt = "0";
-    public static String note10000Amt = "0";
-    public static String note5000Amt = "0";
-    public static String note2000Amt = "0";
-    public static String note1000Amt = "0";
-    public static String note500Amt = "0";
-    public static String note200Amt = "0";
-    public static String note100Amt = "0";
-    public static String note50Amt = "0";
-    public static String note20Amt = "0";
-    public static String note10Amt = "0";
-    public static String note5Amt = "0";
-    public static String note1Amt = "0";
-    public static String coin2Amt = "0";
-    public static String coin1Amt = "0";
-    public static String cent50Amt = "0";
-    public static String cent25Amt = "0";
-    public static String cent20Amt = "0";
-    public static String cent10Amt = "0";
-    public static String cent5Amt = "0";
-    public static String cent2Amt = "0";
-    public static String cent1Amt = "0";
-    public static String additionalCoins = "0";
-    private static String total = "0";
+    public static String note200000Amt = " ";
+    public static String note100000Amt = " ";
+    public static String note50000Amt = " ";
+    public static String note20000Amt = " ";
+    public static String note10000Amt = " ";
+    public static String note5000Amt = " ";
+    public static String note2000Amt = " ";
+    public static String note1000Amt = " ";
+    public static String note500Amt = " ";
+    public static String note200Amt = " ";
+    public static String note100Amt = " ";
+    public static String note50Amt = " ";
+    public static String note20Amt = " ";
+    public static String note10Amt = " ";
+    public static String note5Amt = " ";
+    public static String note1Amt = " ";
+    public static String coin2Amt = " ";
+    public static String coin1Amt = " ";
+    public static String cent50Amt = " ";
+    public static String cent25Amt = " ";
+    public static String cent20Amt = " ";
+    public static String cent10Amt = " ";
+    public static String cent5Amt = " ";
+    public static String cent2Amt = " ";
+    public static String cent1Amt = " ";
+    public static String additionalCoins = " ";
+    private static String total = " ";
     public static String comment = " ";
 
     // All edittexts
@@ -278,8 +278,7 @@ public class MainActivity extends ActionBarActivity {
     // This puts the date in the rght format when the total is saved, currenctly only works with english locale
     public String getFormatDate() {
         Date now = new Date();
-        String nowAsString = new SimpleDateFormat("dd-MM-yy", Locale.getDefault()).format(now);
-        return nowAsString;
+        return new SimpleDateFormat("dd-MM-yy", Locale.getDefault()).format(now);
     }
 
     @Override
@@ -327,21 +326,15 @@ public class MainActivity extends ActionBarActivity {
         } else if (toDouble(getTotal()) < 0.01) {
             Toast.makeText(MainActivity.this, R.string.check_if_empty_overlay_errror, Toast.LENGTH_SHORT).show();
             return true;
-        } else {
-            return false;
-        }
+        } else {return false;}
     }
 
     // Same as above minus the toasts.
     // Returns true if fields are empty
     public boolean fieldsAreEmpty() {
-        if (total_title_.getText().toString().equals("")) {
-            return true;
-        } else if (toDouble(getTotal()) < 0.01) {
-            return true;
-        } else {
-            return false;
-        }
+        if (total_title_.getText().toString().equals("")) {return true;}
+        else if (toDouble(getTotal()) < 0.01) {return true;}
+        else {return false;}
     }
 
     // ----------------------------------- MENU SETTINGS ------------------------------
@@ -500,15 +493,12 @@ public class MainActivity extends ActionBarActivity {
     }
 
     // Convert String to Integer
-    public static int toInt(String number) {
-        return Integer.parseInt(number);
-    }
+    public static int toInt(String number) {return Integer.parseInt(number);}
 
     // Convert String into double
     public static double toDouble(String number) {
         System.out.println("toDouble: " + number);
-        String num = number.replace(",", "");
-        double value = Double.parseDouble(num);
+        double value = Double.parseDouble(number.replace(",", ""));
         System.out.println("toDouble: " + value);
         return value;
     }
@@ -519,18 +509,14 @@ public class MainActivity extends ActionBarActivity {
         System.out.println("setTotal: " + total + " - total");
     }
 
-    public static String getTotal() {
-        return total;
-    }
+    public static String getTotal() {return total;}
 
     public String getLanguage() {
         SharedPreferences lang = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
         String defaultValue = getString(R.string.english);
         String language = "";
         language = lang.getString("language", language);
-        if (language.equals("")) {
-            language = defaultValue;
-        }
+        if (language.equals("")) {language = defaultValue;}
         return language;
     }
 
@@ -538,16 +524,10 @@ public class MainActivity extends ActionBarActivity {
     // Speaks the total when clicked.
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public void make_a_toast() {
-        String Speak = getString(R.string.your_total_is) + (getTotal());
-        System.out.println("make_a_toast (TTS): " + Speak);
-
         t1.setLanguage(Locale.getDefault());
 
-        if (Build.VERSION.RELEASE.startsWith("5") || Build.VERSION.RELEASE.startsWith("6")) {
-            t1.speak(Speak, TextToSpeech.QUEUE_FLUSH, null, null);
-        } else {
-            t1.speak(Speak, TextToSpeech.QUEUE_FLUSH, null);
-        }
+        if (Build.VERSION.RELEASE.startsWith("5") || Build.VERSION.RELEASE.startsWith("6")) {t1.speak(getString(R.string.your_total_is) + (getTotal()), TextToSpeech.QUEUE_FLUSH, null, null);}
+        else {t1.speak(getString(R.string.your_total_is) + (getTotal()), TextToSpeech.QUEUE_FLUSH, null);}
     }
 
     // Returns the three letter currency code.
@@ -556,13 +536,265 @@ public class MainActivity extends ActionBarActivity {
         String defaultValue = "EUR";
         String currency = "";
         currency = curr.getString("currency", currency);
-        if (currency.equals("")) {
-            currency = defaultValue;
-        }
+        if (currency.equals("")) {currency = defaultValue;}
         return currency;
     }
 
+    public void setCurrencyBoxes() {
+        String currentCurrency;
 
+        // Set the Strings for all of the currencies, replaces everything but the numbers, easier to paste from the excel spreadsheet
+        String ALL = "0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t0\t0\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String ARS = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t1\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
+        String AUD = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t1\t0\t0\n".replaceAll("[^0-9]", "");
+        String BGN = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
+        String BRL = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t1\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
+        String BYR = "1\t1\t1\t1\t1\t1\t0\t1\t1\t0\t1\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String CAD = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t1\t0\t1\t1\t0\t0\n".replaceAll("[^0-9]", "");
+        String CHF = "0\t0\t0\t0\t0\t0\t0\t1\t0\t1\t1\t1\t1\t1\t1\t0\t1\t1\t1\t1\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
+        String CZK = "0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t1\t0\t1\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String DKK = "0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String EUR = "0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
+        String GBP = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
+        String HKD = "0\t0\t0\t0\t0\t0\t0\t1\t1\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String ILS = "0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t0\t1\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String ISK = "0\t0\t0\t0\t1\t1\t0\t1\t1\t0\t1\t1\t0\t1\t1\t1\t0\t0\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String JPY = "0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t0\t1\t1\t1\t0\t0\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String KRW = "0\t0\t1\t0\t1\t1\t0\t1\t1\t0\t1\t1\t0\t1\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String NOK = "0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t0\t0\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String NZD = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String RON = "0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t0\t1\t1\t1\t0\t0\t1\t0\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
+        String RSD = "0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t0\t1\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String RUB = "0\t0\t0\t0\t0\t1\t0\t1\t1\t0\t1\t1\t0\t0\t1\t0\t1\t1\t1\t0\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
+        String SEK = "0\t0\t0\t0\t0\t0\t0\t1\t1\t0\t1\t1\t1\t1\t1\t0\t0\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String USD = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t0\t0\t0\t1\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
+        String defCur = "1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
+
+        // Compare the string to get the right code for the currency
+        if (getCurrency().equals("ALL")) {currentCurrency = ALL;}
+        else if (getCurrency().equals("ARS")) {currentCurrency = ARS;}
+        else if (getCurrency().equals("AUD")) {currentCurrency = AUD;}
+        else if (getCurrency().equals("BGN")) {currentCurrency = BGN;}
+        else if (getCurrency().equals("BRL")) {currentCurrency = BRL;}
+        else if (getCurrency().equals("BYR")) {currentCurrency = BYR;}
+        else if (getCurrency().equals("CAD")) {currentCurrency = CAD;}
+        else if (getCurrency().equals("CHF")) {currentCurrency = CHF;}
+        else if (getCurrency().equals("CZK")) {currentCurrency = CZK;}
+        else if (getCurrency().equals("DKK")) {currentCurrency = DKK;}
+        else if (getCurrency().equals("EUR")) {currentCurrency = EUR;}
+        else if (getCurrency().equals("GBP")) {currentCurrency = GBP;}
+        else if (getCurrency().equals("HKD")) {currentCurrency = HKD;}
+        else if (getCurrency().equals("ILS")) {currentCurrency = ILS;}
+        else if (getCurrency().equals("ISK")) {currentCurrency = ISK;}
+        else if (getCurrency().equals("JPY")) {currentCurrency = JPY;}
+        else if (getCurrency().equals("KRW")) {currentCurrency = KRW;}
+        else if (getCurrency().equals("NOK")) {currentCurrency = NOK;}
+        else if (getCurrency().equals("NZD")) {currentCurrency = NZD;}
+        else if (getCurrency().equals("RON")) {currentCurrency = RON;}
+        else if (getCurrency().equals("RSD")) {currentCurrency = RSD;}
+        else if (getCurrency().equals("RUB")) {currentCurrency = RUB;}
+        else if (getCurrency().equals("SEK")) {currentCurrency = SEK;}
+        else if (getCurrency().equals("USD")) {currentCurrency = USD;}
+        else {currentCurrency = defCur;}
+
+        // Methods to set the boxes to visible or gone, 11 boxes as of 21st Sept 2015
+
+        // i is used so that the system can be expanded easily without having to change all of the numbers
+        int i = 0;
+
+        // 200,000
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note200000edit.setVisibility(View.VISIBLE);
+        } else {
+            note200000edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 100,000
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note100000edit.setVisibility(View.VISIBLE);
+        } else {
+            note100000edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 50,000
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note50000edit.setVisibility(View.VISIBLE);
+        } else {
+            note50000edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 20 000
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note20000edit.setVisibility(View.VISIBLE);
+        } else {
+            note20000edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 10 000
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note10000edit.setVisibility(View.VISIBLE);
+        } else {
+            note10000edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 5 000
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note5000edit.setVisibility(View.VISIBLE);
+        } else {
+            note5000edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 1 000
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note1000edit.setVisibility(View.VISIBLE);
+        } else {
+            note1000edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 500
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note500edit.setVisibility(View.VISIBLE);
+        } else {
+            note500edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 200
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note200edit.setVisibility(View.VISIBLE);
+        } else {
+            note200edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 100
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note100edit.setVisibility(View.VISIBLE);
+        } else {
+            note100edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 50
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note50edit.setVisibility(View.VISIBLE);
+        } else {
+            note50edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 20
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note20edit.setVisibility(View.VISIBLE);
+        } else {
+            note20edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 10
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note10edit.setVisibility(View.VISIBLE);
+        } else {
+            note10edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 5
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note5edit.setVisibility(View.VISIBLE);
+        } else {
+            note5edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 1 note
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            note1edit.setVisibility(View.VISIBLE);
+        } else {
+            note1edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 2
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            coin2edit.setVisibility(View.VISIBLE);
+        } else {
+            coin2edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // 1
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            coin1edit.setVisibility(View.VISIBLE);
+        } else {
+            coin1edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // .50
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            cent50edit.setVisibility(View.VISIBLE);
+        } else {
+            cent50edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // .25
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            cent25edit.setVisibility(View.VISIBLE);
+        } else {
+            cent25edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // .20
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            cent20edit.setVisibility(View.VISIBLE);
+        } else {
+            cent20edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // .10
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            cent10edit.setVisibility(View.VISIBLE);
+        } else {
+            cent10edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // .05
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            cent5edit.setVisibility(View.VISIBLE);
+        } else {
+            cent5edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // .02
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            cent2edit.setVisibility(View.VISIBLE);
+        } else {
+            cent2edit.setVisibility(View.GONE);
+        }
+        i++;
+
+        // .01
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
+            cent1edit.setVisibility(View.VISIBLE);
+        } else {
+            cent1edit.setVisibility(View.GONE);
+        }
+        i++;
+
+    } // end setCurrencyBoxes()
 
     // --------------------------------------------------- TEXT WATCHERS --------------------------------------------------------------------
     private final TextWatcher total_title_listener = new TextWatcher() {
@@ -1177,293 +1409,5 @@ public class MainActivity extends ActionBarActivity {
             }
         }
     };
-
-    // Experiments
-    public void setCurrencyBoxes() {
-        String curr = getCurrency();
-        String currentCurrency;
-
-        // Set the Strings for all of the currencies, replaces everything but the numbers, easier to paste from the excel spreadsheet
-        String ALL = "0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t0\t0\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String ARS = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t1\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
-        String AUD = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t1\t0\t0\n".replaceAll("[^0-9]", "");
-        String BGN = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
-        String BRL = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t1\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
-        String BYR = "1\t1\t1\t1\t1\t1\t0\t1\t1\t0\t1\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String CAD = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t1\t0\t1\t1\t0\t0\n".replaceAll("[^0-9]", "");
-        String CHF = "0\t0\t0\t0\t0\t0\t0\t1\t0\t1\t1\t1\t1\t1\t1\t0\t1\t1\t1\t1\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
-        String CZK = "0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t1\t0\t1\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String DKK = "0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String EUR = "0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
-        String GBP = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
-        String HKD = "0\t0\t0\t0\t0\t0\t0\t1\t1\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String ILS = "0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t0\t1\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String ISK = "0\t0\t0\t0\t1\t1\t0\t1\t1\t0\t1\t1\t0\t1\t1\t1\t0\t0\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String JPY = "0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t0\t1\t1\t1\t0\t0\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String KRW = "0\t0\t1\t0\t1\t1\t0\t1\t1\t0\t1\t1\t0\t1\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String NOK = "0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t0\t0\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String NZD = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String RON = "0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t0\t1\t1\t1\t0\t0\t1\t0\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
-        String RSD = "0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t0\t1\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String RUB = "0\t0\t0\t0\t0\t1\t0\t1\t1\t0\t1\t1\t0\t0\t1\t0\t1\t1\t1\t0\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
-        String SEK = "0\t0\t0\t0\t0\t0\t0\t1\t1\t0\t1\t1\t1\t1\t1\t0\t0\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String USD = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t0\t0\t0\t1\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
-        String defCur = "1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
-
-        // Compare the string to get the right code for the currency
-        if(curr.equals("ALL")) {currentCurrency = ALL;}
-        else if (curr.equals("ARS")) {currentCurrency = ARS;}
-        else if (curr.equals("AUD")) {currentCurrency = AUD;}
-        else if (curr.equals("BGN")) {currentCurrency = BGN;}
-        else if (curr.equals("BRL")) {currentCurrency = BRL;}
-        else if (curr.equals("BYR")) {currentCurrency = BYR;}
-        else if (curr.equals("CAD")) {currentCurrency = CAD;}
-        else if (curr.equals("CHF")) {currentCurrency = CHF;}
-        else if (curr.equals("CZK")) {currentCurrency = CZK;}
-        else if (curr.equals("DKK")) {currentCurrency = DKK;}
-        else if (curr.equals("EUR")) {currentCurrency = EUR;}
-        else if (curr.equals("GBP")) {currentCurrency = GBP;}
-        else if (curr.equals("HKD")) {currentCurrency = HKD;}
-        else if (curr.equals("ILS")) {currentCurrency = ILS;}
-        else if (curr.equals("ISK")) {currentCurrency = ISK;}
-        else if (curr.equals("JPY")) {currentCurrency = JPY;}
-        else if (curr.equals("KRW")) {currentCurrency = KRW;}
-        else if (curr.equals("NOK")) {currentCurrency = NOK;}
-        else if (curr.equals("NZD")) {currentCurrency = NZD;}
-        else if (curr.equals("RON")) {currentCurrency = RON;}
-        else if (curr.equals("RSD")) {currentCurrency = RSD;}
-        else if (curr.equals("RUB")) {currentCurrency = RUB;}
-        else if (curr.equals("SEK")) {currentCurrency = SEK;}
-        else if (curr.equals("USD")) {currentCurrency = USD;}
-        else { currentCurrency = defCur;}
-
-        // Methods to set the boxes to visible or gone, 11 boxes as of 21st Sept 2015
-
-        // i is used so that the system can be expanded easily without having to change all of the numbers
-        int i = 0;
-
-        // 200,000
-        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
-            note200000edit.setVisibility(View.VISIBLE);
-        } else {
-            note200000edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 100,000
-        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
-            note100000edit.setVisibility(View.VISIBLE);
-        } else {
-            note100000edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 50,000
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")) {
-            note50000edit.setVisibility(View.VISIBLE);
-        } else {
-            note50000edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 20 000
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")) {
-            note20000edit.setVisibility(View.VISIBLE);
-        } else {
-            note20000edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 10 000
-        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {
-            note10000edit.setVisibility(View.VISIBLE);
-        } else {
-            note10000edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 5 000
-        if (Character.toString(currentCurrency.charAt(i)).equals("1")){
-            note5000edit.setVisibility(View.VISIBLE);
-        } else {
-            note5000edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 1 000
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            note1000edit.setVisibility(View.VISIBLE);
-        } else {
-            note1000edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 500
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            note500edit.setVisibility(View.VISIBLE);
-        } else {
-            note500edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 200
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            note200edit.setVisibility(View.VISIBLE);
-        } else {
-            note200edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 100
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            note100edit.setVisibility(View.VISIBLE);
-        } else {
-            note100edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 50
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            note50edit.setVisibility(View.VISIBLE);
-        } else {
-            note50edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 20
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            note20edit.setVisibility(View.VISIBLE);
-        } else {
-            note20edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 10
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            note10edit.setVisibility(View.VISIBLE);
-        } else {
-            note10edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 5
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            note5edit.setVisibility(View.VISIBLE);
-        } else {
-            note5edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 1 note
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            note1edit.setVisibility(View.VISIBLE);
-        } else {
-            note1edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 2
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            coin2edit.setVisibility(View.VISIBLE);
-        } else {
-            coin2edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // 1
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            coin1edit.setVisibility(View.VISIBLE);
-        } else {
-            coin1edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // .50
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            cent50edit.setVisibility(View.VISIBLE);
-        } else {
-            cent50edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // .25
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            cent25edit.setVisibility(View.VISIBLE);
-        } else {
-            cent25edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // .20
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            cent20edit.setVisibility(View.VISIBLE);
-        } else {
-            cent20edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // .10
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            cent10edit.setVisibility(View.VISIBLE);
-        } else {
-            cent10edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // .05
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            cent5edit.setVisibility(View.VISIBLE);
-        } else {
-            cent5edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // .02
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            cent2edit.setVisibility(View.VISIBLE);
-        } else {
-            cent2edit.setVisibility(View.GONE);
-        }
-        i++;
-
-        // .01
-        if(Character.toString(currentCurrency.charAt(i)).equals("1")){
-            cent1edit.setVisibility(View.VISIBLE);
-        } else {
-            cent1edit.setVisibility(View.GONE);
-        }
-        i++;
-
-
-        // Testing code, should be removed before releasing
-        Toast.makeText(MainActivity.this, curr + " " + currentCurrency, Toast.LENGTH_LONG).show();
-    }
 }
 
-/*
-            note200000edit.setVisibility(View.GONE);
-            note100000edit.setVisibility(View.GONE);
-            note50000edit.setVisibility(View.GONE);
-            note20000edit.setVisibility(View.GONE);
-            note10000edit.setVisibility(View.GONE);
-            note5000edit.setVisibility(View.GONE);
-            note2000edit.setVisibility(View.GONE);
-            note1000edit.setVisibility(View.VISIBLE);
-            note500edit.setVisibility(View.GONE);
-            note200edit.setVisibility(View.VISIBLE);
-            note100edit.setVisibility(View.VISIBLE);
-            note50edit.setVisibility(View.VISIBLE);
-            note20edit.setVisibility(View.VISIBLE);
-            note10edit.setVisibility(View.VISIBLE);
-            note5edit.setVisibility(View.VISIBLE);
-            note1edit.setVisibility(View.GONE);
-            coin2edit.setVisibility(View.VISIBLE);
-            coin1edit.setVisibility(View.VISIBLE);
-            cent50edit.setVisibility(View.GONE);
-            cent25edit.setVisibility(View.GONE);
-            cent20edit.setVisibility(View.GONE);
-            cent10edit.setVisibility(View.GONE);
-            cent5edit.setVisibility(View.GONE);
-            cent2edit.setVisibility(View.GONE);
-            cent1edit.setVisibility(View.GONE);
- */
