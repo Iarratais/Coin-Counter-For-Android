@@ -23,6 +23,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -42,33 +43,33 @@ public class MainActivity extends ActionBarActivity {
     public static TextToSpeech t1;
 
     public static String total_title = " ";
-    public static String note200000Amt = " ";
-    public static String note100000Amt = " ";
-    public static String note50000Amt = " ";
-    public static String note20000Amt = " ";
-    public static String note10000Amt = " ";
-    public static String note5000Amt = " ";
-    public static String note2000Amt = " ";
-    public static String note1000Amt = " ";
-    public static String note500Amt = " ";
-    public static String note200Amt = " ";
-    public static String note100Amt = " ";
-    public static String note50Amt = " ";
-    public static String note20Amt = " ";
-    public static String note10Amt = " ";
-    public static String note5Amt = " ";
-    public static String note1Amt = " ";
-    public static String coin2Amt = " ";
-    public static String coin1Amt = " ";
-    public static String cent50Amt = " ";
-    public static String cent25Amt = " ";
-    public static String cent20Amt = " ";
-    public static String cent10Amt = " ";
-    public static String cent5Amt = " ";
-    public static String cent2Amt = " ";
-    public static String cent1Amt = " ";
-    public static String additionalCoins = " ";
-    private static String total = " ";
+    public static String note200000Amt = "0";
+    public static String note100000Amt = "0";
+    public static String note50000Amt = "0";
+    public static String note20000Amt = "0";
+    public static String note10000Amt = "0";
+    public static String note5000Amt = "0";
+    public static String note2000Amt = "0";
+    public static String note1000Amt = "0";
+    public static String note500Amt = "0";
+    public static String note200Amt = "0";
+    public static String note100Amt = "0";
+    public static String note50Amt = "0";
+    public static String note20Amt = "0";
+    public static String note10Amt = "0";
+    public static String note5Amt = "0";
+    public static String note1Amt = "0";
+    public static String coin2Amt = "0";
+    public static String coin1Amt = "0";
+    public static String cent50Amt = "0";
+    public static String cent25Amt = "0";
+    public static String cent20Amt = "0";
+    public static String cent10Amt = "0";
+    public static String cent5Amt = "0";
+    public static String cent2Amt = "0";
+    public static String cent1Amt = "0";
+    public static String additionalCoins = "0";
+    private static String total = "0";
     public static String comment = " ";
 
     // All edittexts
@@ -177,11 +178,14 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+        System.out.println("Before ad response");
         adView = (AdView) findViewById(R.id.adView);
 
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("BB06F90FCB63535EB4CCF8EF55E116D6").build();
 
         adView.loadAd(adRequest);
+
+        System.out.println("AdRequest compelte");
 
         btnadd.setOnClickListener(
                 new View.OnClickListener() {
@@ -199,9 +203,12 @@ public class MainActivity extends ActionBarActivity {
                     }
                 });
 
+        // Keep the main activity from allowing the screen to turn off
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         clearAll();
         setCurrencyBoxes();
-        checkLanguage();
+        //checkLanguage();
     } // End onCreate()
 
 
@@ -255,7 +262,7 @@ public class MainActivity extends ActionBarActivity {
             adView.resume();
         }
         setCurrencyBoxes();
-        checkLanguage();
+        //checkLanguage();
     }
 
     @Override
@@ -508,6 +515,7 @@ public class MainActivity extends ActionBarActivity {
         String currency = "";
         currency = curr.getString("currency", currency);
         if (currency.equals("")) {currency = defaultValue;}
+        System.out.println("getCurrency sucessful!");
         return currency;
     }
 
@@ -539,7 +547,7 @@ public class MainActivity extends ActionBarActivity {
         String RUB = "0\t0\t0\t0\t0\t1\t0\t1\t1\t0\t1\t1\t0\t0\t1\t0\t1\t1\t1\t0\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
         String SEK = "0\t0\t0\t0\t0\t0\t0\t1\t1\t0\t1\t1\t1\t1\t1\t0\t0\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
         String USD = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t0\t0\t0\t1\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
-        String defCur = "1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
+        String def = "1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
 
         // Compare the string to get the right code for the currency
         if (getCurrency().equals("ALL")) {currentCurrency = ALL;}
@@ -566,7 +574,7 @@ public class MainActivity extends ActionBarActivity {
         else if (getCurrency().equals("RUB")) {currentCurrency = RUB;}
         else if (getCurrency().equals("SEK")) {currentCurrency = SEK;}
         else if (getCurrency().equals("USD")) {currentCurrency = USD;}
-        else {currentCurrency = defCur;}
+        else {currentCurrency = def;}
 
         // Methods to set the boxes to visible or gone, 11 boxes as of 21st Sept 2015
 
@@ -595,6 +603,10 @@ public class MainActivity extends ActionBarActivity {
 
         // 5 000
         if (Character.toString(currentCurrency.charAt(i)).equals("1")) {note5000edit.setVisibility(View.VISIBLE);} else {note5000edit.setVisibility(View.GONE);}
+        i++;
+
+        // 2 000
+        if (Character.toString(currentCurrency.charAt(i)).equals("1")) {note2000edit.setVisibility(View.VISIBLE);} else {note2000edit.setVisibility(View.GONE);}
         i++;
 
         // 1 000
@@ -668,6 +680,7 @@ public class MainActivity extends ActionBarActivity {
         // .01
         if (Character.toString(currentCurrency.charAt(i)).equals("1")) {cent1edit.setVisibility(View.VISIBLE);} else {cent1edit.setVisibility(View.GONE);}
 
+        System.out.println("setCurrencyBoxes() successful!");
     } // end setCurrencyBoxes()
 
     // --------------------------------------------------- TEXT WATCHERS --------------------------------------------------------------------
