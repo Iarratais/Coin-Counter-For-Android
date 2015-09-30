@@ -2,7 +2,6 @@
 
 package com.karl.android.coincounter;
 
-
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -89,6 +88,9 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        checkLanguage();
+
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -97,40 +99,42 @@ public class MainActivity extends ActionBarActivity {
 
         curr = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
-        myDB = new MySQLiteHelper(this);
+        myDB            =   new MySQLiteHelper(this);
 
-        overlay = (TextView) findViewById(R.id.OverlayTotal);
-        note200000edit = (EditText) findViewById(R.id.notes200000);
-        note100000edit = (EditText) findViewById(R.id.notes100000);
-        note50000edit = (EditText) findViewById(R.id.notes50000);
-        note20000edit = (EditText) findViewById(R.id.notes20000);
-        note10000edit = (EditText) findViewById(R.id.notes10000);
-        note5000edit = (EditText) findViewById(R.id.notes5000);
-        note2000edit = (EditText) findViewById(R.id.notes2000);
-        note1000edit = (EditText) findViewById(R.id.notes1000);
-        note500edit = (EditText) findViewById(R.id.notes500);
-        note200edit = (EditText) findViewById(R.id.notes200);
-        note100edit = (EditText) findViewById(R.id.notes100);
-        note50edit = (EditText) findViewById(R.id.notes50);
-        note20edit = (EditText) findViewById(R.id.notes20);
-        note10edit = (EditText) findViewById(R.id.notes10);
-        note5edit = (EditText) findViewById(R.id.notes5);
-        note1edit = (EditText) findViewById(R.id.notes1);
-        coin2edit = (EditText) findViewById(R.id.coins2);
-        coin1edit = (EditText) findViewById(R.id.coins1);
-        cent50edit = (EditText) findViewById(R.id.cent50);
-        cent25edit = (EditText) findViewById(R.id.cent25);
-        cent20edit = (EditText) findViewById(R.id.cent20);
-        cent10edit = (EditText) findViewById(R.id.cent10);
-        cent5edit = (EditText) findViewById(R.id.cent5);
-        cent2edit = (EditText) findViewById(R.id.cent2);
-        cent1edit = (EditText) findViewById(R.id.cent1);
-        additionaledit = (EditText) findViewById(R.id.extraAdditions);
-        commentedit = (EditText) findViewById(R.id.comment);
-        total_title_ = (EditText) findViewById(R.id.total_title);
+        overlay         =   (TextView) findViewById(R.id.OverlayTotal);
+        note200000edit  =   (EditText) findViewById(R.id.notes200000);
+        note100000edit  =   (EditText) findViewById(R.id.notes100000);
+        note50000edit   =   (EditText) findViewById(R.id.notes50000);
+        note20000edit   =   (EditText) findViewById(R.id.notes20000);
+        note10000edit   =   (EditText) findViewById(R.id.notes10000);
+        note5000edit    =   (EditText) findViewById(R.id.notes5000);
+        note2000edit    =   (EditText) findViewById(R.id.notes2000);
+        note1000edit    =   (EditText) findViewById(R.id.notes1000);
+        note500edit     =   (EditText) findViewById(R.id.notes500);
+        note200edit     =   (EditText) findViewById(R.id.notes200);
+        note100edit     =   (EditText) findViewById(R.id.notes100);
+        note50edit      =   (EditText) findViewById(R.id.notes50);
+        note20edit      =   (EditText) findViewById(R.id.notes20);
+        note10edit      =   (EditText) findViewById(R.id.notes10);
+        note5edit       =   (EditText) findViewById(R.id.notes5);
+        note1edit       =   (EditText) findViewById(R.id.notes1);
+        coin2edit       =   (EditText) findViewById(R.id.coins2);
+        coin1edit       =   (EditText) findViewById(R.id.coins1);
+        cent50edit      =   (EditText) findViewById(R.id.cent50);
+        cent25edit      =   (EditText) findViewById(R.id.cent25);
+        cent20edit      =   (EditText) findViewById(R.id.cent20);
+        cent10edit      =   (EditText) findViewById(R.id.cent10);
+        cent5edit       =   (EditText) findViewById(R.id.cent5);
+        cent2edit       =   (EditText) findViewById(R.id.cent2);
+        cent1edit       =   (EditText) findViewById(R.id.cent1);
+        additionaledit  =   (EditText) findViewById(R.id.extraAdditions);
+        commentedit     =   (EditText) findViewById(R.id.comment);
+        total_title_    =   (EditText) findViewById(R.id.total_title);
 
-        btnadd = (Button) findViewById(R.id.button);
-        btnsave = (Button) findViewById(R.id.btnSaves);
+        btnadd          =   (Button) findViewById(R.id.button);
+        btnsave         =   (Button) findViewById(R.id.btnSaves);
+
+        adView          =   (AdView) findViewById(R.id.adView);
 
         // Set text watchers
         note200000edit.addTextChangedListener(note200000listener);
@@ -179,7 +183,6 @@ public class MainActivity extends ActionBarActivity {
         });
 
         System.out.println("Before ad response");
-        adView = (AdView) findViewById(R.id.adView);
 
         AdRequest adRequest = new AdRequest.Builder().addTestDevice("BB06F90FCB63535EB4CCF8EF55E116D6").build();
 
@@ -208,7 +211,6 @@ public class MainActivity extends ActionBarActivity {
 
         clearAll();
         setCurrencyBoxes();
-        //checkLanguage();
     } // End onCreate()
 
 
@@ -216,19 +218,18 @@ public class MainActivity extends ActionBarActivity {
     public void checkLanguage() {
         Locale locale = Locale.getDefault();
 
-        if(getLanguage().equals(getString(R.string.english))) {
-            locale = new Locale("en_GB");
-        } else if (getLanguage().equals(getString(R.string.bulgarian))) {
-            locale = new Locale("bg_BG");
-        } else if (getLanguage().equals(getString(R.string.czech))) {
-            locale = new Locale("cs_CZ");
-        } else if (getLanguage().equals(getString(R.string.danish))) {
-            locale = new Locale("da_DK");
-        }
+        // Check what language the user has asked for, and set the current language to the one that the user has asked for
+        if(getLanguage().equals(getString(R.string.english))) {locale = new Locale("en_GB");}
+        else if (getLanguage().equals(getString(R.string.bulgarian))) {locale = new Locale("bg_BG");}
+        else if (getLanguage().equals(getString(R.string.czech))) {locale = new Locale("cs_CZ");}
+        else if (getLanguage().equals(getString(R.string.danish))) {locale = new Locale("da_DK");}
+
         Locale.setDefault(locale);
         Configuration config = new Configuration();
         config.locale = locale;
-        this.getApplicationContext().getResources().updateConfiguration(config, null);
+        this.getApplicationContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+
+        System.out.println("MainActivity: checkLanguage() output: " + getLanguage());
     }
 
     public void AddData() {
@@ -241,9 +242,9 @@ public class MainActivity extends ActionBarActivity {
     }
 
     // Shows an alert to the user
-    public void showMessage(String title, String message) {
+    public void showMessage(String title, String message, Boolean cancelable) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(true).setTitle(title).setMessage(message).show();
+        builder.setCancelable(cancelable).setTitle(title).setMessage(message).show();
     }
 
     // ----------------------------------- ACTIVITY RELATED METHODS ---------------------------------------------------
@@ -262,7 +263,7 @@ public class MainActivity extends ActionBarActivity {
             adView.resume();
         }
         setCurrencyBoxes();
-        //checkLanguage();
+        checkLanguage();
     }
 
     @Override
@@ -547,6 +548,13 @@ public class MainActivity extends ActionBarActivity {
         String RUB = "0\t0\t0\t0\t0\t1\t0\t1\t1\t0\t1\t1\t0\t0\t1\t0\t1\t1\t1\t0\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
         String SEK = "0\t0\t0\t0\t0\t0\t0\t1\t1\t0\t1\t1\t1\t1\t1\t0\t0\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
         String USD = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t0\t0\t0\t1\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
+        String UAH = "0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t0\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
+        String IKR = "0\t0\t0\t0\t0\t0\t0\t1\t1\t0\t1\t1\t1\t1\t1\t1\t1\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String MNT = "0\t0\t0\t1\t1\t1\t0\t1\t1\t0\t1\t1\t1\t1\t1\t1\t0\t0\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String KZT = "0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t0\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String THB = "0\t0\t0\t0\t0\t0\t0\t1\t1\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t1\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String ZAR = "0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t0\t0\t0\n".replaceAll("[^0-9]", "");
+        String PEN = "0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t0\t0\t0\n".replaceAll("[^0-9]", "");
         String def = "1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
 
         // Compare the string to get the right code for the currency
@@ -574,6 +582,13 @@ public class MainActivity extends ActionBarActivity {
         else if (getCurrency().equals("RUB")) {currentCurrency = RUB;}
         else if (getCurrency().equals("SEK")) {currentCurrency = SEK;}
         else if (getCurrency().equals("USD")) {currentCurrency = USD;}
+        else if (getCurrency().equals("UAH")) {currentCurrency = UAH;}
+        else if (getCurrency().equals("IKR")) {currentCurrency = IKR;}
+        else if (getCurrency().equals("MNT")) {currentCurrency = MNT;}
+        else if (getCurrency().equals("KZT")) {currentCurrency = KZT;}
+        else if (getCurrency().equals("THB")) {currentCurrency = THB;}
+        else if (getCurrency().equals("ZAR")) {currentCurrency = ZAR;}
+        else if (getCurrency().equals("PEN")) {currentCurrency = PEN;}
         else {currentCurrency = def;}
 
         // Methods to set the boxes to visible or gone, 11 boxes as of 21st Sept 2015

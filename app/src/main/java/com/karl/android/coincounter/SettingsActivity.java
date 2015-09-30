@@ -6,11 +6,14 @@ import android.content.DialogInterface;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,6 +23,7 @@ import android.widget.Switch;
 
 import android.widget.Toast;
 import java.util.Arrays;
+import java.util.Locale;
 
 
 public class SettingsActivity extends AppCompatActivity {
@@ -27,10 +31,6 @@ public class SettingsActivity extends AppCompatActivity {
     // Location and Currency settings
     public Button btncurr;
     public Button btnlangSel;
-    public Switch includeLocation;
-
-    // Other
-    public Switch google_Analytics;
 
     // About
     public Button btnHowTo;
@@ -48,6 +48,9 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        checkLanguage();
+
         setContentView(R.layout.activity_settings);
 
         Toolbar toolbar    = (Toolbar) findViewById (R.id.tool_bar);
@@ -89,20 +92,6 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             }
         }); */
-
-        // Initialise buttons for "Other"
-        google_Analytics = (Switch) findViewById(R.id.switch1);
-
-        google_Analytics.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked) {
-                    analyticsSwitch(true);
-                } else {
-                    analyticsSwitch(false);
-                }
-            }
-        });
 
         // Initialise buttons for "About"
         btnHowTo = (Button) findViewById(R.id.button4);
@@ -174,6 +163,8 @@ public class SettingsActivity extends AppCompatActivity {
         );
 
         myDB = new MySQLiteHelper(this);
+
+        btnlangSel.setText(getLanguage());
     }
 
     /*
@@ -217,6 +208,29 @@ public class SettingsActivity extends AppCompatActivity {
                     }
                 })
                 .show();
+
+        checkLanguage();
+    }
+
+    public void checkLanguage() {
+        // Set the locale to the device locale so that if it is not set by the user, it goes into the default language that the device is in
+        Configuration config = new Configuration();
+
+        // Check what language the user has asked for, and set the current language to the one that the user has asked for
+        if(getLanguage().equals(getString(R.string.english))) {config.locale = new Locale("en_GB");}
+        else if (getLanguage().equals(getString(R.string.bulgarian))) {config.locale = new Locale("bg_BG");}
+        else if (getLanguage().equals(getString(R.string.czech))) {config.locale = new Locale("cs_CZ");}
+        else if (getLanguage().equals(getString(R.string.danish))) {config.locale = new Locale("da_DK");}
+        else {config.locale = Locale.getDefault();}
+
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        res.updateConfiguration(config, dm);
+
+        System.out.println("SettingsActivity: checkLanguage(): " + getLanguage());
+
+        Locale current = getResources().getConfiguration().locale;
+        System.out.println("Current locale: " + current);
     }
 
     public void saveLanguage(String language) {
@@ -241,7 +255,8 @@ public class SettingsActivity extends AppCompatActivity {
 
     public void changeCurrency() {
         final String[] currencies = {"EUR", "ISK", "RUB", "USD", "GBP", "JPY", "KRW", "BGN", "CAD", "NZD", "AUD", "DKK", "SEK",
-                "NOK", "RON", "CZK", "ARS", "BRL", "CHF", "ALL", "ILS", "HKD", "RSD", "BYR"};
+                "NOK", "RON", "CZK", "ARS", "BRL", "CHF", "ALL", "ILS", "HKD", "RSD", "BYR", "UAH", "IKR", "MNT", "KZT", "THB",
+                "ZAR", "PEN"};
         Arrays.sort(currencies);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.currency_title)
@@ -281,23 +296,9 @@ public class SettingsActivity extends AppCompatActivity {
         return currency;
     }
 
-    public void analyticsSwitch(boolean isChecked) {
-        // Let the user know
-        if(isChecked) {
-            showToast(getString(R.string.google_analytics_activated));
-        } else {
-            showToast(getString(R.string.google_analytics_deactivated));
-        }
+    public void about() {showMessage(getString(R.string.about_title), getString(R.string.description), true);}
 
-        SharedPreferences analytics = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = analytics.edit();
-        editor.putBoolean("analytics", isChecked);
-        editor.apply();
-    }
-
-    public void about() {showMessage(getString(R.string.about_title), getString(R.string.description));}
-
-    public void howTo() {showMessage(getString(R.string.howto_title), getString(R.string.howto));}
+    public void howTo() {showMessage(getString(R.string.howto_title), getString(R.string.howto), true);}
 
     public void sendFeedback() {
         Intent i = new Intent(Intent.ACTION_SEND);
@@ -378,9 +379,9 @@ public class SettingsActivity extends AppCompatActivity {
                 }).show();
     }
 
-    public void showMessage(String title, String message) {
+    public void showMessage(String title, String message, Boolean cancelable) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(true);
+        builder.setCancelable(cancelable);
         builder.setTitle(title);
         builder.setMessage(message);
         builder.show();
