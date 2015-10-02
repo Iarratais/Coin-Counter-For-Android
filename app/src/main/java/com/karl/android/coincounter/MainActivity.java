@@ -15,6 +15,7 @@ import android.os.Build;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 
 import android.text.TextWatcher;
@@ -89,13 +90,17 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        checkLanguage();
+        // checkLanguage();
 
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(R.string.app_name);
+        try {
+            getSupportActionBar().setTitle(R.string.app_name);
+        } catch (NullPointerException e) {
+            System.out.println("Error: " + e);
+        }
 
         curr = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
@@ -182,13 +187,9 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-        System.out.println("Before ad response");
-
         AdRequest adRequest = new AdRequest.Builder().addTestDevice("BB06F90FCB63535EB4CCF8EF55E116D6").build();
 
         adView.loadAd(adRequest);
-
-        System.out.println("AdRequest compelte");
 
         btnadd.setOnClickListener(
                 new View.OnClickListener() {
@@ -206,13 +207,11 @@ public class MainActivity extends ActionBarActivity {
                     }
                 });
 
-        // Keep the main activity from allowing the screen to turn off
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         clearAll();
         setCurrencyBoxes();
     } // End onCreate()
-
 
     // Not finished
     public void checkLanguage() {
@@ -259,9 +258,9 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public void onResume() {
         super.onResume();
-        if (adView != null) {
-            adView.resume();
-        }
+
+        if (adView != null) {adView.resume();}
+
         setCurrencyBoxes();
         checkLanguage();
     }
@@ -443,41 +442,15 @@ public class MainActivity extends ActionBarActivity {
         double cent1 = toInt(cent1Amt) * 0.01;
         double total = 0;
 
-        double total_numb = note100000
-                + note200000
-                + note50000
-                + note20000
-                + note10000
-                + note5000
-                + note2000
-                + note1000
-                + note500
-                + note200
-                + note100
-                + note50
-                + note20
-                + note10
-                + note5
-                + note1
-                + euro2
-                + euro1
-                + cent50
-                + cent25
-                + cent20
-                + cent10
-                + cent5
-                + cent2
-                + cent1
-                + toInt(additionalCoins);
+        double total_numb = note100000 + note200000 + note50000 + note20000 + note10000 + note5000 + note2000 + note1000 + note500 + note200 + note100 + note50
+                + note20 + note10 + note5 + note1 + euro2 + euro1 + cent50 + cent25 + cent20 + cent10 + cent5 + cent2 + cent1 + toInt(additionalCoins);
 
         DecimalFormat formatter = new DecimalFormat("#,###.00");
         setTotal(formatter.format(total_numb));
 
         if (toDouble(getTotal()) < 0.01) {overlay.setVisibility(TextView.GONE);}
-        else {
-            overlay.setText(getTotal());
-            overlay.setVisibility(TextView.VISIBLE);
-        }
+        else {overlay.setText(getTotal());overlay.setVisibility(TextView.VISIBLE);}
+
         return total;
     }
 

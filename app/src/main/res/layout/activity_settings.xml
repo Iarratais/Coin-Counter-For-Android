@@ -57,7 +57,7 @@
                     android:clickable="false"
                     android:textSize="12dp"
                     />
-
+<!--
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
@@ -79,7 +79,6 @@
                     android:layout_gravity="right"
                     android:textSize="12dp" />
 
-                <!--
                 <Switch
                     android:layout_width="match_parent"
                     android:layout_height="60dp"

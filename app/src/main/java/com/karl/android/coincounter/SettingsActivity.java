@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.media.audiofx.BassBoost;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,7 +31,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     // Location and Currency settings
     public Button btncurr;
-    public Button btnlangSel;
+    //public Button btnlangSel;
 
     // About
     public Button btnHowTo;
@@ -49,7 +50,7 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        checkLanguage();
+        //checkLanguage();
 
         setContentView(R.layout.activity_settings);
 
@@ -60,7 +61,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Initialise the buttons for "location and currency"
         btncurr = (Button) findViewById(R.id.button2);
-        btnlangSel = (Button) findViewById(R.id.button3);
+        //btnlangSel = (Button) findViewById(R.id.button3);
         //includeLocation = (Switch) findViewById(R.id.Location);
 
         btncurr.setText(getCurrency());
@@ -72,14 +73,15 @@ public class SettingsActivity extends AppCompatActivity {
                         changeCurrency();
                     }
                 });
-        btnlangSel.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeLanguage();
-                    }
-                }
-        );
+        //btnlangSel.setOnClickListener(
+        //        new View.OnClickListener() {
+        //            @Override
+        //    public void onClick(View v) {
+        //                // Method not finished yet
+        //                changeLanguage();
+        //            }
+        //        }
+        //);
 
         // Temporarily disabled, not a valid option for the time being.
         /*includeLocation.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -164,7 +166,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         myDB = new MySQLiteHelper(this);
 
-        btnlangSel.setText(getLanguage());
+        //btnlangSel.setText(getLanguage());
     }
 
     /*
@@ -239,7 +241,7 @@ public class SettingsActivity extends AppCompatActivity {
         editor.putString("language", language);
         editor.apply();
 
-        btnlangSel.setText(getLanguage());
+        //btnlangSel.setText(getLanguage());
     }
 
     public String getLanguage() {
