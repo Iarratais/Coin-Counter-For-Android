@@ -42,11 +42,11 @@ public class ShowSaves extends ActionBarActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.app_name);
 
-        LinearLayout ll = (LinearLayout) findViewById(R.id.llo2);
         myDB = new MySQLiteHelper(this);
 
         viewAll();
 
+        LinearLayout ll = (LinearLayout) findViewById(R.id.llo2);
         ContextThemeWrapper newContext = new ContextThemeWrapper(getBaseContext(), R.style.FancyText);
 
         for (int i = displays.size() - 1 ; i >= 0 ; i--) {
@@ -55,6 +55,13 @@ public class ShowSaves extends ActionBarActivity {
             b.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             b.setId(i);
             b.setTag(i);
+            final int j = i;
+            b.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    myDB.deleteData(toStringFromInt(j));
+                }
+            });
             ll.addView(b);
         }
 
@@ -127,10 +134,13 @@ public class ShowSaves extends ActionBarActivity {
         return Integer.parseInt(number);
     }
 
+    public String toStringFromInt(int i) {return Integer.toString(i);}
+
     public Cursor res;
     public ArrayList<StringBuffer> displays;
 
     public void viewAll() {
+
         displays = new ArrayList<>();
         res = myDB.getAllData();
         if(res.getCount() == 0) {
@@ -143,10 +153,10 @@ public class ShowSaves extends ActionBarActivity {
             StringBuffer buffer = new StringBuffer();
             buffer.append(
                     res.getString(2) + "\n"
-                    + res.getString(3) + "\n"
-                    + res.getString(1) + "\n"
-                    + getResources().getString(R.string.save_id) + " " + res.getString(0) + "\n"
-                    + res.getString(4) + "\n\n");
+                            + res.getString(3) + "\n"
+                            + res.getString(1) + "\n"
+                            + getString(R.string.save_id) + " " + res.getString(0) + "\n"
+                            + res.getString(4) + "\n\n");
             displays.add(buffer);
         }
     }

@@ -72,7 +72,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
     // Clear all entries from the database
     public void deleteAll() {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("delete from " + TABLE_NAME);
+        db.execSQL("DELETE FROM " + TABLE_NAME);
     }
 
     public Cursor searchData(String search){
