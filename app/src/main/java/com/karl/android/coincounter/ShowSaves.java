@@ -209,6 +209,7 @@ public class ShowSaves extends ActionBarActivity {
                             }
                         }).create().show();
                 break;
+
             // Temporarily removed, this needs work.
             /*case R.id.action_search:
                 if(calendar.getVisibility() == View.GONE) {

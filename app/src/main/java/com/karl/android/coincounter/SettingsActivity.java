@@ -50,13 +50,15 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //checkLanguage();
-
         setContentView(R.layout.activity_settings);
 
         Toolbar toolbar    = (Toolbar) findViewById (R.id.tool_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(R.string.action_settings);
+        try {
+            getSupportActionBar().setTitle(R.string.action_settings);
+        } catch (NullPointerException e) {
+            throw new NullPointerException("Error setting up action bar: " + e);
+        }
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Initialise the buttons for "location and currency"
@@ -169,15 +171,6 @@ public class SettingsActivity extends AppCompatActivity {
         //btnlangSel.setText(getLanguage());
     }
 
-    /*
-    public void includeLocationOn() {
-        Toast.makeText(SettingsActivity.this, "includeLocationOn", Toast.LENGTH_SHORT).show();
-    }
-
-    public void includeLocationOff() {
-        Toast.makeText(SettingsActivity.this, "includeLocationOff", Toast.LENGTH_SHORT).show();
-    } */
-
     @Override
     public void onDestroy() {
         finish();
@@ -211,28 +204,6 @@ public class SettingsActivity extends AppCompatActivity {
                 })
                 .show();
 
-        checkLanguage();
-    }
-
-    public void checkLanguage() {
-        // Set the locale to the device locale so that if it is not set by the user, it goes into the default language that the device is in
-        Configuration config = new Configuration();
-
-        // Check what language the user has asked for, and set the current language to the one that the user has asked for
-        if(getLanguage().equals(getString(R.string.english))) {config.locale = new Locale("en_GB");}
-        else if (getLanguage().equals(getString(R.string.bulgarian))) {config.locale = new Locale("bg_BG");}
-        else if (getLanguage().equals(getString(R.string.czech))) {config.locale = new Locale("cs_CZ");}
-        else if (getLanguage().equals(getString(R.string.danish))) {config.locale = new Locale("da_DK");}
-        else {config.locale = Locale.getDefault();}
-
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        res.updateConfiguration(config, dm);
-
-        System.out.println("SettingsActivity: checkLanguage(): " + getLanguage());
-
-        Locale current = getResources().getConfiguration().locale;
-        System.out.println("Current locale: " + current);
     }
 
     public void saveLanguage(String language) {
@@ -357,11 +328,26 @@ public class SettingsActivity extends AppCompatActivity {
 
     }
     public void rateApplication() {
-        try {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + this.getPackageName())));
-        } catch (Exception e) {
-            Toast.makeText(SettingsActivity.this, R.string.common_google_play_services_network_error_text, Toast.LENGTH_SHORT).show();
-        }
+        final String package_name = this.getPackageName();
+        new AlertDialog.Builder(this)
+                .setMessage(getString(R.string.you_are_exiting_the_application))
+                .setTitle("")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        try {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + package_name)));
+                        } catch (Exception e) {
+                            Toast.makeText(SettingsActivity.this, R.string.common_google_play_services_network_error_text, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                })
+                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).show();
     }
 
     public void clearAllData() {

@@ -15,7 +15,6 @@ import android.os.Build;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 
 import android.text.TextWatcher;
@@ -89,8 +88,6 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // checkLanguage();
 
         setContentView(R.layout.activity_main);
 
@@ -213,24 +210,6 @@ public class MainActivity extends ActionBarActivity {
         setCurrencyBoxes();
     } // End onCreate()
 
-    // Not finished
-    public void checkLanguage() {
-        Locale locale = Locale.getDefault();
-
-        // Check what language the user has asked for, and set the current language to the one that the user has asked for
-        if(getLanguage().equals(getString(R.string.english))) {locale = new Locale("en_GB");}
-        else if (getLanguage().equals(getString(R.string.bulgarian))) {locale = new Locale("bg_BG");}
-        else if (getLanguage().equals(getString(R.string.czech))) {locale = new Locale("cs_CZ");}
-        else if (getLanguage().equals(getString(R.string.danish))) {locale = new Locale("da_DK");}
-
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        this.getApplicationContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-
-        System.out.println("MainActivity: checkLanguage() output: " + getLanguage());
-    }
-
     public void AddData() {
         boolean isEmpty = checkIfEmpty();
         if (!isEmpty) {
@@ -262,7 +241,6 @@ public class MainActivity extends ActionBarActivity {
         if (adView != null) {adView.resume();}
 
         setCurrencyBoxes();
-        checkLanguage();
     }
 
     @Override
@@ -465,14 +443,6 @@ public class MainActivity extends ActionBarActivity {
 
     public static String getTotal() {return total;}
 
-    public String getLanguage() {
-        SharedPreferences lang = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-        String language = "";
-        language = lang.getString("language", language);
-        if (language.equals("")) {language = getString(R.string.english);}
-        return language;
-    }
-
     // ---------------- CURRENCY METHODS --------------------------------------------
     // Speaks the total when clicked.
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -507,7 +477,7 @@ public class MainActivity extends ActionBarActivity {
         String CHF = "0\t0\t0\t0\t0\t0\t0\t1\t0\t1\t1\t1\t1\t1\t1\t0\t1\t1\t1\t1\t0\t1\t1\t0\t1\n".replaceAll("[^0-9]", "");
         String CZK = "0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t1\t0\t1\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
         String DKK = "0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
-        String EUR = "0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
+        String EUR = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
         String GBP = "0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t1\t1\t1\n".replaceAll("[^0-9]", "");
         String HKD = "0\t0\t0\t0\t0\t0\t0\t1\t1\t0\t1\t1\t1\t1\t1\t0\t1\t1\t1\t0\t1\t1\t0\t0\t0\n".replaceAll("[^0-9]", "");
         String ILS = "0\t0\t0\t0\t0\t0\t0\t0\t0\t1\t1\t1\t1\t1\t1\t0\t1\t1\t0\t0\t0\t0\t0\t0\t0\n".replaceAll("[^0-9]", "");
@@ -873,7 +843,7 @@ public class MainActivity extends ActionBarActivity {
                 note200Amt = note200edit.getText().toString();
                 calcTotal();
             }
-            if (note2000edit.getText().toString().equals("")) {
+            if (note200edit.getText().toString().equals("")) {
                 note200Amt = "0";
                 calcTotal();
             }

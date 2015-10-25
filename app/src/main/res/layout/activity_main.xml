@@ -552,7 +552,7 @@
                     android:paddingTop="20dp"
                     android:paddingBottom="20dp"
                     android:id="@+id/extraAdditions"
-                    android:hint="@string/extraAdditionsedit"
+                    android:hint="@string/additions"
                     android:inputType="number"
                     />
             </android.support.design.widget.TextInputLayout>
