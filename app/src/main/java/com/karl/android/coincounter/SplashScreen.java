@@ -31,7 +31,7 @@ public class SplashScreen extends Activity {
             // This method is run after the timer has expired
             @Override
             public void run() {
-                Intent i = new Intent(SplashScreen.this, MainActivity.class);
+                Intent i = new Intent(SplashScreen.this, MainActivityNew.class);
                 startActivity(i);
 
                 overridePendingTransition(R.anim.abc_slide_in_top, R.anim.abc_slide_out_bottom);

@@ -171,4 +171,5 @@
     <string name="enter_id_for_deletion">Please enter the ID of the entry you would like to delete</string>
     <string name="title_activity_splash_screen" translatable="false">SplashScreen</string>
     <string name="title_activity_search_results" translatable="false">SearchResults</string>
+    <string name="title_activity_main_activity_new" translatable="false">MainActivityNew</string>
 </resources>
