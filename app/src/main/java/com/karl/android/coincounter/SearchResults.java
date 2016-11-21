@@ -2,8 +2,8 @@ package com.karl.android.coincounter;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.ContextThemeWrapper;
 import android.view.ViewGroup;
@@ -12,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import data.sql.MySQLiteHelper;
 
 public class SearchResults extends AppCompatActivity {
 

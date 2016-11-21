@@ -1,10 +1,11 @@
 package com.karl.android.coincounter;
 
-import android.os.Build;
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.RequiresApi;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -13,6 +14,7 @@ public class SplashScreen extends Activity {
     // Splash screen timer, shows 2.5 seconds
     private static int SPLASH_TIME_OUT = 2500;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +33,7 @@ public class SplashScreen extends Activity {
             // This method is run after the timer has expired
             @Override
             public void run() {
-                Intent i = new Intent(SplashScreen.this, MainActivityNew.class);
+                Intent i = new Intent(SplashScreen.this, MainActivity.class);
                 startActivity(i);
 
                 overridePendingTransition(R.anim.abc_slide_in_top, R.anim.abc_slide_out_bottom);

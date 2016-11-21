@@ -2,214 +2,652 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-c01393b49082515f2d8835bded10d6336aa00ddf.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="4438b1a7848a7c571122ba618aa1304514aabee6">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.8.0_8cb1729b26f66767455e8e554d519278bd040f5e\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="b99f0b78bbcb76b915bc6529a83b65d4d46990dd">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-bfee58688773c1eedccaa54c5a94f4b31874b51f.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.1_31ebbf2681783f290cbe630f8ee079eb29d947df\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="c2ac04c5b232f6f0658ee4f1c13be09cd76406e2">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-3b28c6a45771a3bf3ca0ce22b16e1ba06eac6a86.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9ff04cc3470178a44512624036751a803418c2ca">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.8.0_d025aef61523548b386ab8da59140bb3f6c058a9\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="0124ce31248c0e8acfa2b28283c6d1a4d76e73d2">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-d849bc4ac251a08efeb98b7f73422aa9e1fe49fd.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AppData\Local\Android\sdk2\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.1_94fb6194732e36d68add837366ef4361a632ae41\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="e23ea11124bb700eeddd4ab7aa848c615f493850">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-78f93db8f29f14fb64badcb7af1fa8ba61a9e75d.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f2d240dd085626f03f759c41d628a0c8b63e491f">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.8.0_fb8a9ff903bf640232a12e7cf63cabb9a9df6258\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="166e458ee3b5fb5fcff0f936df3f3a788e6c54f3">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-9f65bdf649f02fadbd00266bd6cb47ca93edbd67.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="055eed08c9cff50cac0db69c74c4d9ff7aef3d84">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-framework-9.8.0_102e76891ee09e1efc66765788d7f1fd89699adf\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-352bbd7b5c3e44969cd27ebb29fc165469c5b2a7.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="20a3c4e355150c15c13dd58045d43ad0c717d916">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-9.8.0_2c40361da44504025b433fc4b3bd4eabcc9a36ad\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="adebe28e0c0c05d34a3bfd76f3275bf4d8ff87b6">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-13cd5787c51c3f1e5ada561bdc0df167f6924017.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0b8e087da59c0b062c33f49a335e59f907086da2">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.8.0_9dd0729c9ca4cc3a054d6fea2697fcdf7c2d3df8\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="1ccbc26be2c465c622a48310e8092241b01abe80">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-44cdb358e886a565fb2b6bf0d7e3fe4147f01c62.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.8.0_b77f05fce07f887e39ca60222bd5ecc08e90bdbe\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AppData\Local\Android\sdk2\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\support-annotations-23.0.0-b398660bd57b241edecc89b76f2743ef9654a7b1.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="00d358528c5a8731a6e19bca910cbb3fd755ee31">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-instantapps-9.8.0_904d8d758b5e76a06dfda475357c4346b01070e5\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="4a135d56554069e5d0ff80e3220e887e57146ee5">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-af2bdf44aba98d44eb539cfeed99d2dd9aacc240.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.8.0_5d3face0abed66b46e3154c1440df8311cdc64db\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\design\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8a5238e4bdcd6568b82db669d41817de670586b8">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-a753c02ff57b52f0f5dc1206316a8ddbd808180f.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b4671be3d1288bf4e5f527cd33e42909fbe4ecc6">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-crash-9.8.0_40444f5bdcbca7e400211779eb361858e924f6e8\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="6e85edfc9b5346d216e50ccef1f8e825504144a3">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-51ed4d609525e4a244db159b42164a4e4eae8b9f.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3daa7a9c9009fd386872a84c177a76979bdcafd6">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-9.8.0_f575087d1ad6487a2f9e0252757a4e0e8137385d\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="cb6fab7a71fa9ec1f483d44c5fca65ab469d8aca">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-aaffe92d38f402178f0669555bbeccbb89cf8e90.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-24.0.0_ba62a942c25e02166b1e3cf628486e14fa03c33a\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="edea92852b40eee716e910af8dad9eeaa58fb0e1">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-95e0f043b401f8ee47b5cc8ed5835d43ad8c3ff3.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.0.1_55c6e9fb4ebb5e829d4a04bd510d532a7c1e890b\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-e654ecd36ab734fb722307ae05b12e1f59f96ceb.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.8.0_847563912ecb7570c92a0b636472a2456d15c986\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="40e7757d9b06db670062ddb3cf5b30c129b2fd8c">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-606ae3e8fcb955d840fe1fc39ec02ed103436f4f.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.1_42f93f924d5c565a409d04ca39ca7e45ec7be9fd\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\internal_impl-23.0.0-01e6b4b0009b73f75ec514f270f2e41acb8fc1ee.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="910c013c511f752c4bbe24c5f492f669f4a3ccc0">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-9.8.0_e7845ccaa86aa08e9948a20b646fa1983af43426\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="2e24e5f1b11170163028277de63f709e42525db4">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-fd1a5b3ae2fb8ed262380201403ae8768db52486.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ca851be26ff89f5b32cc222cee98139fb3fac830">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-9.8.0_1d96bd5cc22324cffd57da1c44c6b97e0df44ba0\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="77a9dcb5f8b1dba36aacaa9c150eb0942dbea158">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-451b72a6e9d7871d255f34ef1c7a0f844dc2f517.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.8.0_ea7faef85d01da76097a03f2dc783f54cd7a5471\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="98137c4d12c50923f5809852b1ef4d1c4e162081">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-f143826d61dc8266c59be4e08d9356c40086c465.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.8.0_fcb4fe552e6c98cce66f749890bd9a8055c9e914\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="d11330ea68c0d964d30d5caed1f27e6b1488b189">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-d735cfe1d920c6b67a66e3688c43cf40dbce3ae7.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.1_336831b0ecd358792ecdf13cd1553565bf2aceb6\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="42a1ee578b62fd1bd28b3307a679dc9ba0791587">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-0f6c0472146a676c274d48183d49bdd3f32e4ff4.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-9.8.0_4b6bdaf5cc66e11907f1957a0113e5d50eb5801b\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-192b6f04766f6c76b7395b9830ada1efb400dd8d.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="679251204de40ace98776a6f4e3a649c27e3d89f">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-places-9.8.0_d2893146150d72b23916cd61c0586d9a0e69b883\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="1ff30fa49c07a08c3035d7218a3efebf5680d522">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-e5dc6a2b023bdab7c07db4772a071fcebbb6621b.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_27d658f5fae9b97b648b10ae4c49f46695a32717\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="c5cafb324568d954780abb858c25db7ce675ab3c">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-8b1637f38274dfcbd45d14127f790ff7516c4a89.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\design\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.0.1_8c69296402a05d89f6626990d8cf5dace222f05d\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="130b32ed466fa0f63efd4c7d6250ccd2ed506790">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-fd1e11dfe1820756922e9e6b794e81f7bb156bac.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="363a20f1d25336e827dd24020f2ecdc42d62638f">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-9.8.0_4205f15ee462401190e9ed4f06c4719ae5ee7bb2\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\internal_impl-22.2.0-92ba452a22e0c51c74f976681bade56c41c90547.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.1_39962e74953316e8bad69cc5e8ce8c83a57a0434\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-ed1839fa6c667f7c316000734f646367e91363f0.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e56f31b23ddb067f95f01255295167db7c798612">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-9.8.0_83ccb1852996196adc61706dbb7d887b2cd1ce25\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
-        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCounter\app\build\intermediates\pre-dexed\release\classes-f1565d310754b771569995789fc890f92fd10b24.jar" />
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_c5caff8cd5a279b2b465fbe661a97e8d10e6bebf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a30aea7df545072ad3c06f56b2efc13e67222140">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-9.8.0_d83ed88ceb0fcec4cc838b878f1979040e9a188e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_f63345e5c61433db1df125d87cfa95593da61baa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9dae58326f6f6a515022468cce56dd04ec3b9fdb">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-9.8.0_ccf08dc0f83132d86b8cd8f45131ca493d8e8d14\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_40817f00e9d14ecaef356f3dad050602b7fd6f9c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="266570862e5792ef3c51143a8b8593cf54fac68d">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-9.8.0_10bbdbf7a5d70cccb4701dc76e074b3454519df3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.1_57043acae29dab591f1cd6d31d28910c329a3d64\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="74ac7cbcf0de4a88e59612dc3a9e3f9e71acb4ca">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-9.8.0_08725e735359d2910b6875b8ee20cfd592a777f5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a7a04d6b7c01e569a285fa627cf64f5b05295906">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-9.8.0_80a0cf781d58d4c7174fe7a34857c8530dcfb341\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.1_635becf8b1c2a1f3f1a6970079c2aff0abbd83a6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3f8f779a22cbb4c4d0759467a4f1011bb5252970">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.8.0_d1a5163fc76921e75d41dcef9faf7774b910e6ea\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ec9104b53aee77dfcfd2fe1c4add23ff7c4df55f">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-9.8.0_f6664cfe502913eb642591a8c7e841178deb1059\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7fd91ec2730fdaa82906aad32a3f3d3e574bae56">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-9.8.0_143e3c570db6e9dd9da77d22855dff0bbf3ebf0c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.0.1_b6d88683bab7f516bb1af4921cafa44e8a4cb4fe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="353abc12d13753f478dec8b61facf59403eb8bc8">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_ad12b82226f71459c33504efab5d9027aa244873\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ee5304fd374e0b4ebf6b42d4037fbfb2c5336511">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-9.8.0_dcfa45f226e771a2cf75f40e6d3f097dc7429a6d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="289cad663c288ce965463cb9ece8b35cc7de0fac">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-9.8.0_c6d334737106fef0dbdd2c0497c277d8cd803fd1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="cef85cfc7df40e29fbea58844dd4c1e7d0b15542">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.8.0_3dc2d23d7f4eb8d26d1aaec8031b444efa62690b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a1ed98e01bd58976d80c062fd0ea2968a1ff68a1">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.8.0_bf02fcab27e7259b1cd00a74e9a0657910994d6c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2d3035050a075484cbf2e33f1ce1f779bae4d451">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-9.8.0_187d7abcaf7c1a90c5dea76bd438283358fb92e7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0b53c4b90654b67ee3892a8e2e7b819c083ab7a6">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-9.8.0_67649f48ade17bee3d7517935d3d750699609dba\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a2537b11ae24b42172d34e2a613fc0b903c56158">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-awareness-9.8.0_04728dfc943b569f345a1cbaaf7ab8a25cad406a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.8.0_581cabdb0cdac1012c7b07055c05692b3885ce77\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_d3589ea75319945e2525d2ec3006f72566914978\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c81df6bd515398ebe45089b0b16c55752a131f6a">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-9.8.0_de29b90b77dad5e29a6b9b01fc500cf99e1bb5c2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="190a642ba16d1421296a4d794606279b80039c59">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.8.0_cc7a51b789cb4502a1befa1c462eaab402d131f8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-9.8.0_6a5e1ca6aabfe042709de0b2e2369dbc767a4d68\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.1_c55264b79a5bf2fe62e8d39b577c97787b6f53e0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a972970c8beddb69c198f61f3fc55f0606a7dfe3">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-9.8.0_18d9d24f1d51a1b5436449c4a6650597b6f2a832\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_b5919d639ff527978d6351249eb5565a6bb73969\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5ffe8867f51cfc726e9fb21db1e5b6962ebf25a0">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-9.8.0_33e77b835dbc3679ab2100569e5bd4508e1a817a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.1_e7182319be00f48e6dfddebdef81e360f9e92e4a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="50e35ae101a679c4c8ef3dda075b1df9d5d947d9">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-9.8.0_f6f4e5d1810702000f91a831005877c91f228809\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.8.0_fafc053dda89a74f300d68f222f7d35cb726e2e1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="16afe57c1d7f8165d107c7806ce7b0c71de87159">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-9.8.0_229897847f8ef9b2b05ec23bfd98ced55e523525\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.1_c5ffb6439822831163231b7f47bf77787c7867cd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-9.8.0_f18202008b8390fec2b177a38bc9d0ab5d48b68b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="15e59454416c6341bd3ed2533b585cd340682dd1">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.8.0_38f59cd41bf54833d8ebdc8260901e2855cb016e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e9b2cfdfd59b03643f1e240668275378b96615a8">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-9.8.0_26bb4c5bdea12c5948b7a2278782a1f7aedad4da\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_b38cdb25f6144c487d0f152047e17b065f32c97c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbb3885c40e431cd2b0dc69c0cab2bf6d5da7b43">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-9.8.0_e33c1645e876bec7414aea53d6d395ab1eea382a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.8.0_011ce30731cafb652bbe811a3be86ee82dccb3ad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ce1afc2c36fb48983cbb029e7087a0ac296bb54d">
+        <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_4c1ec69ceae7d8df3b3533c3045d97242c763993\classes.dex" />
     </item>
 
 </items>

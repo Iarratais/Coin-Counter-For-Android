@@ -6,8 +6,8 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
@@ -23,6 +23,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import data.sql.MySQLiteHelper;
 
 
 public class ShowSaves extends ActionBarActivity {
@@ -89,7 +91,7 @@ public class ShowSaves extends ActionBarActivity {
     }
 
     public void goToCount() {
-        Intent intent = new Intent(ShowSaves.this, MainActivity.class);
+        Intent intent = new Intent(ShowSaves.this, OldMainActivity.class);
         startActivity(intent);
         finish();
         overridePendingTransition(R.anim.abc_grow_fade_in_from_bottom, R.anim.abc_shrink_fade_out_from_bottom);
@@ -145,7 +147,7 @@ public class ShowSaves extends ActionBarActivity {
         res = myDB.getAllData();
         if(res.getCount() == 0) {
             Toast.makeText(ShowSaves.this, "No saves found", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(ShowSaves.this, MainActivity.class);
+            Intent intent = new Intent(ShowSaves.this, OldMainActivity.class);
             startActivity(intent);
 
         }

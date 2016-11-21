@@ -3,28 +3,19 @@ package com.karl.android.coincounter;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.media.audiofx.BassBoost;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
-import android.util.DisplayMetrics;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.Switch;
-
 import android.widget.Toast;
+
 import java.util.Arrays;
-import java.util.Locale;
+
+import data.sql.MySQLiteHelper;
 
 
 public class SettingsActivity extends AppCompatActivity {
@@ -180,13 +171,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     public void changeLanguage() {
         final String[] languages = {
-                getString(R.string.english), getString(R.string.bulgarian), getString(R.string.czech), getString(R.string.danish), getString(R.string.german), getString(R.string.greek),
-                getString(R.string.spanish), getString(R.string.estonian), getString(R.string.finnish), getString(R.string.french), getString(R.string.hebrew), getString(R.string.croatian),
-                getString(R.string.hungarian), getString(R.string.lithuanian), getString(R.string.latvian), getString(R.string.maltese), getString(R.string.dutch), getString(R.string.polish),
-                getString(R.string.portuguese), getString(R.string.romanian), getString(R.string.russian), getString(R.string.slovak), getString(R.string.slovienian), getString(R.string.swedish),
-                getString(R.string.ukrainian), getString(R.string.italian), getString(R.string.icelandic), getString(R.string.belarusian), getString(R.string.bosnian), getString(R.string.japanese),
-                getString(R.string.korean), getString(R.string.norwegian), getString(R.string.turkish), getString(R.string.albanian), getString(R.string.serbian), getString(R.string.chinese_simplified),
-                getString(R.string.thai), getString(R.string.catalan), getString(R.string.afrikaans), getString(R.string.basque), getString(R.string.filipino), getString(R.string.detect_device_language)
+                "No languages anymore"
         };
         Arrays.sort(languages);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -338,7 +323,7 @@ public class SettingsActivity extends AppCompatActivity {
                         try {
                             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + package_name)));
                         } catch (Exception e) {
-                            Toast.makeText(SettingsActivity.this, R.string.common_google_play_services_network_error_text, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SettingsActivity.this, "Could not coneect to play store", Toast.LENGTH_SHORT).show();
                         }
                     }
                 })
