@@ -12,3 +12,5 @@
 * Nav header height is 100 down from 160
 + Added navigation drawer icons
 + Added MyGroupingsFragment
++ Denominations are now saved into the database
++ Added settings activity 

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.karl.android.coincounter.R;
 
@@ -17,6 +18,8 @@ public class MySavesFragment extends Fragment {
 
     View rootView;
 
+    ListView savesList;
+
     public MySavesFragment() {
         // Required empty public constructor
     }
@@ -27,7 +30,16 @@ public class MySavesFragment extends Fragment {
 
         rootView = inflater.inflate(R.layout.fragment_my_saves, container, false);
 
+        // initialise the views of the fragment.
+        initialiseViews();
+
         return rootView;
     }
 
+    /**
+     * Initialise the views for the fragment.
+     */
+    private void initialiseViews(){
+        savesList = (ListView) rootView.findViewById(R.id.my_saves_fragment_list_view);
+    }
 }

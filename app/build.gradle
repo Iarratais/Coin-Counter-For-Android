@@ -10,6 +10,7 @@ android {
         targetSdkVersion 25
         versionCode 15
         versionName "${versionCode}." + getDate();
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -43,4 +44,5 @@ dependencies {
     compile "com.google.android.gms:play-services:${playServiceVersion}"
     compile "com.android.support:support-v4:${supportLibVersion}"
     compile 'com.android.support:support-v4:25.0.1'
+    compile 'com.android.support:support-vector-drawable:25.0.1'
 }

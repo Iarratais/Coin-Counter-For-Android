@@ -1,366 +1,267 @@
 package com.karl.android.coincounter;
 
-import android.app.AlertDialog;
+
+import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+import android.preference.ListPreference;
+import android.preference.Preference;
+import android.preference.PreferenceActivity;
+import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
+import android.preference.RingtonePreference;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
+import android.text.TextUtils;
+import android.view.MenuItem;
 
-import java.util.Arrays;
+import java.util.List;
 
-import data.sql.MySQLiteHelper;
+/**
+ * A {@link PreferenceActivity} that presents a set of application settings. On
+ * handset devices, settings are presented as a single list. On tablets,
+ * settings are split by category, with category headers shown to the left of
+ * the list of settings.
+ * <p>
+ * See <a href="http://developer.android.com/design/patterns/settings.html">
+ * Android Design: Settings</a> for design guidelines and the <a
+ * href="http://developer.android.com/guide/topics/ui/settings.html">Settings
+ * API Guide</a> for more information on developing a Settings UI.
+ */
+public class SettingsActivity extends AppCompatPreferenceActivity {
+    /**
+     * A preference value change listener that updates the preference's summary
+     * to reflect its new value.
+     */
+    private static Preference.OnPreferenceChangeListener sBindPreferenceSummaryToValueListener = new Preference.OnPreferenceChangeListener() {
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object value) {
+            String stringValue = value.toString();
 
+            if (preference instanceof ListPreference) {
+                // For list preferences, look up the correct display value in
+                // the preference's 'entries' list.
+                ListPreference listPreference = (ListPreference) preference;
+                int index = listPreference.findIndexOfValue(stringValue);
 
-public class SettingsActivity extends AppCompatActivity {
+                // Set the summary to reflect the new value.
+                preference.setSummary(
+                        index >= 0
+                                ? listPreference.getEntries()[index]
+                                : null);
 
-    // Location and Currency settings
-    public Button btncurr;
-    //public Button btnlangSel;
+            } else if (preference instanceof RingtonePreference) {
+                // For ringtone preferences, look up the correct display value
+                // using RingtoneManager.
+                if (TextUtils.isEmpty(stringValue)) {
+                    // Empty values correspond to 'silent' (no ringtone).
+                    preference.setSummary(R.string.pref_ringtone_silent);
 
-    // About
-    public Button btnHowTo;
-    public Button btnAbout;
-    public Button btnSendFeedback;
-    public Button btnRate;
-    public Button btnFacebook;
-    public Button btnWordpress;
+                } else {
+                    Ringtone ringtone = RingtoneManager.getRingtone(
+                            preference.getContext(), Uri.parse(stringValue));
 
-    // Danger Zone
-    public Button btnClearAllData;
+                    if (ringtone == null) {
+                        // Clear the summary if there was a lookup error.
+                        preference.setSummary(null);
+                    } else {
+                        // Set the summary to reflect the new ringtone display
+                        // name.
+                        String name = ringtone.getTitle(preference.getContext());
+                        preference.setSummary(name);
+                    }
+                }
 
-    MySQLiteHelper myDB;
+            } else {
+                // For all other preferences, set the summary to the value's
+                // simple string representation.
+                preference.setSummary(stringValue);
+            }
+            return true;
+        }
+    };
+
+    /**
+     * Helper method to determine if the device has an extra-large screen. For
+     * example, 10" tablets are extra-large.
+     */
+    private static boolean isXLargeTablet(Context context) {
+        return (context.getResources().getConfiguration().screenLayout
+                & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_XLARGE;
+    }
+
+    /**
+     * Binds a preference's summary to its value. More specifically, when the
+     * preference's value is changed, its summary (line of text below the
+     * preference title) is updated to reflect the value. The summary is also
+     * immediately updated upon calling this method. The exact display format is
+     * dependent on the type of preference.
+     *
+     * @see #sBindPreferenceSummaryToValueListener
+     */
+    private static void bindPreferenceSummaryToValue(Preference preference) {
+        // Set the listener to watch for value changes.
+        preference.setOnPreferenceChangeListener(sBindPreferenceSummaryToValueListener);
+
+        // Trigger the listener immediately with the preference's
+        // current value.
+        sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
+                PreferenceManager
+                        .getDefaultSharedPreferences(preference.getContext())
+                        .getString(preference.getKey(), ""));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setupActionBar();
+    }
 
-        setContentView(R.layout.activity_settings);
-
-        Toolbar toolbar    = (Toolbar) findViewById (R.id.tool_bar);
-        setSupportActionBar(toolbar);
-        try {
-            getSupportActionBar().setTitle(R.string.action_settings);
-        } catch (NullPointerException e) {
-            throw new NullPointerException("Error setting up action bar: " + e);
+    /**
+     * Set up the {@link android.app.ActionBar}, if the API is available.
+     */
+    private void setupActionBar() {
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            // Show the Up button in the action bar.
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // Initialise the buttons for "location and currency"
-        btncurr = (Button) findViewById(R.id.button2);
-        //btnlangSel = (Button) findViewById(R.id.button3);
-        //includeLocation = (Switch) findViewById(R.id.Location);
-
-        btncurr.setText(getCurrency());
-
-        btncurr.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeCurrency();
-                    }
-                });
-        //btnlangSel.setOnClickListener(
-        //        new View.OnClickListener() {
-        //            @Override
-        //    public void onClick(View v) {
-        //                // Method not finished yet
-        //                changeLanguage();
-        //            }
-        //        }
-        //);
-
-        // Temporarily disabled, not a valid option for the time being.
-        /*includeLocation.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked) {
-                    includeLocationOn();
-                } else {
-                    includeLocationOff();
-                }
-            }
-        }); */
-
-        // Initialise buttons for "About"
-        btnHowTo = (Button) findViewById(R.id.button4);
-        btnAbout = (Button) findViewById(R.id.button5);
-        btnSendFeedback = (Button) findViewById(R.id.button6);
-        btnRate = (Button) findViewById(R.id.button8);
-        btnFacebook = (Button) findViewById(R.id.button9);
-        btnWordpress = (Button) findViewById(R.id.button10);
-
-        btnHowTo.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        howTo();
-                    }
-                }
-        );
-        btnAbout.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        about();
-                    }
-                }
-        );
-        btnSendFeedback.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        sendFeedback();
-                    }
-                }
-        );
-        btnRate.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        rateApplication();
-                    }
-                }
-        );
-        btnFacebook.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        goToFacebook();
-                    }
-                }
-        );
-        btnWordpress.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        goToWordpress();
-                    }
-                }
-        );
-
-        // Initialise buttons for "Danger Zone"
-        btnClearAllData = (Button) findViewById(R.id.button7);
-
-        btnClearAllData.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        clearAllData();
-                    }
-                }
-        );
-
-        myDB = new MySQLiteHelper(this);
-
-        //btnlangSel.setText(getLanguage());
     }
 
     @Override
-    public void onDestroy() {
-        finish();
-        overridePendingTransition(R.anim.slideout, R.anim.slidein);
-        super.onDestroy();
-    }
-
-    public void changeLanguage() {
-        final String[] languages = {
-                "No languages anymore"
-        };
-        Arrays.sort(languages);
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(getString(R.string.language_title))
-                .setItems(languages, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        saveLanguage(languages[which]);
-                        Toast.makeText(SettingsActivity.this, getString(R.string.language_title) + ": " + languages[which], Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // User has cancelled the action, returns to the previous screen
-                    }
-                })
-                .show();
-
-    }
-
-    public void saveLanguage(String language) {
-        SharedPreferences curr = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = curr.edit();
-        editor.putString("language", language);
-        editor.apply();
-
-        //btnlangSel.setText(getLanguage());
-    }
-
-    public String getLanguage() {
-        SharedPreferences lang = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-        String defaultValue = getString(R.string.english);
-        String language = "";
-        language = lang.getString("language", language);
-        if (language.equals("")) {
-            language = defaultValue;
+    public boolean onMenuItemSelected(int featureId, MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            if (!super.onMenuItemSelected(featureId, item)) {
+                NavUtils.navigateUpFromSameTask(this);
+            }
+            return true;
         }
-        return language;
+        return super.onMenuItemSelected(featureId, item);
     }
 
-    public void changeCurrency() {
-        final String[] currencies = {"EUR", "ISK", "RUB", "USD", "GBP", "JPY", "KRW", "BGN", "CAD", "NZD", "AUD", "DKK", "SEK",
-                "NOK", "RON", "CZK", "ARS", "BRL", "CHF", "ALL", "ILS", "HKD", "RSD", "BYR", "UAH", "IKR", "MNT", "KZT", "THB",
-                "ZAR", "PEN"};
-        Arrays.sort(currencies);
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.currency_title)
-                .setItems(currencies, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        saveCurrency(currencies[which]);
-                    }
-                })
-                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // User has cancelled the action, returns to the previous screen
-                    }
-                })
-                .show();
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean onIsMultiPane() {
+        return isXLargeTablet(this);
     }
 
-    public void saveCurrency(String currency) {
-        // Let the user know
-        showToast(getString(R.string.changed_curr) + " " + currency);
-
-        SharedPreferences curr = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = curr.edit();
-        editor.putString("currency", currency);
-        editor.apply();
-
-        btncurr.setText(getCurrency());
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public void onBuildHeaders(List<Header> target) {
+        loadHeadersFromResource(R.xml.pref_headers, target);
     }
 
-    public String getCurrency() {
-        SharedPreferences curr = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-        String defaultValue = "EUR";
-        String currency = "";
-        currency = curr.getString("currency", currency);
-        if (currency.equals("")) {
-            currency = defaultValue;
+    /**
+     * This method stops fragment injection in malicious applications.
+     * Make sure to deny any unknown fragments here.
+     */
+    protected boolean isValidFragment(String fragmentName) {
+        return PreferenceFragment.class.getName().equals(fragmentName)
+                || GeneralPreferenceFragment.class.getName().equals(fragmentName)
+                || DataSyncPreferenceFragment.class.getName().equals(fragmentName)
+                || NotificationPreferenceFragment.class.getName().equals(fragmentName);
+    }
+
+    /**
+     * This fragment shows general preferences only. It is used when the
+     * activity is showing a two-pane settings UI.
+     */
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public static class GeneralPreferenceFragment extends PreferenceFragment {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.pref_general);
+            setHasOptionsMenu(true);
+
+            // Bind the summaries of EditText/List/Dialog/Ringtone preferences
+            // to their values. When their values change, their summaries are
+            // updated to reflect the new value, per the Android Design
+            // guidelines.
+            bindPreferenceSummaryToValue(findPreference("example_text"));
+            bindPreferenceSummaryToValue(findPreference("example_list"));
         }
-        return currency;
-    }
 
-    public void about() {showMessage(getString(R.string.about_title), getString(R.string.description), true);}
-
-    public void howTo() {showMessage(getString(R.string.howto_title), getString(R.string.howto), true);}
-
-    public void sendFeedback() {
-        Intent i = new Intent(Intent.ACTION_SEND);
-        i.setType("message/rfc822");
-        i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"coincountr@gmail.com"});
-        i.putExtra(Intent.EXTRA_SUBJECT, "Coin Countr feedback");
-        try {
-            startActivity(Intent.createChooser(i, getString(R.string.choose_an_email_application)));
-        } catch (Exception e) {
-            Toast.makeText(SettingsActivity.this, R.string.no_email_clients_installed, Toast.LENGTH_SHORT).show();
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            int id = item.getItemId();
+            if (id == android.R.id.home) {
+                startActivity(new Intent(getActivity(), SettingsActivity.class));
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
         }
     }
 
-    public void goToFacebook() {
-        new AlertDialog.Builder(this)
-                .setMessage(R.string.you_are_exiting_the_application)
-                .setTitle("")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        try {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/CoinCountr")));
-                        } catch (Exception e) {
-                            Toast.makeText(SettingsActivity.this, R.string.error + " " + e, Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                })
-                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // User has cancelled the action, returns to the previous screen
-                    }
-                }).show();
+    /**
+     * This fragment shows notification preferences only. It is used when the
+     * activity is showing a two-pane settings UI.
+     */
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public static class NotificationPreferenceFragment extends PreferenceFragment {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.pref_notification);
+            setHasOptionsMenu(true);
+
+            // Bind the summaries of EditText/List/Dialog/Ringtone preferences
+            // to their values. When their values change, their summaries are
+            // updated to reflect the new value, per the Android Design
+            // guidelines.
+            bindPreferenceSummaryToValue(findPreference("notifications_new_message_ringtone"));
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            int id = item.getItemId();
+            if (id == android.R.id.home) {
+                startActivity(new Intent(getActivity(), SettingsActivity.class));
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
+        }
     }
 
-    public void goToWordpress() {
-        final String url = "https://goo.gl/ClW5em";
+    /**
+     * This fragment shows data and sync preferences only. It is used when the
+     * activity is showing a two-pane settings UI.
+     */
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public static class DataSyncPreferenceFragment extends PreferenceFragment {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.pref_data_sync);
+            setHasOptionsMenu(true);
 
-        new AlertDialog.Builder(this)
-                .setMessage(R.string.you_are_exiting_the_application)
-                .setTitle("")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        try {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-                        } catch (Exception e) {
-                            Toast.makeText(SettingsActivity.this, R.string.error + " " + e, Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                })
-                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // User has cancelled the action, returns to the previous screen
-                    }
-                }).show();
+            // Bind the summaries of EditText/List/Dialog/Ringtone preferences
+            // to their values. When their values change, their summaries are
+            // updated to reflect the new value, per the Android Design
+            // guidelines.
+            bindPreferenceSummaryToValue(findPreference("sync_frequency"));
+        }
 
-    }
-    public void rateApplication() {
-        final String package_name = this.getPackageName();
-        new AlertDialog.Builder(this)
-                .setMessage(getString(R.string.you_are_exiting_the_application))
-                .setTitle("")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        try {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + package_name)));
-                        } catch (Exception e) {
-                            Toast.makeText(SettingsActivity.this, "Could not coneect to play store", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                })
-                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                }).show();
-    }
-
-    public void clearAllData() {
-        new AlertDialog.Builder(this)
-                .setMessage(R.string.are_you_sure_you_want_to_delete)
-                .setTitle(R.string.delete)
-                .setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        myDB.deleteAll();
-                        Toast.makeText(SettingsActivity.this, R.string.done, Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // User has cancelled the action, returns to the previous screen
-                    }
-                }).show();
-    }
-
-    public void showMessage(String title, String message, Boolean cancelable) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(cancelable);
-        builder.setTitle(title);
-        builder.setMessage(message);
-        builder.show();
-    }
-
-    public void showToast(String message) {
-        Toast.makeText(SettingsActivity.this, message, Toast.LENGTH_SHORT).show();
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            int id = item.getItemId();
+            if (id == android.R.id.home) {
+                startActivity(new Intent(getActivity(), SettingsActivity.class));
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
+        }
     }
 }

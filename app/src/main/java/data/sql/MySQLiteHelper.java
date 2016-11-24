@@ -37,6 +37,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
                 + KEY_AMOUNT + " TEXT, "
                 + KEY_COMMENT + " TEXT, "
                 + KEY_GROUPING + " TEXT)");
+
         db.execSQL("CREATE TABLE " + TABLE_DENOMINATIONS_NAME
                 + "("
                 + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -77,19 +78,50 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
     public boolean insertData(Save save) {
         SQLiteDatabase db = this.getWritableDatabase();
 
-        // insert information into totals
-        ContentValues values = new ContentValues();
-        values.put(KEY_DATE, save.getDate());
-        values.put(KEY_TITLE, save.getTitle());
-        values.put(KEY_AMOUNT, save.getAmount());
-        values.put(KEY_COMMENT, save.getComment());
-        values.put(KEY_GROUPING, save.getGrouping());
+        // insert information into totals table
+        ContentValues totalsInformation = new ContentValues();
+        totalsInformation.put(KEY_DATE, save.getDate());
+        totalsInformation.put(KEY_TITLE, save.getTitle());
+        totalsInformation.put(KEY_AMOUNT, save.getAmount());
+        totalsInformation.put(KEY_COMMENT, save.getComment());
+        totalsInformation.put(KEY_GROUPING, save.getGrouping());
 
-        long result = db.insert(TABLE_NAME, null, values);
+        long totalsResult = db.insert(TABLE_NAME, null, totalsInformation);
 
-        // insert information into
+        // only insert this if the totals information has been saved correctly
+        if(totalsResult != -1) {
 
-        return result != -1;
+            // insert information into denominations
+            ContentValues denominations = new ContentValues();
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_200000, save.getNote200000());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_100000, save.getNote100000());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_50000, save.getNote50000());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_20000, save.getNote20000());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_10000, save.getNote10000());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_5000, save.getNote5000());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_2000, save.getNote2000());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_1000, save.getNote1000());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_500, save.getNote500());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_100, save.getNote100());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_50, save.getNote50());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_20, save.getNote20());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_10, save.getNote10());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_5, save.getNote5());
+            denominations.put(Save.DatabaseExtras.KEY_NOTE_1, save.getNote1());
+            denominations.put(Save.DatabaseExtras.KEY_COIN_2, save.getCoin2());
+            denominations.put(Save.DatabaseExtras.KEY_COIN_1, save.getCoin1());
+            denominations.put(Save.DatabaseExtras.KEY_CENT_50, save.getCent50());
+            denominations.put(Save.DatabaseExtras.KEY_CENT_25, save.getCent25());
+            denominations.put(Save.DatabaseExtras.KEY_CENT_20, save.getCent20());
+            denominations.put(Save.DatabaseExtras.KEY_CENT_10, save.getCent10());
+            denominations.put(Save.DatabaseExtras.KEY_CENT_5, save.getCent5());
+            denominations.put(Save.DatabaseExtras.KEY_CENT_2, save.getCent2());
+            denominations.put(Save.DatabaseExtras.KEY_CENT_1, save.getCent1());
+
+            totalsResult = db.insert(TABLE_DENOMINATIONS_NAME, null, denominations);
+        }
+
+        return totalsResult != -1;
     }
 
     // Returns all the data

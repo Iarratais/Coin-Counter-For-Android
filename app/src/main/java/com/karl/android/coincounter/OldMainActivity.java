@@ -346,7 +346,7 @@ public class OldMainActivity extends ActionBarActivity {
 
     // Method opens the settings from the menu in the main activity.
     public void openSettings() {
-        Intent intent = new Intent(OldMainActivity.this, SettingsActivity.class);
+        Intent intent = new Intent(OldMainActivity.this, OldSettingsActivity.class);
         startActivity(intent);
     }
 

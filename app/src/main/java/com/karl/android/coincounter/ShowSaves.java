@@ -86,7 +86,7 @@ public class ShowSaves extends ActionBarActivity {
 
     // Method opens the settings from the menu in the main activity.
     public void openSettings() {
-        Intent intent = new Intent(ShowSaves.this, SettingsActivity.class);
+        Intent intent = new Intent(ShowSaves.this, OldSettingsActivity.class);
         startActivity(intent);
     }
 
