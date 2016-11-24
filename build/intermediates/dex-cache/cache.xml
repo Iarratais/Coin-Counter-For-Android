@@ -646,7 +646,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="a27441e5e76c0e43f4653a23ce3c10d6441796dc">
+        sha1="ae57e1b5ed243f72a67663d3600af5a124f42484">
         <dex dex="C:\Users\Karl\AndroidStudioProjects\CoinCountr\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_4c1ec69ceae7d8df3b3533c3045d97242c763993\classes.dex" />
     </item>
 

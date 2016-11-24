@@ -14,3 +14,4 @@
 + Added MyGroupingsFragment
 + Denominations are now saved into the database
 + Added settings activity 
+* Reduced the splash screen from 2.5 to .5 seconds 

@@ -11,8 +11,8 @@ import android.view.WindowManager;
 
 public class SplashScreen extends Activity {
 
-    // Splash screen timer, shows 2.5 seconds
-    private static int SPLASH_TIME_OUT = 2500;
+    // Splash screen timer, shows .5 seconds
+    private static int SPLASH_TIME_OUT = 500;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
