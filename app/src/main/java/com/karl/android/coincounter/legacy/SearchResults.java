@@ -1,4 +1,4 @@
-package com.karl.android.coincounter;
+package com.karl.android.coincounter.legacy;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.karl.android.coincounter.R;
 
 import java.util.ArrayList;
 

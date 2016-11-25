@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".OldMainActivity">
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".legacy.OldMainActivity">
 
     <item
         android:id="@+id/action_clear_all"

@@ -143,6 +143,9 @@
     <string name="navigation_item_my_groupings">My Groupings</string>
     <string name="navigation_item_currency_conversion">Currency Conversion</string>
 
+    <!-- My Saves fragment -->
+    <string name="my_saves_fragment_no_information_to_display">No Saves</string>
+
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->

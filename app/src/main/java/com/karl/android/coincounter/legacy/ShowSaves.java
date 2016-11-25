@@ -1,6 +1,6 @@
 // Copyright of Karl Jones
 
-package com.karl.android.coincounter;
+package com.karl.android.coincounter.legacy;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -21,6 +21,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.karl.android.coincounter.R;
 
 import java.util.ArrayList;
 

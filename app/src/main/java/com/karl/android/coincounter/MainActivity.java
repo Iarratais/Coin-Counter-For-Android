@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.karl.android.coincounter.settings.SettingsActivity;
 import com.karl.android.fragments.MyGroupingsFragment;
 import com.karl.android.fragments.MySavesFragment;
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 // on click for floating action button
+                // this is going to give the user the ability add a new save to the database
             }
         });
 
@@ -43,6 +45,9 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // have the saves fragment be the one that shows on the start up of the app
+        getFragmentManager().beginTransaction().replace(R.id.content_frame, new MySavesFragment()).commit();
     }
 
     @Override

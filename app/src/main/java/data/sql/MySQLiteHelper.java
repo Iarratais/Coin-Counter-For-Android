@@ -127,8 +127,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
     // Returns all the data
     public Cursor getAllData() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
-        return res;
+        return db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
     }
 
     // Delete a single entry from the database

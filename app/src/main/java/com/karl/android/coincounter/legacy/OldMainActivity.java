@@ -1,6 +1,6 @@
 // Copyright Karl Jones
 
-package com.karl.android.coincounter;
+package com.karl.android.coincounter.legacy;
 
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.karl.android.coincounter.R;
 import com.karl.android.templates.Save;
 
 import java.text.DecimalFormat;

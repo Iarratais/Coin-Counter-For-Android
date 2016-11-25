@@ -11,7 +11,8 @@
         <item
             android:id="@+id/navigation_drawer_my_groupings"
             android:icon="@drawable/ic_collections_bookmark_black_24dp"
-            android:title="@string/navigation_item_my_groupings"/>
+            android:title="@string/navigation_item_my_groupings"
+            android:enabled="false"/>
         <!-- Currency Converter -->
         <item
             android:id="@+id/nav_slideshow"

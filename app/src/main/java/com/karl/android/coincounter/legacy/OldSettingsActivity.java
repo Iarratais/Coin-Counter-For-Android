@@ -1,4 +1,4 @@
-package com.karl.android.coincounter;
+package com.karl.android.coincounter.legacy;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -12,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.karl.android.coincounter.R;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.karl.android.coincounter;
+package com.karl.android.coincounter.settings;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
