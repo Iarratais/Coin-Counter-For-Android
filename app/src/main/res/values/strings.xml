@@ -147,6 +147,7 @@
     <string name="my_saves_fragment_no_information_to_display">No Saves</string>
 
     <!-- Strings related to Settings -->
+    <string name="pref_title_choose_currency">Currency</string>
 
     <!-- Example General settings -->
     <string name="pref_header_general">General</string>

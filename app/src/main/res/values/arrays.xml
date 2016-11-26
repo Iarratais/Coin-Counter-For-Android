@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_currency_values">
+        <item>ALL</item>
+        <item>ARS</item>
+        <item>AUD</item>
+        <item>BGN</item>
+        <item>BRL</item>
+        <item>BYR</item>
+        <item>CAD</item>
+        <item>CHF</item>
+        <item>CZK</item>
+        <item>DKK</item>
+        <item>EUR</item>
+        <item>GBP</item>
+        <item>HKD</item>
+        <item>ILS</item>
+        <item>ISK</item>
+        <item>JPY</item>
+        <item>KRW</item>
+        <item>NOK</item>
+        <item>NZD</item>
+        <item>RON</item>
+        <item>RSD</item>
+        <item>RUB</item>
+        <item>SEK</item>
+        <item>USD</item>
+        <item>UAH</item>
+        <item>IKR</item>
+        <item>MNT</item>
+        <item>KZT</item>
+        <item>THB</item>
+        <item>ZAR</item>
+        <item>PEN</item>
+    </string-array>
+    <string-array name="pref_currency_titles">
+        <item>Albanian Lek</item>
+        <item>Argentine Peso</item>
+        <item>Australian Dollar</item>
+        <item>Bulgaria Lev</item>
+        <item>Brazilian Real</item>
+        <item>Belarussian Ruble</item>
+        <item>Canadian Dollar</item>
+        <item>Swiss Franc</item>
+        <item>Czech Republic Koruna</item>
+        <item>Denmark Krone</item>
+        <item>Euro</item>
+        <item>Great British Pound</item>
+        <item>Hong Kong Dollar</item>
+        <item>Israel Shekel</item>
+        <item>Iceland Krona</item>
+        <item>Japan Yen</item>
+        <item>Korea (South) Won</item>
+        <item>Norway Krone</item>
+        <item>New Zealand Dollar</item>
+        <item>Romania New Leu</item>
+        <item>Serbia Dinar</item>
+        <item>Russia Ruble</item>
+        <item>Sweden Krona</item>
+        <item>United States Dollar</item>
+        <item>Ukraine Hryvnia</item>
+        <item>Sri Lanka Rupee</item>
+        <item>Mongolia Tughrik</item>
+        <item>Kazakhstan Tenge</item>
+        <item>Thailand Baht</item>
+        <item>South Africa Rand</item>
+        <item>Peru Sol</item>
+    </string-array>
+</resources>

@@ -3,7 +3,8 @@ package com.karl.android.templates;
 /**
  * Created by Karl on 20/11/2016.
  *
- * Save template holds all the information to be sent to the database
+ * Save template holds all the information to be sent to the database and retrieved from the database
+ * to be displayed
  */
 
 public class Save {
@@ -13,6 +14,7 @@ public class Save {
     private String amount;
     private String date;
     private String comment;
+    private String currency;
     private String grouping;
 
     private String note200000 = "0";
@@ -322,5 +324,51 @@ public class Save {
 
     public void setCent1(String cent1) {
         this.cent1 = cent1;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    @Override
+    public String toString() {
+        return "Save{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", amount='" + amount + '\'' +
+                ", date='" + date + '\'' +
+                ", comment='" + comment + '\'' +
+                ", currency='" + currency + '\'' +
+                ", grouping='" + grouping + '\'' +
+                ", note200000='" + note200000 + '\'' +
+                ", note100000='" + note100000 + '\'' +
+                ", note50000='" + note50000 + '\'' +
+                ", note20000='" + note20000 + '\'' +
+                ", note10000='" + note10000 + '\'' +
+                ", note5000='" + note5000 + '\'' +
+                ", note2000='" + note2000 + '\'' +
+                ", note1000='" + note1000 + '\'' +
+                ", note500='" + note500 + '\'' +
+                ", note200='" + note200 + '\'' +
+                ", note100='" + note100 + '\'' +
+                ", note50='" + note50 + '\'' +
+                ", note20='" + note20 + '\'' +
+                ", note10='" + note10 + '\'' +
+                ", note5='" + note5 + '\'' +
+                ", note1='" + note1 + '\'' +
+                ", coin2='" + coin2 + '\'' +
+                ", coin1='" + coin1 + '\'' +
+                ", cent50='" + cent50 + '\'' +
+                ", cent25='" + cent25 + '\'' +
+                ", cent20='" + cent20 + '\'' +
+                ", cent10='" + cent10 + '\'' +
+                ", cent5='" + cent5 + '\'' +
+                ", cent2='" + cent2 + '\'' +
+                ", cent1='" + cent1 + '\'' +
+                '}';
     }
 }

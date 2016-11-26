@@ -146,7 +146,7 @@ public class ShowSaves extends ActionBarActivity {
     public void viewAll() {
 
         displays = new ArrayList<>();
-        res = myDB.getAllData();
+        res = myDB.getDataFromTotals();
         if(res.getCount() == 0) {
             Toast.makeText(ShowSaves.this, "No saves found", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(ShowSaves.this, OldMainActivity.class);
@@ -230,14 +230,7 @@ public class ShowSaves extends ActionBarActivity {
 
     public void deleteEntry(String id) {
 
-        int result = myDB.deleteData(id);
-        if(result > 0) {
-            Intent intent = new Intent(ShowSaves.this, ShowSaves.class);
-            startActivity(intent);
-            Toast.makeText(ShowSaves.this, R.string.entry_deleted, Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(ShowSaves.this, R.string.entry_not_deleted, Toast.LENGTH_SHORT).show();
-        }
+        myDB.deleteData(id);
 
     }
 

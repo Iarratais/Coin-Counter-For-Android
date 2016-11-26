@@ -19,6 +19,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
     private static final String KEY_DATE = "date";
     private static final String KEY_COMMENT = "comment";
     private static final String KEY_GROUPING = "grouping";
+    private static final String KEY_CURRENCY = "currency";
     private static final String TABLE_DENOMINATIONS_NAME = "denominations";
 
 
@@ -36,7 +37,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
                 + KEY_TITLE + " TEXT, "
                 + KEY_AMOUNT + " TEXT, "
                 + KEY_COMMENT + " TEXT, "
-                + KEY_GROUPING + " TEXT)");
+                + KEY_GROUPING + " TEXT, "
+                + KEY_CURRENCY + " TEXT)");
 
         db.execSQL("CREATE TABLE " + TABLE_DENOMINATIONS_NAME
                 + "("
@@ -74,21 +76,29 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
         onCreate(db);
     }
 
-    // Insert data into the database
+    /**
+     * Insert data into the two database tables.
+     *
+     * @param save object with all the information contained within.
+     *
+     * @return true if the information has been saved, false if not.
+     */
     public boolean insertData(Save save) {
         SQLiteDatabase db = this.getWritableDatabase();
 
-        // insert information into totals table
+        // insert information into totals table.
         ContentValues totalsInformation = new ContentValues();
         totalsInformation.put(KEY_DATE, save.getDate());
         totalsInformation.put(KEY_TITLE, save.getTitle());
         totalsInformation.put(KEY_AMOUNT, save.getAmount());
         totalsInformation.put(KEY_COMMENT, save.getComment());
         totalsInformation.put(KEY_GROUPING, save.getGrouping());
+        totalsInformation.put(KEY_CURRENCY, save.getCurrency());
 
         long totalsResult = db.insert(TABLE_NAME, null, totalsInformation);
 
-        // only insert this if the totals information has been saved correctly
+        // only insert this if the totals information has been saved correctly, so this does not
+        // knock the two tables out of line.
         if(totalsResult != -1) {
 
             // insert information into denominations
@@ -124,23 +134,34 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
         return totalsResult != -1;
     }
 
-    // Returns all the data
-    public Cursor getAllData() {
+    /**
+     * Get all of the data from the totals database.
+     *
+     * @return Cursor with information of total from totals database.
+     */
+    public Cursor getDataFromTotals() {
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        return db.rawQuery("SELECT " + KEY_ID + ", " + KEY_TITLE + ", " + KEY_AMOUNT + ", " + KEY_DATE + ", " + KEY_CURRENCY + " FROM " + TABLE_NAME, null);
     }
 
-    // Delete a single entry from the database
-    public Integer deleteData(String id) {
+    /**
+     * Delete a single entry from the totals table and from the denominations table.
+     *
+     * @param id of the entry to delete from the database.
+     */
+    public void deleteData(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        Integer delete = db.delete(TABLE_NAME, "id = ?", new String[]{id});
-        return delete;
+        db.delete(TABLE_NAME, "id = ?", new String[]{id});
+        db.delete(TABLE_DENOMINATIONS_NAME, "id = ?", new String[]{id});
     }
 
-    // Clear all entries from the database
+    /**
+     * Delete all entries from both of the databases
+     */
     public void deleteAll() {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM " + TABLE_NAME);
+        db.execSQL("DELETE FROM " + TABLE_DENOMINATIONS_NAME);
     }
 
     public Cursor searchData(String search){

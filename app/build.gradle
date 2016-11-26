@@ -34,7 +34,7 @@ def getDate() {
 
 ext {
     supportLibVersion = '25.0.1'
-    playServiceVersion = '9.8.0'
+    playServiceVersion = '10.0.0'
 }
 
 dependencies {
@@ -43,6 +43,7 @@ dependencies {
     compile "com.android.support:design:${supportLibVersion}"
     compile "com.google.android.gms:play-services:${playServiceVersion}"
     compile "com.android.support:support-v4:${supportLibVersion}"
+    compile "com.android.support:recyclerview-v7:${supportLibVersion}"
     compile 'com.android.support:support-v4:25.0.1'
     compile 'com.android.support:support-vector-drawable:25.0.1'
 }

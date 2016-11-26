@@ -24,7 +24,7 @@
 - Removed support for Portuguese
 - Removed support for Romanian
 - Removed support for Russian
-- Removed support for Solvak
+- Removed support for Slovak
 - Removed support for Slovenian
 - Removed support for Swedish
 - Removed support for Ukrainian
@@ -56,3 +56,6 @@
 + Added settings activity 
 * Reduced the splash screen from 2.5 to .5 seconds 
 + Added SlimSave as a minimum requirement Save object
++ SavesAdapter for recycler view 
++ NewSaveActivity for creating new saves
++ CurrencyConverterFragment

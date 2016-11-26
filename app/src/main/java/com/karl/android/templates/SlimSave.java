@@ -13,6 +13,7 @@ public class SlimSave {
     private String title;
     private String amount;
     private String date;
+    private String currency;
 
     public SlimSave() {
     }
@@ -47,5 +48,24 @@ public class SlimSave {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    @Override
+    public String toString() {
+        return "SlimSave{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", amount='" + amount + '\'' +
+                ", date='" + date + '\'' +
+                ", currency='" + currency + '\'' +
+                '}';
     }
 }

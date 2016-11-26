@@ -32,8 +32,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // on click for floating action button
-                // this is going to give the user the ability add a new save to the database
+                startActivity(new Intent(getApplicationContext(), NewSaveActivity.class));
             }
         });
 

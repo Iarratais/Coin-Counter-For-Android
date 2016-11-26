@@ -1,24 +1,28 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.karl.android.fragments.MySavesFragment">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.karl.android.fragments.MySavesFragment">
 
+    <!-- Text view to show if there is no information to show -->
     <TextView
         android:id="@+id/my_saves_fragment_no_information_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/my_saves_fragment_no_information_to_display"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:drawableTop="@drawable/ic_local_library_black_48dp"
+        android:text="@string/my_saves_fragment_no_information_to_display"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"/>
 
-    <ListView
+    <!-- List view for the information to be displayed -->
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/my_saves_fragment_list_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+    </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>
